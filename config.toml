@@ -1,0 +1,48 @@
+# The URL the site will be built for
+base_url = "https://boardgamenightwg.com"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+taxonomies = [
+  {name = "tags", feed = true},
+]
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+highlight_theme = "one-dark"
+render_emoji = true
+smart_punctuation = true
+[extra]
+date_format="%d %b, %Y"
+
+[[extra.main_menu]]
+name = "Posts"
+url = "@/posts/_index.md"
+
+# [[extra.main_menu]]
+# name = "Projects"
+# url = "@/projects/_index.md"
+
+[[extra.main_menu]]
+name = "Talks"
+url = "@/talks.md"
+
+# [[extra.main_menu]]
+# name = "TIL"
+# url = "@/tils/_index.md"
+
+# [[extra.main_menu]]
+# name = "Travel"
+# url = "@/travel/_index.md"
+
+[[extra.main_menu]]
+name = "Contact"
+url = "@/contact.md"
+
+# derived from https://github.com/mr-karan/website
