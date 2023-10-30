@@ -20,7 +20,7 @@ Thursday 11/16/2023
 7:00 PM (TBD)
 
 ## Where
-[Aeronaught Brewing Company](https://www.aeronautbrewing.com/visit/somerville/)\
+[Aeronaut Brewing Company](https://www.aeronautbrewing.com/visit/somerville/)\
 14 Tyler Street, Somerville, MA 02143
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2947.169355530118!2d-71.1055806!3d42.3815386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37736621ba0e3%3A0xb021004068e0d0ef!2s14%20Tyler%20St%2C%20Somerville%2C%20MA%2002143!5e0!3m2!1sen!2sus!4v1698681411653!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
@@ -29,8 +29,8 @@ Thursday 11/16/2023
 ### [Please fill out this form if you're planning to attend.](https://forms.gle/84rs1eRpebendzTN8)
 
 We need to get a rough head count to know how many tables we need to reserve.
-Aeronaught has a $10 bar minimum per person, so please plan accordingly.
+Aeronaut has a $10 bar minimum per person, so please plan accordingly.
 There is a [Venezuelan food truck on site](https://www.aeronautbrewing.com/visit/somerville/#:~:text=partners%20and%20friends.-,Carolicious,-is%20the%20result), but you can also bring your own food.
-Depending on interest, we may also order pizza if there's enough interest.
+Depending on interest, we may also order pizza.
 
 We will bring a board games but more are always welcome!
