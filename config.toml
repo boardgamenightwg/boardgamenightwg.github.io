@@ -22,12 +22,12 @@ smart_punctuation = true
 [extra]
 date_format="%d %b, %Y"
 
-[[extra.main_menu]]
-name = "About"
-url = "@/about.md"
+# [[extra.main_menu]]
+# name = "About"
+# url = "@/about.md"
 
-[[extra.main_menu]]
-name = "Contact"
-url = "@/contact.md"
+# [[extra.main_menu]]
+# name = "Contact"
+# url = "@/contact.md"
 
 # derived from https://github.com/mr-karan/website
