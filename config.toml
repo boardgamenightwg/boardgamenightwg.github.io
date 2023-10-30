@@ -22,24 +22,8 @@ smart_punctuation = true
 date_format="%d %b, %Y"
 
 [[extra.main_menu]]
-name = "Posts"
-url = "@/posts/_index.md"
-
-# [[extra.main_menu]]
-# name = "Projects"
-# url = "@/projects/_index.md"
-
-[[extra.main_menu]]
-name = "Talks"
-url = "@/talks.md"
-
-# [[extra.main_menu]]
-# name = "TIL"
-# url = "@/tils/_index.md"
-
-# [[extra.main_menu]]
-# name = "Travel"
-# url = "@/travel/_index.md"
+name = "About"
+url = "@/about.md"
 
 [[extra.main_menu]]
 name = "Contact"

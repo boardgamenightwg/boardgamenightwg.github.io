@@ -1,0 +1,6 @@
++++
+title = "About"
++++
+
+Board Game Night Working Group started...
+Something about their locations...
