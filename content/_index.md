@@ -16,7 +16,7 @@ Thursday 11/16/2023
 
 Join us Thursday 10/12 anytime after 6 PM. We'll have Costco Pizza, soft drinks and board games on hand. Bring more games!
 
-## ☕🍻 Boston
+## 🫘🌆 Boston
 ### When
 Thursday 11/16/2023
 7:00 PM
