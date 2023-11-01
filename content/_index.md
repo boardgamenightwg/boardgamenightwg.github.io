@@ -17,7 +17,7 @@ Join us Thursday 10/12 anytime after 6 PM. We'll have Costco Pizza, soft drinks 
 # 🫘🌆 Boston
 ## When
 Thursday 11/16/2023
-6:30 PM
+6:30-9:30 PM
 
 ## Where
 [Aeronaut Brewing Company](https://www.aeronautbrewing.com/visit/somerville/)\
@@ -28,9 +28,12 @@ Thursday 11/16/2023
 
 ### [Please fill out this form if you're planning to attend.](https://forms.gle/84rs1eRpebendzTN8)
 
-We will reserve two tables for 16 people total. 
+We will reserve two tables for 16 people total.
 Aeronaut has a $160 bar minimum for the party, so please plan accordingly.
-This has to all be put on one card, which I can do and have people Venmo me.
+This has to all be put on one card, which I can do and have people Venmo me.\
+
+If there is a line at the door, please proceed directly to the security podium as you arrive between 6:30 and 9:30 pm.\
+
 There is [Venezuelan food on site](https://www.aeronautbrewing.com/visit/somerville/#:~:text=partners%20and%20friends.-,Carolicious,-is%20the%20result), but you can also bring your own food.
 Depending on interest, we may also order pizza.
 
