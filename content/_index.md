@@ -20,7 +20,9 @@ Join us Thursday 11/16 anytime after 6:30 PM. We'll have Costco Pizza, soft drin
 
 ## When
 Thursday 11/16/2023
-6:30-9:30 PM
+6:30-9:30 PM \
+Add to your calendar: \
+<a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MnFmYzJybHZuaG91amlhbnV1Z2RoY2w2a3AgcmljZWNyYWNrZXIwMkBt&amp;tmsrc=ricecracker02%40gmail.com"><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif"></a>
 
 ## Where
 [Aeronaut Brewing Company](https://www.aeronautbrewing.com/visit/somerville/)\
