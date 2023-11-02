@@ -15,6 +15,9 @@ Thursday 11/16/2023
 Join us Thursday 10/12 anytime after 6 PM. We'll have Costco Pizza, soft drinks and board games on hand. Bring more games!
 
 # 🫘🌆 Boston
+## RSVP
+[Please respond here if you're planning to attend](https://forms.gle/84rs1eRpebendzTN8)
+
 ## When
 Thursday 11/16/2023
 6:30-9:30 PM
@@ -25,8 +28,6 @@ Thursday 11/16/2023
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2947.169355530118!2d-71.1055806!3d42.3815386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37736621ba0e3%3A0xb021004068e0d0ef!2s14%20Tyler%20St%2C%20Somerville%2C%20MA%2002143!5e0!3m2!1sen!2sus!4v1698681411653!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 ## Notes
-
-### [Please fill out this form if you're planning to attend.](https://forms.gle/84rs1eRpebendzTN8)
 
 We will reserve two tables for 16 people total.
 Aeronaut has a $160 bar minimum for the party, so please plan accordingly.
