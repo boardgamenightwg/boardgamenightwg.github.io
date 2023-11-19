@@ -30,14 +30,13 @@ Other examples of games that have been played at past events include:
 - [Pandemic](https://www.zmangames.com/en/games/pandemic/)
 - [Spirit Island](https://www.greaterthangames.com/spirit-island)
 
-Games such as chess or poker do not typically feature at board game nights,
-but are not explicitly excluded and have occasionally featured.
+Games such as chess or poker do not typically feature,
+but are not explicitly excluded.
 
 ## What to bring?
-Games that follow the theme of the event are always welcome. Usually hosts
-bring a selection of games, but it's always nice to have more options.
-If you have anything else you'd like to show off such as a hobby robot project
-feel free to bring it along, though it's not expected.
+The host will have a selection of games, but more games are always welcome!
+Have a robotics project you'd like to show off? Bring it along!
+Perphaps a hot take on continuous integration or model predictive control?
 
 ## Who to invite?
 Anyone who might be interested in playing board games with roboticists or
@@ -45,18 +44,19 @@ robotics enthusiasts. The events are open to friends and family, but are
 not intended for the general public.
 
 ## Age restrictions?
-Our board game nights are generally inclusive and do not have a strict age limit.
-However, the suitability for minors can depend on the specific venue.
-For instance, events held at bars may not permit attendees under the legal drinking age.
-This is the exception though, rather than the rule.
-We often see a diverse age group among our attendees, from middle schoolers to working professionals.
-Our events are usually hosted in environments conducive to all ages,
-such as robotics companies, where it's not uncommon for our colleagues to bring their children.
-One of our regulars has been participating
-since her high school years and has now transitioned into a professional role in the robotics field.
-We value this diversity and the unique perspectives it brings to our community.
+Our events don't have an age limit and are usually family-friendly.
+Though if the event is at a bar, minor's cannot attend, but that's rare.
+Usually we meet at robotics companies or hacker spaces, where it's totally cool to bring the kids.
+High school and college robotics club members are regulars too!
 
-## How to host an event?
+## Photography
+We typically take photos at the events and post them on the website.
+If you'd prefer not to be photographed, or if you
+see a photo of yourself that you'd like removed, please let us know.
+If your company has a policy against photography, we'll refrain from taking
+photos at your event.
+
+## How to host?
 If you're interested in hosting an event, please reach out to
 [contact@boardgamenightwg.com](mailto:contact@boardgamenightwg.com).
 Typically hosts should expect 15-30 people to attend, but this can vary month
