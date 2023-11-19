@@ -21,6 +21,23 @@ render_emoji = true
 smart_punctuation = true
 [extra]
 date_format="%d %b, %Y"
+favicon = "/images/favicon.png"
+
+[[extra.main_menu]]
+name = "Bay Area"
+url = "@/bayarea.md"
+
+[[extra.main_menu]]
+name = "Boston"
+url = "@/boston.md"
+
+[[extra.main_menu]]
+name = "Past Events"
+url = "@/pastevents.md"
+
+[[extra.main_menu]]
+name = "FAQ"
+url = "@/faq.md"
 
 # [[extra.main_menu]]
 # name = "About"
