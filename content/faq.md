@@ -2,10 +2,10 @@
 title = "🤔❓ FAQ"
 +++
 ## What to expect?
-Board game nights are a casual, social event directed towards roboticists and 
+Board game nights are a casual, social event directed towards roboticists and
 their friends and family. It's an opportunity to meet other roboticists,
 network, and play board games.
-The events are typically hosted at a robotics company or 
+The events are typically hosted at a robotics company or
 other social space. Depending on the venue and interest, food and drinks may be
 provided. The events are typically held in the evening and last for a few hours.
 
@@ -52,7 +52,7 @@ This is the exception though, rather than the rule.
 We often see a diverse age group among our attendees, from middle schoolers to working professionals.
 Our events are usually hosted in environments conducive to all ages,
 such as robotics companies, where it's not uncommon for our colleagues to bring their children.
-One of our regulars has been participating 
+One of our regulars has been participating
 since her high school years and has now transitioned into a professional role in the robotics field.
 We value this diversity and the unique perspectives it brings to our community.
 
@@ -71,5 +71,3 @@ You can ask to join the group through the link above.
 ## General feedback?
 If you have any questions or concerns, you can contact us by emailing
 [contact@boardgamenightwg.com](mailto:contact@boardgamenightwg.com)
-
-
