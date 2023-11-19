@@ -6,4 +6,3 @@ January 2024
 
 ## Where
 TBD
-
