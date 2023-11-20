@@ -9,4 +9,4 @@ Dusty Robotics \
 Aeronaut Brewing Company \
 14 Tyler Street, Somerville, MA 02143
 ![groupphoto](/images/pastevents/11.16.23.boston/20231116_195642.jpg)
-[Photos](https://drive.google.com/drive/folders/1F9uPpl0DXWYO6TR5kBtiS74Z4UKnaHfi?usp=sharing)
+[Photos](https://drive.google.com/drive/folders/1dpdLYlFxEUxOpveZSFg-5U2sbaCVp8tf?usp=sharing)
