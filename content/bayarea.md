@@ -4,7 +4,7 @@ title = "🌅🌉 Bay Area"
 ## Next Event
 ![trolleyproblem](/images/bayarea/trolleyproblem.png)
 ## When
-January 2024 (Day and Time TBD)
+January 18th 2024 @ 6:30 pm
 
 ## Where
 Apex.AI \
