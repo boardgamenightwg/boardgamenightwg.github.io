@@ -3,6 +3,11 @@ title = "🌅🌉 Bay Area"
 +++
 ## Next Event
 ![trolleyproblem](/images/bayarea/trolleyproblem.png)
+
+## RSVP
+
+<a href="https://forms.gle/ybpMqW2Fr2sVVtV8A">RSVP Google Form</a>
+
 ## When
 January 18th 2024 @ 6:30 pm
 
