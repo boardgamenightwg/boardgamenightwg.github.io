@@ -5,7 +5,7 @@ title = "🫘🌆 Boston"
 <!-- ![faneuilhall](/images/boston/faneuilhall.png) -->
 ![artisansasylum](/images/artisansasylum/logo.png)
 ### RSVP
-[Meetup](https://www.eventbrite.com/e/board-game-night-wg-a2-tickets-798969347827)
+[Eventbrite](https://www.eventbrite.com/e/board-game-night-wg-a2-tickets-798969347827)
 
 ### When
 January 26, 2024 @ 6:30 PM - 10:00 PM
