@@ -42,26 +42,3 @@
         {% endfor -%}
     {% endif -%}
 {% endif -%}
-
-<meta name="twitter:card" content="{{ twitter_card }}">
-<meta name="twitter:title" content="{{ og_title }}">
-<meta name="twitter:description" content="{{ og_description }}">
-<meta name="twitter:url" content="{{ og_url | safe }}">
-
-{% if og_image -%}
-    <meta name="twitter:image" content="{{ config.base_url ~ og_image }}">
-{% endif -%}
-
-<meta name="twitter:site" content="@mrkaran_">
-
-{% if og_type == "article" -%}
-    <meta name="twitter:label1" content="Written by">
-    <meta name="twitter:data1" content="Tyler Weaver">
-
-    {% if page.taxonomies and page.taxonomies.tags -%}
-        <meta name="twitter:label2" content="Filed under">
-        <meta name="twitter:data2" content="{% for tag in page.taxonomies.tags -%}{{ tag }}{% if not loop.last -%},{% endif -%}{% endfor -%}">
-    {% endif -%}
-{% endif -%}
-
-<meta name="twitter:creator" content="@mrkaran_">
