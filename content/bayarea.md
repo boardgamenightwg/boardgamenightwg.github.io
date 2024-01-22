@@ -7,7 +7,7 @@ title = "🌅🌉 Bay Area"
 <a href="https://forms.gle/ccNQiYBEcnNw61ic6">RSVP Google Form</a>
 
 ## When
-January 18th 2024 @ 6:30 pm
+February 22nd 2024 @ 6:00 pm
 
 ## Where
 Bear Robotics \
