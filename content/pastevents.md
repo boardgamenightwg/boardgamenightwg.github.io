@@ -1,6 +1,11 @@
 +++
 title = "📆📷 Past Events"
 +++
+
+# 01/18/2024 - Bay Area
+Apex.AI \
+844 E Charleston Rd Palo Alto, CA 94303
+
 # 11/16/2023 - Bay Area
 Dusty Robotics \
 909 San Rafael Ave, Mountain View, CA 94043
