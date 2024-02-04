@@ -2,6 +2,12 @@
 title = "📆📷 Past Events"
 +++
 
+# 1/26/2024 - Boston
+Artisans Asylum \
+96 Holton Street, Boston, MA 02135
+![groupphoto](/images/pastevents/1.26.24.boston/20240126_200146.jpg)
+[Photos](https://drive.google.com/drive/folders/1DCZMN8SboaEkMZhfFX1ubE1hiN-kTm8h?usp=drive_link)
+
 # 01/18/2024 - Bay Area
 Apex.AI \
 844 E Charleston Rd Palo Alto, CA 94303
