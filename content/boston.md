@@ -12,7 +12,7 @@ Cambridge, MA 02142
 March 8th 2024 @ 6:30 pm
 
 ## RSVP
-<a href="https://forms.gle/BuDfRfCcsyt7WJMr9">RSVP Google Form</a>
+Unfortunately, the deadline has passed for attendance.
 
 ## Notes
 The AI Institute is welcoming fellow roboticists to enjoy a night of board game fun!
