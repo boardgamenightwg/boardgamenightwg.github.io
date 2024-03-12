@@ -2,6 +2,10 @@
 title = "📆📷 Past Events"
 +++
 
+# 03/8/2024 - Boston
+The AI Institute \
+145 Broadway, Cambridge, MA 02142
+
 # 1/26/2024 - Boston
 Artisans Asylum \
 96 Holton Street, Boston, MA 02135
