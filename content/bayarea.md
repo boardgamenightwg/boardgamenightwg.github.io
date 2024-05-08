@@ -8,7 +8,7 @@ title = "🌅🌉 Bay Area"
 
 
 ## When
-May 22nd 2024 @ 6:00 pm
+June 5th 2024 @ 6:00 pm
 
 ## RSVP
 <a href="https://forms.gle/e6L2cmhPZPbXzG8g9">RSVP Google Form</a>
