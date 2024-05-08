@@ -1,6 +1,10 @@
 +++
 title = "Home"
 +++
-# 🎲🌟 Choose Your Adventure 🧭🚀
+
+# Current Chapters
 ## [🌅🌉 Bay Area](/bayarea/)
 ## [🫘🌆 Boston](/boston/)
+
+
+### Established in 2012 @ Willow Garage in Menlo Park, CA
