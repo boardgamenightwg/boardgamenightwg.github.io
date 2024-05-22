@@ -5,7 +5,7 @@ title = "🫘🌆 Boston"
 
 ## Where
 <a href="https://www.gaia-ai.eco/">Gaia AI</a> \
-295 Devonshire St, Boston, MA 02110
+295 Devonshire St, Suite 302, Boston, MA 02110
 
 ## When
 May 24th 2024 @ 6:30 pm
