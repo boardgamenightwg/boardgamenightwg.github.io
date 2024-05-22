@@ -7,4 +7,4 @@ title = "Home"
 ## [🫘🌆 Boston](/boston/)
 
 
-### Established in 2012 @ Willow Garage in Menlo Park, CA
+### [Established in 2012](/about/) @ Willow Garage in Menlo Park, CA

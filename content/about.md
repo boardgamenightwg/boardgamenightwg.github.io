@@ -2,5 +2,6 @@
 title = "About"
 +++
 
-Board Game Night Working Group started...
-Something about their locations...
+The Board Game Night Working Group had its humble beginnings at Willow Garage in 2012. Every Friday at Willow Garage there was a team building social event called "Beer Friday". A few extra geeky folks wanted to recruit others into playing board games while drinking. This effort took the overly grandiose name of "Board Games and Brew". The group enjoyed many games and beverages prior to Willow Garage officially shutting its doors in 2014. Luckily the spark lived on because the core had started to organize via a google group "boardgamenightwg" or "Board Game Night Willow Garage" instead of an internal Willow Garage email list. The Robotisist gaming enthusiasts started using that group to organize a round robin of game nights at the various Silicon Valley Robotics companies. The frequency has varied widely over the years, especially during covid times but started shooting for roughly monthly coming out of it. Around the same time the group rebranded itself "The Robotics Game Night Working Group" to clarify that all roboticists and their friends/family are welcome, not just Willow Garage Alumni. In 2023 the Boston Chapter started hosting events at local robotics companies and establishments. We look forward to seeing you and many more games in the future.
+
+
