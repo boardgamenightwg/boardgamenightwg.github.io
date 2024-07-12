@@ -13,7 +13,9 @@ July 24th 2024 @ 6:30 pm
 <a href="https://forms.gle/5vh1uJWLLfLUZpbNA">RSVP Google Form</a>
 
 ## Notes
-Reframe Systems will be providing a light dinner at the event. As their main office is in Andover, they have opted to sponsor the event in Brookline, which is a more convenient location.
+Come hang out with Reframe Systems at their local creative space. They are a Boston area startup aiming to leverage robotics to address housing affordability and decarbonization of the built environment. They won't be able to bring all their fun toys from their factory space in Andover, including huge cranes, forklifts, CNCs, and obviously robots, they will have a small cobot arm to play with while we enjoy board games with fellow roboticists.
+
+A light dinner will be provided. There is a sign for "Cabinet Maker/Custom Woodwork" on the building.
 
 ## Access
 [71 Boylston St, Brookline, MA 02445](https://maps.app.goo.gl/UYRQRiB3UbzsoJjj9)
