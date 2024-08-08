@@ -16,7 +16,7 @@ Bear Robotics employees will bring a plethora of games but feel free to bring yo
 A private parking lot is available on the side and back of the building, please feel free to park in any available spot or on the street. The front door will be locked, please enter through the back door in the parking lot, it will be wide open. \
 
 ## When
-August 24th 2024 @ 5:00 pm
+August 23rd 2024 @ 5:00 pm
 
 ## RSVP
 <a href="https://forms.gle/y1mDYbJGWEgWvh5e8">RSVP Google Form</a>
