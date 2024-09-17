@@ -9,7 +9,7 @@ title = "🌅🌉 Bay Area"
 Bonsai Robotics \
 Suite 1200 on the 12th floor \
 75 E Santa Clara St \
-Redwood City, CA 94063 \
+San Jose, CA 94063 \
 
 Bonsai Robotics will provide some pizza and sodas. 
 
