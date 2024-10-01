@@ -11,7 +11,7 @@ Suite 1200 on the 12th floor \
 75 E Santa Clara St \
 San Jose, CA 94063 \
 
-Bonsai Robotics will provide some pizza and sodas. 
+Bonsai Robotics will provide some pizza and sodas.
 
 ## When
 September 25th 2024 @ 6:00 pm
