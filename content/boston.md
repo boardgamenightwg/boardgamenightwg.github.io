@@ -10,7 +10,9 @@ title = "🫘🌆 Boston"
 **Cambridge, MA 02142** \
 
 The AI Institute is welcoming fellow roboticists and their friends to enjoy a night of board game fun! \
-Please be sure to RSVP as a list of names is required to be given ahead of the event. \
+
+**Please be sure to RSVP by noon on 11/13/2024 as a list of names is required to be given ahead of the event.** \
+
 The hosts will be collecting people from the lobby and bringing them to where games will be hosted. \
 The AI Institute will provide pizza, snacks, and non alcoholic beverages. \
 The event is alcohol free. \
