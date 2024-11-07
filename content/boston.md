@@ -1,7 +1,34 @@
 +++
 title = "🫘🌆 Boston"
 +++
-<a href="https://www.gaia-ai.eco/">![venue logo](/images/boston/faneuilhall.png)</a>
+<!-- ![venue logo](/images/boston/faneuilhall.png) -->
+
+## Where
+[![venue logo](/images/logos/ai-flowers.png)](https://theaiinstitute.com/)
+**The AI Institute** \
+**145 Broadway** \
+**Cambridge, MA 02142** \
+
+The AI Institute is welcoming fellow roboticists and their friends to enjoy a night of board game fun! \
+Please be sure to RSVP as a list of names is required to be given ahead of the event. \
+The hosts will be collecting people from the lobby and bringing them to where games will be hosted. \
+The AI Institute will provide pizza, snacks, and non alcoholic beverages. \
+The event is alcohol free. \
+
+Games will be provided but feel free to bring your own to share! \
+Photographs will not be allowed to be taken. \
 
 ## When
-TBD
+November 13th 2024 @ 6:30 pm
+
+## RSVP
+<a href="https://forms.gle/pH657o3Y4iU78C669">RSVP Google Form</a>
+
+## Access
+If you arrive after 6:30 pm, send a text to \
+
+(617) 744-9296 \
+
+and someone will come down to the lobby to get you.
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2947.9511403783567!2d-71.09149382340276!3d42.364880534796356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e370ae56c77775%3A0x6f67dbaf689fcdac!2s145%20Broadway%2C%20Cambridge%2C%20MA%2002142!5e0!3m2!1sen!2sus!4v1730942155657!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
