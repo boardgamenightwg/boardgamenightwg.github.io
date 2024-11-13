@@ -28,6 +28,9 @@ November 13th 2024 @ 6:30 pm
 <a href="https://forms.gle/pH657o3Y4iU78C669">RSVP Google Form</a>
 
 ## Access
+
+Be sure to read the [AI Institute Visitor policy](/files/ai_institute_visitor_instructions_FOR_GUESTS_05302024.pdf) before arriving.
+
 If you arrive after 6:30 pm, send a text to \
 
 (617) 744-9296 \
