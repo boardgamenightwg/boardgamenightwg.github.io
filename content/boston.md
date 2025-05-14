@@ -4,7 +4,7 @@ title = "🫘🌆 Boston"
 <!-- [![venue logo](/images/boston/faneuilhall.png)](https://boardgamenightwg.com/boston) -->
 
 ## Where
-[![venue logo](/images/logos/MassRobotics_logo.jpg)](https://massrobotics.org/)   
+[![venue logo](/images/logos/MassRobotics_logo.jpg)](https://massrobotics.org/)
 **MassRobotics** \
 **12 Channel St** \
 **Boston, MA 02210** \
