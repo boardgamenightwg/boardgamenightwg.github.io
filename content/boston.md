@@ -28,6 +28,7 @@ May 30th 2025 @ 6:30 pm
 <!-- TBD -->
 
 ## RSVP
+Currently, the organization has to limit the attendance to 30 participants so be sure to RSVP!
 <a href="https://forms.gle/BQB9adVw3n9gyEss5">RSVP Google Form</a>
 
 ## Access
