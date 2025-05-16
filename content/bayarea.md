@@ -6,11 +6,11 @@ title = "🌅🌉 Bay Area"
 
 ## Where
 <a href="https://www.circuitlaunch.com/">![venue logo](/images/logos/Circuit-Launch-Logo.png)</a> \
-Circuit Launch \
+Silicon Valley Robotics \
 599 Fairchild Dr \
 Mountain View, CA 94043 \
 
-The event will occur simultaniously with <a href="https://lu.ma/svrobo"> Circuit Launch "Bots & Beer" Event </a>
+The event will occur simultaniously with the <a href="https://lu.ma/svrobo"> Silicon Valley Robotics "Bots & Beer" Event.</a>
 
 ## When
 June 4 2025 @ 6:00 pm
