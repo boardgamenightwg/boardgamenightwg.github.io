@@ -10,7 +10,7 @@ Silicon Valley Robotics \
 599 Fairchild Dr \
 Mountain View, CA 94043 \
 
-The event will occur simultaniously with the <a href="https://lu.ma/svrobo"> Silicon Valley Robotics "Bots & Beer" Event.</a>
+The event will occur simultaneously with the <a href="https://lu.ma/svrobo"> Silicon Valley Robotics "Bots & Beer" Event.</a>
 
 ## When
 June 4 2025 @ 6:00 pm
