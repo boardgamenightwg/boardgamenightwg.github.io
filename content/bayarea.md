@@ -5,7 +5,9 @@ title = "🌅🌉 Bay Area"
 
 
 ## Where
-<a href="https://www.polymathrobotics.com/">Polymath Robotics </a> \
+<a href="https://www.polymathrobotics.com/">![venue logo](/images/logos/Polymath-robotics.jpg)</a> \
+
+Polymath Robotics \
 375 Alabama St #360, \
 San Francisco, CA 94110 \
 

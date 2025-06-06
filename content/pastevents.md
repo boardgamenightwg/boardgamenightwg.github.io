@@ -1,6 +1,11 @@
 +++
 title = "📆📷 Past Events"
 +++
+# 06/04/2025 - Bay Area
+Silicon Valley Robotics \
+599 Fairchild Dr \
+Mountain View, CA 94043 \
+
 # 12/13/2024 - Bay Area
 Intrinsic AI \
 Google Building RLS2 \
