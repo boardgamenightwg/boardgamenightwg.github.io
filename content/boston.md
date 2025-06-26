@@ -7,7 +7,7 @@ title = "🫘🌆 Boston"
 [![venue logo](/images/logos/analog-devices-logo.jpg)](https://www.analog.com/)
 **Analog Devices** \
 **125 Summer St** \
-**Boston, MA 02110**   
+**Boston, MA 02110**
 
 Analog Devices is welcoming its fellow Bostonian's to a night of fun and games!
 <!-- **Please be sure to RSVP by noon on 11/13/2024 as a list of names is required to be given ahead of the event.** -->
@@ -25,7 +25,7 @@ July 15th 2025 @ 7:00 pm - 9:00 pm
 
 ## RSVP
 Currently, the organization has to limit the attendance to 48 participants so be sure to RSVP! \
-The names of each attendee must be given by the day before so badges can be made.  
+The names of each attendee must be given by the day before so badges can be made.
 <a href="https://forms.gle/vEz3Grc6fucuLPbz9">RSVP Google Form</a>
 
 ## Access
