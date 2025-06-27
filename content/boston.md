@@ -5,8 +5,8 @@ title = "🫘🌆 Boston"
 
 ## Where
 [![venue logo](/images/logos/analog-devices-logo.jpg)](https://www.analog.com/)
-**Analog Devices** \
-**125 Summer St** \
+**Analog Garage @ Analog Devices** \
+**125 Summer St, 21st floor** \
 **Boston, MA 02110**
 
 Analog Devices is welcoming its fellow Bostonian's to a night of fun and games!
