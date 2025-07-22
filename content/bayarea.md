@@ -3,7 +3,6 @@ title = "🌅🌉 Bay Area"
 +++
 <!--If the venue for the month does not have a serviceable logo to use here consider omitting or using /images/bayarea/trolleyproblem.png as a place holder-->
 
-
 ## Where
 <a href="https://www.bearrobotics.ai/">![venue logo](/images/logos/Bear_Robotics.png)</a> \
 Bear Robotics \
