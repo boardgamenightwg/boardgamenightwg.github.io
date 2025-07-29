@@ -40,6 +40,7 @@ Please RSVP here \
 The name of each attendee must be given ahead of time so they can be added to the guest list.
 
 ## Access
+The RAI Institute is located in the Akamai building. The entrance is on the side facing construction.
 If you arrive after 6:30 pm, send a text to \
 
 (617) 744-9296 \
