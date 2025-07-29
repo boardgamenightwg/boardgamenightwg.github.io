@@ -518,6 +518,20 @@ body[data-theme="dark"] .proj .links a:hover {
     color: #a6d3ea;
 }
 
+/* Make the light/dark logos fill their container’s width */
+.logo-light,
+.logo-dark {
+  display: block;   /* so width:100% really takes the whole line */
+  width: 100%;      /* stretch to 100% of the parent element */
+  height: auto;     /* preserve aspect ratio */
+}
+/* Default: show the light logo, hide the dark one */
+.logo-dark { display: none; }
+
+/* When dark mode is enabled, swap them */
+body[data-theme="dark"] .logo-light { display: none; }
+body[data-theme="dark"] .logo-dark  { display: inline; }
+
 @media screen and (max-width: 768px) {
     body {
         font-size: 17px;
