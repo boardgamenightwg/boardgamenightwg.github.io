@@ -25,7 +25,7 @@ title = "🫘🌆 Boston"
 **Cambridge, MA 02142**
 
 The hosts will be collecting people from the lobby and bringing them to where games will be hosted. \
-The AI Institute will provide pizza, snacks, and non alcoholic beverages. \
+The Robotics and AI Institute will provide pizza, snacks, and non alcoholic beverages. \
 The event is alcohol free. \
 Pizza and games will be provided but feel free to bring your own to share! \
 Photographs will not be allowed to be taken. \
