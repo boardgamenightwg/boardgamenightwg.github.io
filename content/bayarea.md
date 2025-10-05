@@ -2,7 +2,7 @@
 title = "🌅🌉 Bay Area"
 +++
 <!--If the venue for the month does not have a serviceable logo to use here consider omitting or using /images/bayarea/trolleyproblem.png as a place holder-->
-<a href="https://www.polymathrobotics.com/">![venue logo](images/logos/polymath-robotics-black-horizontal.png)</a>
+<a href="https://www.polymathrobotics.com/">![venue logo](/images/logos/polymath-robotics-black-horizontal.png)</a>
 
 ## Where
 
