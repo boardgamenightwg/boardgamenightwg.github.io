@@ -25,7 +25,7 @@ title = "🌅🌉 Bay Area"
   src="/images/logos/intrinsic_logo.jpeg"
   alt="Intrinsic Logo"
   >
-</a> 
+</a>
 
 <a href="https://www.intrinsic.ai/">Intrinsic</a> <br>
 250 Mayfield Ave <br>
