@@ -20,37 +20,20 @@ title = "🌅🌉 Bay Area"
   <!--   class="logo-dark" -->
   <!-- > -->
 <!-- </a> -->
-<a href="https://www.intrinsic.ai/">
-  <img
-  src="/images/logos/intrinsic_logo.jpeg"
-  alt="Intrinsic Logo"
-  >
-</a>
 
-<a href="https://www.intrinsic.ai/">Intrinsic</a> <br>
-250 Mayfield Ave <br>
-Mountain View, CA 94043, USA <br>
-
-## Venue Info
-
-INTRINSIC ROBOTICS AND FRIENDS GAME NIGHT!
-
-We'll be in the Space Invaders conference room. Bring a game, a drink, and a snack. Invite your friends (within reason). Please make sure all friends you invite RSVP individually.
+[Dusty Robotics](https://www.dustyrobotics.com/)\
+909 San Rafael Ave, Mountain View, CA 94043
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.280852236776!2d-122.07225179999999!3d37.40683609999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb745802de859%3A0xb04d0af9b12ce783!2s909%20San%20Rafael%20Ave%2C%20Mountain%20View%2C%20CA%2094043!5e0!3m2!1sen!2sus!4v1698624941475!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 ## When
 
-January 14 2026 @ 5:30 pm - 9:30 pm
+February 26 2026 @ 5:30 pm
+
+## Venue Info
+Join us! We'll have some Costco Pizza, soft drinks and board games on hand. \
+Bring more of your favorite games!
+
 
 ## RSVP
 
-<a href="https://luma.com/8zhaby75">
-  <img
-  src="/images/logos/intrinsic_game_night.png"
-  alt="Intrinsic Game Night Art"
-  >
-</a> <br>
-<a href="https://luma.com/8zhaby75">RSVP Luma Form</a>
-
-## Access
-
-See Luma RSVP link
+[Google Form this time](https://forms.gle/K8gKHkvni5FWfY5y7)
