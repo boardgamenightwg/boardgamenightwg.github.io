@@ -39,8 +39,7 @@ Pizza will be provided. No hard alcohol will be provided or allowed at the event
 
 ## RSVP
 
-**Please RSVP by February 24th.** Due to building security requirements, we'll need to submit our guest list in advance — unfortunately, we won't be able to accommodate walk-ins or late RSVPs. \
-<a href="https://forms.gle/JDjSFUYSGbYvp4Ej8">RSVP Google Form</a>
+**Registration is now closed.** Due to building security requirements, the guest list has been submitted and we are unable to accommodate walk-ins or late RSVPs.
 
 ## Access
 
