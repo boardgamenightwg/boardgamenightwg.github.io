@@ -4,48 +4,43 @@ title = "🫘🌆 Boston"
 <!-- [![venue logo](/images/boston/faneuilhall.png)](https://boardgamenightwg.com/boston) -->
 
 ## Where
-
-<a href="https://www.codemetal.ai/">
-  <!-- light mode -->
+<!-- TBD -->
+<a href="https://rai-inst.com/">
+  <!-- light version -->
   <img
-    src="/images/logos/codemetal-logo-light.svg"
-    alt="Code Metal Logo"
+    src="/images/logos/rai-logo-light.svg"
+    alt="Robotics and AI Institute Logo"
     class="logo-light"
   >
-  <!-- dark mode -->
+  <!-- dark version -->
   <img
-    src="/images/logos/codemetal-logo-dark.svg"
-    alt="Code Metal Logo"
+    src="/images/logos/rai-logo-dark.svg"
+    alt="Robotics and AI Institute Logo"
     class="logo-dark"
   >
 </a>
 
-<a href="https://www.codemetal.ai/">Code Metal</a> \
-**One Boston Place, Suite 1700** \
-**201 Washington St, Floor 17** \
-**Boston, MA 02108**
+**Robotics and AI Institute** \
+**145 Broadway** \
+**Cambridge, MA 02142**
+
+The hosts will be collecting people from the lobby and bringing them to where games will be hosted. \
+The AI Institute will provide pizza, snacks, and non alcoholic beverages. \
+The event is alcohol free. \
+Pizza and games will be provided but feel free to bring your own to share! \
+Photographs will not be allowed to be taken. \
 
 ## When
-
-February 26, 2026 @ 6:30 pm - 9:30 pm
-
-**Please arrive by 7:00 pm** — after 7 pm the elevators require a tenant key card, so latecomers would need an escort.
-
-**Please wrap up by 9:30 pm** — doors must be locked by 10 pm.
-
-## Food & Drink
-
-Pizza will be provided. No hard alcohol will be provided or allowed at the event.
+March 26, 2026 @ 6:30 pm
 
 ## RSVP
-
-**Registration is now closed.** Due to building security requirements, the guest list has been submitted and we are unable to accommodate walk-ins or late RSVPs.
+<a href="https://forms.gle/cUZbYJTcFeKSYcgU9">Please RSVP here</a> \
+Names and emails for all attendees are required. You will be emailed a form to fill out before the event and will receive a QR code to scan at the front desk when you arrive.
+{% admonition(kind="note") %}
+Each attendee should RSVP separately.
+{% end %}
 
 ## Access
+The RAI Institute is located in the Akamai building. The entrance is on the side facing construction.
 
-1. Check in at the front desk of One Boston Place. You'll need **government-issued ID**.
-2. Use the QR code on the sticker you receive from the front desk to go through the gates into the elevator hall for Floor 17.
-3. Take the elevators to Floor 17.
-4. Ring the bell to Suite 1700.
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.248361361285!2d-71.06086022340303!3d42.358546035196255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e370845c044afd%3A0x2cd7f04f33e7d724!2sOne%20Boston%20Place%2C%20201%20Washington%20St%20Floor%2017%2C%20Boston%2C%20MA%2002108!5e0!3m2!1sen!2sus!4v1770057520765!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2947.9491618245934!2d-71.088803!3d42.3649227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e371004f084101%3A0x865f42b145478533!2sRAI%20Institute!5e0!3m2!1sen!2sus!4v1753812098522!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
