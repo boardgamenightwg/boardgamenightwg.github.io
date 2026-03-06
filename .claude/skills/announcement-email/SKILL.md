@@ -1,3 +1,9 @@
+---
+name: announcement-email
+description: Generate an announcement email for an upcoming board game night event
+user-invocable: true
+---
+
 # Announcement Email Skill
 
 Generate an announcement email for an upcoming board game night event. Read the relevant chapter page (e.g. `content/boston.md`, `content/bayarea.md`) to extract event details, then fill in the template below.
