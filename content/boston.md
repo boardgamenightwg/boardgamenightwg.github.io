@@ -23,8 +23,8 @@ title = "🫘🌆 Boston"
 **480 Pleasant St** \
 **Watertown, MA**
 
-<!-- TBD: Food/drink info -->
-<!-- TBD: Access/entry instructions -->
+TBD: Food/drink info \
+TBD: Access/entry instructions \
 Photographs are welcome! \
 Games will be provided but feel free to bring your own to share!
 
