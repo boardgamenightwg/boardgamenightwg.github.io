@@ -63,6 +63,14 @@ Thanks to @t.capp and Brian Okorn for hosting the August meeting of the Board Ga
 Really cool to visit Analog Garage @analogdevices and meet some really cool people! They also have a really nice rooftop patio #coolbreeze #viewfromthetop 🌫🌆🫘🦾
 ```
 
+```
+Kicked off 2026 with an awesome Boston board game night at Code Metal! Big shoutout to Samson Melamed and Anna Stenberg for hosting and keeping everyone fueled with an absurd amount of pizza 🍕 So good to see familiar faces again and the turnout was 👀🔥 See everyone next month! 🫘🌆🦾
+
+#robotics #robotic #boston
+
+https://www.codemetal.ai/
+```
+
 ## Notes
 
 - Every caption should feel unique. Don't follow a rigid template — vary sentence structure, what gets emphasized, and length.
