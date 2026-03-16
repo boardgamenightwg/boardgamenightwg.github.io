@@ -2,8 +2,6 @@
 title = "🌅🌉 Bay Area"
 +++
 
-## Where
-
 <!--If the venue for the month does not have a logo to use, consider omitting or using /images/bayarea/trolleyproblem.png as a placeholder -->
 <a href="https://www.polymathrobotics.com/">
   <!-- light mode -->
@@ -20,10 +18,6 @@ title = "🌅🌉 Bay Area"
   >
 </a>
 
-**Polymath Robotics** \
-**375 Alabama St #360** \
-**San Francisco, CA 94110**
-
 Polymath Robotics invites fellow San Francisco & Bay Area robot makers to an evening of board games and camaraderie!
 
 There will be pizza, beverages, and games provided - but feel free to bring anything you'd like to share.
@@ -32,11 +26,17 @@ There will be pizza, beverages, and games provided - but feel free to bring anyt
 
 April 16 2026 @ 6:00 pm
 
+## Where
+
+**Polymath Robotics** \
+**375 Alabama St #360** \
+**San Francisco, CA 94110**
+
 ## RSVP
 
-<a href="https://forms.gle/dP6K2Chz9yzNBWuv6">RSVP Google Form</a>
+If you are planning to attend, please <a href="https://luma.com/5ovtdgmq">RSVP on Luma</a> so we know who to expect.
 
-## Access
+## Getting there
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3220.160131684692!2d-122.41442012330224!3d37.76457157198788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7f0004c266b5%3A0x1baca18a0dde4c8d!2sPolymath%20Robotics!5e0!3m2!1sen!2sus!4v1749158654009!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
@@ -45,10 +45,10 @@ April 16 2026 @ 6:00 pm
 <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1626.326795221446!2d-122.4128840713708!3d37.764526998242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzfCsDQ1JzUyLjMiTiAxMjLCsDI0JzQ0LjEiVw!5e1!3m2!1sen!2sus!4v1751263635982!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 **Entrance**:
-- Call number 002 on the keypad and somebody will buzz you in
-- Take the stairs or go around the right side to the elevator, up to floor 3
+- Front Door: Call number 002 on the keypad and somebody will buzz you in
+- Floor 3: Take the stairs or go around the right side to the elevator
 - Go straight down the hallway and the Polymath offices will be on the left hand side
-- If stuck, message/call Emerson Knapp via the phone number in the email thread (or OSRF Zulip!)
+- If stuck, message/call Emerson Knapp via the Luma host contact feature
 
 ### Parking and Transit
 
