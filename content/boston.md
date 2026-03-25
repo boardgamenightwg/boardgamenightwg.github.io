@@ -34,11 +34,8 @@ Photographs will not be allowed to be taken. \
 March 26, 2026 @ 6:30 pm
 
 ## RSVP
-<a href="https://forms.gle/cUZbYJTcFeKSYcgU9">Please RSVP here</a> \
-Names and emails for all attendees are required. You will be emailed a form to fill out before the event and will receive a QR code to scan at the front desk when you arrive.
-{% admonition(kind="note") %}
-Each attendee should RSVP separately.
-{% end %}
+Registration for this event is now closed. Thanks to everyone who signed up — see you tomorrow! \
+If you registered, you should receive an email to sign the visitors form. After that, you'll get a QR code to scan on arrival.
 
 ## Access
 The RAI Institute is located in the Akamai building. The entrance is on the side facing construction.
