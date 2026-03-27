@@ -17,7 +17,7 @@ Hey everyone,
 
 Just a reminder that the <chapter> Chapter Board Game Night Working Group for <month> will be hosted by <host> on <date> @ <time>.
 
-<flavor text — a sentence or two of color about the host, venue, or what to expect>
+<flavor text - a sentence or two of color about the host, venue, or what to expect>
 
 Please remember to RSVP at https://boardgamenightwg.com/<chapter slug>
 
@@ -46,4 +46,5 @@ Web Site - https://boardgamenightwg.com/
 - The chapter page URL follows the pattern: `https://boardgamenightwg.com/<chapter slug>/`
 - Always check the chapter markdown file for the latest event details before generating
 - If coordinator name is not known, leave a placeholder and ask
-- This is a reminder email, not an announcement — assume recipients already know about the event and just need the nudge with key details
+- This is a reminder email, not an announcement - assume recipients already know about the event and just need the nudge with key details
+- Don't use dashes (emdashes, endashes, or hyphens) as punctuation in generated emails. People don't write that way. Use commas, periods, or just rephrase.
