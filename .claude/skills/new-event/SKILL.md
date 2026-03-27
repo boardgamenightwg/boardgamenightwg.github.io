@@ -23,7 +23,7 @@ Ask together:
 
 Ask together:
 
-- **Event date and time?** Let the user type it (e.g. "April 23, 2026 @ 6:30 pm" or just "April"). Options: "I have a date" (type in notes), "TBD"
+- **Event date, start time, and end time?** Let the user type it (e.g. "April 23, 2026 @ 6:30 pm - 9:00 pm" or just "April"). Options: "I have details" (type in notes), "TBD"
 - **RSVP link?** Let the user paste the URL in notes. Options: "I have a link" (type in notes), "No link yet"
 
 ### Menu 3: Event Details & Logo
@@ -41,7 +41,7 @@ If the user says logo is already in the repo, search `static/images/logos/` for 
 2. Update the chapter page with the new event details, matching the style and structure of the existing content. Key patterns:
    - The `## Where` section has the venue name (linked to their website if available), address in bold, and optionally a Google Maps iframe embed.
    - If a venue logo is provided, include it with both light/dark mode variants using the `logo-light`/`logo-dark` CSS classes, wrapped in a link to the venue website.
-   - The `## When` section has the date and time.
+   - The `## When` section has the date, start time, and end time (e.g. `April 23, 2026 @ 6:30 pm - 9:00 pm`).
    - The `## RSVP` section has the RSVP link.
    - Additional sections (like `## Venue Info`, `## Access`) vary by chapter and event.
 3. For any details not provided, use **visible** `TBD` placeholders on the page (not HTML comments). The page is often shared with the host for review, so TBD items serve as a checklist for them. Example:
