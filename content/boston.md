@@ -41,8 +41,6 @@ NDA signature is required. A kiosk will be available at the location to fill it 
 Go down the ramp to the parking lot behind the building and enter near the roundabout in the corner of the parking lot (hidden from the street). \
 Putting the address in Google Maps will get you to the right building but you'll be confused about where to go. Use the map pin below for the entrance.
 
-If you have trouble getting in, call Emily at (914) 426-6511.
-
 **Entrance:**
 <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2947.9052735356013!2d-71.206336!3d42.365857999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDIxJzU3LjEiTiA3McKwMTInMjIuOCJX!5e0!3m2!1sen!2sus!4v1774965613210!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
