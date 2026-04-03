@@ -48,17 +48,18 @@ Thanks for volunteering to host Board Game Night! To get your event page set up 
 9. Is there a maximum number of attendees?
 10. Do you need a guest list or attendee names in advance? (Some venues require this for building security.)
 11. Are there any visitor policies, security forms, or NDAs that attendees need to complete beforehand?
+12. Is there a deadline for guest registration? (e.g. names must be submitted X days before the event.)
 
 **Getting There**
-12. How do attendees enter the building? (Buzzer codes, lobby pickup, specific entrances, etc.)
-13. Are there any quirks with directions? (e.g. Google Maps sends you to the wrong side, use a specific door, etc.)
-14. Any parking recommendations or public transit tips?
-15. Who should attendees contact on the day of the event if they have trouble getting in? (Name and phone number or other contact method.)
+13. How do attendees enter the building? (Buzzer codes, lobby pickup, specific entrances, etc.)
+14. Are there any quirks with directions? (e.g. Google Maps sends you to the wrong side, use a specific door, etc.)
+15. Any parking recommendations or public transit tips?
+16. Who should attendees contact on the day of the event if they have trouble getting in? (Name and phone number or other contact method.)
 
 **Other**
-16. What is your photography/social media policy? (Can attendees take photos? Post on social media?)
-17. Do you have a company logo you can share for the event page? (Ideally both a light and dark background version, PNG or SVG.)
-18. Anything else attendees should know?
+17. What is your photography/social media policy? (Can attendees take photos? Post on social media?)
+18. Do you have a company logo you can share for the event page? (Ideally both a light and dark background version, PNG or SVG.)
+19. Anything else attendees should know?
 
 If it's easier, feel free to just reply inline with your answers. No need to be formal!
 
