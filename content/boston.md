@@ -24,7 +24,7 @@ Photographs are welcome!
 May 21, 2026 @ 7:00 pm - 9:00 pm
 
 ## RSVP
-<a href="https://forms.gle/aE4pVCXK6s2io5RQA">RSVP Google Form</a>
+Please RSVP at the <a href="https://luma.com/q7fpx3ol">Luma here</a>
 
 ## Access
 If you arrive after 7:00 pm, send a text to \
