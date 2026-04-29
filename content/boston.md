@@ -10,10 +10,11 @@ title = "🫘🌆 Boston"
 **125 Summer St** \
 **Boston, MA 02110**
 
-Analog Devices is welcoming its fellow Bostonian's to a night of fun and games!
+Analog Devices is welcoming its fellow Bostonians to a night of fun and games!
 Currently, the organization has to limit the attendance to 48 participants so be sure to RSVP! \
 The names of each attendee must be given by the day before so badges can be made. \
-Pizza and games will be provided but feel free to bring your own to share!
+Pizza and games will be provided but feel free to bring your own to share! \
+Photographs are welcome!
 
 ## When
 May 21, 2026 @ 7:00 pm - 9:00 pm
