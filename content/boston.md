@@ -26,6 +26,8 @@ May 21, 2026 @ 7:00 pm - 9:00 pm
 ## RSVP
 Please RSVP at the <a href="https://luma.com/q7fpx3ol">Luma here</a>
 
+<iframe src="https://lu.ma/embed-checkout/q7fpx3ol" width="100%" height="450" frameborder="0" style="border: 1px solid #bfcbda88; border-radius: 4px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
 ## Access
 If you arrive after 7:00 pm, send a text to \
 
