@@ -10,11 +10,14 @@ title = "🫘🌆 Boston"
 **125 Summer St** \
 **Boston, MA 02110**
 
-The Analog Garage is Analog Devices' innovation hub, where teams prototype emerging tech at the edge of sensing, signal processing, and AI. \
-Analog Devices is welcoming its fellow Bostonians to a night of fun and games!
-Currently, the organization has to limit the attendance to 48 participants so be sure to RSVP! \
-The names of each attendee must be given by the day before so badges can be made. \
-Pizza and games will be provided but feel free to bring your own to share! \
+Analog Garage @ Analog Devices is welcoming its fellow Bostonians to a night of fun and games! The Analog Garage is Analog Devices' innovation hub, where teams prototype emerging tech at the edge of sensing, signal processing, and AI.
+
+Currently, the organization has to limit the attendance to 48 participants so be sure to RSVP!
+
+The names of each attendee must be given by the day before so badges can be made.
+
+Pizza and games will be provided but feel free to bring your own to share!
+
 Photographs are welcome!
 
 ## When
