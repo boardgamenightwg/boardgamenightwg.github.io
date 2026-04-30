@@ -32,9 +32,8 @@ Games will be provided but feel free to bring your own to share!
 April 30, 2026 @ 6:00 pm - 8:30 pm
 
 ## RSVP
-Please RSVP at the <a href="https://luma.com/7ahfm9ii">Luma here</a>
+**Registration is now closed. We've reached capacity for this event. Thank you to everyone who registered!**
 
-Names, emails, and companies of all attendees are required for registration. Registration closes at noon on April 30. \
 NDA signature is required. A kiosk will be available at the location to fill it out.
 
 ## Access
