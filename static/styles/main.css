@@ -607,3 +607,52 @@ body[data-theme="dark"] .logo-dark  { display: inline; }
         margin-left: 0.4rem;
     }
 }
+
+.badge {
+    display: inline-block;
+    padding: 0.15em 0.65em;
+    border-radius: 999px;
+    font-size: 0.75em;
+    font-weight: 600;
+    margin-left: 0.4em;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    line-height: 1.5;
+}
+
+.badge-robotics {
+    background-color: #DCEEFB;
+    color: #0967D2;
+    border-color: #BCD9F1;
+}
+
+.badge-boardgames {
+    background-color: #FFE4C7;
+    color: #D35400;
+    border-color: #FFCBA4;
+}
+
+.badge-tech {
+    background-color: #E9D8FD;
+    color: #6B46C1;
+    border-color: #D6BCFA;
+}
+
+body[data-theme="dark"] .badge-robotics {
+    background-color: #1A365D;
+    color: #BEE3F8;
+    border-color: #2C5282;
+}
+
+body[data-theme="dark"] .badge-boardgames {
+    background-color: #5C2E0A;
+    color: #FED7AA;
+    border-color: #7B3F0B;
+}
+
+body[data-theme="dark"] .badge-tech {
+    background-color: #322659;
+    color: #D6BCFA;
+    border-color: #4C3585;
+}
