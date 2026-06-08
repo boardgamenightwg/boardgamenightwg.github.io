@@ -23,16 +23,18 @@ title = "🫘🌆 Boston"
 **465 Medford Street, Suite 102** \
 **Charlestown, MA 02129**
 
-Pickle Robot Company will provide pizza, snacks, and non/alcoholic beverages. \
-Games will be provided but feel free to bring your own to share! \
+Pickle Robot Company will provide pizza, snacks, and both non-alcoholic and alcoholic beverages. \
+Games will be provided but feel free to bring your own to share!
 
-TBD: Confirm food/drink and any other event details with host
+Photographs are welcome — and encouraged!
 
 ## When
 June 23, 2026 @ 6:00 pm - 8:45 pm
 
 ## RSVP
-TBD: RSVP link pending host confirmation
+Please RSVP by 9:00 am on June 23, 2026 so the host can finalize the pizza and beverage order.
+
+TBD: RSVP link pending
 
 ## Access
 Pickle Robot Company's office is located at 465 Medford Street in Charlestown. Upon arrival, enter the lobby and turn right. Pickle’s office is just down the hallway on the first floor, on the right-hand side.
