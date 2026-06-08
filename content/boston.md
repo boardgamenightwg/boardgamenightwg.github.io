@@ -7,13 +7,13 @@ title = "🫘🌆 Boston"
 <a href="https://picklerobot.com/">
   <!-- light version -->
   <img
-    src="/images/logos/Pickle_Logo_Black.png"
+    src="/images/logos/Pickle_Logo_OffBlack.svg"
     alt="Pickle Robot Company Logo"
     class="logo-light"
   >
   <!-- dark version -->
   <img
-    src="/images/logos/Pickle_Logo_White.png"
+    src="/images/logos/Pickle_Logo_PickleGreen.svg"
     alt="Pickle Robot Company Logo"
     class="logo-dark"
   >
