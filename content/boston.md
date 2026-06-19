@@ -32,9 +32,12 @@ Photographs are welcome — and encouraged!
 June 23, 2026 @ 6:00 pm - 8:45 pm
 
 ## RSVP
-Please RSVP by 9:00 am on June 23, 2026 so the host can finalize the pizza and beverage order.
 
-Please RSVP at the <a href="https://luma.com/1etgvzvp">Luma here</a>
+[#rsvp](#rsvp)
+
+**Registration is now closed — we've reached capacity.**
+
+Thank you to everyone who RSVP'd! We're at full capacity for this event and are no longer accepting new registrations.
 
 <iframe src="https://lu.ma/embed-checkout/1etgvzvp" width="100%" height="450" frameborder="0" style="border: 1px solid #bfcbda88; border-radius: 4px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
