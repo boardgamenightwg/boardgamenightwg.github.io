@@ -33,8 +33,6 @@ June 23, 2026 @ 6:00 pm - 8:45 pm
 
 ## RSVP
 
-[#rsvp](#rsvp)
-
 **Registration is now closed — we've reached capacity.**
 
 Thank you to everyone who RSVP'd! We're at full capacity for this event and are no longer accepting new registrations.
