@@ -1,7 +1,7 @@
 +++
 title = "🫘🌆 Boston"
 +++
-<!-- [![venue logo](/images/boston/faneuilhall.png)](https://boardgamenightwg.com/boston) -->
+[![venue logo](/images/boston/faneuilhall.png)](https://boardgamenightwg.com/boston)
 
 ## Where
 TBD
