@@ -37,6 +37,8 @@ TBD: RSVP link (Luma) \
 TBD: RSVP deadline \
 
 ## Access
+Andover is a bit of a drive for many of us, so consider teaming up and arranging a carpool with other attendees. Coordinate on the RSVP page or the <a href="https://groups.google.com/g/boardgamenightwg">Google Group</a>.
+
 TBD: Suite / floor / building entry instructions \
 TBD: Directions quirks and parking recommendations \
 TBD: Guest list / security form / NDA requirements and submission deadline \
