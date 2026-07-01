@@ -33,7 +33,7 @@ TBD: Alcohol policy \
 July 22, 2026 @ 6:00 pm - 8:45 pm
 
 ## RSVP
-<
+<a
   href="https://luma.com/event/evt-0BXLk5tNr9INnT0"
   class="luma-checkout--button"
   data-luma-action="checkout"
