@@ -33,7 +33,19 @@ TBD: Alcohol policy \
 July 22, 2026 @ 6:00 pm - 8:45 pm
 
 ## RSVP
-TBD: RSVP link (Luma) \
+Please RSVP at the <a href="https://luma.com/event/evt-0BXLk5tNr9INnT0">Luma here</a>
+
+<a
+  href="https://luma.com/event/evt-0BXLk5tNr9INnT0"
+  class="luma-checkout--button"
+  data-luma-action="checkout"
+  data-luma-event-id="evt-0BXLk5tNr9INnT0"
+>
+  Register for Event
+</a>
+
+<script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
+
 TBD: RSVP deadline \
 
 ## Access
