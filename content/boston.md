@@ -5,17 +5,19 @@ title = "🫘🌆 Boston"
 
 ## Where
 <a href="https://www.reframe.systems/">
-  <!-- light version -->
+  <!-- light mode: dark-ink logo on light background -->
   <img
-    src="/images/logos/reframe-systems.png"
+    src="/images/logos/reframe-systems-vertical-light.png"
     alt="Reframe Systems Logo"
     class="logo-light"
+    style="max-width: 300px; margin: 0 auto;"
   >
-  <!-- dark version (TBD: swap in Reframe Logo Vertical Dark.png from host) -->
+  <!-- dark mode: white-ink logo on dark background -->
   <img
-    src="/images/logos/reframe-systems.png"
+    src="/images/logos/reframe-systems-vertical-dark.png"
     alt="Reframe Systems Logo"
     class="logo-dark"
+    style="max-width: 300px; margin: 0 auto;"
   >
 </a>
 
