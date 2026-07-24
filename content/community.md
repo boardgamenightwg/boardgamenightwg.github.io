@@ -6,7 +6,13 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
-_No community events posted yet — be the first to submit yours below!_
+### Revolute: Boston Physical AI Hackathon <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** August 1–2, 2026 \
+**Where:** 325 Main St, Kendall Square, Cambridge, MA \
+**Host:** Nancy Ouyang · Fab Foundation \
+A two-day robotics + physical AI hackathon — each team gets a real robot arm to program, with $15k of robot hardware on hand. Space is limited to about 30 in-person participants, so apply early; mentors and co-organizers with a robotics background are also welcome.
+
+[More info / Apply →](https://revolutehack.com)
 
 <!-- Example entry — copy and adapt when adding an approved submission:
 
