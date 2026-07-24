@@ -31,7 +31,16 @@ September 9, 2026 @ 6:00 pm - 9:00 pm
 ## RSVP
 There is no RSVP deadline, and walk-ins are always welcome (students often drop by impromptu). The space holds about 50 people. Please RSVP anyway so the host knows roughly how many folding tables to set up.
 
-TBD: RSVP link (Luma) \
+<a
+  href="https://luma.com/event/evt-B7YEQyHSmFj5COk"
+  class="luma-checkout--button"
+  data-luma-action="checkout"
+  data-luma-event-id="evt-B7YEQyHSmFj5COk"
+>
+  Register for Event
+</a>
+
+<script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
 
 ## Access
 Please do not drive. Take the Green Line to **BU Central**, which is literally at RASTIC's front door.
