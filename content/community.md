@@ -32,9 +32,4 @@ _No community events posted yet — be the first to submit yours below!_
 
 ## Submit Your Event {#submit-your-event}
 
-Want to post an event here? Fill out the form below — we review each submission and post approved events on this page. Please submit at least two weeks in advance when possible.
-
-<!-- TODO: replace this placeholder with the Tally form embed snippet once the form is created. See https://tally.so/help/embed-forms for embed instructions. -->
-<div style="padding: 2rem; border: 2px dashed #bfcbda88; border-radius: 8px; text-align: center;">
-  <p><em>Submission form coming soon — check back shortly!</em></p>
-</div>
+Want to post an event here? For now, email us at [contact@boardgamenightwg.com](mailto:contact@boardgamenightwg.com) with the details — title, date and time, venue and address, host, a short description, and a link. We review each submission and post approved events on this page. Please reach out at least two weeks in advance when possible.

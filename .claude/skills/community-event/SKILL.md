@@ -61,6 +61,6 @@ _No community events posted yet — be the first to submit yours below!_
 
 ## Notes
 
-- Only post approved submissions. Submissions come in via the Tally form embedded on the page; review them before adding here.
+- Only post approved submissions. For now, submissions come in by email to contact@boardgamenightwg.com (or directly to the coordinator); review them before adding here.
 - Keep descriptions short — 1–2 sentences max. Link out for full details.
 - If a submitted event clearly doesn't fit the audience (robotics / board games / adjacent tech) or the chapters (Boston / Bay Area), decline it rather than posting.
