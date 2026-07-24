@@ -36,6 +36,10 @@ name = "Past Events"
 url = "@/pastevents.md"
 
 [[extra.main_menu]]
+name = "Community Events"
+url = "@/community.md"
+
+[[extra.main_menu]]
 name = "FAQ"
 url = "@/faq.md"
 
