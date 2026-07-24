@@ -51,6 +51,17 @@ Each entry is a `###` heading with a category badge, followed by When / Where / 
 4. Keep a blank line between entries.
 5. Do not touch the example `<!-- ... -->` comment block — leave it as a reference for future entries.
 
+## Also Add to the Luma Calendar
+
+Every approved community event also goes on the **Board Game Night WG** Luma calendar, so it appears in the calendar embed on the home page.
+
+1. Go to the calendar admin: https://luma.com/calendar/manage/cal-v6H3Jm84BrwuOYb
+2. On the **Events** tab, click the **+** next to "Events".
+3. If the event has its own Luma page, choose **Add Existing Luma Event** and paste its Luma URL (preferred — pulls in the event's own image and details). Otherwise choose **Add External Event** and fill in the URL, name, location, host, and times.
+4. Confirm the event shows up under Upcoming with the right date.
+
+When an event is removed from the page (see Cleanup), it does not need to be removed from the Luma calendar — past events age out of the embed on their own.
+
 ## Cleanup
 
 When an event's date has passed, remove its entry from the page. If a chapter section has no upcoming events left, restore the empty-state line:
