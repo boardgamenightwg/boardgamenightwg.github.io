@@ -14,6 +14,14 @@ A two-day robotics + physical AI hackathon — each team gets a real robot arm t
 
 [More info / Apply →](https://revolutehack.com)
 
+### Forward and Inverse Kinematics — Talk by Shivam Chopra, PhD <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** August 6, 2026 @ 7:00 PM \
+**Where:** Artisans Asylum, 96 Holton Street, Boston, MA 02135 \
+**Host:** Boston Robot Hackers \
+How robotic arms figure out where their end effector is from joint angles — and vice versa — covering rotation matrices, homogeneous transforms, the Denavit-Hartenberg convention, and geometric and numerical approaches to inverse kinematics.
+
+[More info / RSVP →](https://brh.eventbrite.com)
+
 <!-- Example entry — copy and adapt when adding an approved submission:
 
 ### Robotics Talk at MIT <span class="badge badge-robotics">🤖 Robotics</span>
