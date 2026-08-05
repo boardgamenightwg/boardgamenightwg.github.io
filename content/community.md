@@ -6,14 +6,6 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
-### Revolute: Boston Physical AI Hackathon <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** August 1–2, 2026 \
-**Where:** 325 Main St, Kendall Square, Cambridge, MA \
-**Host:** Nancy Ouyang · Fab Foundation \
-A two-day robotics + physical AI hackathon — each team gets a real robot arm to program, with $15k of robot hardware on hand. Space is limited to about 30 in-person participants, so apply early; mentors and co-organizers with a robotics background are also welcome.
-
-[More info / Apply →](https://revolutehack.com)
-
 ### Forward and Inverse Kinematics — Talk by Shivam Chopra, PhD <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** August 6, 2026 @ 7:00 PM \
 **Where:** Artisans Asylum, 96 Holton Street, Boston, MA 02135 \
@@ -21,6 +13,22 @@ A two-day robotics + physical AI hackathon — each team gets a real robot arm t
 How robotic arms figure out where their end effector is from joint angles — and vice versa — covering rotation matrices, homogeneous transforms, the Denavit-Hartenberg convention, and geometric and numerical approaches to inverse kinematics.
 
 [More info / RSVP →](https://brh.eventbrite.com)
+
+### RoboBoston: 9th Annual Robot Block Party <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** September 26, 2026 @ 10:45 AM – 4:00 PM \
+**Where:** Seaport, 88 Seaport Blvd, Boston, MA 02210 \
+**Host:** MassRobotics \
+A free, public robotics festival — demos, hands-on interactions, and a sidewalk robot parade from universities, startups, and student teams. All ages welcome, come and go as you please.
+
+[More info / RSVP →](https://luma.com/c2kl6qdb)
+
+### Minds in Motion @ MIT <span class="badge badge-tech">💻 Tech & Community</span>
+**When:** October 30, 2026 @ 8:00 AM \
+**Where:** MIT Samberg Conference Center, 50 Memorial Dr, Cambridge, MA 02142 \
+**Host:** Theo Ehrmann, John Werner & MassRobotics \
+A Tough Tech Week gathering of innovators and robotics enthusiasts at MIT. Registration requires host approval, so RSVP early.
+
+[More info / RSVP →](https://luma.com/9rdzhuwf)
 
 <!-- Example entry — copy and adapt when adding an approved submission:
 
