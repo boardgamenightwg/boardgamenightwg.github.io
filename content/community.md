@@ -6,14 +6,6 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
-### Forward and Inverse Kinematics — Talk by Shivam Chopra, PhD <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** August 6, 2026 @ 7:00 PM \
-**Where:** Artisans Asylum, 96 Holton Street, Boston, MA 02135 \
-**Host:** Boston Robot Hackers \
-How robotic arms figure out where their end effector is from joint angles — and vice versa — covering rotation matrices, homogeneous transforms, the Denavit-Hartenberg convention, and geometric and numerical approaches to inverse kinematics.
-
-[More info / RSVP →](https://brh.eventbrite.com)
-
 ### RoboBoston: 9th Annual Robot Block Party <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** September 26, 2026 @ 10:45 AM – 4:00 PM \
 **Where:** Seaport, 88 Seaport Blvd, Boston, MA 02210 \
