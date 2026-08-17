@@ -6,6 +6,14 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
+### Priors #00: Andreea Bobu on Human-Aligned Robot Learning <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** August 24, 2026 @ 6:00 PM – 7:00 PM \
+**Where:** MIT Campus, Room 5-134, Cambridge, MA \
+**Host:** Priors \
+Kickoff session of Priors, a new Boston robotics research group: Andreea Bobu (MIT CLEAR Lab) on how robots learn from sparse, noisy human feedback. 40-minute lecture, open Q&A, and networking, with light refreshments.
+
+[More info / RSVP →](https://luma.com/ya8w8a2e)
+
 ### RoboBoston: 9th Annual Robot Block Party <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** September 26, 2026 @ 10:45 AM – 4:00 PM \
 **Where:** Seaport, 88 Seaport Blvd, Boston, MA 02210 \
