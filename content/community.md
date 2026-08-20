@@ -14,6 +14,22 @@ Kickoff session of Priors, a new Boston robotics research group: Andreea Bobu (M
 
 [More info / RSVP →](https://luma.com/ya8w8a2e)
 
+### Boston Robot Hackers: Alan Kilian on Powering Robots <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** September 3, 2026 @ 7:00 PM – 9:00 PM \
+**Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
+**Host:** Boston Robot Hackers \
+Alan Kilian covers robot batteries, power measurement, circuitry, voltage regulation, and practical ways to improve efficiency and operating life.
+
+[More info / RSVP →](https://bostonrobothackers.com/news/19-june-meeting-announcement.html)
+
+### Boston Robot Hackers Hands-On Meeting <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** September 9, 2026 @ 6:00 PM – 8:00 PM \
+**Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
+**Host:** Boston Robot Hackers \
+An agenda-free evening of building and hacking together. Bring a robot or project for help and discussion; beginners are welcome.
+
+[More info / RSVP →](https://bostonrobothackers.com/meetings.html)
+
 ### RoboBoston: 9th Annual Robot Block Party <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** September 26, 2026 @ 10:45 AM – 4:00 PM \
 **Where:** Seaport, 88 Seaport Blvd, Boston, MA 02210 \
@@ -29,6 +45,14 @@ A free, public robotics festival — demos, hands-on interactions, and a sidewal
 A Tough Tech Week gathering of innovators and robotics enthusiasts at MIT. Registration requires host approval, so RSVP early.
 
 [More info / RSVP →](https://luma.com/9rdzhuwf)
+
+### Boston Robot Hackers: Yun Chang on Robot Scene Understanding for Extreme Environments <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** November 12, 2026 @ 7:00 PM – 9:00 PM \
+**Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
+**Host:** Boston Robot Hackers \
+Yun Chang shares lessons from the DARPA Subterranean Challenge and current work bringing autonomous scene understanding to heavy equipment.
+
+[More info / RSVP →](https://bostonrobothackers.com/news/25-yun-chang-talk-announcement.html)
 
 <!-- Example entry — copy and adapt when adding an approved submission:
 
