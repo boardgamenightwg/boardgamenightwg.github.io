@@ -4,45 +4,34 @@ title = "🌅🌉 Bay Area"
 <!-- [![venue logo](/images/bayarea/trolleyproblem.png)](https://boardgamenightwg.com/bayarea) -->
 
 ## Where
-<a href="https://hello-robot.com/">
+
+<a href="https://www.dustyrobotics.com/">
+  <!-- light mode -->
   <img
-    src="/images/logos/hello-robot-logo.png"
-    alt="Hello Robot Logo"
-    style="width: 100%; max-width: 220px; height: auto; display: block; margin: 0 auto;"
+    src="/images/logos/dusty-robotics-logo-light.png"
+    alt="Dusty Robotics Logo"
+    class="logo-light"
+  >
+  <!-- dark mode -->
+  <img
+    src="/images/logos/dusty-robotics-logo-dark.png"
+    alt="Dusty Robotics Logo"
+    class="logo-dark"
   >
 </a>
 
-**Hello Robot Inc** \
-**825 Ferry St** \
-**Martinez, CA 94553**
+<a href="https://www.dustyrobotics.com/">Dusty Robotics</a> \
+**909 San Rafael Ave** \
+**Mountain View, CA 94043**
 
-You'll see a brick building with a pole out front that holds a Chrysler sign. Go through the red door; the lower level is the production floor, so head upstairs, where we'll have the tables set up.
-
-Pizza and soft drinks will be provided. \
-Games will be provided but feel free to bring your own to share!
-
-Photos and social media are welcome.
+Join us! We'll have some Costco Pizza, soft drinks and board games on hand. \
+Bring more of your favorite games!
 
 ## When
-Thursday, August 20, 2026 @ 5:30 pm - 9:00 pm
+Thursday, September 3, 2026 @ 5:00 pm - 9:00 pm
 
 ## RSVP
-There is no RSVP deadline, and walk-ins are always welcome. Please RSVP anyway so the host knows roughly how much food to order.
-
-<a
-  href="https://luma.com/event/evt-xzOxCi84PzAGNV0"
-  class="luma-checkout--button"
-  data-luma-action="checkout"
-  data-luma-event-id="evt-xzOxCi84PzAGNV0"
->
-  Register for Event
-</a>
-
-<script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
+TBD: Luma RSVP link \
 
 ## Access
-You can drive, there is plenty of street parking nearby. We are also within walking distance of the Martinez Amtrak station.
-
-If you have trouble finding us on the day of the event, call Ola at (774) 225-7735.
-
-<iframe src="https://maps.google.com/maps?q=825+Ferry+St+Martinez+CA+94553&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://maps.google.com/maps?q=909+San+Rafael+Ave+Mountain+View+CA+94043&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
