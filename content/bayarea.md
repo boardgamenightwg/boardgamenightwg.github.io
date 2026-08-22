@@ -31,7 +31,7 @@ Bring more of your favorite games!
 Thursday, September 3, 2026 @ 5:00 pm - 9:00 pm
 
 ## RSVP
-TBD: Luma RSVP link \
+[RSVP on Luma](https://luma.com/jg39ijuc) \
 
 ## Access
 <iframe src="https://maps.google.com/maps?q=909+San+Rafael+Ave+Mountain+View+CA+94043&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
