@@ -6,14 +6,6 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
-### Priors #00: Andreea Bobu on Human-Aligned Robot Learning <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** August 24, 2026 @ 6:00 PM – 7:00 PM \
-**Where:** MIT Campus, Room 5-134, Cambridge, MA \
-**Host:** Priors \
-Kickoff session of Priors, a new Boston robotics research group: Andreea Bobu (MIT CLEAR Lab) on how robots learn from sparse, noisy human feedback. 40-minute lecture, open Q&A, and networking, with light refreshments.
-
-[More info / RSVP →](https://luma.com/ya8w8a2e)
-
 ### Boston Robot Hackers: Alan Kilian on Powering Robots <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** September 3, 2026 @ 7:00 PM – 9:00 PM \
 **Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
@@ -37,6 +29,14 @@ An agenda-free evening of building and hacking together. Bring a robot or projec
 A free, public robotics festival — demos, hands-on interactions, and a sidewalk robot parade from universities, startups, and student teams. All ages welcome, come and go as you please.
 
 [More info / RSVP →](https://luma.com/c2kl6qdb)
+
+### Boston Robot Hackers: Arjun Viswanathan on Reinforcement Learning for Multimodal Locomotion <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** October 15, 2026 @ 7:00 PM – 9:00 PM \
+**Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
+**Host:** Boston Robot Hackers \
+Arjun Viswanathan shares a hierarchical reinforcement learning approach that teaches a legged-aerial robot both how to move and when to switch between walking and flying.
+
+[More info / RSVP →](https://bostonrobothackers.com/news/26-arjun-viswanathan-talk-announcement.html)
 
 ### Minds in Motion @ MIT <span class="badge badge-tech">💻 Tech & Community</span>
 **When:** October 30, 2026 @ 8:00 AM \
