@@ -6,14 +6,6 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
-### Priors #00: Andreea Bobu on Human-Aligned Robot Learning <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** August 24, 2026 @ 6:00 PM – 7:00 PM \
-**Where:** MIT Campus, Room 5-134, Cambridge, MA \
-**Host:** Priors \
-Kickoff session of Priors, a new Boston robotics research group: Andreea Bobu (MIT CLEAR Lab) on how robots learn from sparse, noisy human feedback. 40-minute lecture, open Q&A, and networking, with light refreshments.
-
-[More info / RSVP →](https://luma.com/ya8w8a2e)
-
 ### Boston Robot Hackers: Alan Kilian on Powering Robots <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** September 3, 2026 @ 7:00 PM – 9:00 PM \
 **Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
@@ -38,6 +30,22 @@ A free, public robotics festival — demos, hands-on interactions, and a sidewal
 
 [More info / RSVP →](https://luma.com/c2kl6qdb)
 
+### Boston Robot Hackers: Arjun Viswanathan on Reinforcement Learning for Multimodal Locomotion <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** October 15, 2026 @ 7:00 PM – 9:00 PM \
+**Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
+**Host:** Boston Robot Hackers \
+Arjun Viswanathan shares a hierarchical reinforcement learning approach that teaches a legged-aerial robot both how to move and when to switch between walking and flying.
+
+[More info / RSVP →](https://bostonrobothackers.com/news/26-arjun-viswanathan-talk-announcement.html)
+
+### Boston Robot Hackers Hands-On Meeting <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** October 21, 2026 @ 6:00 PM – 8:00 PM \
+**Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
+**Host:** Boston Robot Hackers \
+An agenda-free evening of building and hacking together. Beginners are welcome.
+
+[More info / RSVP →](https://bostonrobothackers.com/meetings.html)
+
 ### Minds in Motion @ MIT <span class="badge badge-tech">💻 Tech & Community</span>
 **When:** October 30, 2026 @ 8:00 AM \
 **Where:** MIT Samberg Conference Center, 50 Memorial Dr, Cambridge, MA 02142 \
@@ -53,6 +61,78 @@ A Tough Tech Week gathering of innovators and robotics enthusiasts at MIT. Regis
 Yun Chang shares lessons from the DARPA Subterranean Challenge and current work bringing autonomous scene understanding to heavy equipment.
 
 [More info / RSVP →](https://bostonrobothackers.com/news/25-yun-chang-talk-announcement.html)
+
+### Boston Robot Hackers Hands-On Meeting <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** November 25, 2026 @ 6:00 PM – 8:00 PM \
+**Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
+**Host:** Boston Robot Hackers \
+An agenda-free evening of building and hacking together. Beginners are welcome.
+
+[More info / RSVP →](https://bostonrobothackers.com/meetings.html)
+
+### Boston Robot Hackers Main Meeting <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** December 10, 2026 @ 7:00 PM – 9:00 PM \
+**Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
+**Host:** Boston Robot Hackers \
+The featured speaker and topic will be announced.
+
+[More info / RSVP →](https://bostonrobothackers.com/meetings.html)
+
+### Boston Robot Hackers Hands-On Meeting <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** December 16, 2026 @ 6:00 PM – 8:00 PM \
+**Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
+**Host:** Boston Robot Hackers \
+An agenda-free evening of building and hacking together. Beginners are welcome.
+
+[More info / RSVP →](https://bostonrobothackers.com/meetings.html)
+
+### Boston Robot Hackers Main Meeting <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** January 7, 2027 @ 7:00 PM – 9:00 PM \
+**Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
+**Host:** Boston Robot Hackers \
+The featured speaker and topic will be announced.
+
+[More info / RSVP →](https://bostonrobothackers.com/meetings.html)
+
+### Boston Robot Hackers Hands-On Meeting <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** January 13, 2027 @ 6:00 PM – 8:00 PM \
+**Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
+**Host:** Boston Robot Hackers \
+An agenda-free evening of building and hacking together. Beginners are welcome.
+
+[More info / RSVP →](https://bostonrobothackers.com/meetings.html)
+
+### Boston Robot Hackers Main Meeting <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** February 11, 2027 @ 7:00 PM – 9:00 PM \
+**Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
+**Host:** Boston Robot Hackers \
+The featured speaker and topic will be announced.
+
+[More info / RSVP →](https://bostonrobothackers.com/meetings.html)
+
+### Boston Robot Hackers Hands-On Meeting <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** February 17, 2027 @ 6:00 PM – 8:00 PM \
+**Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
+**Host:** Boston Robot Hackers \
+An agenda-free evening of building and hacking together. Beginners are welcome.
+
+[More info / RSVP →](https://bostonrobothackers.com/meetings.html)
+
+### Boston Robot Hackers Main Meeting <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** March 11, 2027 @ 7:00 PM – 9:00 PM \
+**Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
+**Host:** Boston Robot Hackers \
+The featured speaker and topic will be announced.
+
+[More info / RSVP →](https://bostonrobothackers.com/meetings.html)
+
+### Boston Robot Hackers Hands-On Meeting <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** March 17, 2027 @ 6:00 PM – 8:00 PM \
+**Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
+**Host:** Boston Robot Hackers \
+An agenda-free evening of building and hacking together. Beginners are welcome.
+
+[More info / RSVP →](https://bostonrobothackers.com/meetings.html)
 
 <!-- Example entry — copy and adapt when adding an approved submission:
 
