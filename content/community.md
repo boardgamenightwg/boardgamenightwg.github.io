@@ -2,7 +2,7 @@
 title = "🤝 Community Events"
 +++
 
-A community-submitted list of upcoming robotics, board game, and adjacent tech events around Boston and the Bay Area. Have something to share? [Submit your event below](#submit-your-event) — we'll review and post approved submissions here.
+A community-submitted list of upcoming robotics, board game, and adjacent tech events around Boston and the Bay Area, plus major robotics events worth traveling for. Have something to share? [Submit your event below](#submit-your-event) — we'll review and post approved submissions here.
 
 ## 🫘🌆 Boston
 
@@ -69,6 +69,16 @@ A talk on the latest in legged locomotion, followed by an open lab tour.
 ## 🌉🌅 Bay Area
 
 _No community events posted yet — be the first to submit yours below!_
+
+## 🤖🌎 Major Robotics Events
+
+### Automate 2027 <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** May 10–13, 2027 \
+**Where:** Las Vegas Convention Center, Las Vegas, NV \
+**Host:** Association for Advancing Automation (A3) \
+The largest automation trade show in North America brings together industrial robotics, machine vision, AI, motion control, and manufacturing technology. Registration is free.
+
+[More info / Register →](https://www.automateshow.com/)
 
 ## Submit Your Event {#submit-your-event}
 
