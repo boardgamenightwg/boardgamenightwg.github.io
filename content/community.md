@@ -52,7 +52,37 @@ A talk on the latest in legged locomotion, followed by an open lab tour.
 
 ## 🌉🌅 Bay Area
 
-_No community events posted yet — be the first to submit yours below!_
+### ULTIMATE GAME NIGHT: THE FINAL ROUND <span class="badge badge-boardgames">🎲 Board Games</span>
+**When:** September 12, 2026 @ 7:00 PM – midnight \
+**Where:** Hacker Dojo, 855 Maude Ave, Mountain View, CA 94043 \
+**Host:** Hacker Dojo \
+An action-packed game night featuring board and card games, classic video games, poker, Rock Band, and organized tournaments. Come to compete or just drop in and play.
+
+[More info / RSVP →](https://www.meetup.com/hackerdojo/events/313961310/)
+
+### Advanced Vision & AI Conference 2026 <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** September 23, 2026 @ 7:30 AM – 6:30 PM; September 24 @ 7:30 AM – 4:00 PM \
+**Where:** Santa Clara Marriott, 2700 Mission College Blvd, Santa Clara, CA 95054 \
+**Host:** Association for Advancing Automation (A3) \
+A two-day technical conference focused on machine vision and AI for industrial automation, with practical sessions for engineers, integrators, and technology leaders.
+
+[More info / RSVP →](https://www.automate.org/events/advanced-vision-and-ai-conference)
+
+### RoboBusiness 2026 <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** October 20, 2026 @ 8:00 AM – 6:30 PM; October 21 @ 8:00 AM – 3:45 PM \
+**Where:** Santa Clara Convention Center, 5001 Great America Pkwy, Santa Clara, CA 95054 \
+**Host:** RoboBusiness \
+The robotics industry gathering brings founders, engineers, investors, and operators together for more than 40 sessions across five tracks on building and deploying commercial robots.
+
+[More info / RSVP →](https://www.robobusiness.com/)
+
+### 2026 IEEE-RAS International Conference on Humanoid Robots <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** December 6–9, 2026, program hours vary \
+**Where:** Santa Clara Convention Center, 5001 Great America Pkwy, Santa Clara, CA 95054 \
+**Host:** IEEE Robotics and Automation Society \
+A premier international forum on humanoid robotics, featuring public forums, workshops and tutorials, and two days of research presentations.
+
+[More info / RSVP →](https://2026.ieee-humanoids.org/)
 
 ## Submit Your Event {#submit-your-event}
 
