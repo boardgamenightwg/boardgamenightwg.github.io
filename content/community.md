@@ -6,22 +6,6 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
-### Boston Robot Hackers: Alan Kilian on Powering Robots <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** September 3, 2026 @ 7:00 PM – 9:00 PM \
-**Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
-**Host:** Boston Robot Hackers \
-Alan Kilian covers robot batteries, power measurement, circuitry, voltage regulation, and practical ways to improve efficiency and operating life.
-
-[More info / RSVP →](https://bostonrobothackers.com/news/19-june-meeting-announcement.html)
-
-### Boston Robot Hackers Hands-On Meeting <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** September 9, 2026 @ 6:00 PM – 8:00 PM \
-**Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
-**Host:** Boston Robot Hackers \
-An agenda-free evening of building and hacking together. Bring a robot or project for help and discussion; beginners are welcome.
-
-[More info / RSVP →](https://bostonrobothackers.com/meetings.html)
-
 ### RoboBoston: 9th Annual Robot Block Party <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** September 26, 2026 @ 10:45 AM – 4:00 PM \
 **Where:** Seaport, 88 Seaport Blvd, Boston, MA 02210 \
