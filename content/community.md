@@ -103,7 +103,7 @@ A premier international forum on humanoid robotics, featuring public forums, wor
 ## 🤖🌎 Major Robotics Events
 
 ### ROSCon Global 2026 <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** September 22–24, 2026, program hours vary \
+**When:** September 22–24, 2026, program hours vary (EDT). Opening-day registration: 7:00 AM – 5:30 PM; workshops: 8:00 AM – 5:00 PM \
 **Where:** Sheraton Centre Toronto, 123 Queen Street W, Toronto, Ontario, Canada \
 **Host:** Open Robotics \
 A three-day conference for ROS developers of all levels, with workshops, technical talks, tutorials, demonstrations, and opportunities to meet the global ROS community.
