@@ -6,6 +6,14 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
+### Silicon Photonics for LiDAR Sensors, Augmented Reality, Biophotonics, Quantum Engineering, and Beyond <span class="badge badge-tech">💻 Tech & Community</span>
+**When:** September 11, 2026 @ 2:00 PM – 3:00 PM EDT \
+**Where:** Harvard Pierce Hall, Room 209, 29 Oxford Street, Cambridge, MA 02138 \
+**Host:** Harvard John A. Paulson School of Engineering and Applied Sciences \
+MIT professor Jelena Notaros presents silicon-photonics optical phased arrays and their applications in autonomous-vehicle LiDAR, augmented reality, biophotonics, and quantum engineering.
+
+[More info / RSVP →](https://events.seas.harvard.edu/event/silicon-photonics-for-lidar-sensors-augmented-reality-biophotonics-quantum-engineering-and-beyond)
+
 ### RoboBoston: 9th Annual Robot Block Party <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** September 26, 2026 @ 10:45 AM – 4:00 PM \
 **Where:** Seaport, 88 Seaport Blvd, Boston, MA 02210 \
@@ -60,6 +68,14 @@ An action-packed game night featuring board and card games, classic video games,
 
 [More info / RSVP →](https://www.meetup.com/hackerdojo/events/313961310/)
 
+### Automated Happy Hour with Rodney Brooks <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** September 22, 2026 @ 6:00 PM – 8:45 PM PDT \
+**Where:** Circuit Launch, Mountain View, CA (register for the exact address) \
+**Host:** Silicon Valley Robotics / Robots and Startups, with Automated Podcast \
+Join Brian Heater and the Automated Podcast crew for networking, robotics demos, and special guest Rodney Brooks. The live recording and talk run from 6:30 PM to 7:30 PM, followed by a happy hour reception.
+
+[More info / RSVP →](https://luma.com/n688dcl5)
+
 ### Advanced Vision & AI Conference 2026 <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** September 23, 2026 @ 7:30 AM – 6:30 PM; September 24 @ 7:30 AM – 4:00 PM \
 **Where:** Santa Clara Marriott, 2700 Mission College Blvd, Santa Clara, CA 95054 \
@@ -83,6 +99,16 @@ The robotics industry gathering brings founders, engineers, investors, and opera
 A premier international forum on humanoid robotics, featuring public forums, workshops and tutorials, and two days of research presentations.
 
 [More info / RSVP →](https://2026.ieee-humanoids.org/)
+
+## 🤖🌎 Major Robotics Events
+
+### ROSCon Global 2026 <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** September 22–24, 2026, program hours vary (EDT). Opening-day registration: 7:00 AM – 5:30 PM; workshops: 8:00 AM – 5:00 PM \
+**Where:** Sheraton Centre Toronto, 123 Queen Street W, Toronto, Ontario, Canada \
+**Host:** Open Robotics \
+A three-day conference for ROS developers of all levels, with workshops, technical talks, tutorials, demonstrations, and opportunities to meet the global ROS community.
+
+[More info / RSVP →](https://roscon.ros.org/2026/)
 
 ## Submit Your Event {#submit-your-event}
 
