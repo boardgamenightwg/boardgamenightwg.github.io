@@ -2,7 +2,19 @@
 
 Tracking epic: https://github.com/boardgamenightwg/boardgamenightwg.github.io/issues/96
 
-Two disposable, clickable directions for a future unlisted `/megamap` ecosystem explorer. These files are outside Zola's content/static directories and do not publish the route or change the live site.
+## Current iteration: site-themed hybrid
+
+Griz selected **A's network + B's search/filters** and requested the existing website theme. The [site-themed hybrid](site-themed-hybrid/index.html) is the current mockup to review ([details and how to open](site-themed-hybrid/README.md)).
+
+![Current light-theme mockup](previews/site-themed-light-1440.png)
+
+[Dark desktop](previews/site-themed-dark-1440.png) · [Light mobile](previews/site-themed-light-390.png) · [Dark mobile](previews/site-themed-dark-390.png)
+
+These files are outside Zola's content/static directories and do not publish the route or change the live site. Open the hybrid HTML directly; Google Fonts supplies the same IBM Plex font as the live site, with a local fallback when offline.
+
+## Original exploration (superseded by hybrid)
+
+The original two directions are preserved for comparison.
 
 - [Network-first](network-first/index.html): spatial relationships first, selected organization details alongside.
 - [Directory-first](directory-first/index.html): browse organizations first, inspect role and relationships on selection.
@@ -33,4 +45,4 @@ Organization names come from Griz's initial seed list. Descriptions, categories,
 2. Does the detail panel explain enough about an organization's role, participation, and resources?
 3. Should shared interests be visible as lines at all, or should lines be reserved for documented relationships?
 
-No production implementation until Griz selects a direction or requests a hybrid.
+Griz selected a hybrid: network-first with directory search/filters. The current site-themed mockup awaits review; no production implementation or deployment is included.

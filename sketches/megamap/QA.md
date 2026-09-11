@@ -1,5 +1,16 @@
 # Mockup verification
 
+## Current site-themed hybrid
+
+- Live CSS fetched and compared byte-for-byte with the repository stylesheet before implementation; live site visually inspected.
+- Chromium checks at 1440/768/390px: area switching, combined search/category filters, filtered edge counts, selection consistency, following hidden connections (filters reset), empty state/reset, keyboard selection and contribution modal/Escape.
+- Light/dark rendering and exact background colors verified at each width; dark preference survives reload.
+- No horizontal overflow or uncaught JavaScript errors in these checks.
+- Light desktop, dark desktop and light mobile screenshots visually reviewed. Same live robot logo is embedded in the mockup.
+- The hybrid preserves the 720px header/intro and expands only the desktop map to 1060px. Mobile uses a compact network list.
+
+## Original variants
+
 Both variants were exercised in Chromium at 1440px, 768px, and 390px widths.
 
 - Region changes show four Boston seeds and three Bay Area seeds.
