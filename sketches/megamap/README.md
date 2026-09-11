@@ -2,7 +2,17 @@
 
 Tracking epic: https://github.com/boardgamenightwg/boardgamenightwg.github.io/issues/96
 
-## Current iteration: site-themed hybrid
+## Current experiment: relationships and expanded Boston nodes
+
+[Open the relationship prototype](relationship-prototype/index.html) · [Scope, sources and open questions](relationship-prototype/README.md)
+
+Griz accepted **shares events from / runs activities with / operates for the prototype only**, explicitly not as a settled model. The current experiment adds Women in Robotics Boston, Fab Hub Kendall, and BU RASTIC as a candidate student-community inclusion. All connection explanations link to evidence; no speculative or one-off hosting edges are drawn.
+
+![Relationship prototype](previews/relationships-light-1440.png)
+
+[Dark desktop](previews/relationships-dark-1440.png) · [Mobile](previews/relationships-light-390.png)
+
+## Approved visual design: site-themed hybrid
 
 Griz selected **A's network + B's search/filters** and requested the existing website theme. The [site-themed hybrid](site-themed-hybrid/index.html) is the current mockup to review ([details and how to open](site-themed-hybrid/README.md)).
 

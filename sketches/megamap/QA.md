@@ -1,6 +1,14 @@
 # Mockup verification
 
-## Current site-themed hybrid
+## Relationship prototype
+
+- Chromium checks pass at 1440/768/390px: six Boston nodes and four sourced edges, correct incoming/outgoing wording, evidence links, candidate and unconnected-node explanations, category/search/empty/reset, hidden-connection navigation, keyboard selection, modal/Escape and both themes.
+- Bay Area remains three seed names with no fabricated connections and an explicit research-pending notice.
+- No uncaught JavaScript errors or horizontal overflow; no overlapping graph nodes at desktop/tablet widths.
+- Desktop and mobile screenshots visually inspected. Arrow endpoints sit outside fixed-height cards; symmetric community-activity edge has arrowheads at both ends.
+- This is a throwaway model experiment, not an approved production schema or comprehensive accessibility audit.
+
+## Site-themed hybrid
 
 - Live CSS fetched and compared byte-for-byte with the repository stylesheet before implementation; live site visually inspected.
 - Chromium checks at 1440/768/390px: area switching, combined search/category filters, filtered edge counts, selection consistency, following hidden connections (filters reset), empty state/reset, keyboard selection and contribution modal/Escape.
