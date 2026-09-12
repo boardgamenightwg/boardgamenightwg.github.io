@@ -1,0 +1,252 @@
+{
+  "categories": {
+    "making": "Making",
+    "robotics": "Robotics",
+    "social-play": "Board games"
+  },
+  "edges": [
+    {
+      "description": "BGNWG\u2019s community page lists BRH\u2019s October and November talks. This is event sharing, not co-organization.",
+      "id": "bgn-boston-shares-robot-hackers",
+      "last_verified": "2026-09-11",
+      "source": "bgn-boston",
+      "sources": [
+        {
+          "label": "Relationship evidence",
+          "url": "https://boardgamenightwg.com/community/"
+        }
+      ],
+      "status": "reviewed",
+      "target": "robot-hackers",
+      "type": "shares_events_from"
+    },
+    {
+      "description": "BGNWG\u2019s community page lists MassRobotics\u2019 RoboBoston and other MassRobotics-involved events.",
+      "id": "bgn-boston-shares-massrobotics",
+      "last_verified": "2026-09-11",
+      "source": "bgn-boston",
+      "sources": [
+        {
+          "label": "Relationship evidence",
+          "url": "https://boardgamenightwg.com/community/"
+        }
+      ],
+      "status": "reviewed",
+      "target": "massrobotics",
+      "type": "shares_events_from"
+    },
+    {
+      "description": "MassRobotics published a calendar listing for Boston Robot Hackers\u2019 September 3, 2026 Power Management in Robots meeting. This records that specific event-sharing example, not a recurring commitment, hosting arrangement or partnership.",
+      "id": "massrobotics-shares-robot-hackers",
+      "last_verified": "2026-09-11",
+      "source": "massrobotics",
+      "sources": [
+        {
+          "label": "September 3, 2026 meeting listing",
+          "url": "https://www.massrobotics.org/event/boston-robot-hackers-power-management-in-robots-2/"
+        },
+        {
+          "label": "Relationship evidence",
+          "url": "https://www.massrobotics.org/events/"
+        }
+      ],
+      "status": "reviewed",
+      "target": "robot-hackers",
+      "type": "shares_events_from"
+    },
+    {
+      "description": "The source says MassRobotics Women and Women in Robotics Boston have joined to strengthen their community through activities such as networking, education and mentoring. \u201cRuns activities with\u201d is a provisional mapping of that statement.",
+      "id": "massrobotics-runs-women-robotics-boston",
+      "last_verified": "2026-09-11",
+      "source": "massrobotics",
+      "sources": [
+        {
+          "label": "Relationship evidence",
+          "url": "https://www.massrobotics.org/women-in-robotics/"
+        }
+      ],
+      "status": "reviewed",
+      "target": "women-robotics-boston",
+      "type": "runs_activities_with"
+    }
+  ],
+  "nodes": [
+    {
+      "category": "social-play",
+      "id": "bgn-boston",
+      "last_verified": "2026-09-11",
+      "name": "Boston Board Game Night WG",
+      "participation": "Follow the mailing list and event announcements. Events move between venues; the FAQ describes a robotics-centered friends/family community rather than a general-public gaming meetup.",
+      "region": "boston",
+      "sources": [
+        {
+          "label": "Club FAQ",
+          "url": "https://boardgamenightwg.com/faq/"
+        },
+        {
+          "label": "Community events",
+          "url": "https://boardgamenightwg.com/community/"
+        }
+      ],
+      "status": "reviewed",
+      "summary": "Casual social evenings for roboticists and their friends and family, built around playing board games and meeting people. Also shares selected community events."
+    },
+    {
+      "category": "robotics",
+      "id": "massrobotics",
+      "last_verified": "2026-09-11",
+      "name": "MassRobotics",
+      "participation": "Use the relevant event or program signup. Some events are public; others are for partners or residents. Newsletter subscription and startup residency are different entry points.",
+      "region": "boston",
+      "sources": [
+        {
+          "label": "Events & access",
+          "url": "https://www.massrobotics.org/events/"
+        },
+        {
+          "label": "About",
+          "url": "https://www.massrobotics.org/"
+        }
+      ],
+      "status": "reviewed",
+      "summary": "A robotics startup hub with public events, professional networking, educational programs and distinct community initiatives. Not a single uniform meetup."
+    },
+    {
+      "category": "robotics",
+      "id": "robot-hackers",
+      "last_verified": "2026-09-11",
+      "name": "Boston Robot Hackers",
+      "participation": "The meetings page welcomes everyone, including beginners, at Artisans Asylum. The group offers an invitation-request link and a mailing list for questions and troubleshooting.",
+      "region": "boston",
+      "sources": [
+        {
+          "label": "Meetings",
+          "url": "https://bostonrobothackers.com/meetings.html"
+        },
+        {
+          "label": "About / join",
+          "url": "https://bostonrobothackers.com/about.html"
+        }
+      ],
+      "status": "reviewed",
+      "summary": "A robotics learning and building community with a speaker/lightning-talk meeting and a hands-on hacking session each month."
+    },
+    {
+      "category": "robotics",
+      "id": "women-robotics-boston",
+      "last_verified": "2026-09-11",
+      "name": "Women in Robotics Boston",
+      "participation": "The MassRobotics Women in Robotics page links to the Boston group and describes its joint community activities. Consult individual meetup announcements for attendance details.",
+      "region": "boston",
+      "sources": [
+        {
+          "label": "Community & join",
+          "url": "https://www.massrobotics.org/women-in-robotics/"
+        }
+      ],
+      "status": "reviewed",
+      "summary": "A community for women working in robotics or interested in entering the field, with local networking, outreach, education and mentoring."
+    },
+    {
+      "category": "making",
+      "id": "fab-hub-kendall",
+      "last_verified": "2026-09-11",
+      "name": "Fab Hub Kendall",
+      "participation": "Its site advertises free public-access hours for specified community activities and routes for workshops, volunteering and collaboration. Confirm current scheduling; this does not imply unrestricted drop-in access.",
+      "region": "boston",
+      "sources": [
+        {
+          "label": "Fab Hub Kendall",
+          "url": "https://fabhubkendall.fabfoundation.org/"
+        }
+      ],
+      "status": "reviewed",
+      "summary": "The Fab Foundation\u2019s Cambridge headquarters and flagship Fab Lab: digital fabrication, workshops, education and community-benefit projects."
+    },
+    {
+      "category": "robotics",
+      "id": "bu-rastic",
+      "last_verified": "2026-09-11",
+      "name": "BU RASTIC",
+      "participation": "Primarily student-centered. RASTIC Certified includes seminars, workshops and projects with peer, faculty and industry connections. External visitors should confirm access for the relevant program; it is not presented as a public drop-in makerspace.",
+      "region": "boston",
+      "sources": [
+        {
+          "label": "RASTIC",
+          "url": "https://www.bu.edu/rastic/"
+        },
+        {
+          "label": "Programs & workspaces",
+          "url": "https://www.bu.edu/eng/academics/teaching-and-innovation/rastic/what-we-offer/"
+        }
+      ],
+      "status": "candidate",
+      "summary": "BU\u2019s student-forward robotics teaching and innovation community: collaborative projects, seminars, workshops, equipment and guidance. Included here to test university-community scope, not because it hosted BGNWG."
+    },
+    {
+      "category": "social-play",
+      "id": "bgn-bay",
+      "last_verified": "2026-09-11",
+      "name": "Board Game Night WG Bay Area",
+      "participation": "Follow the mailing list and Bay Area chapter page for current event announcements. The FAQ describes a robotics-centered friends and family community; attendance details depend on the event.",
+      "region": "bay",
+      "sources": [
+        {
+          "label": "Club FAQ",
+          "url": "https://boardgamenightwg.com/faq/"
+        },
+        {
+          "label": "Bay Area chapter",
+          "url": "https://boardgamenightwg.com/bayarea/"
+        }
+      ],
+      "status": "reviewed",
+      "summary": "Casual social evenings for roboticists and their friends and family, built around playing board games and meeting people. Also shares selected community events."
+    },
+    {
+      "category": "making",
+      "id": "circuit-launch",
+      "last_verified": "2026-09-11",
+      "name": "Circuit Launch",
+      "participation": "Browse published events for RSVP details. Workspace and equipment access require a monthly membership and equipment safety training; arrange a tour before visiting.",
+      "region": "bay",
+      "sources": [
+        {
+          "label": "Membership and access FAQ",
+          "url": "https://circuitlaunch.com/faq.html"
+        },
+        {
+          "label": "Upcoming events",
+          "url": "https://circuitlaunch.com/calendar/upcoming-events-day.html"
+        }
+      ],
+      "status": "reviewed",
+      "summary": "A robotics and electronic-hardware coworking community with shared prototyping resources and events for builders and entrepreneurs."
+    },
+    {
+      "category": "robotics",
+      "id": "homebrew-robotics",
+      "last_verified": "2026-09-11",
+      "name": "HomeBrew Robotics Club",
+      "participation": "Join the discussion group or attend a meeting as a guest; paid membership is optional. Check current meeting announcements before attending.",
+      "region": "bay",
+      "sources": [
+        {
+          "label": "Get involved",
+          "url": "https://www.hbrobotics.org/get-involved/"
+        },
+        {
+          "label": "Membership and dues",
+          "url": "https://www.hbrobotics.org/membership-and-dues/"
+        }
+      ],
+      "status": "reviewed",
+      "summary": "A volunteer robotics club for learning, building robots, sharing projects, and exchanging technical help."
+    }
+  ],
+  "regions": {
+    "bay": "Bay Area",
+    "boston": "Boston"
+  },
+  "version": 1
+}

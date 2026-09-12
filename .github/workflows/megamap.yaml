@@ -1,0 +1,49 @@
+name: Megamap checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-build-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate data and run dependency-free unit tests
+        run: |
+          python scripts/validate_megamap.py
+          python -m unittest discover -s tests -p 'test_*.py' -v
+          node --test tests/megamap-model.test.mjs
+      - name: Install pinned Zola 0.17.2 and build
+        run: |
+          curl --fail --location --retry 3 https://github.com/getzola/zola/releases/download/v0.17.2/zola-v0.17.2-x86_64-unknown-linux-gnu.tar.gz --output "$RUNNER_TEMP/zola.tar.gz"
+          tar -xzf "$RUNNER_TEMP/zola.tar.gz" -C "$RUNNER_TEMP"
+          "$RUNNER_TEMP/zola" --version
+          "$RUNNER_TEMP/zola" build --base-url http://127.0.0.1:8766
+      - name: Install optional browser test dependencies
+        run: |
+          python -m venv .venv-megamap
+          .venv-megamap/bin/python -m pip install -r tests/requirements-browser.txt
+          .venv-megamap/bin/python -m playwright install --with-deps chromium
+      - name: Run real headless browser smoke
+        run: .venv-megamap/bin/python tests/megamap_smoke.py
+      - name: Keep smoke screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: megamap-smoke
+          path: /tmp/megamap-*.png
+          if-no-files-found: ignore
