@@ -1,0 +1,74 @@
+/* Page-only workspace; shared header, typography and theme remain the site's own. */
+body.megamap-page { max-width: 1160px; }
+.megamap-page > header, .megamap-page > footer, #megamap .mm-reading { max-width: 720px; margin-left: auto; margin-right: auto; }
+#megamap { --mm-panel: var(--color-background); --mm-soft: #f7f7f7; --mm-border: #c6cdd5; --mm-selected: #e7f2fa; --mm-link: var(--color-link); --mm-muted: #626262; --mm-joint: #79509c; }
+body[data-theme="dark"] #megamap { --mm-panel: var(--color-background-dark); --mm-soft: #292929; --mm-border: #727272; --mm-selected: #335566; --mm-link: var(--color-link-dark); --mm-muted: #c4c4c4; --mm-joint: #c6a9e8; color-scheme: dark; }
+#megamap *, #megamap *::before, #megamap *::after { box-sizing: border-box; }
+#megamap [hidden] { display: none !important; }
+#megamap h1 { font-size: 2rem; }
+#megamap h2 { font-size: 1.35rem; line-height: 1.3; }
+#megamap h3 { font-size: 1.05rem; line-height: 1.4; }
+#megamap a { text-decoration: underline; text-underline-offset: 3px; }
+#megamap button, #megamap input, #megamap select { font: inherit; color: inherit; background: var(--mm-panel); border: 1px solid var(--mm-border); border-radius: 5px; padding: 9px 12px; min-height: 44px; }
+#megamap button, #megamap summary { cursor: pointer; }
+#megamap :is(button, input, select, a, summary, [tabindex]):focus-visible { outline: 3px solid var(--mm-link); outline-offset: 3px; }
+#megamap .mm-intro { margin-top: 32px; margin-bottom: 28px; }
+#megamap .mm-badge { display: inline-block; font-size: .78rem; font-weight: normal; line-height: 1.5; padding: 3px 9px; border: 1px solid var(--color-tag-border); border-radius: 99px; background: var(--color-tag-bg); color: #9e3d00; vertical-align: middle; }
+#megamap .mm-note { padding: 12px 16px; border-left: 4px solid var(--mm-link); background: var(--mm-selected); font-size: .9rem; }
+#megamap .mm-controls { display: flex; gap: 16px; align-items: end; flex-wrap: wrap; }
+#megamap .mm-controls label { display: flex; flex-direction: column; gap: 5px; font-size: .85rem; }
+#megamap .mm-controls label[for="mm-search"] { flex: 1 1 270px; }
+#megamap input::placeholder { color: var(--mm-muted); opacity: 1; }
+#megamap #mm-status { min-height: 1.5em; color: var(--mm-muted); font-size: .85rem; }
+#megamap .mm-workspace { display: grid; grid-template-columns: minmax(0, 1fr) 340px; border: 1px solid var(--mm-border); border-radius: 6px; overflow: hidden; }
+#megamap #mm-network { min-width: 0; background: var(--mm-soft); }
+#megamap #mm-network-title { padding: 16px 20px 0; margin-bottom: 6px; }
+#megamap .mm-hint { padding: 0 20px; font-size: .8rem; color: var(--mm-muted); }
+#megamap .mm-graph { position: relative; height: var(--mm-graph-height, 600px); background-image: radial-gradient(var(--mm-border) 1px, transparent 1px); background-size: 18px 18px; }
+#megamap #mm-edges { position: absolute; width: 100%; height: 100%; inset: 0; pointer-events: none; }
+#megamap .mm-edge { stroke: var(--mm-link); stroke-width: 2; opacity: .7; }
+#megamap .mm-edge.mm-highlight { stroke-width: 3; opacity: 1; }
+#megamap .mm-arrow { fill: var(--mm-link); }
+#megamap .mm-edge.runs_activities_with { stroke: var(--mm-joint); stroke-dasharray: 7 4; }
+#megamap .mm-arrow.runs_activities_with { fill: var(--mm-joint); }
+#megamap .mm-edge.operates { stroke-dasharray: 2 4; }
+#megamap #mm-nodes { list-style: none; margin: 0; padding: 0; }
+#megamap #mm-nodes li { position: absolute; left: var(--mm-x); top: var(--mm-y); transform: translate(-50%, -50%); width: 188px; }
+#megamap .mm-node { width: 100%; height: 144px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 7px; box-shadow: 0 2px 5px #00000009; }
+#megamap .mm-node strong { font-size: .95rem; line-height: 1.25; }
+#megamap .mm-node span, #megamap .mm-node small { font-size: .75rem; line-height: 1.3; color: var(--mm-muted); }
+#megamap button:hover { border-color: var(--mm-link); }
+#megamap .mm-node[aria-pressed="true"] { border: 2px solid var(--mm-link); background: var(--mm-selected); }
+#megamap .mm-legend { list-style: none; margin: 0; padding: 15px 20px; border-top: 1px solid var(--mm-border); display: flex; gap: 8px 16px; flex-wrap: wrap; font-size: .75rem; }
+#megamap .mm-legend li:nth-child(2) { border-bottom: 2px dashed var(--mm-joint); }
+#megamap #mm-detail { padding: 20px; min-width: 0; border-left: 1px solid var(--mm-border); background: var(--mm-panel); font-size: .9rem; }
+#megamap #mm-detail h2 { margin-top: 0; }
+#megamap .mm-back { display: block; margin-bottom: 12px; font-size: .8rem; }
+#megamap .mm-meta, #megamap .mm-sources { font-size: .78rem; }
+#megamap .mm-meta { color: var(--mm-muted); }
+#megamap .mm-sources { padding-left: 20px; }
+#megamap .mm-relationship { border-top: 1px solid var(--mm-border); padding: 12px 0; }
+#megamap .mm-relationship p { margin: 7px 0; }
+#megamap .mm-relation-label { font-weight: bold; font-size: .8rem; }
+#megamap .mm-follow { text-align: left; color: var(--mm-link); }
+#megamap #mm-empty { padding: 35px 20px; }
+#megamap .mm-contribute { font-size: .85rem; margin: 22px 0; }
+#megamap #mm-directory { border-top: 1px solid var(--mm-border); padding-top: 16px; }
+#megamap #mm-directory summary { padding: 8px 0; font-weight: bold; }
+#megamap #mm-directory article { border-bottom: 1px solid var(--mm-border); padding: 10px 0 24px; }
+@media (max-width: 1000px) {
+  #megamap .mm-workspace { grid-template-columns: 1fr; }
+  #megamap #mm-detail { border-left: 0; border-top: 1px solid var(--mm-border); }
+}
+@media (max-width: 600px) {
+  #megamap .mm-controls label, #megamap .mm-controls label[for="mm-search"] { flex: 1 1 100%; }
+  #megamap .mm-controls input, #megamap .mm-controls select { width: 100%; min-width: 0; }
+  #megamap .mm-graph { height: auto; background: none; }
+  #megamap #mm-edges { display: none; }
+  #megamap #mm-nodes { padding: 12px; }
+  #megamap #mm-nodes li { position: static; transform: none; width: auto; margin: 0 0 10px; }
+  #megamap .mm-node { height: auto; min-height: 90px; align-items: start; text-align: left; }
+  #megamap .mm-node strong { font-size: 1rem; }
+  #megamap .mm-intro { margin-top: 24px; }
+}
+@media (prefers-reduced-motion: reduce) { .megamap-page.theme-transition { transition: none; } }

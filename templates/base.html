@@ -43,9 +43,10 @@
     }
 </style>
 
+{% block extra_head %}{% endblock extra_head %}
 </head>
 
-<body>
+<body class="{% block body_class %}{% endblock body_class %}">
 <header>
     <a href="{{ config.base_url | safe }}" class="title">
       <div class="titley">
