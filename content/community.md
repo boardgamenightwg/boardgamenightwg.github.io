@@ -1,5 +1,6 @@
 +++
 title = "🤝 Community Events"
+template = "community.html"
 +++
 
 A community-submitted list of upcoming robotics, board game, and adjacent tech events around Boston and the Bay Area. Have something to share? [Submit your event below](#submit-your-event) — we'll review and post approved submissions here.
