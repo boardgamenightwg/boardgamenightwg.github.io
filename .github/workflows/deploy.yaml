@@ -21,6 +21,13 @@ jobs:
         with:
           lfs: true
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate Megamap before rendering public data
+        run: python scripts/validate_megamap.py
+
       - name: Build
         uses: shalzz/zola-deploy-action@v0.17.2
         env:

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}Megamap | {{ super() }}{% endblock title %}
+{% block body_class %}megamap-page{% endblock body_class %}
+{% block extra_head %}
+<meta name="robots" content="noindex,follow">
+<link rel="stylesheet" href="{{ get_url(path='styles/megamap.css') }}">
+{% endblock extra_head %}
+{% block main %}
+{% set map = load_data(path="static/data/megamap.json") %}
+<main id="megamap" data-source="{{ get_url(path='data/megamap.json') }}">
+  <section class="mm-reading mm-intro" aria-labelledby="mm-title">
+    <h1 id="mm-title">Megamap <span class="mm-badge">Experimental</span></h1>
+    <p>Explore robotics and maker communities. Inspect a group, follow a connection, and check what the source actually says.</p>
+    <p class="mm-note"><strong>The relationship model is experimental, not final.</strong> Lines describe specific sourced activity, not blanket partnerships, endorsements or guaranteed access. Missing lines mean no relationship is recorded, not that groups are isolated.</p>
+  </section>
+  <p id="mm-load-status" class="mm-reading" role="status">The full directory below is available without JavaScript.</p>
+  <section id="mm-app" aria-label="Community explorer" hidden>
+    <div class="mm-controls">
+      <label for="mm-region">Region <select id="mm-region"></select></label>
+      <label for="mm-search">Search organizations or interests <input id="mm-search" type="search" autocomplete="off" placeholder="Try a name or interest…"></label>
+      <label for="mm-category">Category <select id="mm-category"></select></label>
+      <button type="button" id="mm-reset">Reset filters</button>
+    </div>
+    <p id="mm-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    <div class="mm-workspace">
+      <section id="mm-network" aria-labelledby="mm-network-title">
+        <h2 id="mm-network-title" tabindex="-1">Community network</h2>
+        <p class="mm-hint">Select an organization to read its details and sourced connections.</p>
+        <div class="mm-graph">
+          <svg id="mm-edges" aria-hidden="true" focusable="false"></svg>
+          <ul id="mm-nodes" aria-label="Organizations"></ul>
+        </div>
+        <div id="mm-empty" hidden><h3>No matching organizations</h3><p>Try another search or category, or use Reset filters above.</p></div>
+        <ul class="mm-legend" aria-label="Experimental relationship types">
+          <li>Shares events from →</li>
+          <li>Runs activities with ↔</li>
+          <li>Operates →</li>
+        </ul>
+        <p class="mm-hint">Positions are for browsing, not geography. Only lines between visible nodes are drawn; details include all recorded connections.</p>
+      </section>
+      <aside id="mm-detail" aria-label="Selected organization"></aside>
+    </div>
+  </section>
+  <p class="mm-contribute">Help improve this experiment through a pull request: <a href="https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/main/docs/megamap.md">contribution guide</a> · <a href="https://github.com/boardgamenightwg/boardgamenightwg.github.io/issues/96">discussion and corrections</a>.</p>
+  <details id="mm-directory" class="mm-reading" open>
+    <summary>Full readable directory and relationship evidence</summary>
+    <p>Generated from the same public data as the interactive map. “Reviewed” describes source review, not endorsement or a final relationship classification. “Candidate” marks a scope question. “Seed” is unverified.</p>
+    {% for region_id, region_label in map.regions %}
+    <section aria-labelledby="directory-{{ region_id }}">
+      <h2 id="directory-{{ region_id }}">{{ region_label }}</h2>
+      {% for node in map.nodes %}{% if node.region == region_id %}
+      <article id="directory-{{ node.id }}">
+        <h3>{{ node.name }}</h3>
+        <p class="mm-badge">{{ map.categories[node.category] }} · {{ node.status }}</p>
+        <p>{{ node.summary }}</p>
+        <h4>Taking part</h4><p>{{ node.participation }}</p>
+        {% if node.status == "seed" %}<p>Research pending · not yet verified</p>{% else %}<p>Last verified: <time datetime="{{ node.last_verified }}">{{ node.last_verified }}</time></p>{% endif %}
+        <ul>{% for source in node.sources %}<li><a href="{{ source.url }}" rel="noopener noreferrer">{{ source.label }}</a></li>{% endfor %}</ul>
+      </article>
+      {% endif %}{% endfor %}
+    </section>
+    {% endfor %}
+    <section aria-labelledby="mm-directory-edges">
+      <h2 id="mm-directory-edges">Recorded relationships</h2>
+      <p>Each relationship is listed once. Arrows point from the event-sharing group to the event source, or from an operator to what it operates. Joint activity is symmetric.</p>
+      {% for edge in map.edges %}
+      <div class="mm-relationship">
+        <h3>{% for node in map.nodes %}{% if node.id == edge.source %}<a href="#directory-{{ node.id }}">{{ node.name }}</a>{% endif %}{% endfor %}
+          {% if edge.type == "shares_events_from" %} shares events from → {% elif edge.type == "runs_activities_with" %} runs activities with ↔ {% else %} operates → {% endif %}
+          {% for node in map.nodes %}{% if node.id == edge.target %}<a href="#directory-{{ node.id }}">{{ node.name }}</a>{% endif %}{% endfor %}</h3>
+        <p>{{ edge.description }}</p>
+        <p>{{ edge.status }} · Last verified: <time datetime="{{ edge.last_verified }}">{{ edge.last_verified }}</time></p>
+        <ul>{% for source in edge.sources %}<li><a href="{{ source.url }}" rel="noopener noreferrer">{{ source.label }}</a></li>{% endfor %}</ul>
+      </div>
+      {% endfor %}
+    </section>
+  </details>
+</main>
+{# Async module starts after its DOM exists, independent of inherited deferred analytics. #}
+<script type="module" async src="{{ get_url(path='scripts/megamap.mjs') }}"></script>
+{% endblock main %}
