@@ -6,14 +6,6 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
-### Silicon Photonics for LiDAR Sensors, Augmented Reality, Biophotonics, Quantum Engineering, and Beyond <span class="badge badge-tech">💻 Tech & Community</span>
-**When:** September 11, 2026 @ 2:00 PM – 3:00 PM EDT \
-**Where:** Harvard Pierce Hall, Room 209, 29 Oxford Street, Cambridge, MA 02138 \
-**Host:** Harvard John A. Paulson School of Engineering and Applied Sciences \
-MIT professor Jelena Notaros presents silicon-photonics optical phased arrays and their applications in autonomous-vehicle LiDAR, augmented reality, biophotonics, and quantum engineering.
-
-[More info / RSVP →](https://events.seas.harvard.edu/event/silicon-photonics-for-lidar-sensors-augmented-reality-biophotonics-quantum-engineering-and-beyond)
-
 ### RoboBoston: 9th Annual Robot Block Party <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** September 26, 2026 @ 10:45 AM – 4:00 PM \
 **Where:** Seaport, 88 Seaport Blvd, Boston, MA 02210 \
