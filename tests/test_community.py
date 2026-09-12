@@ -1,7 +1,8 @@
 """Browser regressions against Zola-rendered Markdown, no external services needed.
 
-The document route removes unrelated base-template scripts (analytics, Feather,
-theme persistence) so these tests isolate the community enhancement even offline.
+Most tests remove unrelated base-template scripts to isolate the enhancement
+without external services. The startup regression instead retains the complete
+generated document and holds analytics pending to verify script independence.
 The production Markdown is never modified; edge cases alter only served HTML.
 """
 
@@ -114,6 +115,39 @@ class CommunityTests(unittest.TestCase):
 
     def visible_events(self):
         return self.page.locator("main details:visible")
+
+    def test_pending_analytics_cannot_block_community_startup(self):
+        # Keep the real generated document and deferred-script ordering. Holding
+        # analytics pending (not aborting it) reproduces the production failure.
+        self.page.unroute("**/community/", self.document_route)
+        held = []
+        self.page.route("https://pls.mrkaran.dev/**", lambda route: held.append(route))
+        # Icons are irrelevant here; a bounded stub keeps the real theme script
+        # runnable offline without altering the document or community script.
+        self.page.add_init_script("window.feather = {replace() {}};")
+        try:
+            self.page.goto(self.url + "/community/", wait_until="commit")
+            self.page.wait_for_function("document.querySelector('main') !== null")
+            self.assertTrue(held, "The real analytics request must remain pending")
+            self.page.wait_for_selector("main.community-page", timeout=3000)
+            self.assertNotEqual(self.page.evaluate("document.readyState"), "complete")
+            self.assertGreater(self.visible_events().count(), 0)
+            self.region("Bay Area")
+            self.assertEqual(
+                self.page.get_by_role(
+                    "button", name="Bay Area", exact=True
+                ).get_attribute("aria-pressed"),
+                "true",
+            )
+            self.page.get_by_role("searchbox", name="Search events").fill(
+                "no match xyz"
+            )
+            self.assertEqual(self.visible_events().count(), 0)
+            self.page.get_by_role("button", name="Reset filters").click()
+            self.assertGreater(self.visible_events().count(), 0)
+        finally:
+            for route in held:
+                route.fulfill(body="", content_type="application/javascript")
 
     def test_boston_default_and_regional_controls(self):
         self.load()

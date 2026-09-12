@@ -3,5 +3,6 @@
 {% block main %}
   {{ super() }}
   <link rel="stylesheet" href="{{ get_url(path="styles/community.css", trailing_slash=false) | safe }}">
-  <script defer src="{{ get_url(path="community.js", trailing_slash=false) | safe }}"></script>
+  {# The event DOM above already exists. Do not queue behind unrelated deferred analytics. #}
+  <script async src="{{ get_url(path="community.js", trailing_slash=false) | safe }}"></script>
 {% endblock main %}

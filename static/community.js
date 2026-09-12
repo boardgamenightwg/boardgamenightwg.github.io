@@ -13,12 +13,30 @@
       return node;
     }
 
+    // Read only an explicit English month/day[/day]/year prefix. This is a
+    // display key, never a timestamp: the complete organizer schedule stays text.
+    function displayDate(schedule) {
+      const months = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"];
+      const match = schedule.match(/^([A-Za-z]+) (\d{1,2})(?:\s*[–-]\s*(\d{1,2}))?, (\d{4})(?=$|[\s,@;.])/);
+      if (!match) return null;
+      const month = months.indexOf(match[1]);
+      const day = Number(match[2]);
+      const end = Number(match[3] || match[2]);
+      const year = Number(match[4]);
+      const leap = year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+      const days = [31, leap ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      if (month < 0 || year < 1 || day < 1 || end < day || end > days[month]) return null;
+      return { month: match[1], day, label: `${match[1]} ${match[4]}`,
+        order: year * 10000 + (month + 1) * 100 + day };
+    }
+
     // Work off-DOM. Unsupported source structure leaves the full original readable.
     const draft = main.cloneNode(true);
     const regions = [
-      { key: "boston", name: "Boston", suffix: "Boston" },
-      { key: "bayarea", name: "Bay Area", suffix: "Bay Area" },
-      { key: "major", name: "Major Events", suffix: "Major Robotics Events" },
+      { key: "boston", name: "Boston", emoji: "🫘🌆", suffix: "Boston" },
+      { key: "bayarea", name: "Bay Area", emoji: "🌉🌅", suffix: "Bay Area" },
+      { key: "major", name: "Major Events", emoji: "🤖🌎", suffix: "Major Robotics Events" },
     ];
     const chapters = [];
     const events = [];
@@ -92,9 +110,34 @@
         node = node.nextSibling;
       }
       if (!node || !date.trim()) return;
-      // Copy text, never interpret HTML, parse dates, infer a timezone, or truncate a range.
-      event.summary.append(element("span", "community-date", date.trim()));
       event.search = event.details.textContent.toLocaleLowerCase();
+      event.date = displayDate(date.trim());
+      const title = event.summary.querySelector("h3");
+      const copy = element("div", "community-copy");
+      const eyebrow = element("div", "community-eyebrow");
+      eyebrow.append(element("span", "community-region-label", event.chapter.name));
+      const badge = title.querySelector(".badge");
+      if (badge) {
+        // Preserve the original h3 verbatim; only its display badge is cloned.
+        const displayBadge = badge.cloneNode(true);
+        displayBadge.removeAttribute("id");
+        displayBadge.querySelectorAll("[id]").forEach((node) => node.removeAttribute("id"));
+        eyebrow.append(displayBadge);
+      }
+      copy.append(eyebrow, title, element("span", "community-date", date.trim()));
+      if (event.date) {
+        const tile = element("span", "community-date-tile");
+        tile.setAttribute("aria-hidden", "true");
+        tile.append(element("span", null, event.date.month.slice(0, 3)),
+          element("b", null, String(event.date.day)));
+        event.summary.append(tile);
+      }
+      event.summary.append(copy);
+      const body = element("div", "community-detail");
+      for (const node of [...event.details.childNodes]) {
+        if (node !== event.summary) body.append(node);
+      }
+      event.details.append(body);
     }
 
     const layout = element("div", "community-layout");
@@ -102,15 +145,28 @@
     const controls = element("div", "community-regions");
     controls.setAttribute("role", "group");
     controls.setAttribute("aria-label", "Event region");
-    sidebar.append(controls);
+    const helper = element("p", "community-helper", "Community-organized events.");
+    helper.append(element("br"), "Club game nights stay on the ");
+    const bostonLink = element("a", null, "Boston");
+    bostonLink.href = "/boston/";
+    const bayareaLink = element("a", null, "Bay Area");
+    bayareaLink.href = "/bayarea/";
+    helper.append(bostonLink, " and ", bayareaLink, " chapter pages.");
+    sidebar.append(controls, helper);
     const agenda = element("div", "community-agenda");
+    const chapterHead = element("div", "community-chapter-head");
+    const chapterTitle = element("h2");
+    const chapterDescription = element("p");
+    chapterHead.append(chapterTitle, chapterDescription);
     const filters = element("div", "community-filters");
-    const searchLabel = element("label", null, "Search events");
+    const searchLabel = element("label");
+    searchLabel.append(element("span", "community-sr-only", "Search events"));
     const search = element("input");
     search.type = "search";
-    search.placeholder = "Title, date, host, or venue…";
+    search.placeholder = "Search events, hosts, or venues…";
     searchLabel.append(search);
-    const typeLabel = element("label", null, "Event type");
+    const typeLabel = element("label");
+    typeLabel.append(element("span", "community-sr-only", "Event type"));
     const type = element("select");
     const allTypes = element("option", null, "All types");
     allTypes.value = "";
@@ -133,16 +189,39 @@
     );
     const reset = element("button", "community-reset", "Reset filters");
     reset.type = "button";
-    agenda.append(filters, status, reset, empty);
+    agenda.append(chapterHead, filters, status, empty, reset);
     layout.append(sidebar, agenda);
     chapters[0].section.before(layout);
     chapters.forEach((c) => agenda.append(c.section));
+    const listing = element("div", "community-listing");
+    const groups = new Map();
+    // Merge months across regions for All regions, without cloning event nodes.
+    const ordered = [...events].sort((a, b) =>
+      (a.date?.order ?? Infinity) - (b.date?.order ?? Infinity));
+    for (const event of ordered) {
+      const label = event.date?.label || "Other dates";
+      if (!groups.has(label)) {
+        const section = element("section", "community-month");
+        section.append(element("h2", null, label));
+        groups.set(label, { section, events: [] });
+        listing.append(section);
+      }
+      const group = groups.get(label);
+      group.events.push(event);
+      group.section.append(event.details);
+    }
+    agenda.append(listing);
 
     let selected = chapters.some((c) => c.key === "boston") ? "boston" : "all";
     const buttons = new Map();
     for (const region of [{ key: "all", name: "All regions" }, ...chapters]) {
       const button = element("button", null, region.name);
       button.type = "button";
+      if (region.emoji) {
+        const emoji = element("span", null, region.emoji);
+        emoji.setAttribute("aria-hidden", "true");
+        button.prepend(emoji, " ");
+      }
       button.addEventListener("click", () => {
         selected = region.key;
         render();
@@ -165,6 +244,9 @@
       for (const c of chapters) {
         c.section.hidden = selected !== "all" && selected !== c.key;
       }
+      for (const group of groups.values()) {
+        group.section.hidden = group.events.every((event) => event.details.hidden);
+      }
       for (const [key, button] of buttons) {
         button.setAttribute("aria-pressed", String(key === selected));
       }
@@ -172,8 +254,15 @@
         selected === "all"
           ? "All regions"
           : chapters.find((c) => c.key === selected).name;
-      status.textContent = `${count} ${count === 1 ? "event" : "events"} · ${name} · dates and times as listed by organizers`;
+      chapterTitle.textContent = name;
+      chapterDescription.textContent = selected === "all"
+        ? "Explore the whole community."
+        : selected === "major" ? "Robotics gatherings worth the trip."
+          : `Talks, demos, and game nights around ${name}.`;
+      status.textContent = `${count} ${count === 1 ? "event" : "events"} · dates and times as listed by organizers`;
+      status.append(element("span", "community-sr-only", ` · ${name}`));
       empty.hidden = count !== 0;
+      reset.hidden = !query && !type.value;
     }
 
     search.addEventListener("input", render);
@@ -194,7 +283,8 @@
       // getElementById avoids interpreting fragment text as a CSS selector.
       const target = document.getElementById(id);
       if (!target || !main.contains(target)) return;
-      const c = chapters.find((item) => item.section.contains(target));
+      const event = events.find((item) => item.details.contains(target));
+      const c = event?.chapter || chapters.find((item) => item.section.contains(target));
       if (c) {
         selected = c.key;
         search.value = "";

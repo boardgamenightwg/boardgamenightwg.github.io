@@ -1,162 +1,159 @@
-/* Community-only layout; typography, palette and category badges come from main.css. */
+/* Community-only chapter-first layout; retain the site's typography and palette. */
 .community-page .community-layout {
   display: grid;
   grid-template-columns: 145px minmax(0, 1fr);
   gap: 24px;
-  margin: 2rem 0;
+  margin: 18px 0 28px;
 }
 
+.community-page .community-sidebar { padding-top: 10px; }
 .community-page .community-regions {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
+.community-page .community-helper { font-size: 13px; line-height: 1.6; }
 
 .community-page button,
 .community-page input,
 .community-page select {
   font: inherit;
   color: inherit;
-  background: var(--color-background);
-  border: 1px solid #999;
-  border-radius: 4px;
+  background: transparent;
+  border: 1px solid #aaa;
+  border-radius: 3px;
   box-sizing: border-box;
   min-height: 44px;
-  padding: 8px;
+  padding: 8px 10px;
 }
-
-.community-page button {
-  cursor: pointer;
-}
-
+.community-page button { cursor: pointer; }
 .community-page .community-regions button {
   text-align: left;
+  padding: 8px;
+  border-color: #ddd;
+  border-radius: 4px;
+  color: var(--color-link);
 }
-
+.community-page .community-regions button:hover { border-color: var(--color-link); }
 .community-page button[aria-pressed="true"] {
   background: var(--color-tag-bg);
-  color: var(--color-selection-text);
+  color: #873a00;
   border-color: var(--color-tag-border);
   font-weight: 700;
 }
 
+.community-page .community-chapter-head h2 { font-size: 24px; margin: 0; }
+.community-page .community-chapter-head p { font-size: 14px; margin: 2px 0 14px; }
 .community-page .community-filters {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 170px);
+  grid-template-columns: minmax(0, 1fr) 160px;
   gap: 8px;
+  margin: 16px 0 10px;
 }
-
-.community-page .community-filters label {
-  font-size: 0.85rem;
-  min-width: 0;
-}
-
+.community-page .community-filters label { min-width: 0; }
 .community-page input,
-.community-page select {
-  display: block;
-  width: 100%;
-  font-size: 1rem;
-}
+.community-page select { display: block; width: 100%; font-size: 1rem; }
+.community-page .community-status { font-size: 13px; margin: 8px 0; }
+.community-page .community-reset { font-size: 0.85rem; }
+.community-page .community-empty { margin-top: 24px; }
 
-.community-page .community-status {
-  font-size: 0.85rem;
-  margin-bottom: 8px;
+/* Preserve source heading outerHTML and fragment IDs without a second visible
+   chapter title. Input labels remain accessible without adding a mockup row. */
+.community-page .community-chapter > h2,
+.community-page .community-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
-
-.community-page .community-reset {
-  font-size: 0.85rem;
-}
-
-.community-page .community-chapter > h2 {
+.community-page .community-month > h2 {
+  font-size: 20px;
   border-bottom: 1px dashed #6b7280;
-  padding-bottom: 8px;
+  padding: 6px 0;
+  margin: 20px 0 4px;
 }
-
-.community-page .community-event {
-  border-bottom: 1px solid #999;
-  padding: 16px 0;
-}
-
+.community-page .community-event { margin: 0; border-bottom: 1px solid #eee; }
 .community-page summary {
   cursor: pointer;
   position: relative;
   list-style: none;
-  padding-right: 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 28px 18px 0;
 }
-
-.community-page summary::-webkit-details-marker {
-  display: none;
-}
-
+.community-page summary::-webkit-details-marker { display: none; }
 .community-page summary::after {
   content: "+";
   position: absolute;
-  right: 2px;
-  top: 0;
+  right: 0;
+  top: 18px;
   color: var(--color-link);
-  font-size: 1.4rem;
+  font-size: 24px;
 }
-
-.community-page details[open] > summary::after {
-  content: "−";
+.community-page details[open] > summary::after { content: "−"; }
+.community-page .community-date-tile {
+  flex: 0 0 44px;
+  text-align: center;
+  line-height: 1.3;
+  font-size: 12px;
+  padding-top: 3px;
 }
-
-.community-page summary h3 {
-  display: inline;
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin: 0;
-}
-
-.community-page .badge {
-  white-space: normal;
-}
-
-.community-page .community-date {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.9rem;
-}
+.community-page .community-date-tile b { display: block; font-size: 26px; line-height: 1.3; }
+.community-page .community-copy { flex: 1; min-width: 0; }
+.community-page .community-eyebrow { font-size: 12px; }
+.community-page .community-region-label { margin-right: 8px; }
+.community-page summary h3 { font-size: 18px; line-height: 1.5; margin: 6px 0; }
+/* Display the original category above the untouched title, not twice. */
+.community-page summary h3 .badge { display: none; }
+.community-page .community-eyebrow .badge { font-size: 12px; margin-left: 0; white-space: normal; }
+.community-page .community-date { display: block; font-size: 14px; line-height: 1.5; }
+.community-page .community-detail { padding: 0 0 20px 58px; font-size: 15px; }
+.community-page .community-detail p { margin: 8px 0; }
+.community-page .community-detail a { display: inline-block; margin-top: 8px; }
 
 .community-page :is(button, input, select, summary, a):focus-visible {
   outline: 2px solid var(--color-link);
   outline-offset: 3px;
 }
-
-.community-page [hidden] {
-  display: none !important;
-}
-
-body[data-theme="dark"] .community-page :is(button, input, select) {
+.community-page [hidden] { display: none !important; }
+body[data-theme="dark"] .community-page :is(input, select) {
   color: var(--color-text-dark);
   background: var(--color-input-bg-dark);
 }
-
-body[data-theme="dark"] .community-page button[aria-pressed="true"] {
-  background: var(--color-tag-bg);
-  color: var(--color-selection-text);
-}
-
-body[data-theme="dark"] .community-page summary::after {
+body[data-theme="dark"] .community-page .community-regions button {
   color: var(--color-link-dark);
+  border-color: #777;
 }
-
-body[data-theme="dark"] .community-page :focus-visible {
-  outline-color: var(--color-link-dark);
+body[data-theme="dark"] .community-page button[aria-pressed="true"] {
+  background: #5c2e0a;
+  color: #fed7aa;
+  border-color: #7b3f0b;
 }
+body[data-theme="dark"] .community-page .community-event { border-color: #777; }
+body[data-theme="dark"] .community-page summary::after { color: var(--color-link-dark); }
+body[data-theme="dark"] .community-page :focus-visible { outline-color: var(--color-link-dark); }
 
-@media (max-width: 600px) {
-  .community-page .community-layout {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 16px;
-  }
-
-  .community-page .community-regions {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .community-page .community-filters {
-    grid-template-columns: minmax(0, 1fr);
-  }
+@media (max-width: 768px) {
+  .community-page .community-layout { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .community-page .community-sidebar { padding: 0; }
+  .community-page .community-helper { display: none; }
+  .community-page .community-regions { flex-direction: row; flex-wrap: wrap; }
+  .community-page .community-regions button { font-size: 14px; }
+  .community-page .community-filters { grid-template-columns: minmax(0, 1fr) 125px; margin-top: 12px; }
+  .community-page select { font-size: 14px; }
+  .community-page summary { gap: 10px; }
+  .community-page summary h3 { font-size: 17px; }
+  .community-page .community-date-tile { flex-basis: 36px; }
+  .community-page .community-eyebrow,
+  .community-page .community-eyebrow .badge { font-size: 11px; }
+  .community-page .community-detail { padding-left: 0; }
+}
+@media (max-width: 360px) {
+  .community-page .community-filters { grid-template-columns: minmax(0, 1fr); }
 }
