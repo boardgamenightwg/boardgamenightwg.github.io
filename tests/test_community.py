@@ -6,6 +6,7 @@ generated document and holds analytics pending to verify script independence.
 The production Markdown is never modified; edge cases alter only served HTML.
 """
 
+from datetime import datetime
 import functools
 import http.server
 from pathlib import Path
@@ -131,8 +132,11 @@ class CommunityTests(unittest.TestCase):
             self.assertTrue(held, "The real analytics request must remain pending")
             self.page.wait_for_selector("main.community-page", timeout=3000)
             self.assertNotEqual(self.page.evaluate("document.readyState"), "complete")
-            self.assertGreater(self.visible_events().count(), 0)
+            self.assertTrue(
+                self.page.get_by_role("searchbox", name="Search events").is_visible()
+            )
             self.region("Bay Area")
+            bay_area_count = self.visible_events().count()
             self.assertEqual(
                 self.page.get_by_role(
                     "button", name="Bay Area", exact=True
@@ -144,7 +148,7 @@ class CommunityTests(unittest.TestCase):
             )
             self.assertEqual(self.visible_events().count(), 0)
             self.page.get_by_role("button", name="Reset filters").click()
-            self.assertGreater(self.visible_events().count(), 0)
+            self.assertEqual(self.visible_events().count(), bay_area_count)
         finally:
             for route in held:
                 route.fulfill(body="", content_type="application/javascript")
@@ -197,6 +201,123 @@ class CommunityTests(unittest.TestCase):
         self.assertEqual(
             self.page.get_by_role("heading", name="Robotics Talk at MIT").count(), 0
         )
+
+    def test_real_source_grouping_membership_and_metadata(self):
+        # Capture the actual Zola output BEFORE enhancement. Expected membership
+        # and metadata must not come from the UI we are trying to verify, nor pin
+        # any current event title, date, count, or populated chapter.
+        self.use_fixture = False
+        self.page.route("**/community.js", lambda route: route.abort())
+        self.load()
+        source = self.page.locator("main > h3").evaluate_all(
+            """headings => headings.map(heading => {
+                let chapter = heading.previousElementSibling;
+                while (chapter && chapter.tagName !== 'H2') {
+                    chapter = chapter.previousElementSibling;
+                }
+                const paragraphs = [];
+                for (let n = heading.nextElementSibling;
+                     n && !['H2', 'H3'].includes(n.tagName);
+                     n = n.nextElementSibling) {
+                    if (n.tagName === 'P') paragraphs.push(n.outerHTML);
+                }
+                const metadata = heading.nextElementSibling;
+                const schedule = metadata.innerText.split('Where:')[0]
+                    .replace(/^When:\\s*/, '').trim();
+                return {id: heading.id, title: heading.outerHTML, paragraphs,
+                    chapter: chapter.textContent.trim(), schedule,
+                    badges: [...heading.querySelectorAll('.badge')]
+                        .map(badge => badge.textContent.trim())};
+            })"""
+        )
+        # Use Python's calendar validation, independently of community.js.
+        for event in source:
+            event["month"] = "Other dates"
+            event["order"] = datetime.max
+            match = re.match(
+                r"^([A-Za-z]+) (\d{1,2})(?:\s*[–-]\s*(\d{1,2}))?, (\d{4})(?=$|[\s,@;.])",
+                event["schedule"],
+            )
+            if match:
+                month, day, end, year = match.groups()
+                try:
+                    start = datetime.strptime(f"{month} {day} {year}", "%B %d %Y")
+                    finish = start.replace(day=int(end or day))
+                    if finish >= start:
+                        event["order"] = start
+                        event["month"] = f"{month} {year}"
+                except ValueError:
+                    pass
+        self.page.unroute("**/community.js")
+        self.load()
+        self.enhanced(len(source))
+        self.region("All regions")
+        for event in source:
+            with self.subTest(event=event["id"]):
+                row = self.page.locator("details").filter(
+                    has=self.page.locator(f'[id="{event["id"]}"]')
+                )
+                self.assertEqual(row.count(), 1)
+                self.assertEqual(
+                    row.locator("h3").evaluate("e => e.outerHTML"), event["title"]
+                )
+                self.assertEqual(
+                    row.locator(".community-detail p").evaluate_all(
+                        "es => es.map(e => e.outerHTML)"
+                    ),
+                    event["paragraphs"],
+                )
+                self.assertEqual(
+                    row.locator(".community-date").inner_text(), event["schedule"]
+                )
+                self.assertEqual(
+                    row.locator(".community-eyebrow .badge").all_text_contents(),
+                    event["badges"],
+                )
+                tile = row.locator(".community-date-tile")
+                if event["month"] == "Other dates":
+                    self.assertEqual(tile.count(), 0)
+                else:
+                    self.assertEqual(
+                        tile.locator("span").inner_text(), event["order"].strftime("%b")
+                    )
+                    self.assertEqual(
+                        tile.locator("b").inner_text(), str(event["order"].day)
+                    )
+
+        for region, suffix in [
+            ("Boston", "Boston"),
+            ("Bay Area", "Bay Area"),
+            ("Major Events", "Major Robotics Events"),
+            ("All regions", ""),
+        ]:
+            with self.subTest(region=region):
+                self.region(region)
+                expected = [e for e in source if e["chapter"].endswith(suffix)]
+                groups = {}
+                for event in sorted(expected, key=lambda e: e["order"]):
+                    groups.setdefault(event["month"], []).append(event["id"])
+                actual = self.page.locator(".community-month:visible").evaluate_all(
+                    """groups => groups.map(group => ({
+                        month: group.querySelector('h2').textContent,
+                        ids: [...group.querySelectorAll('details:not([hidden]) h3')]
+                            .map(heading => heading.id)
+                    }))"""
+                )
+                self.assertEqual(
+                    actual,
+                    [{"month": month, "ids": ids} for month, ids in groups.items()],
+                )
+                self.assertCountEqual(
+                    self.visible_events()
+                    .locator("h3")
+                    .evaluate_all("es => es.map(e => e.id)"),
+                    [e["id"] for e in expected],
+                )
+                self.assertIn(
+                    f"{len(expected)} event",
+                    self.page.get_by_role("status").inner_text(),
+                )
 
     def test_search_type_and_empty_reset(self):
         self.load()
