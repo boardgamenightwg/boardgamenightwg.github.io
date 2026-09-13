@@ -7,6 +7,14 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
+### Dimensional Robotics Happy Hour <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** September 16, 2026 @ 5:30 PM – 8:00 PM \
+**Where:** Cambridge, MA (RSVP for location) \
+**Host:** Dimensional and LightHouse \
+​Dimensional and LightHouse are hosting a happy hour for builders in robotics. Come hang out and play with our robots!
+
+[More info / RSVP →](https://luma.com/z768k4i7)
+
 ### RoboBoston: 9th Annual Robot Block Party <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** September 26, 2026 @ 10:45 AM – 4:00 PM \
 **Where:** Seaport, 88 Seaport Blvd, Boston, MA 02210 \
