@@ -69,18 +69,20 @@ class CommunityDesignTests(unittest.TestCase):
                 .endswith(path)
             )
 
-    def test_source_events_are_grouped_once_by_month_and_year(self):
+    def test_fixture_events_are_grouped_once_by_month_and_year(self):
+        # Fixed counts belong to a fixture, not the routinely pruned live calendar.
+        self.use_fixture = True
         self.load()
         headings = self.page.locator(".community-month:visible > h2")
         self.assertEqual(
             headings.all_text_contents(),
-            ["September 2026", "October 2026", "November 2026"],
+            ["September 2026", "October 2026"],
         )
         self.assertEqual(
             self.page.locator(".community-month:visible").evaluate_all(
                 "es => es.map(e => e.querySelectorAll('details:not([hidden])').length)"
             ),
-            [1, 2, 1],
+            [1, 1],
         )
         self.assertEqual(
             headings.first.evaluate("e => getComputedStyle(e).borderBottomStyle"),
@@ -89,16 +91,16 @@ class CommunityDesignTests(unittest.TestCase):
         self.region("All regions")
         self.assertEqual(
             headings.all_text_contents(),
-            ["September 2026", "October 2026", "November 2026", "December 2026"],
+            ["September 2026", "October 2026", "December 2026"],
         )
-        self.assertEqual(self.visible_events().count(), 10)
+        self.assertEqual(self.visible_events().count(), 7)
         self.assertEqual(
             self.page.locator(".community-month:visible").evaluate_all(
                 "es => es.map(e => e.querySelectorAll('details:not([hidden])').length)"
             ),
-            [5, 3, 1, 1],
+            [5, 1, 1],
         )
-        self.page.get_by_role("searchbox", name="Search events").fill("Minds in Motion")
+        self.page.get_by_role("searchbox", name="Search events").fill("Test robotics talk")
         self.assertEqual(headings.all_text_contents(), ["October 2026"])
         self.page.get_by_role("searchbox", name="Search events").fill(
             "no match anywhere"
