@@ -1,0 +1,67 @@
+/* Approved A: club nights first, a compact community preview, existing theme. */
+.homepage > section > h2 {
+  font-size: 26px;
+  line-height: 1.3;
+  margin: 22px 0 5px;
+}
+.homepage .section-intro { font-size: 15px; margin: 0 0 17px; }
+.homepage .club-row {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  padding: 17px 0;
+  border-bottom: 1px solid #ddd;
+}
+.homepage .chapter-emoji { font-size: 21px; white-space: nowrap; }
+.homepage .club-row h3 { font-size: 20px; margin: 0; line-height: 1.4; }
+.homepage .club-row p { margin: 2px 0 0; font-size: 14px; white-space: pre-line; }
+.homepage .chapter-link { font-size: 14px; white-space: nowrap; }
+.homepage .newcomer { font-size: 14px; margin: 16px 0 24px; }
+.homepage .around { border-top: 1px dashed #6b7280; padding-top: 10px; margin-top: 24px; }
+.homepage .preview-event { margin: 0; border-bottom: 1px solid #ddd; }
+.homepage .preview-event summary {
+  display: flex;
+  gap: 14px;
+  position: relative;
+  padding: 16px 25px 16px 0;
+  cursor: pointer;
+  list-style: none;
+}
+.homepage .preview-event summary::-webkit-details-marker { display: none; }
+.homepage .preview-event summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 16px;
+  color: var(--color-link);
+  font-size: 23px;
+}
+.homepage .preview-event[open] summary::after { content: '−'; }
+.homepage .date-tile { flex: 0 0 44px; text-align: center; font-size: 12px; line-height: 1.3; padding-top: 3px; }
+.homepage .date-tile b { display: block; font-size: 26px; line-height: 1.3; }
+.homepage .event-copy { flex: 1; min-width: 0; }
+.homepage .eyebrow { display: block; font-size: 12px; }
+.homepage .eyebrow .badge { font-size: 12px; white-space: normal; margin-left: 7px; }
+.homepage .event-title { display: block; font-size: 18px; line-height: 1.45; font-weight: 700; margin: 4px 0; }
+.homepage .schedule { display: block; font-size: 14px; line-height: 1.5; }
+.homepage [hidden] { display: none; }
+.homepage .event-detail { padding: 0 0 18px 58px; font-size: 14px; }
+.homepage .event-detail p { margin: 8px 0; }
+.homepage .browse { font-size: 16px; margin: 20px 0; }
+.homepage .heritage { font-size: 14px; margin: 30px 0 25px; }
+.homepage :where(a, summary):focus-visible { outline: 2px solid var(--color-link); outline-offset: 4px; }
+body[data-theme='dark'] .homepage :where(.club-row, .preview-event) { border-color: #777; }
+body[data-theme='dark'] .homepage .preview-event summary::after { color: var(--color-link-dark); }
+body[data-theme='dark'] .homepage :where(a, summary):focus-visible { outline-color: var(--color-link-dark); }
+@media (max-width: 600px) {
+  .homepage > section > h2 { font-size: 24px; }
+  .homepage .club-row { grid-template-columns: 44px minmax(0, 1fr); gap: 12px; }
+  .homepage .chapter-link { grid-column: 2; margin-top: -4px; }
+  .homepage .preview-event summary { gap: 10px; }
+  .homepage .date-tile { flex-basis: 40px; }
+  .homepage .date-tile b { font-size: 23px; }
+  .homepage .event-title { font-size: 17px; }
+  .homepage .event-detail { padding-left: 0; }
+  .homepage .eyebrow, .homepage .eyebrow .badge { font-size: 11px; }
+}

@@ -1,7 +1,44 @@
 {% extends "base.html" %}
 
+{% block extra_head %}
+<link rel="stylesheet" href="{{ get_url(path='styles/homepage.css', trailing_slash=false) | safe }}">
+{% endblock extra_head %}
+
 {% block main %}
-  <main>
-    {{ section.content | safe }}
-  </main>
-{% endblock %}
+<main class="homepage">
+  <section aria-labelledby="club-title">
+    <h2 id="club-title">Next club game nights</h2>
+    <p class="section-intro">Find your chapter. Join us at the table.</p>
+    {% for chapter in ['boston', 'bayarea'] %}
+    {% if chapter == 'boston' %}
+    {% set name = 'Boston' %}{% set emoji = '🫘🌆' %}
+    {% else %}
+    {% set name = 'Bay Area' %}{% set emoji = '🌉🌅' %}
+    {% endif %}
+    <div class="club-row" data-chapter="{{ chapter }}" data-region="{{ name }}">
+      <span class="chapter-emoji" aria-hidden="true">{{ emoji }}</span>
+      <div>
+        <h3><a href="{{ get_url(path=chapter, trailing_slash=true) | safe }}">{{ name }}</a></h3>
+        <p class="club-schedule">Check the chapter for the latest date</p>
+      </div>
+      <a class="chapter-link" href="{{ get_url(path=chapter, trailing_slash=true) | safe }}">Chapter details <span aria-hidden="true">→</span></a>
+    </div>
+    {% endfor %}
+    <p class="newcomer">New here? <a href="{{ get_url(path='faq') | safe }}">Start with the FAQ →</a></p>
+  </section>
+  <section class="around" aria-labelledby="around-title">
+    <h2 id="around-title">Around the community</h2>
+    <p class="section-intro">A few upcoming gatherings from our wider robotics community.<br>Hosted by other groups, not club game nights.</p>
+    <div id="homepage-events"></div>
+    <p id="homepage-directory-note" class="schedule">See the community directory for more dates.</p>
+    <p class="browse"><a id="homepage-directory-link" href="{{ get_url(path='community', trailing_slash=true) | safe }}">Browse all community events →</a></p>
+  </section>
+  <div class="heritage">{{ section.content | safe }}</div>
+</main>
+{% for source in ['boston', 'bayarea', 'community'] %}
+{% set source_page = get_page(path=source ~ '.md') %}
+<template id="homepage-{{ source }}-source">{{ source_page.content | safe }}</template>
+{% endfor %}
+<!-- Async and after its DOM: never wait behind inherited deferred analytics. -->
+<script type="module" async src="{{ get_url(path='scripts/homepage.mjs', trailing_slash=false) | safe }}"></script>
+{% endblock main %}
