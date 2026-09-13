@@ -61,14 +61,6 @@ A talk on the latest in legged locomotion, followed by an open lab tour.
 
 ## 🌉🌅 Bay Area
 
-### ULTIMATE GAME NIGHT: THE FINAL ROUND <span class="badge badge-boardgames">🎲 Board Games</span>
-**When:** September 12, 2026 @ 7:00 PM – midnight \
-**Where:** Hacker Dojo, 855 Maude Ave, Mountain View, CA 94043 \
-**Host:** Hacker Dojo \
-An action-packed game night featuring board and card games, classic video games, poker, Rock Band, and organized tournaments. Come to compete or just drop in and play.
-
-[More info / RSVP →](https://www.meetup.com/hackerdojo/events/313961310/)
-
 ### Automated Happy Hour with Rodney Brooks <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** September 22, 2026 @ 6:00 PM – 8:45 PM PDT \
 **Where:** Circuit Launch, Mountain View, CA (register for the exact address) \
