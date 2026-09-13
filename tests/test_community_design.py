@@ -100,7 +100,9 @@ class CommunityDesignTests(unittest.TestCase):
             ),
             [5, 1, 1],
         )
-        self.page.get_by_role("searchbox", name="Search events").fill("Test robotics talk")
+        self.page.get_by_role("searchbox", name="Search events").fill(
+            "Test robotics talk"
+        )
         self.assertEqual(headings.all_text_contents(), ["October 2026"])
         self.page.get_by_role("searchbox", name="Search events").fill(
             "no match anywhere"
