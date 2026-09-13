@@ -1,4 +1,4 @@
-"""Chapter-first design regressions on actual Zola content, plus safe date edges."""
+"""Deterministic design/date cases; live-source contracts live in test_community."""
 
 import unittest
 
@@ -16,7 +16,8 @@ class CommunityDesignTests(unittest.TestCase):
 
     def setUp(self):
         community.CommunityTests.setUp(self)
-        self.use_fixture = False
+        # Fixed layout and date expectations belong to community_fixture.html.
+        self.use_fixture = True
         self.page.set_viewport_size({"width": 1200, "height": 1050})
 
     def test_chapter_heading_and_description_precede_filters(self):
@@ -69,18 +70,18 @@ class CommunityDesignTests(unittest.TestCase):
                 .endswith(path)
             )
 
-    def test_source_events_are_grouped_once_by_month_and_year(self):
+    def test_fixture_events_are_grouped_once_by_month_and_year(self):
         self.load()
         headings = self.page.locator(".community-month:visible > h2")
         self.assertEqual(
             headings.all_text_contents(),
-            ["September 2026", "October 2026", "November 2026"],
+            ["September 2026", "October 2026"],
         )
         self.assertEqual(
             self.page.locator(".community-month:visible").evaluate_all(
                 "es => es.map(e => e.querySelectorAll('details:not([hidden])').length)"
             ),
-            [1, 2, 1],
+            [1, 1],
         )
         self.assertEqual(
             headings.first.evaluate("e => getComputedStyle(e).borderBottomStyle"),
@@ -89,16 +90,18 @@ class CommunityDesignTests(unittest.TestCase):
         self.region("All regions")
         self.assertEqual(
             headings.all_text_contents(),
-            ["September 2026", "October 2026", "November 2026", "December 2026"],
+            ["September 2026", "October 2026", "December 2026"],
         )
-        self.assertEqual(self.visible_events().count(), 10)
+        self.assertEqual(self.visible_events().count(), 7)
         self.assertEqual(
             self.page.locator(".community-month:visible").evaluate_all(
                 "es => es.map(e => e.querySelectorAll('details:not([hidden])').length)"
             ),
-            [5, 3, 1, 1],
+            [5, 1, 1],
         )
-        self.page.get_by_role("searchbox", name="Search events").fill("Minds in Motion")
+        self.page.get_by_role("searchbox", name="Search events").fill(
+            "Test robotics talk"
+        )
         self.assertEqual(headings.all_text_contents(), ["October 2026"])
         self.page.get_by_role("searchbox", name="Search events").fill(
             "no match anywhere"
@@ -110,13 +113,16 @@ class CommunityDesignTests(unittest.TestCase):
 
     def test_compact_date_column_and_eyebrow_above_unchanged_title(self):
         self.load()
-        row = self.visible_events().first
+        row = self.page.locator("details").filter(
+            has=self.page.locator("#robotics-talk")
+        )
         tile = row.locator(".community-date-tile")
         self.assertEqual(tile.count(), 1, "Approved month/day column missing")
-        self.assertEqual(tile.locator("span").inner_text(), "Sep")
-        self.assertEqual(tile.locator("b").inner_text(), "26")
+        self.assertEqual(tile.locator("span").inner_text(), "Oct")
+        self.assertEqual(tile.locator("b").inner_text(), "15")
         self.assertEqual(tile.get_attribute("aria-hidden"), "true")
         title = row.locator("h3")
+        self.assertEqual(title.text_content(), "Test robotics talk 🤖 Robotics")
         eyebrow = row.locator(".community-eyebrow")
         self.assertIn("Boston", eyebrow.inner_text())
         self.assertIn("Robotics", eyebrow.inner_text())
@@ -129,7 +135,7 @@ class CommunityDesignTests(unittest.TestCase):
         self.assertFalse(title.locator(".badge").is_visible())
         self.assertEqual(row.locator("summary .badge:visible").count(), 1)
         self.assertLess(row.bounding_box()["height"], 140)
-        schedule = "September 26, 2026 @ 10:45 AM – 4:00 PM"
+        schedule = "October 15, 2026 @ 7:00 PM – 9:00 PM"
         self.assertEqual(row.locator(".community-date").inner_text(), schedule)
         self.assertFalse(row.evaluate("e => e.open"))
         row.locator("summary").click()
@@ -146,13 +152,13 @@ class CommunityDesignTests(unittest.TestCase):
                 "September 23, 2026 @ 7:30 AM – 6:30 PM; September 24 @ 7:30 AM – 4:00 PM",
             ),
             (
-                "2026 IEEE-RAS International Conference on Humanoid Robots",
+                "Test IEEE-RAS event",
                 "Dec",
                 "6",
                 "December 6–9, 2026, program hours vary",
             ),
             (
-                "ROSCon Global 2026",
+                "Test ROSCon",
                 "Sep",
                 "22",
                 "September 22–24, 2026, program hours vary (EDT). Opening-day registration: 7:00 AM – 5:30 PM; workshops: 8:00 AM – 5:00 PM",
@@ -173,7 +179,7 @@ class CommunityDesignTests(unittest.TestCase):
                 )
 
     def test_unrecognized_or_invalid_dates_use_honest_fallback(self):
-        original = "September 26, 2026 @ 10:45 AM – 4:00 PM"
+        original = "September 11, 2026 @ 2:00 PM – 3:00 PM EDT"
         for schedule in [
             "Date to be announced",
             "09/26/26, time unknown",
@@ -185,7 +191,9 @@ class CommunityDesignTests(unittest.TestCase):
             with self.subTest(schedule=schedule):
                 self.transform = lambda html: html.replace(original, schedule)
                 self.load()
-                row = self.page.locator("details").filter(has_text="RoboBoston:")
+                row = self.page.locator("details").filter(
+                    has=self.page.locator("#long-title")
+                )
                 group = row.locator("..")
                 self.assertEqual(group.locator(":scope > h2").count(), 1)
                 self.assertEqual(
@@ -193,14 +201,14 @@ class CommunityDesignTests(unittest.TestCase):
                 )
                 self.assertEqual(row.locator(".community-date-tile").count(), 0)
                 self.assertEqual(row.locator(".community-date").inner_text(), schedule)
-                self.assertEqual(self.visible_events().count(), 4)
+                self.assertEqual(self.visible_events().count(), 2)
 
     def test_year_is_taken_from_source_not_fixed_to_mockup(self):
         self.transform = lambda html: html.replace(
-            "September 26, 2026", "February 29, 2028"
+            "September 11, 2026", "February 29, 2028"
         )
         self.load()
-        row = self.page.locator("details").filter(has_text="RoboBoston:")
+        row = self.page.locator("details").filter(has=self.page.locator("#long-title"))
         self.assertEqual(row.locator(".community-date-tile").count(), 1)
         self.assertEqual(row.locator(".community-date-tile span").inner_text(), "Feb")
         self.assertEqual(row.locator(".community-date-tile b").inner_text(), "29")
