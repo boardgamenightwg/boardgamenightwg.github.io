@@ -61,6 +61,14 @@ A talk on the latest in legged locomotion, followed by an open lab tour.
 
 ## 🌉🌅 Bay Area
 
+### Next-Gen Wearables & Assistive Robotics — WT Conference session <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** September 16, 2026 @ 2:45 PM – 3:45 PM PDT (preliminary agenda; ends at the next session's start) \
+**Where:** Computer History Museum, 1401 N. Shoreline Blvd., Mountain View, CA 94043 \
+**Host:** Wearable Technologies \
+A WT Conference session on wearables and assistive robotics for active aging and independence, with an opening talk, market insights, and a panel featuring Tim Swift of Roam Robotics and Assaf Gad of Intuition Robotics. WT Conference admission required; agenda subject to change.
+
+[More info / RSVP →](https://wearable-technologies.com/e-agenda/wt-conference-us-2026---agenda)
+
 ### Automated Happy Hour with Rodney Brooks <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** September 22, 2026 @ 6:00 PM – 8:45 PM PDT \
 **Where:** Circuit Launch, Mountain View, CA (register for the exact address) \
@@ -102,6 +110,14 @@ A premier international forum on humanoid robotics, featuring public forums, wor
 A three-day conference for ROS developers of all levels, with workshops, technical talks, tutorials, demonstrations, and opportunities to meet the global ROS community.
 
 [More info / RSVP →](https://roscon.ros.org/2026/)
+
+### Automate 2027 <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** May 10–13, 2027. Show floor: May 10–12 @ 10:00 AM – 5:00 PM PDT; May 13 @ 10:00 AM – 3:00 PM PDT \
+**Where:** Las Vegas Convention Center, 3150 Paradise Rd, Las Vegas, NV 89109 \
+**Host:** Association for Advancing Automation (A3) \
+A four-day automation show covering robotics and industrial automation. Show-only registration is free; educational conference courses require a fee, and no children under 12 are permitted on the show floor.
+
+[More info / RSVP →](https://www.xpressreg.net/register/AUTO0527/landing.php)
 
 ## Submit Your Event {#submit-your-event}
 
