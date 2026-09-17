@@ -7,14 +7,6 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
-### Dimensional Robotics Happy Hour <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** September 16, 2026 @ 5:30 PM – 8:00 PM \
-**Where:** Cambridge, MA (RSVP for location) \
-**Host:** Dimensional and LightHouse \
-​Dimensional and LightHouse are hosting a happy hour for builders in robotics. Come hang out and play with our robots!
-
-[More info / RSVP →](https://luma.com/z768k4i7)
-
 ### RoboBoston: 9th Annual Robot Block Party <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** September 26, 2026 @ 10:45 AM – 4:00 PM \
 **Where:** Seaport, 88 Seaport Blvd, Boston, MA 02210 \
@@ -68,14 +60,6 @@ A talk on the latest in legged locomotion, followed by an open lab tour.
 -->
 
 ## 🌉🌅 Bay Area
-
-### Next-Gen Wearables & Assistive Robotics — WT Conference session <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** September 16, 2026 @ 2:45 PM – 3:45 PM PDT (preliminary agenda; ends at the next session's start) \
-**Where:** Computer History Museum, 1401 N. Shoreline Blvd., Mountain View, CA 94043 \
-**Host:** Wearable Technologies \
-A WT Conference session on wearables and assistive robotics for active aging and independence, with an opening talk, market insights, and a panel featuring Tim Swift of Roam Robotics and Assaf Gad of Intuition Robotics. WT Conference admission required; agenda subject to change.
-
-[More info / RSVP →](https://wearable-technologies.com/e-agenda/wt-conference-us-2026---agenda)
 
 ### Automated Happy Hour with Rodney Brooks <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** September 22, 2026 @ 6:00 PM – 8:45 PM PDT \
