@@ -1,4 +1,5 @@
 """Optional browser smoke for the server-rendered Megadex; build to public/ first."""
+
 import functools
 import http.server
 import json
@@ -32,12 +33,14 @@ def main():
             context.route("https://pls.mrkaran.dev/**", lambda route: route.abort())
             page.on(
                 "console",
-                lambda msg: console_errors.append(msg.text)
-                if msg.type == "error"
-                and not msg.location.get("url", "").startswith(
-                    "https://pls.mrkaran.dev/"
-                )
-                else None,
+                lambda msg: (
+                    console_errors.append(msg.text)
+                    if msg.type == "error"
+                    and not msg.location.get("url", "").startswith(
+                        "https://pls.mrkaran.dev/"
+                    )
+                    else None
+                ),
             )
             page.on("pageerror", lambda error: errors.append(str(error)))
             page.goto("http://127.0.0.1:8767/megadex/", wait_until="domcontentloaded")
@@ -95,7 +98,9 @@ def main():
             assert not errors, errors
             assert not console_errors, console_errors
             browser.close()
-        print("PASS: rendered regions, careers links, news order, unlisted route, mobile")
+        print(
+            "PASS: rendered regions, careers links, news order, unlisted route, mobile"
+        )
     finally:
         server.shutdown()
         server.server_close()
