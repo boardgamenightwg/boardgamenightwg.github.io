@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Validate public Megadex data using Python's standard library only."""
+
 import argparse
 from datetime import date
 import json
@@ -10,7 +11,14 @@ from urllib.parse import urlsplit
 
 ID = re.compile(r"[a-z][a-z0-9]*(?:-[a-z0-9]+)*\Z")
 COMPANY_FIELDS = {
-    "id", "name", "region", "website", "careers_url", "summary", "news", "last_verified",
+    "id",
+    "name",
+    "region",
+    "website",
+    "careers_url",
+    "summary",
+    "news",
+    "last_verified",
 }
 NEWS_FIELDS = {"date", "headline", "url"}
 
@@ -64,7 +72,9 @@ def validate(data):
     )
 
     regions = data.get("regions")
-    if check(isinstance(regions, dict) and regions, "regions: expected non-empty object"):
+    if check(
+        isinstance(regions, dict) and regions, "regions: expected non-empty object"
+    ):
         for key, label in regions.items():
             check(
                 isinstance(key, str) and len(key) <= 40 and bool(ID.fullmatch(key)),
@@ -104,7 +114,9 @@ def validate(data):
         )
         check(safe_url(company.get("website")), f"{where}: bad website URL")
         check(safe_url(company.get("careers_url")), f"{where}: bad careers_url")
-        check(text(company.get("summary"), 600), f"{where}: bad summary (max 600 chars)")
+        check(
+            text(company.get("summary"), 600), f"{where}: bad summary (max 600 chars)"
+        )
 
         last = company.get("last_verified")
         check(
@@ -123,7 +135,10 @@ def validate(data):
                     set(item) == NEWS_FIELDS,
                     f"{n_where}: expected fields {sorted(NEWS_FIELDS)}, got {sorted(item)}",
                 )
-                check(valid_date(item.get("date")), f"{n_where}: bad date {item.get('date')!r}")
+                check(
+                    valid_date(item.get("date")),
+                    f"{n_where}: bad date {item.get('date')!r}",
+                )
                 check(text(item.get("headline"), 300), f"{n_where}: bad headline")
                 url = item.get("url")
                 check(safe_url(url), f"{n_where}: bad url")
@@ -132,7 +147,8 @@ def validate(data):
             dates = [str(item.get("date")) for item in news if isinstance(item, dict)]
             ok_dates = [d for d in dates if valid_date(d)]
             check(
-                len(ok_dates) == len(dates) and ok_dates == sorted(ok_dates, reverse=True),
+                len(ok_dates) == len(dates)
+                and ok_dates == sorted(ok_dates, reverse=True),
                 f"{where}: news must be newest-first with valid ISO dates",
             )
 

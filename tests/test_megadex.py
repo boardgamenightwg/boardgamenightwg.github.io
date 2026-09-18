@@ -1,4 +1,5 @@
 """Stdlib contract tests for the Megadex validator and data."""
+
 import copy
 import importlib.util
 import json
@@ -66,8 +67,12 @@ class ValidatorTests(unittest.TestCase):
         self.assertTrue(any("unknown region" in e for e in validate(data)))
 
     def test_rejects_bad_urls(self):
-        for bad in ["javascript:alert(1)", "ftp://example.org", "not a url",
-                    "https://user:***@example.org/"]:
+        for bad in [
+            "javascript:alert(1)",
+            "ftp://example.org",
+            "not a url",
+            "https://user:***@example.org/",
+        ]:
             data = fixture()
             data["companies"][0]["careers_url"] = bad
             self.assertTrue(
