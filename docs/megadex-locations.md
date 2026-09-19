@@ -21,6 +21,12 @@ company. Its official [website](https://locusrobotics.com/) and
 [job openings](https://locusrobotics.com/company/careers/job-openings) were fetched
 and verified against their page titles and content before correcting the links.
 
+## Additional companies
+
+For the expanded roster, see [host-derived company evidence](megadex-hosts.md)
+and [additional company sources](megadex-company-sources.md). Each records its
+own verification date, city source and coordinate provenance.
+
 ## Coordinate provenance
 
 Coordinates are city/town representative points returned by the

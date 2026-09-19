@@ -73,6 +73,42 @@
       "website": "https://www.bonsairobotics.ai/"
     },
     {
+      "careers_url": "https://www.cobaltai.com/careers/",
+      "id": "cobalt-ai",
+      "last_verified": "2026-09-19",
+      "location": {
+        "label": "San Francisco, CA",
+        "lat": 37.7879363,
+        "lon": -122.4075201,
+        "precision": "city",
+        "source_url": "https://www.cobaltai.com/contact/",
+        "verified": "2026-09-19"
+      },
+      "name": "Cobalt AI (Cobalt Robotics)",
+      "news": [],
+      "region": "bay",
+      "summary": "Autonomous indoor security patrol robots paired with AI monitoring and human security specialists.",
+      "website": "https://www.cobaltai.com/"
+    },
+    {
+      "careers_url": "https://jobs.lever.co/dexterity",
+      "id": "dexterity",
+      "last_verified": "2026-09-19",
+      "location": {
+        "label": "Redwood City, CA",
+        "lat": 37.4863239,
+        "lon": -122.232523,
+        "precision": "city",
+        "source_url": "https://dexterity.ai/",
+        "verified": "2026-09-19"
+      },
+      "name": "Dexterity",
+      "news": [],
+      "region": "bay",
+      "summary": "Enterprise physical AI and dexterous robots for autonomous logistics, truck loading, and manipulation.",
+      "website": "https://dexterity.ai/"
+    },
+    {
       "careers_url": "https://www.dustyrobotics.com/careers",
       "id": "dusty-robotics",
       "last_verified": "2026-09-19",
@@ -107,6 +143,24 @@
       "region": "bay",
       "summary": "General-purpose humanoid robots.",
       "website": "https://www.figure.ai/"
+    },
+    {
+      "careers_url": "https://generalistai.com/careers",
+      "id": "generalist-ai",
+      "last_verified": "2026-09-19",
+      "location": {
+        "label": "San Francisco, CA",
+        "lat": 37.7879363,
+        "lon": -122.4075201,
+        "precision": "city",
+        "source_url": "https://generalistai.com/careers/office-manager",
+        "verified": "2026-09-19"
+      },
+      "name": "Generalist AI",
+      "news": [],
+      "region": "bay",
+      "summary": "Robot foundation models for dexterous tasks; offices in the Bay Area and Boston.",
+      "website": "https://generalistai.com/"
     },
     {
       "careers_url": "https://hello-robot.com/careers/",
@@ -163,6 +217,24 @@
       "website": "https://www.intrinsic.ai/"
     },
     {
+      "careers_url": "https://www.pi.website/join-us",
+      "id": "physical-intelligence",
+      "last_verified": "2026-09-19",
+      "location": {
+        "label": "San Francisco, CA",
+        "lat": 37.7879363,
+        "lon": -122.4075201,
+        "precision": "city",
+        "source_url": "https://www.pi.website/join-us",
+        "verified": "2026-09-19"
+      },
+      "name": "Physical Intelligence",
+      "news": [],
+      "region": "bay",
+      "summary": "Develops general-purpose robot foundation models and learning algorithms for dexterous physical tasks.",
+      "website": "https://www.pi.website/"
+    },
+    {
       "careers_url": "https://www.ycombinator.com/companies/polymath-robotics/jobs",
       "id": "polymath-robotics",
       "last_verified": "2026-09-19",
@@ -181,6 +253,24 @@
       "website": "https://www.polymathrobotics.com/"
     },
     {
+      "careers_url": "https://www.skydio.com/careers",
+      "id": "skydio",
+      "last_verified": "2026-09-19",
+      "location": {
+        "label": "San Mateo, CA",
+        "lat": 37.5629997,
+        "lon": -122.3253265,
+        "precision": "city",
+        "source_url": "https://www.skydio.com/careers",
+        "verified": "2026-09-19"
+      },
+      "name": "Skydio",
+      "news": [],
+      "region": "bay",
+      "summary": "Autonomous flying robots for infrastructure inspection, public safety, mapping, and national security.",
+      "website": "https://www.skydio.com/"
+    },
+    {
       "careers_url": null,
       "id": "willow-garage",
       "last_verified": "2026-09-19",
@@ -189,6 +279,24 @@
       "region": "bay",
       "summary": "Original host (2012\u20132014), now closed. Link opens club history, not an active employer site.",
       "website": "https://boardgamenightwg.com/about/"
+    },
+    {
+      "careers_url": "https://www.zipline.com/careers",
+      "id": "zipline",
+      "last_verified": "2026-09-19",
+      "location": {
+        "label": "South San Francisco, CA",
+        "lat": 37.6535403,
+        "lon": -122.4168664,
+        "precision": "city",
+        "source_url": "https://www.zipline.com/open-roles/7904002003",
+        "verified": "2026-09-19"
+      },
+      "name": "Zipline",
+      "news": [],
+      "region": "bay",
+      "summary": "Designs, builds, and operates autonomous delivery drones carrying food, medicine, and essential goods.",
+      "website": "https://www.zipline.com/"
     },
     {
       "careers_url": "https://www.analog.com/en/careers.html",
@@ -207,6 +315,24 @@
       "region": "boston",
       "summary": "Analog Devices innovation lab and board-game host. Jobs link covers ADI-wide opportunities.",
       "website": "https://www.analog.com/en/who-we-are.html"
+    },
+    {
+      "careers_url": "https://www.berkshiregrey.com/careers/",
+      "id": "berkshire-grey",
+      "last_verified": "2026-09-19",
+      "location": {
+        "label": "Bedford, MA",
+        "lat": 42.4917301,
+        "lon": -71.2817947,
+        "precision": "city",
+        "source_url": "https://www.berkshiregrey.com/contact-us/",
+        "verified": "2026-09-19"
+      },
+      "name": "Berkshire Grey",
+      "news": [],
+      "region": "boston",
+      "summary": "AI-powered warehouse robotics for picking, sorting, trailer unloading, and fulfillment automation.",
+      "website": "https://www.berkshiregrey.com/"
     },
     {
       "careers_url": "https://bostondynamics.com/careers/",
@@ -243,6 +369,24 @@
       "region": "boston",
       "summary": "Verified AI code translation and optimization for mission-critical systems. Board-game host.",
       "website": "https://www.codemetal.ai/"
+    },
+    {
+      "careers_url": "https://www.familiarmachines.com/careers",
+      "id": "familiar-machines",
+      "last_verified": "2026-09-19",
+      "location": {
+        "label": "Woburn, MA",
+        "lat": 42.4792618,
+        "lon": -71.1522766,
+        "precision": "city",
+        "source_url": "https://www.familiarmachines.com/legal/privacy-statement",
+        "verified": "2026-09-19"
+      },
+      "name": "Familiar Machines & Magic",
+      "news": [],
+      "region": "boston",
+      "summary": "Develops emotionally intelligent companion robots and physical AI designed to support everyday life.",
+      "website": "https://www.familiarmachines.com/"
     },
     {
       "careers_url": "https://careers.formlabs.com/",
@@ -309,6 +453,24 @@
       "website": "https://locusrobotics.com/"
     },
     {
+      "careers_url": "https://www.mathworks.com/company/jobs/opportunities.html",
+      "id": "mathworks",
+      "last_verified": "2026-09-19",
+      "location": {
+        "label": "Natick, MA",
+        "lat": 42.2836393,
+        "lon": -71.346996,
+        "precision": "city",
+        "source_url": "https://www.mathworks.com/company/aboutus/contact_us.html",
+        "verified": "2026-09-19"
+      },
+      "name": "MathWorks",
+      "news": [],
+      "region": "boston",
+      "summary": "Robotics development and simulation software: MATLAB, Simulink, Robotics System Toolbox, and ROS Toolbox.",
+      "website": "https://www.mathworks.com/"
+    },
+    {
       "careers_url": "https://www.picklerobot.com/careers",
       "id": "pickle-robot-company",
       "last_verified": "2026-09-19",
@@ -363,6 +525,24 @@
       "website": "https://rai-inst.com/"
     },
     {
+      "careers_url": "https://www.symbotic.com/careers/jobs/",
+      "id": "symbotic",
+      "last_verified": "2026-09-19",
+      "location": {
+        "label": "Wilmington, MA",
+        "lat": 42.5464828,
+        "lon": -71.1736669,
+        "precision": "city",
+        "source_url": "https://www.symbotic.com/",
+        "verified": "2026-09-19"
+      },
+      "name": "Symbotic",
+      "news": [],
+      "region": "boston",
+      "summary": "Builds robotic warehouse automation systems with mobile robots and AI-powered supply-chain software.",
+      "website": "https://www.symbotic.com/"
+    },
+    {
       "careers_url": "https://jobs.lever.co/tutorintelligence",
       "id": "tutor-intelligence",
       "last_verified": "2026-09-19",
@@ -397,6 +577,24 @@
       "region": "boston",
       "summary": "Material-handling AMRs and orchestration software.",
       "website": "https://www.vecnarobotics.com/"
+    },
+    {
+      "careers_url": "https://www.waldenrobotics.com/careers",
+      "id": "walden-robotics",
+      "last_verified": "2026-09-19",
+      "location": {
+        "label": "Cambridge, MA",
+        "lat": 42.3656347,
+        "lon": -71.1040018,
+        "precision": "city",
+        "source_url": "https://www.waldenrobotics.com/careers",
+        "verified": "2026-09-19"
+      },
+      "name": "Walden Robotics",
+      "news": [],
+      "region": "boston",
+      "summary": "Builds general-purpose robots and physical AI for production work in manufacturing and logistics.",
+      "website": "https://www.waldenrobotics.com/"
     }
   ],
   "regions": {
