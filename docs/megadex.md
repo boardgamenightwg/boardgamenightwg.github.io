@@ -1,9 +1,10 @@
 # Contributing to the experimental Megadex
 
-The public `/megadex/` page is a rolling company index for the club's two
-regions: **careers links** for robotics companies around Boston and the Bay
-Area, plus recent sourced **news** and regional geographic maps. It is the
-sibling of the experimental Megamap, but has no relationship model: companies
+The public `/megadex/` page is a rolling employer and board-game host index for
+both club regions: **careers links** where available, recent sourced **news**,
+and regional geographic maps. Host organizations include companies, university
+centers, nonprofits, makerspaces and venues; do not imply they all do robotics.
+It is the sibling of the experimental Megamap, but has no relationship model: companies
 remain a flat, sourced directory, with optional verified locations.
 
 The page is deliberately **public but unlisted**: no navigation link, no
@@ -16,11 +17,15 @@ the site or block crawlers from reading the page's robots meta tag.
 
 1. Edit **`static/data/megadex.json`**. Do not edit templates, generated
    `public/` files or stylesheets to add a company or a news item.
-2. **Every URL must be checked before you commit it.** `careers_url` must
-   resolve (follow redirects, confirm it is the company's own job listings,
-   not a third-party aggregator unless the company has no board of its own).
-   Some careers pages block datacenter IPs (HTTP 403 from CI); verify in a
-   real browser session and note that in the PR description if curl fails.
+2. **Every URL must be checked before you commit it.** A non-null `careers_url`
+   must be an official employer careers page, a job board linked by that
+   employer, or a verified employer-maintained hiring profile. Follow redirects and verify identity, not just HTTP status.
+   Use explicit `null` when no public employer jobs page can be verified;
+   the page says **Jobs page not listed**, not that the organization is not
+   hiring. Do not substitute a generic homepage or ecosystem job board.
+   Some careers pages block datacenter IPs (HTTP 403 from CI); verify the
+   employer's link in a browser and document access limitations. Parent-employer
+   careers pages for labs/centers must be clearly described as employer-wide.
 3. Company entries need: `id` (kebab-case), `name`, `region` (`boston` or
    `bay`), `website`, `careers_url`, a short `summary` of what they do,
    `news` (may be empty), and `last_verified` (ISO date, never in the future).
@@ -38,10 +43,17 @@ the site or block crawlers from reading the page's robots meta tag.
 - The company does robotics/automation work relevant to club members, and
   has a presence (HQ, office, or primarily-remote hiring) in Boston or the
   Bay Area.
-- Venues that have hosted club game nights are welcome entries (e.g. Locus,
-  Vecna); note that in the summary.
-- Clubs, meetups and community groups belong on the Megamap, not here. When
-  in doubt, ask in the epic issue rather than duplicating.
+- Include every documented club board-game host, even if it is a university
+  center, nonprofit, makerspace or brewery rather than a robotics employer.
+  Identify the organization accurately and note its host role in the summary.
+  Deduplicate renamed hosts and branded venues under the responsible organization.
+  Mark closed origin-era hosts explicitly as historical; use a clearly identified
+  club-history link instead of an unsafe or unverified former company domain,
+  and never assign them a current office pin or hiring link.
+- Non-host clubs, meetups and community groups still belong on the Megamap,
+  not here. Host evidence and checked links are recorded in
+  [the host roster](megadex-hosts.md). Past venue addresses prove event history,
+  not necessarily a current office; current map locations need their own source.
 
 ## Verified locations (optional)
 
