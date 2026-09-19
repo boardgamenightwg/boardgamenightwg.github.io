@@ -4,7 +4,7 @@ The public `/megadex/` page is a robotics-company index for both club regions:
 **careers links**, recent sourced **news**, and regional geographic maps. It is
 not a directory of all board-game venues or host organizations. It is the sibling
 of the experimental Megamap, but companies remain a flat, sourced directory with
-optional verified locations.
+one canonical record per company and optional verified locations per region.
 
 The page is deliberately **public but unlisted**: no navigation link, no
 sitemap entry, no search-index entry, and page-only `noindex,follow`. This is
@@ -25,10 +25,17 @@ the site or block crawlers from reading the page's robots meta tag.
    Some careers pages block datacenter IPs (HTTP 403 from CI); verify the
    employer's link in a browser and document access limitations. Parent-employer
    careers pages for labs/centers must be clearly described as employer-wide.
-3. Company entries need: `id` (kebab-case), `name`, `region` (`boston` or
-   `bay`), `website`, `careers_url`, a short `summary` of what they do,
-   `news` (may be empty), and `last_verified` (ISO date, never in the future).
-   Avoid repeating the town in the summary when it has a `location` field.
+3. The file uses **schema version 2**. Company entries need: `id` (kebab-case),
+   `name`, `regions` (a nonempty, unique list of keys from the top-level `regions`
+   object, currently `boston` and `bay`), `website`, `careers_url`, a short
+   `summary` of what they do, `news` (may be empty), and `last_verified` (ISO date,
+   never in the future). Avoid repeating towns in the summary when they have
+   entries in `locations`.
+   **Never copy a company record to add a region.** Add the new region to its
+   `regions` list; name, website, careers, summary, news and verification date
+   stay shared and render in both tabs. IDs and names (case-insensitive, ignoring
+   surrounding whitespace) must be unique across the directory. The old singular
+   `region` and `location` fields are no longer accepted.
 4. **News items** are `{date, headline, url}`, newest-first, one line each.
    Prefer primary sources (company blog, funding/product announcement,
    reputable outlet). No speculation, no rumor, no opinion. Aim to prune
@@ -62,11 +69,37 @@ the site or block crawlers from reading the page's robots meta tag.
 
 ## Verified locations (optional)
 
-A company without `location` remains valid and displays **Location not mapped**.
-Never infer a coordinate from a company name or an unsourced summary. The page
-performs no runtime geocoding and asks for no location permission.
+`regions` establishes presence independently of map coordinates. A company can
+belong to both regions even if only one has a source-verified city. It still
+appears in each region's list; a region without a location displays
+**Location not mapped**, with no marker or map link. Never borrow the other
+region's coordinates, infer a city from a regional-presence claim, or duplicate
+the company. Generalist AI has separately verified Somerville and San Mateo
+city pins; unmapped entries such as Foxglove retain the honest fallback.
 
-`location` has exactly these fields (omit the entire object if unverified):
+The optional `locations` object maps region keys to verified location objects.
+Its keys must be a subset of that company's `regions`; omit unverified regions
+rather than using `null`. Omit `locations` altogether (or use `{}`) if no
+locations are verified. Never infer a coordinate from a company name or an
+unsourced summary. The page performs no runtime geocoding and asks for no
+location permission.
+
+For a company with `"regions": ["boston", "bay"]`, this fragment maps only Boston:
+
+```json
+"locations": {
+  "boston": {
+    "label": "Waltham, MA",
+    "lat": 42.3765,
+    "lon": -71.2356,
+    "precision": "city",
+    "source_url": "https://example.org/contact",
+    "verified": "2026-09-10"
+  }
+}
+```
+
+Each `locations` value has exactly these fields:
 
 ```json
 {
@@ -92,8 +125,16 @@ the claim: human review must check the source and geocode. Record research in
 
 ## Map implementation and fallbacks
 
-- The list is server-rendered, compact, and always usable. Jobs are the primary
-  action; news uses native disclosure rows, including without JavaScript.
+- The list is server-rendered, compact, and always usable. Each region projects
+  the same canonical records in source order, with its own numbering and
+  `mdx-entry--<region>--<company-id>` row IDs. Double hyphens are forbidden
+  by both ID slug grammars, so the separator is unambiguous even for hyphenated
+  IDs (for example, `bay` + `area-acme` versus `bay-area` + `acme`). The `entry`
+  namespace also keeps row IDs separate from other page IDs.
+  Location, selection, popup and keyboard focus stay local to that region;
+  shared careers and news appear in every view.
+  Jobs are the primary action; news uses native disclosure rows, including
+  without JavaScript.
 - Boston and Bay Area tabs show one region at a time, defaulting to Boston,
   using the Community page's chapter-selector colors and styling. Arrow keys,
   Home and End switch tabs with keyboard focus. Without JavaScript both lists
@@ -129,15 +170,21 @@ zola build --base-url http://127.0.0.1:8767   # pinned 0.17.2 in CI
 python tests/megadex_smoke.py
 ```
 
-The validator enforces strict fields, safe URLs, dates, coordinate ranges and
-newest-first news. Schema regressions cover valid/missing locations, booleans,
-NaN/infinities, ranges, unknown precision and invalid metadata.
+The validator enforces schema version 2, strict fields, unique company IDs/names,
+nonempty unique region membership, region-keyed locations, safe URLs, dates,
+coordinate ranges and newest-first news. Schema regressions cover distinct
+regional cities, missing/partial locations, invalid or duplicate region keys,
+locations outside a company's regions, legacy fields, booleans, NaN/infinities,
+ranges, unknown precision and invalid metadata.
 
 CI uses **real vendored Leaflet with intercepted synthetic tile images**; it
 never calls the public tile service. Source-derived assertions avoid fixed
-company counts. A separately built synthetic fixture covers co-located pins,
-unmapped/empty regions, region-tab switching and keyboard navigation, news,
-keyboard and mouse selection, safe popups,
+company counts. A separately built synthetic fixture covers one canonical
+company rendered in both regions with distinct cities, another with unknown-city
+fallback in one region, unique rendered DOM IDs for the ambiguous slug pair
+`bay` + `area-acme` / `bay-area` + `acme`, shared careers/news, independent regional
+selection/focus, co-located pins, unmapped/empty regions, region-tab switching and
+keyboard navigation, keyboard and mouse selection, safe popups,
 responsive bounds at 1440/390/320px and initial mobile, dark-theme readability,
 map-button focus, tile/library/no-JS failure, and genuinely pending analytics.
 Fallback screenshots (clearly named `megadex-fixture-*`) are written under
@@ -149,3 +196,9 @@ additionally checks real OSM responses and saves `megadex-live-*` screenshots
 from the actual source data. Do not enable live-tile QA in repeated CI runs;
 verify actual tile imagery, marker bounds, attribution, mobile and dark mode
 before calling a screenshot a working map.
+
+## Multi-region and conference-source audit
+
+See [the regional evidence ledger](megadex-regional-sources.md) for Generalist
+and MathWorks office coverage, EKA identity verification, and ROSCon 2026
+candidates. Conference venue geography is not company office evidence.

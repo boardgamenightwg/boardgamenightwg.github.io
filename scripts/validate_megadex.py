@@ -13,7 +13,7 @@ ID = re.compile(r"[a-z][a-z0-9]*(?:-[a-z0-9]+)*\Z")
 COMPANY_FIELDS = {
     "id",
     "name",
-    "region",
+    "regions",
     "website",
     "careers_url",
     "summary",
@@ -68,7 +68,7 @@ def validate(data):
         "root: unexpected or missing fields",
     )
     check(
-        type(data.get("version")) is int and data["version"] == 1, "version: expected 1"
+        type(data.get("version")) is int and data["version"] == 2, "version: expected 2"
     )
 
     regions = data.get("regions")
@@ -87,13 +87,14 @@ def validate(data):
         return errors
 
     seen_ids = set()
+    seen_names = set()
     today = date.today()
     for index, company in enumerate(companies):
         where = f"companies[{index}]"
         if not check(isinstance(company, dict), f"{where}: expected object"):
             continue
         where = f"companies[{index}]"
-        extra = set(company) - COMPANY_FIELDS - {"location"}
+        extra = set(company) - COMPANY_FIELDS - {"locations"}
         missing = COMPANY_FIELDS - set(company)
         check(not extra, f"{where}: unexpected fields {sorted(extra)}")
         check(not missing, f"{where}: missing fields {sorted(missing)}")
@@ -107,11 +108,28 @@ def validate(data):
             seen_ids.add(cid)
             where = f"company {cid!r}"
 
-        check(text(company.get("name"), 200), f"{where}: bad name")
-        check(
-            isinstance(regions, dict) and company.get("region") in regions,
-            f"{where}: unknown region {company.get('region')!r}",
-        )
+        name = company.get("name")
+        if check(text(name, 200), f"{where}: bad name"):
+            normalized_name = name.strip().casefold()
+            check(
+                normalized_name not in seen_names, f"{where}: duplicate name {name!r}"
+            )
+            seen_names.add(normalized_name)
+        company_regions = company.get("regions")
+        region_keys = set()
+        if check(
+            isinstance(company_regions, list) and bool(company_regions),
+            f"{where}: regions expected non-empty list",
+        ):
+            for key in company_regions:
+                if check(
+                    isinstance(key, str)
+                    and isinstance(regions, dict)
+                    and key in regions,
+                    f"{where}: unknown region {key!r}",
+                ):
+                    check(key not in region_keys, f"{where}: duplicate region {key!r}")
+                    region_keys.add(key)
         check(safe_url(company.get("website")), f"{where}: bad website URL")
         check(
             company.get("careers_url") is None or safe_url(company.get("careers_url")),
@@ -127,9 +145,16 @@ def validate(data):
             f"{where}: bad last_verified {last!r} (expected ISO date, not future)",
         )
 
-        if "location" in company:
-            location = company["location"]
-            loc_where = f"{where} location"
+        locations = company.get("locations", {})
+        if not check(
+            isinstance(locations, dict), f"{where}: locations expected object"
+        ):
+            locations = {}
+        for key, location in locations.items():
+            loc_where = f"{where} locations[{key!r}]"
+            check(
+                key in region_keys, f"{loc_where}: key must belong to company regions"
+            )
             if check(isinstance(location, dict), f"{loc_where}: expected object"):
                 check(
                     set(location)
