@@ -1,0 +1,102 @@
+/* Megadex: static, server-rendered company index. Keep dependency-free. */
+.megadex-page #megadex {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 3rem;
+}
+
+.mdx-intro h1 {
+  margin-bottom: 0.25rem;
+}
+
+.mdx-badge {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.6em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.2em 0.6em;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  opacity: 0.8;
+}
+
+.mdx-note {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  border-left: 3px solid rgba(128, 128, 128, 0.5);
+  padding-left: 0.75rem;
+}
+
+.mdx-region h2 {
+  margin-top: 2rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.35);
+  padding-bottom: 0.25rem;
+}
+
+.mdx-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.mdx-entry {
+  border: 1px solid rgba(128, 128, 128, 0.35);
+  border-radius: 0.5rem;
+  padding: 0.9rem 1.1rem;
+}
+
+.mdx-entry h3 {
+  margin: 0 0 0.35rem;
+}
+
+.mdx-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  align-items: baseline;
+  margin: 0 0 0.5rem;
+}
+
+.mdx-jobs {
+  font-weight: 600;
+}
+
+.mdx-verified {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.mdx-entry p {
+  margin: 0 0 0.5rem;
+}
+
+.mdx-news {
+  list-style: none;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.mdx-news li {
+  margin-bottom: 0.25rem;
+}
+
+.mdx-news time {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.75;
+}
+
+.mdx-empty {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.mdx-contribute {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}

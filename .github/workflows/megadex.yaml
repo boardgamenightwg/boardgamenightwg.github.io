@@ -1,0 +1,45 @@
+name: Megadex checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-build-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate data and run dependency-free unit tests
+        run: |
+          python scripts/validate_megadex.py
+          python -m unittest discover -s tests -p 'test_megadex.py' -v
+      - name: Install pinned Zola 0.17.2 and build
+        run: |
+          curl --fail --location --retry 3 https://github.com/getzola/zola/releases/download/v0.17.2/zola-v0.17.2-x86_64-unknown-linux-gnu.tar.gz --output "$RUNNER_TEMP/zola.tar.gz"
+          tar -xzf "$RUNNER_TEMP/zola.tar.gz" -C "$RUNNER_TEMP"
+          "$RUNNER_TEMP/zola" --version
+          "$RUNNER_TEMP/zola" build --base-url http://127.0.0.1:8767
+      - name: Install optional browser test dependencies
+        run: |
+          python -m venv .venv-megadex
+          .venv-megadex/bin/python -m pip install -r tests/requirements-browser.txt
+          .venv-megadex/bin/python -m playwright install --with-deps chromium
+      - name: Run real headless browser smoke
+        run: .venv-megadex/bin/python tests/megadex_smoke.py
+      - name: Keep smoke screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: megadex-smoke
+          path: /tmp/megadex-*.png
+          if-no-files-found: ignore
