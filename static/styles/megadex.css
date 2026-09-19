@@ -26,6 +26,7 @@ body.megadex-page { max-width: 1160px; }
 .mdx-entry h3 a { color: inherit; }
 .mdx-number { display: inline-grid; place-items: center; border: 1px solid #8887; border-radius: 50%; min-width: 1.5rem; height: 1.5rem; font-size: .8rem; font-weight: bold; font-variant-numeric: tabular-nums; }
 .mdx-jobs { font-weight: 700; white-space: nowrap; }
+.mdx-jobs-unavailable { font-size: .75rem; max-width: 6.5rem; text-align: right; opacity: .8; }
 .mdx-entry p { margin: .25rem 0; }
 .mdx-summary { font-size: .9rem; }
 .mdx-location-line { display: flex; align-items: baseline; flex-wrap: wrap; gap: .1rem .65rem; font-size: .8rem; }
@@ -51,7 +52,7 @@ body.megadex-page { max-width: 1160px; }
 .megadex-page .mdx-map .leaflet-popup-close-button { color: #222; }
 .mdx-popup-company strong { line-height: 1.4; }
 .mdx-popup-company p { margin: .25rem 0; }
-.mdx-popup-company .mdx-jobs { color: #2458a6; }
+.mdx-map .mdx-popup-company a { color: #2458a6; }
 .mdx-map .leaflet-control-attribution { color: #333; }
 .mdx-map .leaflet-control-attribution a { color: #2458a6; }
 .mdx-contribute { margin-top: 1.5rem; font-size: .85rem; }

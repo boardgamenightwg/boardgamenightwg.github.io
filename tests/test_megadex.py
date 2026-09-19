@@ -49,6 +49,19 @@ class ValidatorTests(unittest.TestCase):
     def test_fixture_is_valid(self):
         self.assertEqual(validate(fixture()), [])
 
+    def test_explicitly_unlisted_careers(self):
+        data = fixture()
+        data["companies"][0]["careers_url"] = None
+        self.assertEqual(validate(data), [])
+        del data["companies"][0]["careers_url"]
+        self.assertTrue(any("missing fields" in e for e in validate(data)))
+
+    def test_careers_null_is_not_an_empty_or_invalid_url(self):
+        for value in ["", " ", False, [], {}]:
+            data = fixture()
+            data["companies"][0]["careers_url"] = value
+            self.assertTrue(any("bad careers_url" in e for e in validate(data)))
+
     def test_optional_verified_location(self):
         for precision in ["city", "address"]:
             data = fixture()

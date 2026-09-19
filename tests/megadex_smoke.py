@@ -71,6 +71,7 @@ def fixture_build():
                 id="bay-fixture",
                 name="Bay fixture",
                 region="bay",
+                careers_url=None,
                 location=ValidatorTests.location(
                     label="Mountain View, CA",
                     lat=37.386,
@@ -139,9 +140,15 @@ def assert_source(page, data):
         for number, company in enumerate(companies, 1):
             row = page.locator(f"#mdx-{company['id']}")
             expect(row.locator(".mdx-number")).to_have_text(str(number))
-            expect(row.locator("a.mdx-jobs")).to_have_attribute(
-                "href", company["careers_url"]
-            )
+            if company["careers_url"]:
+                expect(row.locator("a.mdx-jobs")).to_have_attribute(
+                    "href", company["careers_url"]
+                )
+            else:
+                expect(row.locator("a.mdx-jobs")).to_have_count(0)
+                expect(row.locator(".mdx-jobs-unavailable")).to_have_text(
+                    "Jobs page not listed"
+                )
             expect(row.locator("h3 a")).to_have_attribute("href", company["website"])
             expect(row.locator(".mdx-news li")).to_have_count(len(company["news"]))
             dates = row.locator(".mdx-news time").evaluate_all(
@@ -212,6 +219,27 @@ def assert_maps(page, data):
             assert sorted(region.locator(".mdx-marker").all_text_contents()) == sorted(
                 " · ".join(nums) for nums in groups.values()
             )
+
+
+def assert_source_map_links(page, data):
+    for region_id in data["regions"]:
+        select_region(page, region_id)
+        region = page.locator(f"#mdx-region-{region_id}")
+        for company in data["companies"]:
+            if company["region"] != region_id or not company.get("location"):
+                continue
+            button = page.locator(f"#mdx-{company['id']} .mdx-map-button")
+            button.click()
+            selected = region.locator('.mdx-popup-company[aria-current="true"]')
+            expect(selected.locator("strong")).to_contain_text(company["name"])
+            expect(selected.locator("a")).to_have_attribute(
+                "href", company["careers_url"] or company["website"]
+            )
+            expect(selected.locator("a")).to_be_focused()
+            expect(selected.locator("a")).to_be_in_viewport()
+            region.locator(".leaflet-popup-close-button").click(timeout=4000)
+            expect(region.locator(".leaflet-popup")).to_have_count(0)
+            expect(button).to_be_focused()
 
 
 def assert_markers_in_bounds(page):
@@ -287,6 +315,23 @@ def fixture_checks(browser, base, data):
     expect(page.locator("#mdx-region-unlocated .mdx-map")).to_be_hidden()
     select_region(page, "bay")
     expect(page.locator("#mdx-region-bay .mdx-marker")).to_have_count(1)
+    page.locator("#mdx-bay-fixture .mdx-map-button").click()
+    popup = page.locator("#mdx-region-bay .leaflet-popup-content")
+    expect(popup.locator(".mdx-jobs")).to_have_count(0)
+    expect(popup.get_by_role("link", name="Website →")).to_have_attribute(
+        "href", data["companies"][-1]["website"]
+    )
+    expect(popup.get_by_role("link", name="Website →")).to_be_focused()
+    page.evaluate("document.body.dataset.theme = 'dark'")
+    assert (
+        popup.get_by_role("link", name="Website →").evaluate(
+            "el => getComputedStyle(el).color"
+        )
+        == "rgb(36, 88, 166)"
+    )
+    page.evaluate("document.body.dataset.theme = 'light'")
+    page.keyboard.press("Escape")
+    expect(page.locator("#mdx-bay-fixture .mdx-map-button")).to_be_focused()
     select_region(page, "boston")
     assert_source(page, data)
     assert_layout(page)
@@ -482,6 +527,7 @@ def main():
             assert_source(page, data)
             assert_region_tabs(page, data)
             assert_maps(page, data)
+            assert_source_map_links(page, data)
             assert_layout(page)
             mobile = context.new_page()
             mobile.set_viewport_size({"width": 390, "height": 844})

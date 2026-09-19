@@ -21,7 +21,7 @@ if (regions.length) {
   const tabs = document.createElement('div');
   tabs.className = 'mdx-region-tabs';
   tabs.setAttribute('role', 'tablist');
-  tabs.setAttribute('aria-label', 'Company region');
+  tabs.setAttribute('aria-label', 'Directory region');
   const buttons = regions.map(region => {
     const button = document.createElement('button');
     button.type = 'button';
@@ -80,7 +80,9 @@ function popupFor(rows, selected) {
     name.textContent = `${row.querySelector('.mdx-number').textContent}: ${row.querySelector('h3').textContent}`;
     const location = document.createElement('p');
     location.textContent = row.querySelector('.mdx-location').textContent;
-    const jobs = row.querySelector('.mdx-jobs').cloneNode(true);
+    const careers = row.querySelector('.mdx-jobs');
+    const jobs = (careers || row.querySelector('h3 a')).cloneNode(true);
+    if (!careers) jobs.textContent = 'Website →';
     item.append(name, location, jobs);
     content.append(item);
   }
@@ -179,7 +181,7 @@ function enhanceRegion(region, L) {
       marker.setPopupContent(popupFor(group.rows, row)).openPopup();
       if (fromList) {
         returnFocus = row.querySelector('.mdx-map-button');
-        const selectedJobs = marker.getPopup().getElement().querySelector('.mdx-popup-company[aria-current="true"] .mdx-jobs');
+        const selectedJobs = marker.getPopup().getElement().querySelector('.mdx-popup-company[aria-current="true"] a');
         selectedJobs.focus();
         canvas.scrollIntoView({ block: 'center' });
       }

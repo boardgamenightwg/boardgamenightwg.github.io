@@ -113,7 +113,10 @@ def validate(data):
             f"{where}: unknown region {company.get('region')!r}",
         )
         check(safe_url(company.get("website")), f"{where}: bad website URL")
-        check(safe_url(company.get("careers_url")), f"{where}: bad careers_url")
+        check(
+            company.get("careers_url") is None or safe_url(company.get("careers_url")),
+            f"{where}: bad careers_url",
+        )
         check(
             text(company.get("summary"), 600), f"{where}: bad summary (max 600 chars)"
         )

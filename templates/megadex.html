@@ -11,7 +11,7 @@
 <main id="megadex">
   <section class="mdx-intro" aria-labelledby="mdx-title">
     <h1 id="mdx-title">Megadex <span class="mdx-badge">Experimental</span></h1>
-    <p>Robotics jobs and company news around Boston and the Bay Area. <a href="{{ get_url(path='megamap/') }}">See the Megamap →</a></p>
+    <p>Robotics companies around Boston and the Bay Area. <a href="{{ get_url(path='megamap/') }}">See the Megamap →</a></p>
     <p class="mdx-note">Community-maintained; not a hiring guarantee or endorsement. City pins are approximate, not office addresses.</p>
   </section>
   {% for region_id, region_label in dex.regions %}
@@ -25,9 +25,13 @@
         <li class="mdx-entry" id="mdx-{{ company.id }}"{% if company.location %} data-lat="{{ company.location.lat }}" data-lon="{{ company.location.lon }}"{% endif %}>
           <article>
             <div class="mdx-entry-heading">
-              <span class="mdx-number" aria-label="Company {{ loop.index }}">{{ loop.index }}</span>
+              <span class="mdx-number" aria-label="Organization {{ loop.index }}">{{ loop.index }}</span>
               <h3><a href="{{ company.website }}" rel="noopener noreferrer">{{ company.name }}</a></h3>
+              {% if company.careers_url %}
               <a class="mdx-jobs" href="{{ company.careers_url }}" rel="noopener noreferrer">Jobs →<span class="mdx-sr-only"> at {{ company.name }}</span></a>
+              {% else %}
+              <span class="mdx-jobs-unavailable">Jobs page not listed</span>
+              {% endif %}
             </div>
             <p class="mdx-summary">{{ company.summary }}</p>
             <div class="mdx-location-line">
