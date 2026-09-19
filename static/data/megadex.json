@@ -4,70 +4,126 @@
       "careers_url": "https://bostondynamics.com/careers/",
       "id": "boston-dynamics",
       "last_verified": "2026-09-18",
+      "location": {
+        "label": "Waltham, MA",
+        "lat": 42.3762385,
+        "lon": -71.2355644,
+        "precision": "city",
+        "source_url": "https://bostondynamics.com/careers/",
+        "verified": "2026-09-19"
+      },
       "name": "Boston Dynamics",
       "news": [],
       "region": "boston",
-      "summary": "Legged and wheeled robotics; Spot and Stretch. HQ in Waltham, MA.",
+      "summary": "Legged and wheeled robots, including Spot and Stretch.",
       "website": "https://bostondynamics.com/"
     },
     {
       "careers_url": "https://careers.irobot.com/",
       "id": "irobot",
       "last_verified": "2026-09-18",
+      "location": {
+        "label": "Bedford, MA",
+        "lat": 42.4917301,
+        "lon": -71.2817947,
+        "precision": "city",
+        "source_url": "https://www.irobot.com/en_US/legal/terms-and-conditions.html",
+        "verified": "2026-09-19"
+      },
       "name": "iRobot",
       "news": [],
       "region": "boston",
-      "summary": "Consumer robot vacuums (Roomba). HQ in Bedford, MA.",
+      "summary": "Consumer robot vacuums, including Roomba.",
       "website": "https://www.irobot.com/"
     },
     {
       "careers_url": "https://careers.formlabs.com/",
       "id": "formlabs",
       "last_verified": "2026-09-18",
+      "location": {
+        "label": "Somerville, MA",
+        "lat": 42.3875968,
+        "lon": -71.0994968,
+        "precision": "city",
+        "source_url": "https://formlabs.com/company/contact/",
+        "verified": "2026-09-19"
+      },
       "name": "Formlabs",
       "news": [],
       "region": "boston",
-      "summary": "Desktop 3D printers (SLA/SLS) and robotics components. HQ in Somerville, MA.",
+      "summary": "SLA and SLS 3D printers for prototyping and production.",
       "website": "https://formlabs.com/"
     },
     {
-      "careers_url": "https://locus.sh/careers/",
+      "careers_url": "https://locusrobotics.com/company/careers/job-openings",
       "id": "locus-robotics",
-      "last_verified": "2026-09-18",
+      "last_verified": "2026-09-19",
+      "location": {
+        "label": "Wilmington, MA",
+        "lat": 42.5464828,
+        "lon": -71.1736669,
+        "precision": "city",
+        "source_url": "https://locusrobotics.com/company/contact-us",
+        "verified": "2026-09-19"
+      },
       "name": "Locus Robotics",
       "news": [],
       "region": "boston",
-      "summary": "Warehouse fulfillment robots (AMRs). HQ in Boston, MA. Has hosted club game nights.",
-      "website": "https://locus.sh/"
+      "summary": "Autonomous mobile robots for warehouse fulfillment.",
+      "website": "https://locusrobotics.com/"
     },
     {
       "careers_url": "https://www.vecnarobotics.com/company/careers/",
       "id": "vecna-robotics",
       "last_verified": "2026-09-18",
+      "location": {
+        "label": "Waltham, MA",
+        "lat": 42.3762385,
+        "lon": -71.2355644,
+        "precision": "city",
+        "source_url": "https://www.vecnarobotics.com/contact-us/",
+        "verified": "2026-09-19"
+      },
       "name": "Vecna Robotics",
       "news": [],
       "region": "boston",
-      "summary": "Material handling AMRs and orchestration software. HQ in Waltham, MA. Has hosted club game nights.",
+      "summary": "Material-handling AMRs and orchestration software.",
       "website": "https://www.vecnarobotics.com/"
     },
     {
       "careers_url": "https://www.ambirobotics.com/careers",
       "id": "ambi-robotics",
       "last_verified": "2026-09-18",
+      "location": {
+        "label": "Berkeley, CA",
+        "lat": 37.8708393,
+        "lon": -122.272863,
+        "precision": "city",
+        "source_url": "https://www.ambirobotics.com/contact/",
+        "verified": "2026-09-19"
+      },
       "name": "Ambi Robotics",
       "news": [],
       "region": "bay",
-      "summary": "AI-powered robotic sorting for parcel and e-commerce. HQ in San Leandro, CA.",
+      "summary": "AI-powered robotic sorting and stacking for parcels.",
       "website": "https://www.ambirobotics.com/"
     },
     {
       "careers_url": "https://www.figure.ai/careers",
       "id": "figure",
       "last_verified": "2026-09-18",
+      "location": {
+        "label": "San Jose, CA",
+        "lat": 37.3361663,
+        "lon": -121.890591,
+        "precision": "city",
+        "source_url": "https://www.figure.ai/careers",
+        "verified": "2026-09-19"
+      },
       "name": "Figure AI",
       "news": [],
       "region": "bay",
-      "summary": "General-purpose humanoid robots. HQ in Sunnyvale, CA.",
+      "summary": "General-purpose humanoid robots.",
       "website": "https://www.figure.ai/"
     }
   ],

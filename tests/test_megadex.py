@@ -49,6 +49,58 @@ class ValidatorTests(unittest.TestCase):
     def test_fixture_is_valid(self):
         self.assertEqual(validate(fixture()), [])
 
+    def test_optional_verified_location(self):
+        for precision in ["city", "address"]:
+            data = fixture()
+            data["companies"][0]["location"] = self.location(precision=precision)
+            self.assertEqual(validate(data), [])
+
+    @staticmethod
+    def location(**changes):
+        return dict(
+            dict(
+                label="Waltham, MA",
+                lat=42.3765,
+                lon=-71.2356,
+                precision="city",
+                source_url="https://example.org/contact",
+                verified="2026-09-10",
+            ),
+            **changes,
+        )
+
+    def test_rejects_invalid_locations(self):
+        cases = [None, [], {}, self.location(extra="no")]
+        for field, values in {
+            "lat": [True, False, "42", None, [], float("nan"), float("inf"), -91, 91],
+            "lon": [True, "-71", float("nan"), float("-inf"), -181, 181],
+            "precision": ["roof", "", None, []],
+            "label": ["", "  ", None, 12, "x" * 201],
+            "source_url": [
+                "http://example.org",
+                "javascript:alert(1)",
+                "https://user:pass@example.org",
+                "not a URL",
+            ],
+            "verified": ["2026-02-30", "20260910", "2030-01-01", None],
+        }.items():
+            cases.extend(self.location(**{field: value}) for value in values)
+        for field in self.location():
+            location = self.location()
+            del location[field]
+            cases.append(location)
+        for location in cases:
+            with self.subTest(location=location):
+                data = fixture()
+                data["companies"][0]["location"] = location
+                self.assertTrue(any("location" in e for e in validate(data)))
+
+    def test_coordinate_boundaries_are_valid(self):
+        for lat, lon in [(-90, -180), (90, 180), (0, 0)]:
+            data = fixture()
+            data["companies"][0]["location"] = self.location(lat=lat, lon=lon)
+            self.assertEqual(validate(data), [])
+
     def test_real_data_is_valid(self):
         data = json.loads(DATA.read_text(encoding="utf-8"))
         self.assertEqual(validate(data), [])

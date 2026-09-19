@@ -93,7 +93,7 @@ def validate(data):
         if not check(isinstance(company, dict), f"{where}: expected object"):
             continue
         where = f"companies[{index}]"
-        extra = set(company) - COMPANY_FIELDS
+        extra = set(company) - COMPANY_FIELDS - {"location"}
         missing = COMPANY_FIELDS - set(company)
         check(not extra, f"{where}: unexpected fields {sorted(extra)}")
         check(not missing, f"{where}: missing fields {sorted(missing)}")
@@ -123,6 +123,37 @@ def validate(data):
             valid_date(last) and date.fromisoformat(last) <= today,
             f"{where}: bad last_verified {last!r} (expected ISO date, not future)",
         )
+
+        if "location" in company:
+            location = company["location"]
+            loc_where = f"{where} location"
+            if check(isinstance(location, dict), f"{loc_where}: expected object"):
+                check(
+                    set(location)
+                    == {"label", "lat", "lon", "precision", "source_url", "verified"},
+                    f"{loc_where}: unexpected or missing fields",
+                )
+                check(text(location.get("label"), 200), f"{loc_where}: bad label")
+                for field, limit in [("lat", 90), ("lon", 180)]:
+                    value = location.get(field)
+                    check(
+                        type(value) in (int, float) and -limit <= value <= limit,
+                        f"{loc_where}: bad {field} (finite number in [-{limit}, {limit}])",
+                    )
+                check(
+                    location.get("precision") in ("city", "address"),
+                    f"{loc_where}: bad precision",
+                )
+                source = location.get("source_url")
+                check(
+                    safe_url(source) and source.startswith("https://"),
+                    f"{loc_where}: bad source_url (HTTPS required)",
+                )
+                verified = location.get("verified")
+                check(
+                    valid_date(verified) and date.fromisoformat(verified) <= today,
+                    f"{loc_where}: bad verified (ISO date, not future)",
+                )
 
         news = company.get("news")
         if check(isinstance(news, list), f"{where}: news expected list"):
