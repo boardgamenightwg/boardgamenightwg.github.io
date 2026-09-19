@@ -35,7 +35,7 @@ jobs:
           .venv-megadex/bin/python -m pip install -r tests/requirements-browser.txt
           .venv-megadex/bin/python -m playwright install --with-deps chromium
       - name: Run browser smoke (real Leaflet, intercepted tiles; no public tile traffic)
-        run: .venv-megadex/bin/python tests/megadex_smoke.py
+        run: PATH="$RUNNER_TEMP:$PATH" .venv-megadex/bin/python tests/megadex_smoke.py
       - name: Keep smoke screenshots
         if: always()
         uses: actions/upload-artifact@v4
