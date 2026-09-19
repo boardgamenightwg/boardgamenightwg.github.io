@@ -140,6 +140,15 @@ function enhanceRegion(region, L) {
   const observer = new ResizeObserver(() => {
     map.invalidateSize({ pan: false });
     fit();
+    // Refitting can move an open popup outside the clipped map; re-run its auto-pan.
+    map.eachLayer(layer => {
+      if (layer instanceof L.Popup && layer.isOpen()) {
+        const focus = layer.getElement().contains(document.activeElement) ? document.activeElement : null;
+        layer.update();
+        // Leaflet rebuilds popup contents during update, temporarily detaching focus.
+        if (focus) focus.focus({ preventScroll: true });
+      }
+    });
   });
   observer.observe(canvas);
 }

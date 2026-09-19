@@ -299,6 +299,23 @@ def fixture_checks(browser, base, data):
     page.keyboard.press("Escape")
     expect(page.locator("#mdx-other .mdx-map-button")).to_be_focused()
     page.keyboard.press("Enter")
+    # A container resize must preserve the open popup, not refit it behind the clip.
+    page.set_viewport_size({"width": 392, "height": 844})
+    page.wait_for_timeout(300)  # Let Leaflet's popup auto-pan finish.
+    geometry = region.locator(".mdx-map").evaluate(
+        """map => {
+        const close = map.querySelector('.leaflet-popup-close-button');
+        const m = map.getBoundingClientRect(), c = close.getBoundingClientRect();
+        return {scrollTop: map.scrollTop, scrollLeft: map.scrollLeft,
+            map: m.toJSON(), close: c.toJSON(),
+            clickable: close.contains(document.elementFromPoint(c.x + c.width / 2, c.y + c.height / 2))};
+        }"""
+    )
+    assert geometry["scrollTop"] == 0 and geometry["scrollLeft"] == 0, geometry
+    assert geometry["clickable"], geometry
+    expect(
+        region.locator('.mdx-popup-company[aria-current="true"] .mdx-jobs')
+    ).to_be_focused()
     region.locator(".leaflet-popup-close-button").click()
     expect(page.locator("#mdx-other .mdx-map-button")).to_be_focused()
     page.keyboard.press("Enter")
