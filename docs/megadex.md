@@ -53,6 +53,12 @@ the site or block crawlers from reading the page's robots meta tag.
   not here. [Host research](megadex-hosts.md) records both included candidates and
   scope exclusions. Past venue addresses prove event history, not a current
   office; current map locations need their own source.
+- Companies need not have hosted the club. Additional robotics companies can be
+  included when public sources verify their identity, regional presence and
+  careers destination (or an honest missing-link state). See
+  [additional company sources](megadex-company-sources.md). Private mail may
+  help identify candidates, but never publish correspondence, personal contacts,
+  or inferred hosting/relationship claims in this public directory.
 
 ## Verified locations (optional)
 

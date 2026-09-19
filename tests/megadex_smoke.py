@@ -527,8 +527,10 @@ def main():
             assert_source(page, data)
             assert_region_tabs(page, data)
             assert_maps(page, data)
-            assert_source_map_links(page, data)
+            # Overview bounds apply before popup auto-pan changes the user's view.
+            # Popup/link interaction checks intentionally pan to each selection.
             assert_layout(page)
+            assert_source_map_links(page, data)
             mobile = context.new_page()
             mobile.set_viewport_size({"width": 390, "height": 844})
             open_page(mobile, base)
