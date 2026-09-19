@@ -6,17 +6,17 @@ Verified 2026-09-19.
 
 The host audit covers the current Past Events and chapter pages, the public Luma calendar (all available past/future pages), and the full repository history of chapter announcements and About. External community events are excluded. Host aliases are deduplicated; a venue/lab and its parent organization are one entry.
 
-There are 21 distinct hosts in dated club event records, plus Willow Garage as the historical origin host attested by [club history](https://boardgamenightwg.com/about/). BU RASTIC is included even though its September 9, 2026 event was not yet in Past Events. Historical/closed hosts are not presented as current hiring employers.
+There are 21 distinct hosts in dated club event records, plus Willow Garage as the historical origin host attested by [club history](https://boardgamenightwg.com/about/). Host history is a candidate audit, not an automatic inclusion rule: Griz clarified that Megadex is for robotics companies only. Non-company venues and community organizations below are deliberately excluded. Willow Garage remains an explicitly approved historical Easter egg, not a current hiring employer.
 
-| Recorded host | Directory ID | Event evidence |
+| Recorded host | Directory ID / scope decision | Event evidence |
 | --- | --- | --- |
-| Aeronaut Brewing Company | `aeronaut-brewing-company` | [2023-11-16](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/77f38b9f6831e3b990a56b915bc691193bc08a0b/content/pastevents.md#L202) |
+| Aeronaut Brewing Company | Excluded: brewery | [2023-11-16](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/77f38b9f6831e3b990a56b915bc691193bc08a0b/content/pastevents.md#L202) |
 | Analog Garage @ Analog Devices | `analog-devices` | [2026-05-21](https://luma.com/q7fpx3ol) |
 | Apex.AI | `apex-ai` | [2024-03-28](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/77f38b9f6831e3b990a56b915bc691193bc08a0b/content/pastevents.md#L176) |
-| Artisans Asylum | `artisans-asylum` | [2024-04-26](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/77f38b9f6831e3b990a56b915bc691193bc08a0b/content/pastevents.md#L172) |
+| Artisans Asylum | Excluded: general makerspace | [2024-04-26](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/77f38b9f6831e3b990a56b915bc691193bc08a0b/content/pastevents.md#L172) |
 | Bear Robotics | `bear-robotics` | [2025-08-29](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/77f38b9f6831e3b990a56b915bc691193bc08a0b/content/pastevents.md#L90) |
 | Bonsai Robotics | `bonsai-robotics` | [2024-09-25](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/77f38b9f6831e3b990a56b915bc691193bc08a0b/content/pastevents.md#L146) |
-| Boston University RASTIC | `boston-university-rastic` | [2026-09-09](https://luma.com/4mcqgsru) |
+| Boston University RASTIC | Excluded: university center | [2026-09-09](https://luma.com/4mcqgsru) |
 | Code Metal | `code-metal` | [2026-02-26](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/77f38b9f6831e3b990a56b915bc691193bc08a0b/content/pastevents.md#L61) |
 | Dusty Robotics | `dusty-robotics` | [2026-09-03](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/77f38b9f6831e3b990a56b915bc691193bc08a0b/content/pastevents.md#L5) |
 | Gaia AI | `gaia-ai` | [2024-05-24](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/77f38b9f6831e3b990a56b915bc691193bc08a0b/content/pastevents.md#L167) |
@@ -24,31 +24,23 @@ There are 21 distinct hosts in dated club event records, plus Willow Garage as t
 | InOrbit Robot Space | `inorbit` | [2024-06-05](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/77f38b9f6831e3b990a56b915bc691193bc08a0b/content/pastevents.md#L162) |
 | Intrinsic AI | `intrinsic` | [2026-01-14](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/5ecaeaef2e1a09f417ca2256a15c1452f5863b89/content/bayarea.md) |
 | Locus Robotics | `locus-robotics` | [2025-11-06](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/77f38b9f6831e3b990a56b915bc691193bc08a0b/content/pastevents.md#L76) |
-| MassRobotics | `massrobotics` | [2025-05-30](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/77f38b9f6831e3b990a56b915bc691193bc08a0b/content/pastevents.md#L123) |
+| MassRobotics | Excluded: industry hub, not a robotics company | [2025-05-30](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/77f38b9f6831e3b990a56b915bc691193bc08a0b/content/pastevents.md#L123) |
 | Pickle Robot Company | `pickle-robot-company` | [2026-06-23](https://luma.com/1etgvzvp) |
 | Polymath Robotics | `polymath-robotics` | [2026-04-16](https://luma.com/5ovtdgmq) |
 | Reframe Systems | `reframe-systems` | [2026-07-22](https://luma.com/842o0xj3) |
 | Robotics and AI Institute | `robotics-and-ai-institute` | [2026-03-26](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/77f38b9f6831e3b990a56b915bc691193bc08a0b/content/pastevents.md#L54) |
-| Silicon Valley Robotics | `silicon-valley-robotics` | [2025-06-04](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/77f38b9f6831e3b990a56b915bc691193bc08a0b/content/pastevents.md#L118) |
+| Silicon Valley Robotics | Excluded: industry association, not a robotics company | [2025-06-04](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/77f38b9f6831e3b990a56b915bc691193bc08a0b/content/pastevents.md#L118) |
 | Tutor Intelligence | `tutor-intelligence` | [2026-04-30](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/77f38b9f6831e3b990a56b915bc691193bc08a0b/content/pastevents.md#L40) |
 | Willow Garage | `willow-garage` | [2012–2014 origin history](https://github.com/boardgamenightwg/boardgamenightwg.github.io/blob/77f38b9f6831e3b990a56b915bc691193bc08a0b/content/about.md#L5) |
 
 ## Interpretation and limitations
-- Cities are approximate municipality points, not office entrances. Charlestown and Brighton are represented by Boston; Analog Garage uses Boston, not ADI’s Wilmington headquarters. RASTIC’s official page identifies Brookline.
-- Gaia AI has a current company website and a MassRobotics resident listing, but no adequately verified current city source; no map pin is inferred from the facility footer. Silicon Valley Robotics publishes its regional scope but no verified current office city. Historical Willow Garage is not assigned a current office pin.
-- `careers_url: null` means no verified public employer careers page is listed, not proof that an organization is not hiring. Permanent careers pages remain useful when no vacancies are posted. ADI and BU jobs links are parent-employer-wide. The MassRobotics jobs page includes both its own team hiring status and ecosystem opportunities, as the summary notes.
+- Cities are approximate municipality points, not office entrances. Charlestown is represented by Boston; Analog Garage uses Boston, not ADI’s Wilmington headquarters.
+- Gaia AI has a company website and a MassRobotics resident listing, but no adequately verified current city source; no map pin is inferred from the facility footer. Historical Willow Garage is not assigned a current office pin.
+- `careers_url: null` means no verified public employer careers page is listed, not proof that a company is not hiring. Permanent careers pages remain useful when no vacancies are posted. Analog Garage’s jobs link is explicitly ADI-wide.
 - Polymath’s company-maintained YC hiring profile is corroborated by its official site, founder identities and accelerator membership; the main site currently has no careers link. Location evidence is its first-person employer job description, not a generic aggregator.
-- Analog Devices sources were verified through real browser-rendered pages after direct-request timeouts. Other official source requests were independently rechecked by the parent; Aeronaut’s initial access block was resolved, including its actual Careers navigation destination.
+- Analog Devices sources were verified through real browser-rendered pages after direct-request timeouts. Other included official source requests were independently rechecked.
 
 ## Official source evidence
-
-### Aeronaut Brewing Company
-- Website: https://www.aeronautbrewing.com/
-- Careers: https://www.aeronautbrewing.com/connect/careers/
-- Careers evidence: Parent independently recovered official homepage and its linked /connect/careers/ page with HTTP 200. Careers page: JOIN OUR TEAM; OPEN POSITIONS: No positions open at this time, check back soon!
-- City source: https://www.aeronautbrewing.com/
-- Location quote: “Visit us at our home in Somerville for local craft beer, food, live music, and more! THE BREWERY 14 Tyler Street, Somerville”
-- Notes: Initial subagent requests were blocked; parent fetched actual current official homepage and Careers content successfully. Somerville city and employer careers destination verified directly; do not treat no open positions as no careers page.
 
 ### Analog Devices (Analog Garage)
 - Website: https://www.analog.com/en/who-we-are.html
@@ -67,14 +59,6 @@ There are 21 distinct hosts in dated club event records, plus Willow Garage as t
 - Location quote: “Apex.AI, Inc. 1881 Page Mill Road, Suite 103 Palo Alto, CA 94304, USA”
 - Notes: Palo Alto is independently supported by current official About, Careers and Legal Notice pages. https://www.apex.ai/about says the company is based in Palo Alto, California, with other international offices. Use /careers, the verified main-nav careers landing page; the footer also links a different /openpositions URL, which was not needed or independently verified. This research verifies public company location, not whether the legal-notice street address is the past board-game event venue.
 
-### Artisan's Asylum
-- Website: https://www.artisansasylum.com/
-- Careers: https://www.artisansasylum.com/employment
-- Careers evidence: Official homepage links to Employment at https://www.artisansasylum.com/employment. Live text: 'Artisans Asylum is always looking for talented instructors to join our education programs and share their skills with the community.' It currently seeks educators in casting, visual art, composites, fiber arts, and screen printing.
-- City source: https://www.artisansasylum.com/
-- Location quote: “96 Holton Street, Brighton, MA 02135”
-- Notes: Checked 2026-09-19. Current website brands the organization 'Artisans Asylum' and explicitly calls it a 'nonprofit community makerspace in Boston'. Current public address is Brighton/Boston, not an older Somerville location. Employment page is an instructor recruitment page, not evidence of an unrelated staff vacancy.
-
 ### Bear Robotics
 - Website: https://www.bearrobotics.ai/
 - Careers: https://www.bearrobotics.ai/careers
@@ -90,14 +74,6 @@ There are 21 distinct hosts in dated club event records, plus Willow Garage as t
 - City source: https://ats.rippling.com/en-US/bonsairoboticsmain/jobs/17740e0e-fb8c-48a6-a0fa-7bb2300b65ce
 - Location quote: “The pay range for this role is: 150,000 - 220,000 USD per year (San Jose, CA) Apply now Software Engineering San Jose, CA”
 - Notes: Current official branding remains Bonsai Robotics Inc.; it ACQUIRED farm-ng, rather than being acquired by farm-ng. Official July 24, 2025 release https://www.bonsairobotics.ai/news/bonsai-robotics-acquires-farm-ng-to-lead-the-future-of-autonomous-farming states: 'Existing shareholders of both companies will retain ownership stakes in the newly combined entity, Bonsai Robotics.' That release has a San Jose dateline and describes historical farm-ng as based in Watsonville. Prefer the current Bonsai employer careers page and current San Jose jobs over legacy farm-ng branding/locations. San Jose is verified as a current employer job location, not as a verified board-game venue street address; current main Contact page does not publish a street address. Summary supported by https://www.bonsairobotics.ai/about/ .
-
-### Boston University RASTIC
-- Website: https://www.bu.edu/eng/academics/teaching-and-innovation/rastic/
-- Careers: https://www.bu.edu/hr/careers/
-- Careers evidence: https://www.bu.edu/hr/careers/ is the verified Boston University employer careers page. It says 'Join Boston University' and links External Staff Applicants, Internal Staff Applicants, and Faculty Applicants to university hiring services. This is UNIVERSITY-WIDE recruitment, not a RASTIC-specific vacancies page or evidence of a current RASTIC vacancy.
-- City source: https://www.bu.edu/eng/academics/teaching-and-innovation/rastic/
-- Location quote: “730 Commonwealth Avenue, Brookline, MA”
-- Notes: Checked 2026-09-19. https://www.bu.edu/rastic/ redirects to the supplied official College of Engineering center URL. IMPORTANT: use the center's own current address, 730 Commonwealth Avenue, Brookline, rather than assuming Boston from the university name or using the generic College of Engineering footer at 44 Cummington Mall, Boston. Region remains boston for the metro grouping. RASTIC is a university center, not an independent robotics company.
 
 ### Code Metal
 - Website: https://www.codemetal.ai/
@@ -146,14 +122,6 @@ There are 21 distinct hosts in dated club event records, plus Willow Garage as t
 - Location quote: “With labs and offices in Mountain View, Munich and Singapore, we are bringing together a global team of experts with different backgrounds, skillsets and perspectives.”
 - Notes: Verified the robotics company at intrinsic.ai, not another business named Intrinsic. City source explicitly describes a Mountain View office/lab; it does not label it headquarters. Main homepage says 'The team at Intrinsic is building a platform for the next generation of intelligent automation' and 'Intrinsic Flowstate is an all-in-one developer environment for building production-grade automation solutions.' Raw careers HTML includes placeholder role text/Lorem Ipsum for its dynamic listings, so this research does not claim a current opening count.
 
-### MassRobotics
-- Website: https://www.massrobotics.org/
-- Careers: https://www.massrobotics.org/robotics-ai-job-opportunities/
-- Careers evidence: The official Careers navigation leads to https://www.massrobotics.org/robotics-ai-job-opportunities/. This is a mixed ecosystem/employer page, but it includes an explicit employer-specific section: 'Join the MassRobotics team We are not currently hiring.' The URL is retained for that direct employer section, NOT for ecosystem job listings or the career fair.
-- City source: https://www.massrobotics.org/
-- Location quote: “12 Channel Street, Boston, MA 02210”
-- Notes: Checked 2026-09-19. The page's 88 Seaport Blvd address refers to its September 25 career fair, not headquarters. Official homepage explicitly says MassRobotics is headquartered in Boston. Nonprofit identity verified in https://www.massrobotics.org/about-us/: 'In 2015, those ideas came to fruition, and MassRobotics was formed as a non-profit'. Python requests initially returned HTTP 403; curl with a full desktop user agent recovered live official pages. If downstream policy requires a dedicated employer-only page rather than a mixed page containing a genuine employer section, use careers_url=null.
-
 ### Pickle Robot Company
 - Website: https://www.picklerobot.com/
 - Careers: https://www.picklerobot.com/careers
@@ -186,13 +154,6 @@ There are 21 distinct hosts in dated club event records, plus Willow Garage as t
 - Location quote: “Cambridge, Massachusetts Our main campus is located in the innovation hub of Kendall Square. 145 Broadway, Cambridge, MA 02142”
 - Notes: Aliases to consolidate into this one entry: RAI Institute, The AI Institute, Robotics and AI Institute. The fetched https://theaiinstitute.com URL redirects to https://rai-inst.com/ and returns the same RAI Institute company content. The current About page gives the Cambridge main campus at 145 Broadway and also identifies a Zurich office. Cambridge is the verified Boston-region location.
 
-### Silicon Valley Robotics
-- Website: https://www.svrobo.org/
-- Careers: Not listed (null)
-- Careers evidence: No official employer careers page was found in the current official website navigation or complete public WordPress page inventory. https://www.svrobo.org/membership/ explicitly says: 'We are a not-for-profit 501c6 industry association.' Community/member-company job boards or career events are not Silicon Valley Robotics employer careers pages; careers_url is deliberately null.
-- Current map location: omitted; no verified current city pin.
-- Notes: Fetched official homepage, About, Membership, Contact, public page inventory and linked 2026 overview PDF. CURRENT CITY NOT VERIFIED: About establishes the region, not an office city. Contact and the 2026 PDF publish no office city/address. Do not geocode this record to an inferred city or use a partner event's location as the organization's headquarters. Public inventory: https://www.svrobo.org/wp-json/wp/v2/pages?per_page=100 ; overview: https://www.svrobo.org/wp-content/uploads/2026/08/About-Silicon-Valley-Robotics-2026.pdf . A guessed legacy /robots-jobs URL returned 404, not a verified current jobs board. Current website supports the organization identity and regional scope, but a city needs additional direct confirmation.
-
 ### Tutor Intelligence
 - Website: https://tutorintelligence.com/
 - Careers: https://jobs.lever.co/tutorintelligence
@@ -216,7 +177,6 @@ Nominatim/OSM administrative relations, queried at no more than one request per 
 | --- | --- | --- | --- |
 | Andover, Massachusetts | [1840196](https://www.openstreetmap.org/relation/1840196) | 42.6571700 | -71.1408776 |
 | Boston, Massachusetts | [2315704](https://www.openstreetmap.org/relation/2315704) | 42.3588336 | -71.0578303 |
-| Brookline, Massachusetts | [2306361](https://www.openstreetmap.org/relation/2306361) | 42.3329180 | -71.1187829 |
 | Cambridge, Massachusetts | [1933745](https://www.openstreetmap.org/relation/1933745) | 42.3656347 | -71.1040018 |
 | Martinez, California | [112189](https://www.openstreetmap.org/relation/112189) | 38.0138934 | -122.1338674 |
 | Mountain View, California | [1544956](https://www.openstreetmap.org/relation/1544956) | 37.3893889 | -122.0832101 |

@@ -11,13 +11,13 @@
 <main id="megadex">
   <section class="mdx-intro" aria-labelledby="mdx-title">
     <h1 id="mdx-title">Megadex <span class="mdx-badge">Experimental</span></h1>
-    <p>Robotics employers and board-game hosts around Boston and the Bay Area. <a href="{{ get_url(path='megamap/') }}">See the Megamap →</a></p>
+    <p>Robotics companies around Boston and the Bay Area. <a href="{{ get_url(path='megamap/') }}">See the Megamap →</a></p>
     <p class="mdx-note">Community-maintained; not a hiring guarantee or endorsement. City pins are approximate, not office addresses.</p>
   </section>
   {% for region_id, region_label in dex.regions %}
   {% set companies_in_region = dex.companies | filter(attribute="region", value=region_id) %}
   <section class="mdx-region" data-region-label="{{ region_label }}" id="mdx-region-{{ region_id }}" aria-labelledby="mdx-region-{{ region_id }}-title">
-    <h2 id="mdx-region-{{ region_id }}-title">{{ region_label }} <span class="mdx-count">{{ companies_in_region | length }} organizations</span></h2>
+    <h2 id="mdx-region-{{ region_id }}-title">{{ region_label }} <span class="mdx-count">{{ companies_in_region | length }} companies</span></h2>
     {% if companies_in_region %}
     <div class="mdx-region-layout">
       <ul class="mdx-list">
@@ -58,7 +58,7 @@
         </li>
         {% endfor %}
       </ul>
-      <aside class="mdx-map-panel" aria-label="{{ region_label }} organization map">
+      <aside class="mdx-map-panel" aria-label="{{ region_label }} company map">
         <div class="mdx-map" id="mdx-map-{{ region_id }}" role="region" aria-label="Interactive {{ region_label }} map" aria-describedby="mdx-map-status-{{ region_id }}" hidden></div>
         <p class="mdx-map-status" id="mdx-map-status-{{ region_id }}" role="status">Map unavailable without JavaScript. Use the Open map links in the list.</p>
         <p class="mdx-map-help">Pins match list numbers; shared locations share a pin. Use + / − to zoom.</p>

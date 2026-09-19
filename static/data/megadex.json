@@ -182,16 +182,6 @@
     },
     {
       "careers_url": null,
-      "id": "silicon-valley-robotics",
-      "last_verified": "2026-09-19",
-      "name": "Silicon Valley Robotics",
-      "news": [],
-      "region": "bay",
-      "summary": "Nonprofit robotics industry association and Bay Area community organizer. Board-game host.",
-      "website": "https://www.svrobo.org/"
-    },
-    {
-      "careers_url": null,
       "id": "willow-garage",
       "last_verified": "2026-09-19",
       "name": "Willow Garage (historical)",
@@ -199,24 +189,6 @@
       "region": "bay",
       "summary": "Original host (2012\u20132014), now closed. Link opens club history, not an active employer site.",
       "website": "https://boardgamenightwg.com/about/"
-    },
-    {
-      "careers_url": "https://www.aeronautbrewing.com/connect/careers/",
-      "id": "aeronaut-brewing-company",
-      "last_verified": "2026-09-19",
-      "location": {
-        "label": "Somerville, MA",
-        "lat": 42.3875968,
-        "lon": -71.0994968,
-        "precision": "city",
-        "source_url": "https://www.aeronautbrewing.com/",
-        "verified": "2026-09-19"
-      },
-      "name": "Aeronaut Brewing Company",
-      "news": [],
-      "region": "boston",
-      "summary": "Craft brewery and community-event venue. Board-game host.",
-      "website": "https://www.aeronautbrewing.com/"
     },
     {
       "careers_url": "https://www.analog.com/en/careers.html",
@@ -237,24 +209,6 @@
       "website": "https://www.analog.com/en/who-we-are.html"
     },
     {
-      "careers_url": "https://www.artisansasylum.com/employment",
-      "id": "artisans-asylum",
-      "last_verified": "2026-09-19",
-      "location": {
-        "label": "Boston, MA",
-        "lat": 42.3588336,
-        "lon": -71.0578303,
-        "precision": "city",
-        "source_url": "https://www.artisansasylum.com/",
-        "verified": "2026-09-19"
-      },
-      "name": "Artisans Asylum",
-      "news": [],
-      "region": "boston",
-      "summary": "Nonprofit community makerspace with shared shops, studios and classes. Board-game host.",
-      "website": "https://www.artisansasylum.com/"
-    },
-    {
       "careers_url": "https://bostondynamics.com/careers/",
       "id": "boston-dynamics",
       "last_verified": "2026-09-18",
@@ -271,24 +225,6 @@
       "region": "boston",
       "summary": "Legged and wheeled robots, including Spot and Stretch.",
       "website": "https://bostondynamics.com/"
-    },
-    {
-      "careers_url": "https://www.bu.edu/hr/careers/",
-      "id": "boston-university-rastic",
-      "last_verified": "2026-09-19",
-      "location": {
-        "label": "Brookline, MA",
-        "lat": 42.332918,
-        "lon": -71.1187829,
-        "precision": "city",
-        "source_url": "https://www.bu.edu/eng/academics/teaching-and-innovation/rastic/",
-        "verified": "2026-09-19"
-      },
-      "name": "Boston University RASTIC",
-      "news": [],
-      "region": "boston",
-      "summary": "BU robotics teaching and innovation center; board-game host. Jobs link covers university-wide opportunities.",
-      "website": "https://www.bu.edu/eng/academics/teaching-and-innovation/rastic/"
     },
     {
       "careers_url": "https://www.codemetal.ai/careers",
@@ -371,24 +307,6 @@
       "region": "boston",
       "summary": "Autonomous mobile robots for warehouse fulfillment. Board-game host.",
       "website": "https://locusrobotics.com/"
-    },
-    {
-      "careers_url": "https://www.massrobotics.org/robotics-ai-job-opportunities/",
-      "id": "massrobotics",
-      "last_verified": "2026-09-19",
-      "location": {
-        "label": "Boston, MA",
-        "lat": 42.3588336,
-        "lon": -71.0578303,
-        "precision": "city",
-        "source_url": "https://www.massrobotics.org/",
-        "verified": "2026-09-19"
-      },
-      "name": "MassRobotics",
-      "news": [],
-      "region": "boston",
-      "summary": "Nonprofit robotics innovation hub and board-game host. Jobs page includes team hiring status and ecosystem opportunities.",
-      "website": "https://www.massrobotics.org/"
     },
     {
       "careers_url": "https://www.picklerobot.com/careers",

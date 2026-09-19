@@ -1,11 +1,10 @@
 # Contributing to the experimental Megadex
 
-The public `/megadex/` page is a rolling employer and board-game host index for
-both club regions: **careers links** where available, recent sourced **news**,
-and regional geographic maps. Host organizations include companies, university
-centers, nonprofits, makerspaces and venues; do not imply they all do robotics.
-It is the sibling of the experimental Megamap, but has no relationship model: companies
-remain a flat, sourced directory, with optional verified locations.
+The public `/megadex/` page is a robotics-company index for both club regions:
+**careers links**, recent sourced **news**, and regional geographic maps. It is
+not a directory of all board-game venues or host organizations. It is the sibling
+of the experimental Megamap, but companies remain a flat, sourced directory with
+optional verified locations.
 
 The page is deliberately **public but unlisted**: no navigation link, no
 sitemap entry, no search-index entry, and page-only `noindex,follow`. This is
@@ -43,17 +42,17 @@ the site or block crawlers from reading the page's robots meta tag.
 - The company does robotics/automation work relevant to club members, and
   has a presence (HQ, office, or primarily-remote hiring) in Boston or the
   Bay Area.
-- Include every documented club board-game host, even if it is a university
-  center, nonprofit, makerspace or brewery rather than a robotics employer.
-  Identify the organization accurately and note its host role in the summary.
-  Deduplicate renamed hosts and branded venues under the responsible organization.
-  Mark closed origin-era hosts explicitly as historical; use a clearly identified
-  club-history link instead of an unsafe or unverified former company domain,
-  and never assign them a current office pin or hiring link.
-- Non-host clubs, meetups and community groups still belong on the Megamap,
-  not here. Host evidence and checked links are recorded in
-  [the host roster](megadex-hosts.md). Past venue addresses prove event history,
-  not necessarily a current office; current map locations need their own source.
+- Hosting a club event supplies a candidate, not an exception to the robotics-
+  company scope. Exclude breweries, general makerspaces, university centers,
+  and industry associations/hubs that are not robotics companies. Deduplicate
+  renamed companies and branded labs/venues under the responsible employer.
+- **Willow Garage is an explicitly approved historical Easter egg.** Keep its
+  closed/historical labeling and safe club-history link; never give it a current
+  office pin or hiring link.
+- Community groups and non-company venues belong on the Megamap or event pages,
+  not here. [Host research](megadex-hosts.md) records both included candidates and
+  scope exclusions. Past venue addresses prove event history, not a current
+  office; current map locations need their own source.
 
 ## Verified locations (optional)
 
