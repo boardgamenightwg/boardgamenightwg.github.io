@@ -165,8 +165,39 @@ def assert_source(page, data):
                 expect(row.locator(".mdx-map-button")).to_have_count(0)
 
 
+def select_region(page, region_id):
+    page.locator(f'[role="tab"][aria-controls="mdx-region-{region_id}"]').click()
+    expect(page.locator(f"#mdx-region-{region_id}")).to_be_visible()
+
+
+def assert_region_tabs(page, data):
+    tabs = page.get_by_role("tab")
+    expect(tabs).to_have_count(len(data["regions"]))
+    expect(page.locator('[role="tabpanel"]:visible')).to_have_count(1)
+    expect(page.locator("#mdx-region-boston")).to_be_visible()
+    for region_id, label in data["regions"].items():
+        select_region(page, region_id)
+        expect(page.get_by_role("tab", name=label, exact=True)).to_have_attribute(
+            "aria-selected", "true"
+        )
+        expect(page.locator('[role="tabpanel"]:visible')).to_have_count(1)
+    tabs.first.focus()
+    page.keyboard.press("End")
+    expect(tabs.last).to_be_focused()
+    expect(tabs.last).to_have_attribute("aria-selected", "true")
+    page.keyboard.press("ArrowRight")
+    expect(tabs.first).to_be_focused()
+    expect(tabs.first).to_have_attribute("aria-selected", "true")
+    page.keyboard.press("ArrowLeft")
+    expect(tabs.last).to_be_focused()
+    page.keyboard.press("Home")
+    expect(tabs.first).to_be_focused()
+    select_region(page, "boston")
+
+
 def assert_maps(page, data):
     for region_id in data["regions"]:
+        select_region(page, region_id)
         groups = {}
         companies = [c for c in data["companies"] if c["region"] == region_id]
         for number, company in enumerate(companies, 1):
@@ -177,6 +208,7 @@ def assert_maps(page, data):
         expect(region.locator(".mdx-marker")).to_have_count(len(groups))
         if groups:
             expect(region.locator(".mdx-map-status")).to_contain_text("Map ready")
+            assert_markers_in_bounds(page)
             assert sorted(region.locator(".mdx-marker").all_text_contents()) == sorted(
                 " · ".join(nums) for nums in groups.values()
             )
@@ -184,7 +216,7 @@ def assert_maps(page, data):
 
 def assert_markers_in_bounds(page):
     page.wait_for_function(
-        """() => [...document.querySelectorAll('.mdx-map:not([hidden])')].every(map => {
+        """() => [...document.querySelectorAll('.mdx-region:not([hidden]) .mdx-map:not([hidden])')].every(map => {
         const bounds = map.getBoundingClientRect();
         const markers = [...map.querySelectorAll('.mdx-marker')];
         return markers.length > 0 && markers.every(marker => {
@@ -198,7 +230,9 @@ def assert_markers_in_bounds(page):
 
 
 def assert_layout(page):
-    region = page.locator(".mdx-region").filter(has=page.locator(".mdx-entry")).first
+    region = (
+        page.locator(".mdx-region:visible").filter(has=page.locator(".mdx-entry")).first
+    )
     listing, panel = region.locator(".mdx-list"), region.locator(".mdx-map-panel")
     for width in [1440, 390, 320, 1440]:
         page.set_viewport_size({"width": width, "height": 1000})
@@ -243,12 +277,17 @@ def fixture_checks(browser, base, data):
     expect(marker).to_have_attribute(
         "aria-label", '1: Fixture <img src=x onerror="alert(1)"> Robotics; 2: Other Co'
     )
+    assert_region_tabs(page, data)
+    select_region(page, "empty")
     expect(page.locator("#mdx-region-empty .mdx-empty")).to_be_visible()
+    select_region(page, "unlocated")
     expect(page.locator("#mdx-region-unlocated .mdx-map-status")).to_contain_text(
         "No verified locations"
     )
     expect(page.locator("#mdx-region-unlocated .mdx-map")).to_be_hidden()
+    select_region(page, "bay")
     expect(page.locator("#mdx-region-bay .mdx-marker")).to_have_count(1)
+    select_region(page, "boston")
     assert_source(page, data)
     assert_layout(page)
     status = region.locator(".mdx-map-status")
@@ -357,6 +396,13 @@ def fixture_checks(browser, base, data):
             context.route("**/vendor/leaflet/leaflet.js", lambda route: route.abort())
         open_page(page, base)
         assert_source(page, data)
+        if failure == "no-js":
+            expect(page.get_by_role("tab")).to_have_count(0)
+            expect(page.locator(".mdx-region:visible")).to_have_count(
+                len(data["regions"])
+            )
+        else:
+            assert_region_tabs(page, data)
         status = page.locator("#mdx-region-boston .mdx-map-status")
         expect(status).to_contain_text("Map unavailable")
         if failure == "tiles":
@@ -388,6 +434,7 @@ def live_checks(browser, base, data):
     mapped = [c for c in data["companies"] if c.get("location")]
     assert mapped, "Live QA needs at least one verified source location"
     for region_id in {c["region"] for c in mapped}:
+        select_region(page, region_id)
         region = page.locator(f"#mdx-region-{region_id}")
         expect(region.locator(".mdx-map-status")).to_contain_text(
             "Map ready", timeout=30000
@@ -401,6 +448,7 @@ def live_checks(browser, base, data):
     assert tile_responses and all(s == 200 for s in tile_responses), tile_responses
     page.screenshot(path=str(ARTIFACTS / "megadex-live-desktop.png"), full_page=True)
     company = mapped[0]
+    select_region(page, company["region"])
     page.locator(f"#mdx-{company['id']} .mdx-map-button").click()
     expect(page.locator(f"#mdx-{company['id']}")).to_have_attribute(
         "aria-current", "true"
@@ -432,6 +480,7 @@ def main():
             context, page, errors = setup(browser)
             open_page(page, base)
             assert_source(page, data)
+            assert_region_tabs(page, data)
             assert_maps(page, data)
             assert_layout(page)
             mobile = context.new_page()

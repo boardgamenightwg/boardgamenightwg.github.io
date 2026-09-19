@@ -77,6 +77,12 @@ the claim: human review must check the source and geocode. Record research in
 
 - The list is server-rendered, compact, and always usable. Jobs are the primary
   action; news uses native disclosure rows, including without JavaScript.
+- Boston and Bay Area tabs show one region at a time, defaulting to Boston,
+  using the Community page's chapter-selector colors and styling. Arrow keys,
+  Home and End switch tabs with keyboard focus. Without JavaScript both lists
+  remain visible; tabs still work if the optional map library fails.
+- Maps initialize when their tab is first selected; revisiting a tab refits the
+  existing map without duplicate markers or hidden-container sizing errors.
 - Each region has an interactive Leaflet 1.9.4 map, beside the list on desktop
   and above it on mobile. Numbered markers match the list's numbered badges.
   Equal coordinates share a marker and popup listing all companies and jobs:
@@ -113,7 +119,8 @@ NaN/infinities, ranges, unknown precision and invalid metadata.
 CI uses **real vendored Leaflet with intercepted synthetic tile images**; it
 never calls the public tile service. Source-derived assertions avoid fixed
 company counts. A separately built synthetic fixture covers co-located pins,
-unmapped/empty regions, news, keyboard and mouse selection, safe popups,
+unmapped/empty regions, region-tab switching and keyboard navigation, news,
+keyboard and mouse selection, safe popups,
 responsive bounds at 1440/390/320px and initial mobile, dark-theme readability,
 map-button focus, tile/library/no-JS failure, and genuinely pending analytics.
 Fallback screenshots (clearly named `megadex-fixture-*`) are written under

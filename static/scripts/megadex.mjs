@@ -1,6 +1,73 @@
 // Independent async module: never wait for the base template's deferred analytics.
 // Company content is escaped, server-rendered HTML; no fetch or runtime geocoding.
-const regions = [...document.querySelectorAll('.mdx-region')];
+const regions = [...document.querySelectorAll('.mdx-region')].sort((a, b) =>
+  Number(b.id === 'mdx-region-boston') - Number(a.id === 'mdx-region-boston'));
+let leaflet;
+const enhanced = new Set();
+function enhanceSelected() {
+  const region = regions.find(region => !region.hidden);
+  if (!leaflet || !region || enhanced.has(region)) return;
+  enhanced.add(region);
+  try { enhanceRegion(region, leaflet); }
+  catch {
+    const status = region.querySelector('.mdx-map-status');
+    if (status) status.textContent = unavailable;
+    region.querySelectorAll('.mdx-map-button').forEach(button => { button.hidden = true; });
+  }
+}
+
+// Tabs work independently of the optional map library. No JS leaves all lists visible.
+if (regions.length) {
+  const tabs = document.createElement('div');
+  tabs.className = 'mdx-region-tabs';
+  tabs.setAttribute('role', 'tablist');
+  tabs.setAttribute('aria-label', 'Company region');
+  const buttons = regions.map(region => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.id = `${region.id}-tab`;
+    button.setAttribute('role', 'tab');
+    button.setAttribute('aria-controls', region.id);
+    button.setAttribute('aria-label', region.dataset.regionLabel);
+    const icon = document.createElement('span');
+    icon.setAttribute('aria-hidden', 'true');
+    icon.textContent = region.id === 'mdx-region-boston' ? '🫘🌆 ' : region.id === 'mdx-region-bay' ? '🌉🌅 ' : '';
+    const count = document.createElement('span');
+    count.className = 'mdx-tab-count';
+    count.setAttribute('aria-hidden', 'true');
+    count.textContent = String(region.querySelectorAll('.mdx-entry').length);
+    button.append(icon, region.dataset.regionLabel, count);
+    region.setAttribute('role', 'tabpanel');
+    region.setAttribute('aria-labelledby', button.id);
+    region.tabIndex = 0;
+    tabs.append(button);
+    return button;
+  });
+  const activate = index => {
+    regions.forEach((region, i) => {
+      region.hidden = i !== index;
+      buttons[i].setAttribute('aria-selected', String(i === index));
+      buttons[i].tabIndex = i === index ? 0 : -1;
+    });
+    enhanceSelected();
+  };
+  buttons.forEach((button, index) => {
+    button.addEventListener('click', () => activate(index));
+    button.addEventListener('keydown', event => {
+      let next;
+      if (event.key === 'ArrowRight') next = (index + 1) % buttons.length;
+      else if (event.key === 'ArrowLeft') next = (index + buttons.length - 1) % buttons.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = buttons.length - 1;
+      else return;
+      event.preventDefault();
+      activate(next);
+      buttons[next].focus();
+    });
+  });
+  document.querySelector('.mdx-intro').after(tabs);
+  activate(0);
+}
 const unavailable = 'Map unavailable. Use the Open map links in the list.';
 
 function popupFor(rows, selected) {
@@ -138,6 +205,7 @@ function enhanceRegion(region, L) {
   }
   // Keep responsive maps fitted to verified coordinates, including mobile stacking.
   const observer = new ResizeObserver(() => {
+    if (!canvas.clientWidth || !canvas.clientHeight) return;
     map.invalidateSize({ pan: false });
     fit();
     // Refitting can move an open popup outside the clipped map; re-run its auto-pan.
@@ -156,14 +224,8 @@ function enhanceRegion(region, L) {
 try {
   await import('../vendor/leaflet/leaflet.js');
   if (!window.L) throw new Error('Leaflet unavailable');
-  for (const region of regions) {
-    try { enhanceRegion(region, window.L); }
-    catch {
-      const status = region.querySelector('.mdx-map-status');
-      if (status) status.textContent = unavailable;
-      region.querySelectorAll('.mdx-map-button').forEach(button => { button.hidden = true; });
-    }
-  }
+  leaflet = window.L;
+  enhanceSelected();
 } catch {
   document.querySelectorAll('.mdx-map-status').forEach(status => { status.textContent = unavailable; });
 }

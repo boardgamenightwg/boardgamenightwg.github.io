@@ -16,7 +16,7 @@
   </section>
   {% for region_id, region_label in dex.regions %}
   {% set companies_in_region = dex.companies | filter(attribute="region", value=region_id) %}
-  <section class="mdx-region" id="mdx-region-{{ region_id }}" aria-labelledby="mdx-region-{{ region_id }}-title">
+  <section class="mdx-region" data-region-label="{{ region_label }}" id="mdx-region-{{ region_id }}" aria-labelledby="mdx-region-{{ region_id }}-title">
     <h2 id="mdx-region-{{ region_id }}-title">{{ region_label }} <span class="mdx-count">{{ companies_in_region | length }} companies</span></h2>
     {% if companies_in_region %}
     <div class="mdx-region-layout">

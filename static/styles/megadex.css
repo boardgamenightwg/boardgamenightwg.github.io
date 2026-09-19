@@ -6,6 +6,14 @@ body.megadex-page { max-width: 1160px; }
 .mdx-badge { display: inline-block; vertical-align: middle; font-size: .5em; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; padding: .15em .6em; border-radius: 999px; border: 1px solid currentColor; }
 .mdx-note, .mdx-map-help, .mdx-map-status, .mdx-verified, .mdx-count { font-size: .8rem; }
 .mdx-note, .mdx-count, .mdx-verified, .mdx-map-help { opacity: .8; }
+.mdx-region-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 1.1rem 0 0; }
+.mdx-region-tabs button { font: inherit; cursor: pointer; min-height: 44px; padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; background: transparent; color: var(--color-link); }
+.mdx-region-tabs button:hover { border-color: var(--color-link); }
+.mdx-region-tabs button[aria-selected="true"] { background: var(--color-tag-bg); color: #873a00; border-color: var(--color-tag-border); font-weight: 700; }
+.mdx-tab-count { margin-left: .6rem; font-size: .8em; }
+.megadex-page[data-theme="dark"] .mdx-region-tabs button:not([aria-selected="true"]) { color: var(--color-link-dark); }
+.mdx-region[hidden] { display: none; }
+.mdx-region[role="tabpanel"] h2 { margin-top: 1rem; }
 .mdx-region h2 { margin: 1.7rem 0 .4rem; padding-bottom: .3rem; border-bottom: 1px solid #8886; }
 .mdx-count { margin-left: .5rem; font-weight: normal; white-space: nowrap; }
 .mdx-region-layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 1.5rem; align-items: start; }
