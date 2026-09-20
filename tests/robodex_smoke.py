@@ -15,11 +15,11 @@ import subprocess
 import tempfile
 import threading
 from playwright.sync_api import sync_playwright, expect
-from test_megadex import fixture, ValidatorTests, validate
+from test_robodex import fixture, ValidatorTests, validate
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
-ARTIFACTS = ROOT / "build/megadex-screenshots"
+ARTIFACTS = ROOT / "build/robodex-screenshots"
 TILES = "https://tile.openstreetmap.org/**"
 # Explicit synthetic tile only for offline interaction tests; never screenshot it.
 TILE = '<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><rect width="256" height="256" fill="#eee"/></svg>'
@@ -104,7 +104,7 @@ def fixture_build():
             ),
         )
         assert validate(data) == [], validate(data)
-        (root / "static/data/megadex.json").write_text(json.dumps(data))
+        (root / "static/data/robodex.json").write_text(json.dumps(data))
         # Relative base URL resolved at serving time; production build still uses 8767.
         subprocess.run(
             [
@@ -148,80 +148,85 @@ def setup(browser, javascript=True, tiles="mock", pending_analytics=False):
 
 
 def open_page(page, base):
-    page.goto(base + "/megadex/", wait_until="commit")
-    expect(page.locator("#mdx-title")).to_be_visible()
+    page.goto(base + "/robodex/", wait_until="commit")
+    expect(page.locator("#rdx-title")).to_be_visible()
 
 
 def assert_source(page, data):
     expect(page.locator('meta[name="robots"]')).to_have_attribute(
         "content", "noindex,follow"
     )
-    assert page.locator('header a[href*="megadex"]').count() == 0
+    expect(page.locator("#rdx-title")).to_have_text("Robodex Experimental")
+    assert page.title().startswith("Robodex | ")
+    expect(page.locator('link[rel="canonical"]')).to_have_attribute(
+        "href", page.url.split("#")[0].split("?")[0]
+    )
+    assert page.locator('header a[href*="robodex"]').count() == 0
     ids = page.locator("[id]").evaluate_all("nodes => nodes.map(n => n.id)")
     assert len(ids) == len(set(ids)), (
         "DOM IDs must be unique across regional views; duplicates: "
         f"{sorted({id_ for id_ in ids if ids.count(id_) > 1})}"
     )
     for region_id in data["regions"]:
-        region = page.locator(f"#mdx-region-{region_id}")
+        region = page.locator(f"#rdx-region-{region_id}")
         companies = [c for c in data["companies"] if region_id in c["regions"]]
-        expect(region.locator(".mdx-entry")).to_have_count(len(companies))
+        expect(region.locator(".rdx-entry")).to_have_count(len(companies))
         for number, company in enumerate(companies, 1):
-            row = page.locator(f"#mdx-entry--{region_id}--{company['id']}")
-            expect(row.locator(".mdx-number")).to_have_text(str(number))
+            row = page.locator(f"#rdx-entry--{region_id}--{company['id']}")
+            expect(row.locator(".rdx-number")).to_have_text(str(number))
             if company["careers_url"]:
-                expect(row.locator("a.mdx-jobs")).to_have_attribute(
+                expect(row.locator("a.rdx-jobs")).to_have_attribute(
                     "href", company["careers_url"]
                 )
             else:
-                expect(row.locator("a.mdx-jobs")).to_have_count(0)
-                expect(row.locator(".mdx-jobs-unavailable")).to_have_text(
+                expect(row.locator("a.rdx-jobs")).to_have_count(0)
+                expect(row.locator(".rdx-jobs-unavailable")).to_have_text(
                     "Jobs page not listed"
                 )
             expect(row.locator("h3 a")).to_have_attribute("href", company["website"])
-            expect(row.locator(".mdx-summary")).to_have_text(company["summary"])
-            expect(row.locator(".mdx-verified time").first).to_have_attribute(
+            expect(row.locator(".rdx-summary")).to_have_text(company["summary"])
+            expect(row.locator(".rdx-verified time").first).to_have_attribute(
                 "datetime", company["last_verified"]
             )
-            expect(row.locator(".mdx-news li")).to_have_count(len(company["news"]))
+            expect(row.locator(".rdx-news li")).to_have_count(len(company["news"]))
             for item, news_row in zip(
-                company["news"], row.locator(".mdx-news li").all()
+                company["news"], row.locator(".rdx-news li").all()
             ):
                 expect(news_row.locator("a")).to_have_text(item["headline"])
                 expect(news_row.locator("a")).to_have_attribute("href", item["url"])
-            dates = row.locator(".mdx-news time").evaluate_all(
+            dates = row.locator(".rdx-news time").evaluate_all(
                 "nodes => nodes.map(n => n.dateTime)"
             )
             assert dates == [n["date"] for n in company["news"]]
             location = company.get("locations", {}).get(region_id)
             if location:
-                expect(row.locator(".mdx-external-map")).to_have_attribute(
+                expect(row.locator(".rdx-external-map")).to_have_attribute(
                     "href",
                     f"https://www.openstreetmap.org/?mlat={location['lat']}&mlon={location['lon']}#map=12/{location['lat']}/{location['lon']}",
                 )
-                expect(row.locator(".mdx-location")).to_contain_text(location["label"])
+                expect(row.locator(".rdx-location")).to_contain_text(location["label"])
                 if location["precision"] == "city":
-                    expect(row.locator(".mdx-location")).to_contain_text(
+                    expect(row.locator(".rdx-location")).to_contain_text(
                         "approximate city pin"
                     )
             else:
                 assert row.get_attribute("data-lat") is None
                 assert row.get_attribute("data-lon") is None
-                expect(row.locator(".mdx-external-map")).to_have_count(0)
-                expect(row.locator(".mdx-location")).to_have_text("Location not mapped")
-                expect(row.locator(".mdx-map-button")).to_have_count(0)
+                expect(row.locator(".rdx-external-map")).to_have_count(0)
+                expect(row.locator(".rdx-location")).to_have_text("Location not mapped")
+                expect(row.locator(".rdx-map-button")).to_have_count(0)
 
 
 def select_region(page, region_id):
-    page.locator(f'[role="tab"][aria-controls="mdx-region-{region_id}"]').click()
-    expect(page.locator(f"#mdx-region-{region_id}")).to_be_visible()
+    page.locator(f'[role="tab"][aria-controls="rdx-region-{region_id}"]').click()
+    expect(page.locator(f"#rdx-region-{region_id}")).to_be_visible()
 
 
 def assert_region_tabs(page, data):
     tabs = page.get_by_role("tab")
     expect(tabs).to_have_count(len(data["regions"]))
     expect(page.locator('[role="tabpanel"]:visible')).to_have_count(1)
-    expect(page.locator("#mdx-region-boston")).to_be_visible()
+    expect(page.locator("#rdx-region-boston")).to_be_visible()
     for region_id, label in data["regions"].items():
         select_region(page, region_id)
         expect(page.get_by_role("tab", name=label, exact=True)).to_have_attribute(
@@ -251,12 +256,12 @@ def assert_maps(page, data):
             loc = company.get("locations", {}).get(region_id)
             if loc:
                 groups.setdefault((loc["lat"], loc["lon"]), []).append(str(number))
-        region = page.locator(f"#mdx-region-{region_id}")
-        expect(region.locator(".mdx-marker")).to_have_count(len(groups))
+        region = page.locator(f"#rdx-region-{region_id}")
+        expect(region.locator(".rdx-marker")).to_have_count(len(groups))
         if groups:
-            expect(region.locator(".mdx-map-status")).to_contain_text("Map ready")
+            expect(region.locator(".rdx-map-status")).to_contain_text("Map ready")
             assert_markers_in_bounds(page)
-            assert sorted(region.locator(".mdx-marker").all_text_contents()) == sorted(
+            assert sorted(region.locator(".rdx-marker").all_text_contents()) == sorted(
                 " · ".join(nums) for nums in groups.values()
             )
 
@@ -264,17 +269,17 @@ def assert_maps(page, data):
 def assert_source_map_links(page, data):
     for region_id in data["regions"]:
         select_region(page, region_id)
-        region = page.locator(f"#mdx-region-{region_id}")
+        region = page.locator(f"#rdx-region-{region_id}")
         for company in data["companies"]:
             if region_id not in company["regions"] or region_id not in company.get(
                 "locations", {}
             ):
                 continue
             button = page.locator(
-                f"#mdx-entry--{region_id}--{company['id']} .mdx-map-button"
+                f"#rdx-entry--{region_id}--{company['id']} .rdx-map-button"
             )
             button.click()
-            selected = region.locator('.mdx-popup-company[aria-current="true"]')
+            selected = region.locator('.rdx-popup-company[aria-current="true"]')
             expect(selected.locator("strong")).to_contain_text(company["name"])
             expect(selected.locator("a")).to_have_attribute(
                 "href", company["careers_url"] or company["website"]
@@ -288,9 +293,9 @@ def assert_source_map_links(page, data):
 
 def assert_markers_in_bounds(page):
     page.wait_for_function(
-        """() => [...document.querySelectorAll('.mdx-region:not([hidden]) .mdx-map:not([hidden])')].every(map => {
+        """() => [...document.querySelectorAll('.rdx-region:not([hidden]) .rdx-map:not([hidden])')].every(map => {
         const bounds = map.getBoundingClientRect();
-        const markers = [...map.querySelectorAll('.mdx-marker')];
+        const markers = [...map.querySelectorAll('.rdx-marker')];
         return markers.length > 0 && markers.every(marker => {
             const pin = marker.getBoundingClientRect();
             return pin.left >= bounds.left && pin.right <= bounds.right &&
@@ -303,9 +308,9 @@ def assert_markers_in_bounds(page):
 
 def assert_layout(page):
     region = (
-        page.locator(".mdx-region:visible").filter(has=page.locator(".mdx-entry")).first
+        page.locator(".rdx-region:visible").filter(has=page.locator(".rdx-entry")).first
     )
-    listing, panel = region.locator(".mdx-list"), region.locator(".mdx-map-panel")
+    listing, panel = region.locator(".rdx-list"), region.locator(".rdx-map-panel")
     for width in [1440, 390, 320, 1440]:
         page.set_viewport_size({"width": width, "height": 1000})
         assert_markers_in_bounds(page)
@@ -317,7 +322,7 @@ def assert_layout(page):
             assert (
                 left["x"] + left["width"] <= right["x"]
             ), "Desktop map must sit beside list"
-            row = listing.locator(".mdx-entry").first
+            row = listing.locator(".rdx-entry").first
             assert (
                 row.evaluate("el => parseFloat(getComputedStyle(el).paddingTop)") <= 12
             )
@@ -335,9 +340,9 @@ def assert_layout(page):
 def fixture_checks(browser, base, data):
     context, page, errors = setup(browser, pending_analytics=True)
     open_page(page, base)
-    region = page.locator("#mdx-region-boston")
+    region = page.locator("#rdx-region-boston")
     # Analytics stays pending: no DOMContentLoaded dependency is permitted.
-    marker = region.locator(".mdx-marker")
+    marker = region.locator(".rdx-marker")
     expect(marker).to_have_count(1)
     assert context._pending_analytics, "Analytics request must actually be pending"
     assert page.evaluate("document.readyState") == "interactive"
@@ -355,42 +360,42 @@ def fixture_checks(browser, base, data):
     assert_source_map_links(page, data)
     # One canonical company has independent selection and focus in both views.
     select_region(page, "boston")
-    page.locator("#mdx-entry--boston--other .mdx-map-button").click()
+    page.locator("#rdx-entry--boston--other .rdx-map-button").click()
     page.keyboard.press("Escape")
     select_region(page, "bay")
-    button = page.locator("#mdx-entry--bay--acme .mdx-map-button")
+    button = page.locator("#rdx-entry--bay--acme .rdx-map-button")
     button.focus()
     page.keyboard.press("Enter")
-    expect(page.locator("#mdx-entry--bay--acme")).to_have_attribute(
+    expect(page.locator("#rdx-entry--bay--acme")).to_have_attribute(
         "aria-current", "true"
     )
-    expect(page.locator("#mdx-entry--boston--other")).to_have_attribute(
+    expect(page.locator("#rdx-entry--boston--other")).to_have_attribute(
         "aria-current", "true"
     )
-    expect(page.locator("#mdx-entry--boston--acme")).not_to_have_attribute(
+    expect(page.locator("#rdx-entry--boston--acme")).not_to_have_attribute(
         "aria-current", "true"
     )
-    expect(page.locator("#mdx-region-bay .leaflet-popup-content")).to_contain_text(
+    expect(page.locator("#rdx-region-bay .leaflet-popup-content")).to_contain_text(
         "Mountain View, CA"
     )
     page.keyboard.press("Escape")
     expect(button).to_be_focused()
     select_region(page, "boston")
-    expect(page.locator("#mdx-entry--boston--other")).to_have_attribute(
+    expect(page.locator("#rdx-entry--boston--other")).to_have_attribute(
         "aria-current", "true"
     )
     select_region(page, "empty")
-    expect(page.locator("#mdx-region-empty .mdx-empty")).to_be_visible()
+    expect(page.locator("#rdx-region-empty .rdx-empty")).to_be_visible()
     select_region(page, "unlocated")
-    expect(page.locator("#mdx-region-unlocated .mdx-map-status")).to_contain_text(
+    expect(page.locator("#rdx-region-unlocated .rdx-map-status")).to_contain_text(
         "No verified locations"
     )
-    expect(page.locator("#mdx-region-unlocated .mdx-map")).to_be_hidden()
+    expect(page.locator("#rdx-region-unlocated .rdx-map")).to_be_hidden()
     select_region(page, "bay")
-    expect(page.locator("#mdx-region-bay .mdx-marker")).to_have_count(2)
-    page.locator("#mdx-entry--bay--bay-fixture .mdx-map-button").click()
-    popup = page.locator("#mdx-region-bay .leaflet-popup-content")
-    expect(popup.locator(".mdx-jobs")).to_have_count(0)
+    expect(page.locator("#rdx-region-bay .rdx-marker")).to_have_count(2)
+    page.locator("#rdx-entry--bay--bay-fixture .rdx-map-button").click()
+    popup = page.locator("#rdx-region-bay .leaflet-popup-content")
+    expect(popup.locator(".rdx-jobs")).to_have_count(0)
     expect(popup.get_by_role("link", name="Website →")).to_have_attribute(
         "href", data["companies"][-1]["website"]
     )
@@ -404,30 +409,30 @@ def fixture_checks(browser, base, data):
     )
     page.evaluate("document.body.dataset.theme = 'light'")
     page.keyboard.press("Escape")
-    expect(page.locator("#mdx-entry--bay--bay-fixture .mdx-map-button")).to_be_focused()
+    expect(page.locator("#rdx-entry--bay--bay-fixture .rdx-map-button")).to_be_focused()
     select_region(page, "boston")
     assert_source(page, data)
     assert_layout(page)
-    status = region.locator(".mdx-map-status")
+    status = region.locator(".rdx-map-status")
     expect(status).to_contain_text("Map ready")
     assert (
         status.evaluate("el => getComputedStyle(el).position") == "absolute"
     ), "Ready status should not duplicate visible help"
     marker.focus()
     page.keyboard.press("Enter")
-    expect(page.locator("#mdx-entry--boston--acme")).to_have_attribute(
+    expect(page.locator("#rdx-entry--boston--acme")).to_have_attribute(
         "aria-current", "true"
     )
     expect(region.locator(".leaflet-popup-content img")).to_have_count(0)
-    expect(region.locator(".leaflet-popup-content a.mdx-jobs")).to_have_count(2)
-    page.locator("#mdx-entry--boston--other .mdx-map-button").click()
-    expect(page.locator("#mdx-entry--boston--other")).to_have_attribute(
+    expect(region.locator(".leaflet-popup-content a.rdx-jobs")).to_have_count(2)
+    page.locator("#rdx-entry--boston--other .rdx-map-button").click()
+    expect(page.locator("#rdx-entry--boston--other")).to_have_attribute(
         "aria-current", "true"
     )
-    expect(page.locator("#mdx-entry--boston--acme")).not_to_have_attribute(
+    expect(page.locator("#rdx-entry--boston--acme")).not_to_have_attribute(
         "aria-current", "true"
     )
-    expect(region.locator('.mdx-popup-company[aria-current="true"]')).to_contain_text(
+    expect(region.locator('.rdx-popup-company[aria-current="true"]')).to_contain_text(
         "Other Co"
     )
     expect(region.locator(".leaflet-popup-content")).to_contain_text(
@@ -448,28 +453,28 @@ def fixture_checks(browser, base, data):
         == "rgb(34, 34, 34)"
     )
     marker.click()
-    expect(page.locator("#mdx-entry--boston--acme")).to_have_attribute(
+    expect(page.locator("#rdx-entry--boston--acme")).to_have_attribute(
         "aria-current", "true"
     )
-    page.locator("#mdx-entry--boston--other .mdx-map-button").click()
+    page.locator("#rdx-entry--boston--other .rdx-map-button").click()
     marker.focus()
     page.keyboard.press("Space")
-    expect(page.locator("#mdx-entry--boston--acme")).to_have_attribute(
+    expect(page.locator("#rdx-entry--boston--acme")).to_have_attribute(
         "aria-current", "true"
     )
     page.set_viewport_size({"width": 390, "height": 844})
-    page.locator("#mdx-entry--boston--other .mdx-map-button").focus()
+    page.locator("#rdx-entry--boston--other .rdx-map-button").focus()
     page.keyboard.press("Enter")
     expect(
-        region.locator('.mdx-popup-company[aria-current="true"] .mdx-jobs')
+        region.locator('.rdx-popup-company[aria-current="true"] .rdx-jobs')
     ).to_be_focused()
     page.keyboard.press("Escape")
-    expect(page.locator("#mdx-entry--boston--other .mdx-map-button")).to_be_focused()
+    expect(page.locator("#rdx-entry--boston--other .rdx-map-button")).to_be_focused()
     page.keyboard.press("Enter")
     # A container resize must preserve the open popup, not refit it behind the clip.
     page.set_viewport_size({"width": 392, "height": 844})
     page.wait_for_timeout(300)  # Let Leaflet's popup auto-pan finish.
-    geometry = region.locator(".mdx-map").evaluate(
+    geometry = region.locator(".rdx-map").evaluate(
         """map => {
         const close = map.querySelector('.leaflet-popup-close-button');
         const m = map.getBoundingClientRect(), c = close.getBoundingClientRect();
@@ -481,20 +486,20 @@ def fixture_checks(browser, base, data):
     assert geometry["scrollTop"] == 0 and geometry["scrollLeft"] == 0, geometry
     assert geometry["clickable"], geometry
     expect(
-        region.locator('.mdx-popup-company[aria-current="true"] .mdx-jobs')
+        region.locator('.rdx-popup-company[aria-current="true"] .rdx-jobs')
     ).to_be_focused()
     region.locator(".leaflet-popup-close-button").click()
-    expect(page.locator("#mdx-entry--boston--other .mdx-map-button")).to_be_focused()
+    expect(page.locator("#rdx-entry--boston--other .rdx-map-button")).to_be_focused()
     page.keyboard.press("Enter")
     marker.click()
     page.wait_for_function(
         """() => {
-        const popup = document.querySelector('#mdx-region-boston .leaflet-popup').getBoundingClientRect();
+        const popup = document.querySelector('#rdx-region-boston .leaflet-popup').getBoundingClientRect();
         return popup.top >= 0 && popup.bottom <= innerHeight;
     }""",
         timeout=3000,
     )
-    expect(page.locator("#mdx-entry--boston--acme")).to_have_attribute(
+    expect(page.locator("#rdx-entry--boston--acme")).to_have_attribute(
         "aria-current", "true"
     )
     page.set_viewport_size({"width": 1440, "height": 1000})
@@ -503,13 +508,13 @@ def fixture_checks(browser, base, data):
     before = region.locator(".leaflet-tile").first.get_attribute("src")
     zoom.click()
     page.wait_for_function(
-        "old => !Array.from(document.querySelectorAll('#mdx-region-boston .leaflet-tile')).some(n => n.src === old)",
+        "old => !Array.from(document.querySelectorAll('#rdx-region-boston .leaflet-tile')).some(n => n.src === old)",
         arg=before,
     )
     tiles_before = region.locator(".leaflet-tile").evaluate_all(
         "nodes => nodes.map(n => n.src)"
     )
-    region.locator(".mdx-map").hover()
+    region.locator(".rdx-map").hover()
     page.mouse.wheel(0, 400)
     page.wait_for_timeout(350)
     assert tiles_before == region.locator(".leaflet-tile").evaluate_all(
@@ -528,25 +533,25 @@ def fixture_checks(browser, base, data):
         assert_source(page, data)
         if failure == "no-js":
             expect(page.get_by_role("tab")).to_have_count(0)
-            expect(page.locator(".mdx-region:visible")).to_have_count(
+            expect(page.locator(".rdx-region:visible")).to_have_count(
                 len(data["regions"])
             )
         else:
             assert_region_tabs(page, data)
-        status = page.locator("#mdx-region-boston .mdx-map-status")
+        status = page.locator("#rdx-region-boston .rdx-map-status")
         expect(status).to_contain_text("Map unavailable")
         if failure == "tiles":
             expect(status).to_contain_text("tiles")
-            page.locator("#mdx-entry--boston--other .mdx-map-button").click()
-            expect(page.locator("#mdx-entry--boston--other")).to_have_attribute(
+            page.locator("#rdx-entry--boston--other .rdx-map-button").click()
+            expect(page.locator("#rdx-entry--boston--other")).to_have_attribute(
                 "aria-current", "true"
             )
         else:
             expect(
-                page.locator("#mdx-entry--boston--other .mdx-map-button")
+                page.locator("#rdx-entry--boston--other .rdx-map-button")
             ).to_be_hidden()
         page.screenshot(
-            path=str(ARTIFACTS / f"megadex-fixture-{failure}.png"), full_page=True
+            path=str(ARTIFACTS / f"robodex-fixture-{failure}.png"), full_page=True
         )
         assert not errors, errors
         context.close()
@@ -569,8 +574,8 @@ def live_checks(browser, base, data):
     assert mapped, "Live QA needs at least one verified source location"
     for region_id in {r for _, r in mapped}:
         select_region(page, region_id)
-        region = page.locator(f"#mdx-region-{region_id}")
-        expect(region.locator(".mdx-map-status")).to_contain_text(
+        region = page.locator(f"#rdx-region-{region_id}")
+        expect(region.locator(".rdx-map-status")).to_contain_text(
             "Map ready", timeout=30000
         )
         assert region.locator(".leaflet-tile-loaded").count() > 0
@@ -580,20 +585,20 @@ def live_checks(browser, base, data):
             )
         ).to_be_visible()
     assert tile_responses and all(s == 200 for s in tile_responses), tile_responses
-    page.screenshot(path=str(ARTIFACTS / "megadex-live-desktop.png"), full_page=True)
+    page.screenshot(path=str(ARTIFACTS / "robodex-live-desktop.png"), full_page=True)
     company, region_id = mapped[0]
     select_region(page, region_id)
-    page.locator(f"#mdx-entry--{region_id}--{company['id']} .mdx-map-button").click()
-    expect(page.locator(f"#mdx-entry--{region_id}--{company['id']}")).to_have_attribute(
+    page.locator(f"#rdx-entry--{region_id}--{company['id']} .rdx-map-button").click()
+    expect(page.locator(f"#rdx-entry--{region_id}--{company['id']}")).to_have_attribute(
         "aria-current", "true"
     )
-    page.screenshot(path=str(ARTIFACTS / "megadex-live-selected.png"), full_page=True)
+    page.screenshot(path=str(ARTIFACTS / "robodex-live-selected.png"), full_page=True)
     page.set_viewport_size({"width": 390, "height": 844})
-    page.screenshot(path=str(ARTIFACTS / "megadex-live-mobile.png"), full_page=True)
+    page.screenshot(path=str(ARTIFACTS / "robodex-live-mobile.png"), full_page=True)
     page.set_viewport_size({"width": 1440, "height": 1000})
     page.locator(".theme-toggle").click()
     expect(page.locator("body")).to_have_attribute("data-theme", "dark")
-    page.screenshot(path=str(ARTIFACTS / "megadex-live-dark.png"), full_page=True)
+    page.screenshot(path=str(ARTIFACTS / "robodex-live-dark.png"), full_page=True)
     assert not errors, errors
     context.close()
     print(
@@ -606,8 +611,9 @@ def main():
     parser.add_argument("--live-tiles", action="store_true")
     args = parser.parse_args()
     ARTIFACTS.mkdir(parents=True, exist_ok=True)
-    data = json.loads((ROOT / "static/data/megadex.json").read_text())
-    assert "megadex" not in (PUBLIC / "sitemap.xml").read_text()
+    data = json.loads((ROOT / "static/data/robodex.json").read_text())
+    sitemap = (PUBLIC / "sitemap.xml").read_text()
+    assert "robodex" not in sitemap
     with sync_playwright() as p:
         browser = p.chromium.launch()
         with serve(PUBLIC, 8767) as base:

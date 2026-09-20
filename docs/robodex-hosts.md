@@ -6,7 +6,7 @@ Verified 2026-09-19.
 
 The host audit covers the current Past Events and chapter pages, the public Luma calendar (all available past/future pages), and the full repository history of chapter announcements and About. External community events are excluded. Host aliases are deduplicated; a venue/lab and its parent organization are one entry.
 
-There are 21 distinct hosts in dated club event records, plus Willow Garage as the historical origin host attested by [club history](https://boardgamenightwg.com/about/). Host history is a candidate audit, not an automatic inclusion rule: Griz clarified that Megadex is for robotics companies only. Non-company venues and community organizations below are deliberately excluded. Willow Garage remains an explicitly approved historical Easter egg, not a current hiring employer.
+There are 21 distinct hosts in dated club event records, plus Willow Garage as the historical origin host attested by [club history](https://boardgamenightwg.com/about/). Host history is a candidate audit, not an automatic inclusion rule: Griz clarified that Robodex is for robotics companies only. Non-company venues and community organizations below are deliberately excluded. Willow Garage remains an explicitly approved historical Easter egg, not a current hiring employer.
 
 | Recorded host | Directory ID / scope decision | Event evidence |
 | --- | --- | --- |

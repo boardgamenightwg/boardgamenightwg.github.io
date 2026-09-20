@@ -1,4 +1,4 @@
-"""Stdlib contract tests for the Megadex validator and data."""
+"""Stdlib contract tests for the Robodex validator and data."""
 
 import copy
 import importlib.util
@@ -7,13 +7,13 @@ from pathlib import Path
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-SCRIPT = ROOT / "scripts/validate_megadex.py"
-DATA = ROOT / "static/data/megadex.json"
+SCRIPT = ROOT / "scripts/validate_robodex.py"
+DATA = ROOT / "static/data/robodex.json"
 
-spec = importlib.util.spec_from_file_location("validate_megadex", SCRIPT)
-validate_megadex = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(validate_megadex)
-validate = validate_megadex.validate
+spec = importlib.util.spec_from_file_location("validate_robodex", SCRIPT)
+validate_robodex = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(validate_robodex)
+validate = validate_robodex.validate
 
 
 def fixture():

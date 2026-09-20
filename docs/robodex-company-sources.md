@@ -1,4 +1,4 @@
-# Additional Megadex company sources
+# Additional Robodex company sources
 
 Public sources checked **2026-09-19**.
 
@@ -38,7 +38,7 @@ Robotics development and simulation software: MATLAB, Simulink, Robotics System 
 - Website: https://www.mathworks.com/
 - Careers: https://www.mathworks.com/company/jobs/opportunities.html
 - Careers verification: Official homepage links its Careers overview to /company/jobs/opportunities.html. Fetched https://www.mathworks.com/company/jobs/opportunities.html returned HTTP 200, titled 'MathWorks Careers | Explore Job Openings - MATLAB & Simulink', with Job Search, Teams and Roles, and 'Explore Jobs Around the World'. Permanent employer careers overview, not an individual vacancy.
-- Cities: Natick, MA (Boston); Santa Clara, CA (Bay Area). The same official office directory explicitly names both offices. See [the regional audit](megadex-regional-sources.md).
+- Cities: Natick, MA (Boston); Santa Clara, CA (Bay Area). The same official office directory explicitly names both offices. See [the regional audit](robodex-regional-sources.md).
 - City source: https://www.mathworks.com/company/aboutus/contact_us.html
 - Public evidence: “MathWorks Office Natick, Apple Hill Campus 1 Apple Hill Drive Natick, MA 01760-2098”
 - Qualification: Robotics-development and simulation software, not a robot-hardware manufacturer. Primary product sources: https://www.mathworks.com/products/robotics.html and https://www.mathworks.com/products/ros.html. Public-source retrieval succeeded during this check (including saved careers/contact content); some subsequent direct and browser requests returned HTTP 403. No access control was bypassed.
@@ -102,7 +102,7 @@ Robot foundation models for dexterous tasks; offices in the Bay Area and Boston.
 - Municipality evidence: https://api.ashbyhq.com/posting-api/job-board/generalist
 - Public evidence: On-site Mechanical Engineer uses “Boston (Somerville)” and structured `addressLocality: Somerville`; Office Manager uses “San Francisco Bay Area (San Mateo)” and structured `addressLocality: San Mateo`.
 - Correction: the former “San Francisco (SFO)” website label is metropolitan shorthand, not the precise municipality. Use the employer's more specific Ashby location, corroborated by its public LinkedIn headquarters in San Mateo.
-- Qualification: One backend record now appears in both regional views, with separate city evidence. See [the regional audit](megadex-regional-sources.md) for the source chain and the MathWorks second-region update.
+- Qualification: One backend record now appears in both regional views, with separate city evidence. See [the regional audit](robodex-regional-sources.md) for the source chain and the MathWorks second-region update.
 
 ### Physical Intelligence
 
@@ -164,6 +164,6 @@ Coordinate data © [OpenStreetMap contributors](https://www.openstreetmap.org/co
 ### Amazon Robotics
 
 Amazon Robotics is stored once and appears in Boston (North Reading) and the
-Bay Area (San Francisco). See [the Amazon source audit](megadex-amazon-sources.md)
+Bay Area (San Francisco). See [the Amazon source audit](robodex-amazon-sources.md)
 for official robotics-team, on-site hiring, and R&D-lab evidence, shared careers
 links, city-level mapping and maintenance caveats.

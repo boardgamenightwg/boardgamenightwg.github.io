@@ -10,8 +10,8 @@ Downloaded from the pinned npm package via:
 - https://unpkg.com/leaflet@1.9.4/LICENSE
 - `https://unpkg.com/leaflet@1.9.4/dist/images/{layers.png,layers-2x.png,marker-icon.png}`
 
-The three images cover the CSS references. Megadex uses its own DOM-based
+The three images cover the CSS references. Robodex uses its own DOM-based
 numbered div icons, not the standard marker icons. No third-party CDN request
 is needed at runtime. Repository formatting normalizes text files to LF line endings and ensures
 a final newline; otherwise these are upstream distribution files. Tiles are fetched separately
-from OpenStreetMap; see `docs/megadex.md` for attribution and tile-policy rules.
+from OpenStreetMap; see `docs/robodex.md` for attribution and tile-policy rules.

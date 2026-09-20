@@ -1,4 +1,4 @@
-# Megadex: multi-region and ROSCon 2026 source audit
+# Robodex: multi-region and ROSCon 2026 source audit
 
 Public sources checked 2026-09-19. Conference sponsorship is candidate discovery,
 not evidence of a local office. This is a bounded audit, not an exhaustive list
