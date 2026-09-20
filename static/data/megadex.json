@@ -1,6 +1,37 @@
 {
   "companies": [
     {
+      "careers_url": "https://www.amazon.jobs/content/en/teams/ftr/amazon-robotics",
+      "id": "amazon-robotics",
+      "last_verified": "2026-09-19",
+      "locations": {
+        "bay": {
+          "label": "San Francisco, CA",
+          "lat": 37.7879363,
+          "lon": -122.4075201,
+          "precision": "city",
+          "source_url": "https://www.amazon.jobs/en/jobs/10528946/lab-safety-engineer-amazon-robotics-ff-tech-enable-and-solutions",
+          "verified": "2026-09-19"
+        },
+        "boston": {
+          "label": "North Reading, MA",
+          "lat": 42.5750939,
+          "lon": -71.0786653,
+          "precision": "city",
+          "source_url": "https://www.amazon.jobs/en/jobs/10526837/senior-electrical-engineer-amazon-robotics",
+          "verified": "2026-09-19"
+        }
+      },
+      "name": "Amazon Robotics",
+      "news": [],
+      "regions": [
+        "boston",
+        "bay"
+      ],
+      "summary": "Amazon's robotics organization builds robots, mechatronics and software for fulfillment automation.",
+      "website": "https://www.aboutamazon.com/news/tag/robotics"
+    },
+    {
       "careers_url": "https://www.ambirobotics.com/careers",
       "id": "ambi-robotics",
       "last_verified": "2026-09-18",
