@@ -1,5 +1,5 @@
 +++
 title = "Robodex"
-template = "megadex.html"
+template = "robodex.html"
 in_search_index = false
 +++

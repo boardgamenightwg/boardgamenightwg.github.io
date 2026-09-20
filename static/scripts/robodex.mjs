@@ -1,7 +1,7 @@
 // Independent async module: never wait for the base template's deferred analytics.
 // Company content is escaped, server-rendered HTML; no fetch or runtime geocoding.
-const regions = [...document.querySelectorAll('.mdx-region')].sort((a, b) =>
-  Number(b.id === 'mdx-region-boston') - Number(a.id === 'mdx-region-boston'));
+const regions = [...document.querySelectorAll('.rdx-region')].sort((a, b) =>
+  Number(b.id === 'rdx-region-boston') - Number(a.id === 'rdx-region-boston'));
 let leaflet;
 const enhanced = new Set();
 function enhanceSelected() {
@@ -10,16 +10,16 @@ function enhanceSelected() {
   enhanced.add(region);
   try { enhanceRegion(region, leaflet); }
   catch {
-    const status = region.querySelector('.mdx-map-status');
+    const status = region.querySelector('.rdx-map-status');
     if (status) status.textContent = unavailable;
-    region.querySelectorAll('.mdx-map-button').forEach(button => { button.hidden = true; });
+    region.querySelectorAll('.rdx-map-button').forEach(button => { button.hidden = true; });
   }
 }
 
 // Tabs work independently of the optional map library. No JS leaves all lists visible.
 if (regions.length) {
   const tabs = document.createElement('div');
-  tabs.className = 'mdx-region-tabs';
+  tabs.className = 'rdx-region-tabs';
   tabs.setAttribute('role', 'tablist');
   tabs.setAttribute('aria-label', 'Directory region');
   const buttons = regions.map(region => {
@@ -31,11 +31,11 @@ if (regions.length) {
     button.setAttribute('aria-label', region.dataset.regionLabel);
     const icon = document.createElement('span');
     icon.setAttribute('aria-hidden', 'true');
-    icon.textContent = region.id === 'mdx-region-boston' ? '🫘🌆 ' : region.id === 'mdx-region-bay' ? '🌉🌅 ' : '';
+    icon.textContent = region.id === 'rdx-region-boston' ? '🫘🌆 ' : region.id === 'rdx-region-bay' ? '🌉🌅 ' : '';
     const count = document.createElement('span');
-    count.className = 'mdx-tab-count';
+    count.className = 'rdx-tab-count';
     count.setAttribute('aria-hidden', 'true');
-    count.textContent = String(region.querySelectorAll('.mdx-entry').length);
+    count.textContent = String(region.querySelectorAll('.rdx-entry').length);
     button.append(icon, region.dataset.regionLabel, count);
     region.setAttribute('role', 'tabpanel');
     region.setAttribute('aria-labelledby', button.id);
@@ -65,7 +65,7 @@ if (regions.length) {
       buttons[next].focus();
     });
   });
-  document.querySelector('.mdx-intro').after(tabs);
+  document.querySelector('.rdx-intro').after(tabs);
   activate(0);
 }
 const unavailable = 'Map unavailable. Use the Open map links in the list.';
@@ -74,13 +74,13 @@ function popupFor(rows, selected) {
   const content = document.createElement('div');
   for (const row of rows) {
     const item = document.createElement('section');
-    item.className = 'mdx-popup-company';
+    item.className = 'rdx-popup-company';
     item.setAttribute('aria-current', String(row === selected));
     const name = document.createElement('strong');
-    name.textContent = `${row.querySelector('.mdx-number').textContent}: ${row.querySelector('h3').textContent}`;
+    name.textContent = `${row.querySelector('.rdx-number').textContent}: ${row.querySelector('h3').textContent}`;
     const location = document.createElement('p');
-    location.textContent = row.querySelector('.mdx-location').textContent;
-    const careers = row.querySelector('.mdx-jobs');
+    location.textContent = row.querySelector('.rdx-location').textContent;
+    const careers = row.querySelector('.rdx-jobs');
     const jobs = (careers || row.querySelector('h3 a')).cloneNode(true);
     if (!careers) jobs.textContent = 'Website →';
     item.append(name, location, jobs);
@@ -90,10 +90,10 @@ function popupFor(rows, selected) {
 }
 
 function enhanceRegion(region, L) {
-  const canvas = region.querySelector('.mdx-map');
+  const canvas = region.querySelector('.rdx-map');
   if (!canvas) return;
-  const status = region.querySelector('.mdx-map-status');
-  const rows = [...region.querySelectorAll('.mdx-entry[data-lat][data-lon]')];
+  const status = region.querySelector('.rdx-map-status');
+  const rows = [...region.querySelectorAll('.rdx-entry[data-lat][data-lon]')];
   if (!rows.length) {
     status.textContent = 'No verified locations mapped yet. The company list is available below.';
     return;
@@ -123,7 +123,7 @@ function enhanceRegion(region, L) {
   let failed = 0;
   let timeout;
   const tileUnavailable = () => {
-    status.classList.remove('mdx-sr-only');
+    status.classList.remove('rdx-sr-only');
     status.textContent = 'Map unavailable: background tiles could not load. Numbered pins and Open map links are still available.';
   };
   tiles.on('loading', () => {
@@ -137,7 +137,7 @@ function enhanceRegion(region, L) {
     clearTimeout(timeout);
     if (failed) tileUnavailable();
     else {
-      status.classList.add('mdx-sr-only');
+      status.classList.add('rdx-sr-only');
       status.textContent = 'Map ready. City pins are approximate; numbers match the list.';
     }
   });
@@ -159,10 +159,10 @@ function enhanceRegion(region, L) {
   const markers = [];
   for (const group of groups.values()) {
     const numbers = document.createElement('span');
-    numbers.textContent = group.rows.map(row => row.querySelector('.mdx-number').textContent).join(' · ');
-    const label = group.rows.map(row => `${row.querySelector('.mdx-number').textContent}: ${row.querySelector('h3').textContent}`).join('; ');
+    numbers.textContent = group.rows.map(row => row.querySelector('.rdx-number').textContent).join(' · ');
+    const label = group.rows.map(row => `${row.querySelector('.rdx-number').textContent}: ${row.querySelector('h3').textContent}`).join('; ');
     const marker = L.marker(group.point, {
-      icon: L.divIcon({ className: 'mdx-marker', html: numbers, iconSize: null, iconAnchor: [16, 16] }),
+      icon: L.divIcon({ className: 'rdx-marker', html: numbers, iconSize: null, iconAnchor: [16, 16] }),
       keyboard: true,
       title: label,
       riseOnHover: true,
@@ -180,8 +180,8 @@ function enhanceRegion(region, L) {
       markers.forEach(candidate => candidate.getElement().setAttribute('aria-pressed', String(candidate === marker)));
       marker.setPopupContent(popupFor(group.rows, row)).openPopup();
       if (fromList) {
-        returnFocus = row.querySelector('.mdx-map-button');
-        const selectedJobs = marker.getPopup().getElement().querySelector('.mdx-popup-company[aria-current="true"] a');
+        returnFocus = row.querySelector('.rdx-map-button');
+        const selectedJobs = marker.getPopup().getElement().querySelector('.rdx-popup-company[aria-current="true"] a');
         selectedJobs.focus();
         canvas.scrollIntoView({ block: 'center' });
       }
@@ -200,7 +200,7 @@ function enhanceRegion(region, L) {
       }
     });
     for (const row of group.rows) {
-      const button = row.querySelector('.mdx-map-button');
+      const button = row.querySelector('.rdx-map-button');
       button.hidden = false;
       button.addEventListener('click', () => select(row, true));
     }
@@ -229,5 +229,5 @@ try {
   leaflet = window.L;
   enhanceSelected();
 } catch {
-  document.querySelectorAll('.mdx-map-status').forEach(status => { status.textContent = unavailable; });
+  document.querySelectorAll('.rdx-map-status').forEach(status => { status.textContent = unavailable; });
 }

@@ -12,20 +12,15 @@ not access control. The HTML, JSON and repository are public; never add
 private contact information, private notes or secrets. Do not globally deindex
 the site or block crawlers from reading the page's robots meta tag.
 
-## Name and URL compatibility
+## Naming
 
-The directory is named **Robodex** and its canonical route is `/robodex/`.
-The former `/megadex/` route is a static HTML redirect with a visible fallback
-link, including without JavaScript. Both routes remain unlisted, `noindex`,
-and excluded from search indexing and the sitemap.
-
-Internal `megadex` filenames, data URL, CSS hooks and `mdx` DOM IDs are retained
-for compatibility; there is still only one dataset and one directory template.
-Existing data contributors should continue using the paths documented below.
+The directory, route, data, assets, templates, tests and documentation all use
+**Robodex**. `/robodex/` is the only directory route; no compatibility aliases
+or redirects are provided. CSS and DOM identifiers use the `rdx` prefix.
 
 ## A data-only pull request
 
-1. Edit **`static/data/megadex.json`**. Do not edit templates, generated
+1. Edit **`static/data/robodex.json`**. Do not edit templates, generated
    `public/` files or stylesheets to add a company or a news item.
 2. **Every URL must be checked before you commit it.** A non-null `careers_url`
    must be an official employer careers page, a job board linked by that
@@ -68,13 +63,13 @@ Existing data contributors should continue using the paths documented below.
   closed/historical labeling and safe club-history link; never give it a current
   office pin or hiring link.
 - Community groups and non-company venues belong on the Megamap or event pages,
-  not here. [Host research](megadex-hosts.md) records both included candidates and
+  not here. [Host research](robodex-hosts.md) records both included candidates and
   scope exclusions. Past venue addresses prove event history, not a current
   office; current map locations need their own source.
 - Companies need not have hosted the club. Additional robotics companies can be
   included when public sources verify their identity, regional presence and
   careers destination (or an honest missing-link state). See
-  [additional company sources](megadex-company-sources.md). Private mail may
+  [additional company sources](robodex-company-sources.md). Private mail may
   help identify candidates, but never publish correspondence, personal contacts,
   or inferred hosting/relationship claims in this public directory.
 
@@ -132,13 +127,13 @@ company source confirming its location. Coordinates must be finite JSON numbers
 `source_url` must be a safe HTTPS URL; `verified` must be a real YYYY-MM-DD date,
 not in the future. The validator checks structure, not whether the source proves
 the claim: human review must check the source and geocode. Record research in
-[location evidence](megadex-locations.md). Preserve 2-space, sorted-key JSON.
+[location evidence](robodex-locations.md). Preserve 2-space, sorted-key JSON.
 
 ## Map implementation and fallbacks
 
 - The list is server-rendered, compact, and always usable. Each region projects
   the same canonical records in source order, with its own numbering and
-  `mdx-entry--<region>--<company-id>` row IDs. Double hyphens are forbidden
+  `rdx-entry--<region>--<company-id>` row IDs. Double hyphens are forbidden
   by both ID slug grammars, so the separator is unambiguous even for hyphenated
   IDs (for example, `bay` + `area-acme` versus `bay-area` + `acme`). The `entry`
   namespace also keeps row IDs separate from other page IDs.
@@ -174,11 +169,11 @@ the claim: human review must check the source and geocode. Record research in
 ## Validation and tests
 
 ```bash
-python scripts/validate_megadex.py
-python -m unittest discover -s tests -p 'test_megadex.py' -v
+python scripts/validate_robodex.py
+python -m unittest discover -s tests -p 'test_robodex*.py' -v
 zola build --base-url http://127.0.0.1:8767   # pinned 0.17.2 in CI
 # Requires tests/requirements-browser.txt and Playwright Chromium:
-python tests/megadex_smoke.py
+python tests/robodex_smoke.py
 ```
 
 The validator enforces schema version 2, strict fields, unique company IDs/names,
@@ -198,18 +193,18 @@ selection/focus, co-located pins, unmapped/empty regions, region-tab switching a
 keyboard navigation, keyboard and mouse selection, safe popups,
 responsive bounds at 1440/390/320px and initial mobile, dark-theme readability,
 map-button focus, tile/library/no-JS failure, and genuinely pending analytics.
-Fallback screenshots (clearly named `megadex-fixture-*`) are written under
-`build/megadex-screenshots/` and uploaded by CI; they are not live-map evidence.
+Fallback screenshots (clearly named `robodex-fixture-*`) are written under
+`build/robodex-screenshots/` and uploaded by CI; they are not live-map evidence.
 The temporary fixture never changes the canonical data file.
 
-For bounded manual network QA, `python tests/megadex_smoke.py --live-tiles`
-additionally checks real OSM responses and saves `megadex-live-*` screenshots
+For bounded manual network QA, `python tests/robodex_smoke.py --live-tiles`
+additionally checks real OSM responses and saves `robodex-live-*` screenshots
 from the actual source data. Do not enable live-tile QA in repeated CI runs;
 verify actual tile imagery, marker bounds, attribution, mobile and dark mode
 before calling a screenshot a working map.
 
 ## Multi-region and conference-source audit
 
-See [the regional evidence ledger](megadex-regional-sources.md) for Generalist
+See [the regional evidence ledger](robodex-regional-sources.md) for Generalist
 and MathWorks office coverage, EKA identity verification, and ROSCon 2026
 candidates. Conference venue geography is not company office evidence.

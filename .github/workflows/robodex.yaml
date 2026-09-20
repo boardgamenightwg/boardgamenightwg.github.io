@@ -21,8 +21,8 @@ jobs:
           python-version: "3.11"
       - name: Validate data and run dependency-free unit tests
         run: |
-          python scripts/validate_megadex.py
-          python -m unittest discover -s tests -p 'test_megadex.py' -v
+          python scripts/validate_robodex.py
+          python -m unittest discover -s tests -p 'test_robodex*.py' -v
       - name: Install pinned Zola 0.17.2 and build
         run: |
           curl --fail --location --retry 3 https://github.com/getzola/zola/releases/download/v0.17.2/zola-v0.17.2-x86_64-unknown-linux-gnu.tar.gz --output "$RUNNER_TEMP/zola.tar.gz"
@@ -31,15 +31,15 @@ jobs:
           "$RUNNER_TEMP/zola" build --base-url http://127.0.0.1:8767
       - name: Install optional browser test dependencies
         run: |
-          python -m venv .venv-megadex
-          .venv-megadex/bin/python -m pip install -r tests/requirements-browser.txt
-          .venv-megadex/bin/python -m playwright install --with-deps chromium
+          python -m venv .venv-robodex
+          .venv-robodex/bin/python -m pip install -r tests/requirements-browser.txt
+          .venv-robodex/bin/python -m playwright install --with-deps chromium
       - name: Run browser smoke (real Leaflet, intercepted tiles; no public tile traffic)
-        run: PATH="$RUNNER_TEMP:$PATH" .venv-megadex/bin/python tests/megadex_smoke.py
+        run: PATH="$RUNNER_TEMP:$PATH" .venv-robodex/bin/python tests/robodex_smoke.py
       - name: Keep smoke screenshots
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: megadex-smoke
-          path: build/megadex-screenshots/megadex-*.png
+          name: robodex-smoke
+          path: build/robodex-screenshots/robodex-*.png
           if-no-files-found: ignore

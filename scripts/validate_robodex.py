@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate public Megadex data using Python's standard library only."""
+"""Validate public Robodex data using Python's standard library only."""
 
 import argparse
 from datetime import date
@@ -219,21 +219,21 @@ def main():
     parser.add_argument(
         "path",
         nargs="?",
-        default=str(Path(__file__).resolve().parents[1] / "static/data/megadex.json"),
+        default=str(Path(__file__).resolve().parents[1] / "static/data/robodex.json"),
     )
     args = parser.parse_args()
     try:
         data = json.loads(Path(args.path).read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
-        print(f"megadex: cannot read {args.path}: {exc}", file=sys.stderr)
+        print(f"robodex: cannot read {args.path}: {exc}", file=sys.stderr)
         return 1
     errors = validate(data)
     if errors:
         for error in errors:
-            print(f"megadex error: {error}", file=sys.stderr)
+            print(f"robodex error: {error}", file=sys.stderr)
         return 1
     companies = data.get("companies", [])
-    print(f"megadex: valid ({len(companies)} companies)")
+    print(f"robodex: valid ({len(companies)} companies)")
     return 0
 
 
