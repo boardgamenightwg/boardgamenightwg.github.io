@@ -12,6 +12,13 @@ control. The HTML, JSON and repository are public; never add private contact
 information, private notes or secrets. Do not globally deindex the site or block
 crawlers from reading the page's robots meta tag.
 
+## Research notes
+
+- [Bay Area relationship audit, September 20, 2026](megamap-bay-relationships.md):
+  evidence and limits for the three existing Bay Area profiles, including why
+  an event's venue must not be mistaken for its organizer. Research findings do
+  not automatically authorize an edge, a new relationship type or roster expansion.
+
 ## A data-only pull request
 
 1. Edit **`static/data/megamap.json`**. Do not edit JavaScript, templates, generated
