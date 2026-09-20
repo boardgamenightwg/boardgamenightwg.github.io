@@ -2,8 +2,9 @@
 
 Verified from public primary sources on **2026-09-19**. These are city/town-level
 locations, not office entrances or an assertion that every job is based there.
-The `location.source_url` and `location.verified` fields preserve the source and
-verification date independently of the company's careers-link check.
+The `locations.<region>.source_url` and `locations.<region>.verified` fields
+preserve the source and verification date independently of the company's
+careers-link check.
 
 | Company | City/town | Primary source and evidence |
 | --- | --- | --- |
@@ -24,8 +25,10 @@ and verified against their page titles and content before correcting the links.
 ## Additional companies
 
 For the expanded roster, see [host-derived company evidence](megadex-hosts.md)
-and [additional company sources](megadex-company-sources.md). Each records its
-own verification date, city source and coordinate provenance.
+and [additional company sources](megadex-company-sources.md). The
+[multi-region and ROSCon audit](megadex-regional-sources.md) records newer
+Generalist/MathWorks regional pins and the Eka/ROSCon additions. Each records
+its own verification date, city source and coordinate provenance.
 
 ## Coordinate provenance
 

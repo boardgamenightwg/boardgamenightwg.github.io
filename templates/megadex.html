@@ -15,14 +15,23 @@
     <p class="mdx-note">Community-maintained; not a hiring guarantee or endorsement. City pins are approximate, not office addresses.</p>
   </section>
   {% for region_id, region_label in dex.regions %}
-  {% set companies_in_region = dex.companies | filter(attribute="region", value=region_id) %}
+  {% set_global companies_in_region = [] %}
+  {% for company in dex.companies %}
+    {% if region_id in company.regions %}
+      {% set_global companies_in_region = companies_in_region | concat(with=company) %}
+    {% endif %}
+  {% endfor %}
   <section class="mdx-region" data-region-label="{{ region_label }}" id="mdx-region-{{ region_id }}" aria-labelledby="mdx-region-{{ region_id }}-title">
     <h2 id="mdx-region-{{ region_id }}-title">{{ region_label }} <span class="mdx-count">{{ companies_in_region | length }} companies</span></h2>
     {% if companies_in_region %}
     <div class="mdx-region-layout">
       <ul class="mdx-list">
         {% for company in companies_in_region %}
-        <li class="mdx-entry" id="mdx-{{ company.id }}"{% if company.location %} data-lat="{{ company.location.lat }}" data-lon="{{ company.location.lon }}"{% endif %}>
+        {% set location = false %}
+        {% if company.locations %}
+          {% set location = company.locations | get(key=region_id, default=false) %}
+        {% endif %}
+        <li class="mdx-entry" id="mdx-entry--{{ region_id }}--{{ company.id }}"{% if location %} data-lat="{{ location.lat }}" data-lon="{{ location.lon }}"{% endif %}>
           <article>
             <div class="mdx-entry-heading">
               <span class="mdx-number" aria-label="Organization {{ loop.index }}">{{ loop.index }}</span>
@@ -35,10 +44,10 @@
             </div>
             <p class="mdx-summary">{{ company.summary }}</p>
             <div class="mdx-location-line">
-              {% if company.location %}
-              <span class="mdx-location">{{ company.location.label }} · {% if company.location.precision == "city" %}approximate city pin{% else %}address pin{% endif %}</span>
+              {% if location %}
+              <span class="mdx-location">{{ location.label }} · {% if location.precision == "city" %}approximate city pin{% else %}address pin{% endif %}</span>
               <button class="mdx-map-button" type="button" hidden aria-controls="mdx-map-{{ region_id }}" aria-label="Show {{ company.name }} on {{ region_label }} map">Show on map</button>
-              <a class="mdx-external-map" href="https://www.openstreetmap.org/?mlat={{ company.location.lat }}&amp;mlon={{ company.location.lon }}#map=12/{{ company.location.lat }}/{{ company.location.lon }}" rel="noopener noreferrer" aria-label="Open {{ company.name }} location in OpenStreetMap">Open map ↗</a>
+              <a class="mdx-external-map" href="https://www.openstreetmap.org/?mlat={{ location.lat }}&amp;mlon={{ location.lon }}#map=12/{{ location.lat }}/{{ location.lon }}" rel="noopener noreferrer" aria-label="Open {{ company.name }} location in OpenStreetMap">Open map ↗</a>
               {% else %}
               <span class="mdx-location">Location not mapped</span>
               {% endif %}
@@ -53,7 +62,7 @@
               </ul>
             </details>
             {% endif %}
-            <p class="mdx-verified">Verified <time datetime="{{ company.last_verified }}">{{ company.last_verified }}</time>{% if company.location %} · <a href="{{ company.location.source_url }}" rel="noopener noreferrer">Location source</a> <time datetime="{{ company.location.verified }}">{{ company.location.verified }}</time>{% endif %}</p>
+            <p class="mdx-verified">Verified <time datetime="{{ company.last_verified }}">{{ company.last_verified }}</time>{% if location %} · <a href="{{ location.source_url }}" rel="noopener noreferrer">Location source</a> <time datetime="{{ location.verified }}">{{ location.verified }}</time>{% endif %}</p>
           </article>
         </li>
         {% endfor %}

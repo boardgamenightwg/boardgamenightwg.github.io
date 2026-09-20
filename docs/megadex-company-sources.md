@@ -38,7 +38,7 @@ Robotics development and simulation software: MATLAB, Simulink, Robotics System 
 - Website: https://www.mathworks.com/
 - Careers: https://www.mathworks.com/company/jobs/opportunities.html
 - Careers verification: Official homepage links its Careers overview to /company/jobs/opportunities.html. Fetched https://www.mathworks.com/company/jobs/opportunities.html returned HTTP 200, titled 'MathWorks Careers | Explore Job Openings - MATLAB & Simulink', with Job Search, Teams and Roles, and 'Explore Jobs Around the World'. Permanent employer careers overview, not an individual vacancy.
-- City: Natick, MA
+- Cities: Natick, MA (Boston); Santa Clara, CA (Bay Area). The same official office directory explicitly names both offices. See [the regional audit](megadex-regional-sources.md).
 - City source: https://www.mathworks.com/company/aboutus/contact_us.html
 - Public evidence: “MathWorks Office Natick, Apple Hill Campus 1 Apple Hill Drive Natick, MA 01760-2098”
 - Qualification: Robotics-development and simulation software, not a robot-hardware manufacturer. Primary product sources: https://www.mathworks.com/products/robotics.html and https://www.mathworks.com/products/ros.html. Public-source retrieval succeeded during this check (including saved careers/contact content); some subsequent direct and browser requests returned HTTP 403. No access control was bypassed.
@@ -97,11 +97,12 @@ Robot foundation models for dexterous tasks; offices in the Bay Area and Boston.
 
 - Website: https://generalistai.com/
 - Careers: https://generalistai.com/careers
-- Careers verification: Official homepage links to /careers, which returned HTTP 200 and showed 23 open positions with Boston (BOS) and San Francisco (SFO) filters. Its Office Manager row links to /careers/office-manager; that first-party page identifies an on-site San Francisco role running daily office operations and has an Apply link to https://jobs.ashbyhq.com/generalist/dd96a0e1-13e6-479f-8ab1-c4136411d0ff/application.
-- City: San Francisco, CA
-- City source: https://generalistai.com/careers/office-manager
-- Public evidence: “Office Manager Department Operations Location San Francisco (SFO) Employment Type Full-time Location Type On-site”
-- Qualification: The company also has a Boston presence: https://generalistai.com/about states, “We are located in the Bay Area (CA) and Boston (MA).” This single entry uses its verified San Francisco office, not a claim of sole Bay headquarters.
+- Careers verification: Official homepage links to /careers, which returned HTTP 200 and showed 23 open positions with Boston (BOS) and San Francisco (SFO) filters. Its Office Manager row links to /careers/office-manager; that first-party page labels the on-site role “San Francisco (SFO)”, describes daily office operations, and has an Apply link to https://jobs.ashbyhq.com/generalist/dd96a0e1-13e6-479f-8ab1-c4136411d0ff/application.
+- Regions/cities: Boston — Somerville, MA; Bay Area — San Mateo, CA.
+- Municipality evidence: https://api.ashbyhq.com/posting-api/job-board/generalist
+- Public evidence: On-site Mechanical Engineer uses “Boston (Somerville)” and structured `addressLocality: Somerville`; Office Manager uses “San Francisco Bay Area (San Mateo)” and structured `addressLocality: San Mateo`.
+- Correction: the former “San Francisco (SFO)” website label is metropolitan shorthand, not the precise municipality. Use the employer's more specific Ashby location, corroborated by its public LinkedIn headquarters in San Mateo.
+- Qualification: One backend record now appears in both regional views, with separate city evidence. See [the regional audit](megadex-regional-sources.md) for the source chain and the MathWorks second-region update.
 
 ### Physical Intelligence
 

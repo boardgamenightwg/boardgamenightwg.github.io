@@ -20,7 +20,7 @@ def fixture():
     company = dict(
         id="acme",
         name="Acme Robotics",
-        region="boston",
+        regions=["boston"],
         website="https://example.org/",
         careers_url="https://example.org/careers",
         summary="A robotics company.",
@@ -39,7 +39,7 @@ def fixture():
         last_verified="2026-09-10",
     )
     return dict(
-        version=1,
+        version=2,
         regions={"boston": "Boston", "bay": "Bay Area"},
         companies=[company, dict(company, id="other", name="Other Co")],
     )
@@ -48,6 +48,70 @@ def fixture():
 class ValidatorTests(unittest.TestCase):
     def test_fixture_is_valid(self):
         self.assertEqual(validate(fixture()), [])
+
+    def test_multiregion_locations_and_unknown_city(self):
+        data = fixture()
+        company = data["companies"][0]
+        company["regions"] = ["boston", "bay"]
+        for locations in [
+            {},
+            {"boston": self.location()},
+            {
+                "boston": self.location(),
+                "bay": self.location(
+                    label="Mountain View, CA", lat=37.386, lon=-122.0838
+                ),
+            },
+        ]:
+            with self.subTest(locations=locations):
+                company["locations"] = locations
+                self.assertEqual(validate(data), [])
+
+    def test_rejects_invalid_region_lists(self):
+        for value in [
+            None,
+            "boston",
+            [],
+            ["boston", "boston"],
+            ["chicago"],
+            [""],
+            [None],
+            [True],
+            [[]],
+            [{}],
+        ]:
+            with self.subTest(regions=value):
+                data = fixture()
+                data["companies"][0]["regions"] = value
+                self.assertTrue(any("region" in e for e in validate(data)))
+
+    def test_rejects_invalid_location_maps(self):
+        for value in [
+            None,
+            [],
+            "boston",
+            {"bay": self.location()},
+            {"chicago": self.location()},
+        ]:
+            with self.subTest(locations=value):
+                data = fixture()
+                data["companies"][0]["locations"] = value
+                self.assertTrue(any("locations" in e for e in validate(data)))
+
+    def test_rejects_legacy_schema(self):
+        data = fixture()
+        data["version"] = 1
+        self.assertTrue(any("version" in e for e in validate(data)))
+        data["version"] = 2
+        data["companies"][0]["region"] = "boston"
+        data["companies"][0]["location"] = self.location()
+        self.assertTrue(any("unexpected fields" in e for e in validate(data)))
+
+    def test_rejects_company_duplicated_under_another_id(self):
+        data = fixture()
+        data["companies"][1]["name"] = " ACME ROBOTICS "
+        data["companies"][1]["regions"] = ["bay"]
+        self.assertTrue(any("duplicate name" in e for e in validate(data)))
 
     def test_explicitly_unlisted_careers(self):
         data = fixture()
@@ -65,7 +129,9 @@ class ValidatorTests(unittest.TestCase):
     def test_optional_verified_location(self):
         for precision in ["city", "address"]:
             data = fixture()
-            data["companies"][0]["location"] = self.location(precision=precision)
+            data["companies"][0]["locations"] = {
+                "boston": self.location(precision=precision)
+            }
             self.assertEqual(validate(data), [])
 
     @staticmethod
@@ -105,13 +171,15 @@ class ValidatorTests(unittest.TestCase):
         for location in cases:
             with self.subTest(location=location):
                 data = fixture()
-                data["companies"][0]["location"] = location
+                data["companies"][0]["locations"] = {"boston": location}
                 self.assertTrue(any("location" in e for e in validate(data)))
 
     def test_coordinate_boundaries_are_valid(self):
         for lat, lon in [(-90, -180), (90, 180), (0, 0)]:
             data = fixture()
-            data["companies"][0]["location"] = self.location(lat=lat, lon=lon)
+            data["companies"][0]["locations"] = {
+                "boston": self.location(lat=lat, lon=lon)
+            }
             self.assertEqual(validate(data), [])
 
     def test_real_data_is_valid(self):
@@ -128,7 +196,7 @@ class ValidatorTests(unittest.TestCase):
 
     def test_rejects_unknown_region(self):
         data = fixture()
-        data["companies"][0]["region"] = "chicago"
+        data["companies"][0]["regions"] = ["chicago"]
         self.assertTrue(any("unknown region" in e for e in validate(data)))
 
     def test_rejects_bad_urls(self):

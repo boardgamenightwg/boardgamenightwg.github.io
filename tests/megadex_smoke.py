@@ -15,7 +15,7 @@ import subprocess
 import tempfile
 import threading
 from playwright.sync_api import sync_playwright, expect
-from test_megadex import fixture, ValidatorTests
+from test_megadex import fixture, ValidatorTests, validate
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
@@ -54,32 +54,56 @@ def fixture_build():
         data["regions"]["empty"] = "Empty fixture region"
         data["regions"]["unlocated"] = "Unmapped fixture region"
         data["companies"][0]["name"] = 'Fixture <img src=x onerror="alert(1)"> Robotics'
-        data["companies"][0]["location"] = ValidatorTests.location()
-        data["companies"][1]["location"] = ValidatorTests.location()
+        data["companies"][0]["regions"] = ["boston", "bay"]
+        data["companies"][0]["locations"] = {
+            "boston": ValidatorTests.location(),
+            "bay": ValidatorTests.location(
+                label="Mountain View, CA", lat=37.386, lon=-122.0838
+            ),
+        }
+        # Regional presence is known, but only Boston has a verified city.
+        data["companies"][1]["regions"] = ["boston", "bay"]
+        data["companies"][1]["locations"] = {"boston": ValidatorTests.location()}
         data["companies"].append(
             dict(
                 data["companies"][0],
                 id="unmapped",
                 name="Unmapped fixture",
-                region="unlocated",
+                regions=["unlocated"],
             )
         )
-        del data["companies"][-1]["location"]
+        del data["companies"][-1]["locations"]
         data["companies"].append(
             dict(
                 data["companies"][0],
                 id="bay-fixture",
                 name="Bay fixture",
-                region="bay",
+                regions=["bay"],
                 careers_url=None,
-                location=ValidatorTests.location(
-                    label="Mountain View, CA",
-                    lat=37.386,
-                    lon=-122.0838,
-                    precision="address",
-                ),
+                locations={
+                    "bay": ValidatorTests.location(
+                        label="Palo Alto, CA",
+                        lat=37.4443,
+                        lon=-122.1598,
+                        precision="address",
+                    )
+                },
             )
         )
+        # Valid hyphenated slugs must not alias: bay + area-acme vs bay-area + acme.
+        data["regions"]["bay-area"] = "Hyphenated fixture region"
+        data["companies"][0]["regions"].append("bay-area")
+        data["companies"].insert(
+            -1,
+            dict(
+                data["companies"][0],
+                id="area-acme",
+                name="Hyphenated ID fixture",
+                regions=["bay"],
+                locations={},
+            ),
+        )
+        assert validate(data) == [], validate(data)
         (root / "static/data/megadex.json").write_text(json.dumps(data))
         # Relative base URL resolved at serving time; production build still uses 8767.
         subprocess.run(
@@ -133,12 +157,17 @@ def assert_source(page, data):
         "content", "noindex,follow"
     )
     assert page.locator('header a[href*="megadex"]').count() == 0
+    ids = page.locator("[id]").evaluate_all("nodes => nodes.map(n => n.id)")
+    assert len(ids) == len(set(ids)), (
+        "DOM IDs must be unique across regional views; duplicates: "
+        f"{sorted({id_ for id_ in ids if ids.count(id_) > 1})}"
+    )
     for region_id in data["regions"]:
         region = page.locator(f"#mdx-region-{region_id}")
-        companies = [c for c in data["companies"] if c["region"] == region_id]
+        companies = [c for c in data["companies"] if region_id in c["regions"]]
         expect(region.locator(".mdx-entry")).to_have_count(len(companies))
         for number, company in enumerate(companies, 1):
-            row = page.locator(f"#mdx-{company['id']}")
+            row = page.locator(f"#mdx-entry--{region_id}--{company['id']}")
             expect(row.locator(".mdx-number")).to_have_text(str(number))
             if company["careers_url"]:
                 expect(row.locator("a.mdx-jobs")).to_have_attribute(
@@ -150,24 +179,35 @@ def assert_source(page, data):
                     "Jobs page not listed"
                 )
             expect(row.locator("h3 a")).to_have_attribute("href", company["website"])
+            expect(row.locator(".mdx-summary")).to_have_text(company["summary"])
+            expect(row.locator(".mdx-verified time").first).to_have_attribute(
+                "datetime", company["last_verified"]
+            )
             expect(row.locator(".mdx-news li")).to_have_count(len(company["news"]))
+            for item, news_row in zip(
+                company["news"], row.locator(".mdx-news li").all()
+            ):
+                expect(news_row.locator("a")).to_have_text(item["headline"])
+                expect(news_row.locator("a")).to_have_attribute("href", item["url"])
             dates = row.locator(".mdx-news time").evaluate_all(
                 "nodes => nodes.map(n => n.dateTime)"
             )
             assert dates == [n["date"] for n in company["news"]]
-            if "location" in company:
+            location = company.get("locations", {}).get(region_id)
+            if location:
                 expect(row.locator(".mdx-external-map")).to_have_attribute(
                     "href",
-                    f"https://www.openstreetmap.org/?mlat={company['location']['lat']}&mlon={company['location']['lon']}#map=12/{company['location']['lat']}/{company['location']['lon']}",
+                    f"https://www.openstreetmap.org/?mlat={location['lat']}&mlon={location['lon']}#map=12/{location['lat']}/{location['lon']}",
                 )
-                expect(row.locator(".mdx-location")).to_contain_text(
-                    company["location"]["label"]
-                )
-                if company["location"]["precision"] == "city":
+                expect(row.locator(".mdx-location")).to_contain_text(location["label"])
+                if location["precision"] == "city":
                     expect(row.locator(".mdx-location")).to_contain_text(
                         "approximate city pin"
                     )
             else:
+                assert row.get_attribute("data-lat") is None
+                assert row.get_attribute("data-lon") is None
+                expect(row.locator(".mdx-external-map")).to_have_count(0)
                 expect(row.locator(".mdx-location")).to_have_text("Location not mapped")
                 expect(row.locator(".mdx-map-button")).to_have_count(0)
 
@@ -206,10 +246,10 @@ def assert_maps(page, data):
     for region_id in data["regions"]:
         select_region(page, region_id)
         groups = {}
-        companies = [c for c in data["companies"] if c["region"] == region_id]
+        companies = [c for c in data["companies"] if region_id in c["regions"]]
         for number, company in enumerate(companies, 1):
-            if company.get("location"):
-                loc = company["location"]
+            loc = company.get("locations", {}).get(region_id)
+            if loc:
                 groups.setdefault((loc["lat"], loc["lon"]), []).append(str(number))
         region = page.locator(f"#mdx-region-{region_id}")
         expect(region.locator(".mdx-marker")).to_have_count(len(groups))
@@ -226,9 +266,13 @@ def assert_source_map_links(page, data):
         select_region(page, region_id)
         region = page.locator(f"#mdx-region-{region_id}")
         for company in data["companies"]:
-            if company["region"] != region_id or not company.get("location"):
+            if region_id not in company["regions"] or region_id not in company.get(
+                "locations", {}
+            ):
                 continue
-            button = page.locator(f"#mdx-{company['id']} .mdx-map-button")
+            button = page.locator(
+                f"#mdx-entry--{region_id}--{company['id']} .mdx-map-button"
+            )
             button.click()
             selected = region.locator('.mdx-popup-company[aria-current="true"]')
             expect(selected.locator("strong")).to_contain_text(company["name"])
@@ -306,6 +350,35 @@ def fixture_checks(browser, base, data):
         "aria-label", '1: Fixture <img src=x onerror="alert(1)"> Robotics; 2: Other Co'
     )
     assert_region_tabs(page, data)
+    assert_source(page, data)
+    assert_maps(page, data)
+    assert_source_map_links(page, data)
+    # One canonical company has independent selection and focus in both views.
+    select_region(page, "boston")
+    page.locator("#mdx-entry--boston--other .mdx-map-button").click()
+    page.keyboard.press("Escape")
+    select_region(page, "bay")
+    button = page.locator("#mdx-entry--bay--acme .mdx-map-button")
+    button.focus()
+    page.keyboard.press("Enter")
+    expect(page.locator("#mdx-entry--bay--acme")).to_have_attribute(
+        "aria-current", "true"
+    )
+    expect(page.locator("#mdx-entry--boston--other")).to_have_attribute(
+        "aria-current", "true"
+    )
+    expect(page.locator("#mdx-entry--boston--acme")).not_to_have_attribute(
+        "aria-current", "true"
+    )
+    expect(page.locator("#mdx-region-bay .leaflet-popup-content")).to_contain_text(
+        "Mountain View, CA"
+    )
+    page.keyboard.press("Escape")
+    expect(button).to_be_focused()
+    select_region(page, "boston")
+    expect(page.locator("#mdx-entry--boston--other")).to_have_attribute(
+        "aria-current", "true"
+    )
     select_region(page, "empty")
     expect(page.locator("#mdx-region-empty .mdx-empty")).to_be_visible()
     select_region(page, "unlocated")
@@ -314,8 +387,8 @@ def fixture_checks(browser, base, data):
     )
     expect(page.locator("#mdx-region-unlocated .mdx-map")).to_be_hidden()
     select_region(page, "bay")
-    expect(page.locator("#mdx-region-bay .mdx-marker")).to_have_count(1)
-    page.locator("#mdx-bay-fixture .mdx-map-button").click()
+    expect(page.locator("#mdx-region-bay .mdx-marker")).to_have_count(2)
+    page.locator("#mdx-entry--bay--bay-fixture .mdx-map-button").click()
     popup = page.locator("#mdx-region-bay .leaflet-popup-content")
     expect(popup.locator(".mdx-jobs")).to_have_count(0)
     expect(popup.get_by_role("link", name="Website →")).to_have_attribute(
@@ -331,7 +404,7 @@ def fixture_checks(browser, base, data):
     )
     page.evaluate("document.body.dataset.theme = 'light'")
     page.keyboard.press("Escape")
-    expect(page.locator("#mdx-bay-fixture .mdx-map-button")).to_be_focused()
+    expect(page.locator("#mdx-entry--bay--bay-fixture .mdx-map-button")).to_be_focused()
     select_region(page, "boston")
     assert_source(page, data)
     assert_layout(page)
@@ -342,12 +415,18 @@ def fixture_checks(browser, base, data):
     ), "Ready status should not duplicate visible help"
     marker.focus()
     page.keyboard.press("Enter")
-    expect(page.locator("#mdx-acme")).to_have_attribute("aria-current", "true")
+    expect(page.locator("#mdx-entry--boston--acme")).to_have_attribute(
+        "aria-current", "true"
+    )
     expect(region.locator(".leaflet-popup-content img")).to_have_count(0)
     expect(region.locator(".leaflet-popup-content a.mdx-jobs")).to_have_count(2)
-    page.locator("#mdx-other .mdx-map-button").click()
-    expect(page.locator("#mdx-other")).to_have_attribute("aria-current", "true")
-    expect(page.locator("#mdx-acme")).not_to_have_attribute("aria-current", "true")
+    page.locator("#mdx-entry--boston--other .mdx-map-button").click()
+    expect(page.locator("#mdx-entry--boston--other")).to_have_attribute(
+        "aria-current", "true"
+    )
+    expect(page.locator("#mdx-entry--boston--acme")).not_to_have_attribute(
+        "aria-current", "true"
+    )
     expect(region.locator('.mdx-popup-company[aria-current="true"]')).to_contain_text(
         "Other Co"
     )
@@ -369,19 +448,23 @@ def fixture_checks(browser, base, data):
         == "rgb(34, 34, 34)"
     )
     marker.click()
-    expect(page.locator("#mdx-acme")).to_have_attribute("aria-current", "true")
-    page.locator("#mdx-other .mdx-map-button").click()
+    expect(page.locator("#mdx-entry--boston--acme")).to_have_attribute(
+        "aria-current", "true"
+    )
+    page.locator("#mdx-entry--boston--other .mdx-map-button").click()
     marker.focus()
     page.keyboard.press("Space")
-    expect(page.locator("#mdx-acme")).to_have_attribute("aria-current", "true")
+    expect(page.locator("#mdx-entry--boston--acme")).to_have_attribute(
+        "aria-current", "true"
+    )
     page.set_viewport_size({"width": 390, "height": 844})
-    page.locator("#mdx-other .mdx-map-button").focus()
+    page.locator("#mdx-entry--boston--other .mdx-map-button").focus()
     page.keyboard.press("Enter")
     expect(
         region.locator('.mdx-popup-company[aria-current="true"] .mdx-jobs')
     ).to_be_focused()
     page.keyboard.press("Escape")
-    expect(page.locator("#mdx-other .mdx-map-button")).to_be_focused()
+    expect(page.locator("#mdx-entry--boston--other .mdx-map-button")).to_be_focused()
     page.keyboard.press("Enter")
     # A container resize must preserve the open popup, not refit it behind the clip.
     page.set_viewport_size({"width": 392, "height": 844})
@@ -401,7 +484,7 @@ def fixture_checks(browser, base, data):
         region.locator('.mdx-popup-company[aria-current="true"] .mdx-jobs')
     ).to_be_focused()
     region.locator(".leaflet-popup-close-button").click()
-    expect(page.locator("#mdx-other .mdx-map-button")).to_be_focused()
+    expect(page.locator("#mdx-entry--boston--other .mdx-map-button")).to_be_focused()
     page.keyboard.press("Enter")
     marker.click()
     page.wait_for_function(
@@ -411,7 +494,9 @@ def fixture_checks(browser, base, data):
     }""",
         timeout=3000,
     )
-    expect(page.locator("#mdx-acme")).to_have_attribute("aria-current", "true")
+    expect(page.locator("#mdx-entry--boston--acme")).to_have_attribute(
+        "aria-current", "true"
+    )
     page.set_viewport_size({"width": 1440, "height": 1000})
     # Genuine map interaction, not a static graphic: zoom buttons alter the tiles.
     zoom = region.locator(".leaflet-control-zoom-in")
@@ -452,10 +537,14 @@ def fixture_checks(browser, base, data):
         expect(status).to_contain_text("Map unavailable")
         if failure == "tiles":
             expect(status).to_contain_text("tiles")
-            page.locator("#mdx-other .mdx-map-button").click()
-            expect(page.locator("#mdx-other")).to_have_attribute("aria-current", "true")
+            page.locator("#mdx-entry--boston--other .mdx-map-button").click()
+            expect(page.locator("#mdx-entry--boston--other")).to_have_attribute(
+                "aria-current", "true"
+            )
         else:
-            expect(page.locator("#mdx-other .mdx-map-button")).to_be_hidden()
+            expect(
+                page.locator("#mdx-entry--boston--other .mdx-map-button")
+            ).to_be_hidden()
         page.screenshot(
             path=str(ARTIFACTS / f"megadex-fixture-{failure}.png"), full_page=True
         )
@@ -476,9 +565,9 @@ def live_checks(browser, base, data):
         else None,
     )
     open_page(page, base)
-    mapped = [c for c in data["companies"] if c.get("location")]
+    mapped = [(c, r) for c in data["companies"] for r in c.get("locations", {})]
     assert mapped, "Live QA needs at least one verified source location"
-    for region_id in {c["region"] for c in mapped}:
+    for region_id in {r for _, r in mapped}:
         select_region(page, region_id)
         region = page.locator(f"#mdx-region-{region_id}")
         expect(region.locator(".mdx-map-status")).to_contain_text(
@@ -492,10 +581,10 @@ def live_checks(browser, base, data):
         ).to_be_visible()
     assert tile_responses and all(s == 200 for s in tile_responses), tile_responses
     page.screenshot(path=str(ARTIFACTS / "megadex-live-desktop.png"), full_page=True)
-    company = mapped[0]
-    select_region(page, company["region"])
-    page.locator(f"#mdx-{company['id']} .mdx-map-button").click()
-    expect(page.locator(f"#mdx-{company['id']}")).to_have_attribute(
+    company, region_id = mapped[0]
+    select_region(page, region_id)
+    page.locator(f"#mdx-entry--{region_id}--{company['id']} .mdx-map-button").click()
+    expect(page.locator(f"#mdx-entry--{region_id}--{company['id']}")).to_have_attribute(
         "aria-current", "true"
     )
     page.screenshot(path=str(ARTIFACTS / "megadex-live-selected.png"), full_page=True)
