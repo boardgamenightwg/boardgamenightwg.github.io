@@ -31,6 +31,14 @@ Arjun Viswanathan shares a hierarchical reinforcement learning approach that tea
 
 [More info / RSVP →](https://bostonrobothackers.com/news/26-arjun-viswanathan-talk-announcement.html)
 
+### Action Space Hackathon 2026 <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** October 23, 2026 @ 4:00 PM – 9:00 PM; October 24 @ 8:00 AM – 5:00 PM EDT \
+**Where:** Microsoft NERD Center, 1 Memorial Drive, Cambridge, MA 02142 \
+**Host:** Jaime Romero & Sebastian Romero \
+A two-day, hands-on robotics hackathon focused on counter-drone swarm defense and physical AI, using NVIDIA Isaac Lab and multi-agent reinforcement learning to take team strategies from simulation to real drones. Open to ages 18+; registration requires host approval, with final approvals by October 17.
+
+[More info / RSVP →](https://luma.com/xl77cp4v)
+
 ### Minds in Motion @ MIT <span class="badge badge-tech">💻 Tech & Community</span>
 **When:** October 30, 2026 @ 8:00 AM \
 **Where:** MIT Samberg Conference Center, 50 Memorial Dr, Cambridge, MA 02142 \
