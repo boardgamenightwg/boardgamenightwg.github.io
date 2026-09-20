@@ -56,8 +56,8 @@ The public Past Events record likewise names Silicon Valley Robotics for
 June 4, 2025.[3]
 
 This is dated co-location/event context. It is not evidence that Circuit Launch
-operates BGNWG, or that the two jointly organize an ongoing series. Preserve the
-organizer/venue distinction instead of resurrecting an earlier attribution.
+operates BGNWG, or that the two jointly organized the June 4 game night. Preserve
+the organizer/venue distinction instead of resurrecting an earlier attribution.
 
 ## HomeBrew Robotics Club meeting context
 
