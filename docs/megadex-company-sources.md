@@ -158,3 +158,12 @@ Municipality representatives from OpenStreetMap Nominatim, retrieved or reused f
 The San Mateo query also returned San Mateo County; that county result was rejected in favor of the municipality relation 2835017.
 
 Coordinate data © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), ODbL. Existing companies at the same municipality retain the same coordinates; no artificial offsets.
+
+## Additional multi-region employers
+
+### Amazon Robotics
+
+Amazon Robotics is stored once and appears in Boston (North Reading) and the
+Bay Area (San Francisco). See [the Amazon source audit](megadex-amazon-sources.md)
+for official robotics-team, on-site hiring, and R&D-lab evidence, shared careers
+links, city-level mapping and maintenance caveats.
