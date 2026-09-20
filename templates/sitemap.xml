@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {# Zola 0.17.2's builtin sitemap, with only the experimental routes excluded. #}
     {%- for sitemap_entry in entries %}
-    {%- if sitemap_entry.permalink is not ending_with("/megamap/") and sitemap_entry.permalink is not ending_with("/megadex/") %}
+    {%- if sitemap_entry.permalink is not ending_with("/megamap/") and sitemap_entry.permalink is not ending_with("/megadex/") and sitemap_entry.permalink is not ending_with("/robodex/") %}
     <url>
         <loc>{{ sitemap_entry.permalink | escape_xml | safe }}</loc>
         {%- if sitemap_entry.updated %}

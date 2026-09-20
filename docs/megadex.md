@@ -1,6 +1,6 @@
-# Contributing to the experimental Megadex
+# Contributing to the experimental Robodex
 
-The public `/megadex/` page is a robotics-company index for both club regions:
+The public `/robodex/` page is a robotics-company index for both club regions:
 **careers links**, recent sourced **news**, and regional geographic maps. It is
 not a directory of all board-game venues or host organizations. It is the sibling
 of the experimental Megamap, but companies remain a flat, sourced directory with
@@ -11,6 +11,17 @@ sitemap entry, no search-index entry, and page-only `noindex,follow`. This is
 not access control. The HTML, JSON and repository are public; never add
 private contact information, private notes or secrets. Do not globally deindex
 the site or block crawlers from reading the page's robots meta tag.
+
+## Name and URL compatibility
+
+The directory is named **Robodex** and its canonical route is `/robodex/`.
+The former `/megadex/` route is a static HTML redirect with a visible fallback
+link, including without JavaScript. Both routes remain unlisted, `noindex`,
+and excluded from search indexing and the sitemap.
+
+Internal `megadex` filenames, data URL, CSS hooks and `mdx` DOM IDs are retained
+for compatibility; there is still only one dataset and one directory template.
+Existing data contributors should continue using the paths documented below.
 
 ## A data-only pull request
 

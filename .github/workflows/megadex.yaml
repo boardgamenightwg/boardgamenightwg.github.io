@@ -1,4 +1,4 @@
-name: Megadex checks
+name: Robodex checks
 
 on:
   pull_request:

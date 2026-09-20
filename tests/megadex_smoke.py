@@ -8,6 +8,7 @@ import argparse
 from contextlib import contextmanager
 import functools
 import http.server
+from html.parser import HTMLParser
 import json
 from pathlib import Path
 import shutil
@@ -148,15 +149,60 @@ def setup(browser, javascript=True, tiles="mock", pending_analytics=False):
 
 
 def open_page(page, base):
-    page.goto(base + "/megadex/", wait_until="commit")
+    page.goto(base + "/robodex/", wait_until="commit")
     expect(page.locator("#mdx-title")).to_be_visible()
+
+
+class RedirectTags(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.tags = []
+
+    def handle_starttag(self, tag, attrs):
+        self.tags.append((tag, dict(attrs)))
+
+
+def assert_legacy_redirect(browser, base, data):
+    for javascript in (True, False):
+        context, page, errors = setup(browser, javascript=javascript)
+        response = page.request.get(base + "/megadex/")
+        assert response.status == 200
+        parser = RedirectTags()
+        parser.feed(response.text())
+        assert ("meta", {"name": "robots", "content": "noindex,follow"}) in parser.tags
+        target = base + "/robodex/"
+        assert (
+            "meta",
+            {"http-equiv": "refresh", "content": "0;url=" + target},
+        ) in parser.tags
+        assert ("link", {"rel": "canonical", "href": target}) in parser.tags
+        assert any(
+            tag == "a" and attrs.get("href") == target for tag, attrs in parser.tags
+        )
+        page.goto(base + "/megadex/", wait_until="commit")
+        page.wait_for_url(target)
+        expect(page.locator("#mdx-title")).to_be_visible()
+        assert_source(page, data)
+        assert not errors, errors
+        context.close()
+    print(
+        "PASS: legacy URL redirects to Robodex with and without JavaScript; both routes noindex"
+    )
 
 
 def assert_source(page, data):
     expect(page.locator('meta[name="robots"]')).to_have_attribute(
         "content", "noindex,follow"
     )
-    assert page.locator('header a[href*="megadex"]').count() == 0
+    expect(page.locator("#mdx-title")).to_have_text("Robodex Experimental")
+    assert page.title().startswith("Robodex | ")
+    expect(page.locator('link[rel="canonical"]')).to_have_attribute(
+        "href", page.url.split("#")[0].split("?")[0]
+    )
+    assert (
+        page.locator('header a[href*="megadex"], header a[href*="robodex"]').count()
+        == 0
+    )
     ids = page.locator("[id]").evaluate_all("nodes => nodes.map(n => n.id)")
     assert len(ids) == len(set(ids)), (
         "DOM IDs must be unique across regional views; duplicates: "
@@ -607,10 +653,13 @@ def main():
     args = parser.parse_args()
     ARTIFACTS.mkdir(parents=True, exist_ok=True)
     data = json.loads((ROOT / "static/data/megadex.json").read_text())
-    assert "megadex" not in (PUBLIC / "sitemap.xml").read_text()
+    sitemap = (PUBLIC / "sitemap.xml").read_text()
+    assert "megadex" not in sitemap
+    assert "robodex" not in sitemap
     with sync_playwright() as p:
         browser = p.chromium.launch()
         with serve(PUBLIC, 8767) as base:
+            assert_legacy_redirect(browser, base, data)
             context, page, errors = setup(browser)
             open_page(page, base)
             assert_source(page, data)

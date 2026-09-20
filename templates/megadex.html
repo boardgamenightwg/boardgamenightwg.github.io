@@ -1,8 +1,9 @@
 {% extends "base.html" %}
-{% block title %}Megadex | {{ super() }}{% endblock title %}
+{% block title %}Robodex | {{ super() }}{% endblock title %}
 {% block body_class %}megadex-page{% endblock body_class %}
 {% block extra_head %}
 <meta name="robots" content="noindex,follow">
+<link rel="canonical" href="{{ get_url(path='robodex/', trailing_slash=true) }}">
 <link rel="stylesheet" href="{{ get_url(path='vendor/leaflet/leaflet.css') }}">
 <link rel="stylesheet" href="{{ get_url(path='styles/megadex.css') }}">
 {% endblock extra_head %}
@@ -10,7 +11,7 @@
 {% set dex = load_data(path="static/data/megadex.json") %}
 <main id="megadex">
   <section class="mdx-intro" aria-labelledby="mdx-title">
-    <h1 id="mdx-title">Megadex <span class="mdx-badge">Experimental</span></h1>
+    <h1 id="mdx-title">Robodex <span class="mdx-badge">Experimental</span></h1>
     <p>Robotics companies around Boston and the Bay Area. <a href="{{ get_url(path='megamap/') }}">See the Megamap →</a></p>
     <p class="mdx-note">Community-maintained; not a hiring guarantee or endorsement. City pins are approximate, not office addresses.</p>
   </section>

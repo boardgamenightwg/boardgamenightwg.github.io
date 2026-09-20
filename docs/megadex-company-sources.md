@@ -1,4 +1,4 @@
-# Additional Megadex company sources
+# Additional Robodex company sources
 
 Public sources checked **2026-09-19**.
 

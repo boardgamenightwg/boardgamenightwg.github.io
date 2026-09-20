@@ -1,4 +1,4 @@
-# Megadex location evidence
+# Robodex location evidence
 
 Verified from public primary sources on **2026-09-19**. These are city/town-level
 locations, not office entrances or an assertion that every job is based there.
