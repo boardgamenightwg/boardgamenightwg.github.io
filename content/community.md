@@ -7,6 +7,14 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
+### What Does Safety Mean for Generalist Robots? <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** September 24, 2026 @ 2:30 PM – 3:30 PM EDT \
+**Where:** Harvard Science and Engineering Complex (SEC), LL2.224, 150 Western Avenue, Allston, MA 02134 \
+**Host:** Harvard SEAS Computer Science Colloquium Series \
+Andrea Bajcsy of CMU's Robotics Institute explores how vision-language and latent-world models can be combined with control-theoretic safety for generalist robots, from open-world decision-making to vision-based manipulation.
+
+[More info / RSVP →](https://events.seas.harvard.edu/event/computer-science-colloquium-series-andrea-bajscy-cmu-robotics-institute)
+
 ### RoboBoston: 9th Annual Robot Block Party <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** September 26, 2026 @ 10:45 AM – 4:00 PM \
 **Where:** Seaport, 88 Seaport Blvd, Boston, MA 02210 \
@@ -118,6 +126,14 @@ A three-day conference for ROS developers of all levels, with workshops, technic
 A four-day automation show covering robotics and industrial automation. Show-only registration is free; educational conference courses require a fee, and no children under 12 are permitted on the show floor.
 
 [More info / RSVP →](https://www.xpressreg.net/register/AUTO0527/landing.php)
+
+### ICRA 2027 <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** May 24–28, 2027, daily times not yet announced (KST, Asia/Seoul) \
+**Where:** Coex Convention & Exhibition Center, Seoul, South Korea \
+**Host:** IEEE Robotics and Automation Society \
+The IEEE International Conference on Robotics and Automation is the society's flagship conference, bringing together the global robotics and automation research community. Registration opens in early February 2027.
+
+[More info / RSVP →](https://2027.ieee-icra.org/)
 
 ## Submit Your Event {#submit-your-event}
 
