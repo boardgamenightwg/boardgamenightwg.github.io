@@ -119,6 +119,14 @@ A four-day automation show covering robotics and industrial automation. Show-onl
 
 [More info / RSVP →](https://www.xpressreg.net/register/AUTO0527/landing.php)
 
+### ICRA 2027 <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** May 24–28, 2027, daily times not yet announced (KST, Asia/Seoul) \
+**Where:** Coex Convention & Exhibition Center, Seoul, South Korea \
+**Host:** IEEE Robotics and Automation Society \
+The IEEE International Conference on Robotics and Automation is the society's flagship conference, bringing together the global robotics and automation research community. Registration opens in early February 2027.
+
+[More info / RSVP →](https://2027.ieee-icra.org/)
+
 ## Submit Your Event {#submit-your-event}
 
 Want to post an event here? For now, email us at [contact@boardgamenightwg.com](mailto:contact@boardgamenightwg.com) with the details — title, date and time, venue and address, host, a short description, and a link. We review each submission and post approved events on this page. Please reach out at least two weeks in advance when possible.
