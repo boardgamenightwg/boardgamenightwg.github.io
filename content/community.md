@@ -7,14 +7,6 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
-### What Does Safety Mean for Generalist Robots? <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** September 24, 2026 @ 2:30 PM – 3:30 PM EDT \
-**Where:** Harvard Science and Engineering Complex (SEC), LL2.224, 150 Western Avenue, Allston, MA 02134 \
-**Host:** Harvard SEAS Computer Science Colloquium Series \
-Andrea Bajcsy of CMU's Robotics Institute explores how vision-language and latent-world models can be combined with control-theoretic safety for generalist robots, from open-world decision-making to vision-based manipulation.
-
-[More info / RSVP →](https://events.seas.harvard.edu/event/computer-science-colloquium-series-andrea-bajscy-cmu-robotics-institute)
-
 ### RoboBoston: 9th Annual Robot Block Party <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** September 26, 2026 @ 10:45 AM – 4:00 PM \
 **Where:** Seaport, 88 Seaport Blvd, Boston, MA 02210 \
