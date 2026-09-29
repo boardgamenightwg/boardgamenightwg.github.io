@@ -505,28 +505,6 @@
       "website": "https://www.intrinsic.ai/"
     },
     {
-      "careers_url": "https://careers.irobot.com/",
-      "id": "irobot",
-      "last_verified": "2026-09-18",
-      "locations": {
-        "boston": {
-          "label": "Bedford, MA",
-          "lat": 42.4917301,
-          "lon": -71.2817947,
-          "precision": "city",
-          "source_url": "https://www.irobot.com/en_US/legal/terms-and-conditions.html",
-          "verified": "2026-09-19"
-        }
-      },
-      "name": "iRobot",
-      "news": [],
-      "regions": [
-        "boston"
-      ],
-      "summary": "Consumer robot vacuums, including Roomba.",
-      "website": "https://www.irobot.com/"
-    },
-    {
       "careers_url": "https://locusrobotics.com/company/careers/job-openings",
       "id": "locus-robotics",
       "last_verified": "2026-09-19",
