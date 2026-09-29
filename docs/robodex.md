@@ -50,6 +50,30 @@ or redirects are provided. CSS and DOM identifiers use the `rdx` prefix.
    actual verification results in the PR description. A human reviewer
    approves entries before merging.
 
+### Check dates and weekly review
+
+`last_verified` is the date of the last completed, source-backed check of the
+company's identity, operating status, regional presence, careers destination
+(or explicitly unlisted state), and recent news. Advance it only after actually
+completing those checks. Leave the previous date unchanged for blocked or
+incomplete checks; record the limitations and sources checked in the PR instead.
+A scheduled run, site build, or unrelated edit is not a company check.
+
+The page calls this **Last checked**. **Latest entry check** is the maximum
+`last_verified` across company records: the single most recent entry review,
+not a full-directory audit date. Entries can have different check dates; a
+multi-region company shares its date across regions. Location-source dates
+remain separate. An empty directory displays **no check date available**.
+These dates describe directory information, not live job availability or job
+counts. Follow the Jobs links for current openings; an absent or inaccessible
+careers page does not establish that a company has no jobs.
+
+Reviews are scheduled weekly. Open a review PR with source-backed changes and
+any blocked checks; do not auto-merge it. A human reviewer approves changes.
+Do not remove a company solely because of bankruptcy or acquisition: verify its
+current operating status, regional presence and employer identity, and document
+any proposed correction or removal with sources.
+
 ### Entry criteria
 
 - The company does robotics/automation work relevant to club members, and
