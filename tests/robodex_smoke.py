@@ -6,6 +6,7 @@ Fixtures build in build/ without ever changing the canonical source data.
 
 import argparse
 from contextlib import contextmanager
+from datetime import date
 import functools
 import http.server
 import json
@@ -43,7 +44,7 @@ def serve(directory, port=0):
 
 
 @contextmanager
-def fixture_build():
+def fixture_build(data_override=None):
     (ROOT / "build").mkdir(exist_ok=True)
     with tempfile.TemporaryDirectory(dir=ROOT / "build") as directory:
         root = Path(directory)
@@ -103,6 +104,8 @@ def fixture_build():
                 locations={},
             ),
         )
+        if data_override is not None:
+            data = data_override
         assert validate(data) == [], validate(data)
         (root / "static/data/robodex.json").write_text(json.dumps(data))
         # Relative base URL resolved at serving time; production build still uses 8767.
@@ -152,7 +155,64 @@ def open_page(page, base):
     expect(page.locator("#rdx-title")).to_be_visible()
 
 
+def assert_freshness(page, data):
+    latest = page.locator(".rdx-latest-check")
+    expect(latest).to_be_visible()
+    dates = [company["last_verified"] for company in data["companies"]]
+    if dates:
+        checked = max(dates)
+        expect(latest.locator("time")).to_have_attribute("datetime", checked)
+        human_date = date.fromisoformat(checked).strftime("%B %-d, %Y")
+        expect(latest).to_have_text(f"Latest entry check: {human_date}")
+    else:
+        expect(latest).to_have_text("Latest entry check: no check date available.")
+        expect(latest.locator("time")).to_have_count(0)
+    note = page.locator(".rdx-review-note")
+    expect(note).to_be_visible()
+    expect(note).to_contain_text("Weekly review schedule; entry check dates vary.")
+    expect(note).to_contain_text(
+        "The latest date is one entry's most recent check, not a full directory audit."
+    )
+    expect(note).to_contain_text(
+        "Check dates cover directory information, not live job availability."
+    )
+    expect(note).to_contain_text("Follow Jobs links for current openings.")
+
+
+def freshness_checks(browser):
+    # Deliberately older than the build, news and location dates. Swapping which
+    # entry is newest proves this is a source-derived maximum, not a first/last
+    # record, regional date, location date, or build-time timestamp.
+    for dates in [("2020-02-03", "2021-12-11"), ("2022-01-09", "2021-12-11"), ()]:
+        data = fixture()
+        if dates:
+            for company, checked in zip(data["companies"], dates):
+                company["last_verified"] = checked
+            data["companies"][0]["regions"] = ["boston", "bay"]
+            data["companies"][0]["locations"] = {"boston": ValidatorTests.location()}
+            data["companies"][1]["regions"] = ["bay"]
+        else:
+            data["companies"] = []
+        with fixture_build(data) as (public, source), serve(public, 8767) as base:
+            context, page, errors = setup(browser, javascript=False)
+            open_page(page, base)
+            assert_source(page, source)
+            for company in source["companies"]:
+                for region in company["regions"]:
+                    expect(
+                        page.locator(
+                            f"#rdx-entry--{region}--{company['id']} .rdx-verified"
+                        )
+                    ).to_be_visible()
+            assert not errors, errors
+            context.close()
+    print(
+        "PASS: source-only freshness changes, mixed dates/regions, no-JS and empty directory"
+    )
+
+
 def assert_source(page, data):
+    assert_freshness(page, data)
     expect(page.locator('meta[name="robots"]')).to_have_attribute(
         "content", "noindex,follow"
     )
@@ -185,6 +245,9 @@ def assert_source(page, data):
                 )
             expect(row.locator("h3 a")).to_have_attribute("href", company["website"])
             expect(row.locator(".rdx-summary")).to_have_text(company["summary"])
+            expect(row.locator(".rdx-verified")).to_contain_text(
+                f"Last checked {company['last_verified']}"
+            )
             expect(row.locator(".rdx-verified time").first).to_have_attribute(
                 "datetime", company["last_verified"]
             )
@@ -644,6 +707,7 @@ def main():
         with fixture_build() as (public, fixture_data):
             with serve(public, 8767) as base:
                 fixture_checks(browser, base, fixture_data)
+        freshness_checks(browser)
         browser.close()
 
 

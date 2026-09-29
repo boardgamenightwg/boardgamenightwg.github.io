@@ -14,6 +14,8 @@
     <h1 id="rdx-title">Robodex <span class="rdx-badge">Experimental</span></h1>
     <p>Robotics companies around Boston and the Bay Area. <a href="{{ get_url(path='megamap/') }}">See the Megamap →</a></p>
     <p class="rdx-note">Community-maintained; not a hiring guarantee or endorsement. City pins are approximate, not office addresses.</p>
+    <p class="rdx-note rdx-latest-check">Latest entry check: {% if dex.companies %}{% set latest = dex.companies | sort(attribute="last_verified") | last %}<time datetime="{{ latest.last_verified }}">{{ latest.last_verified | date(format="%B %-d, %Y") }}</time>{% else %}no check date available.{% endif %}</p>
+    <p class="rdx-note rdx-review-note">Weekly review schedule; entry check dates vary. The latest date is one entry's most recent check, not a full directory audit. Check dates cover directory information, not live job availability. Follow Jobs links for current openings.</p>
   </section>
   {% for region_id, region_label in dex.regions %}
   {% set_global companies_in_region = [] %}
@@ -63,7 +65,7 @@
               </ul>
             </details>
             {% endif %}
-            <p class="rdx-verified">Verified <time datetime="{{ company.last_verified }}">{{ company.last_verified }}</time>{% if location %} · <a href="{{ location.source_url }}" rel="noopener noreferrer">Location source</a> <time datetime="{{ location.verified }}">{{ location.verified }}</time>{% endif %}</p>
+            <p class="rdx-verified">Last checked <time datetime="{{ company.last_verified }}">{{ company.last_verified }}</time>{% if location %} · <a href="{{ location.source_url }}" rel="noopener noreferrer">Location source</a> <time datetime="{{ location.verified }}">{{ location.verified }}</time>{% endif %}</p>
           </article>
         </li>
         {% endfor %}
