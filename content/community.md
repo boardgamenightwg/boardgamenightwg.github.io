@@ -101,6 +101,14 @@ Explore dexterous manipulation with live robotic hands, tactile sensing, manipul
 
 [More info / RSVP →](https://luma.com/h8ew3co6)
 
+### Robotics Happy Hour with LiveKit & Dimensional – #SFTechWeek <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** October 6, 2026 @ 5:30 PM PDT \
+**Where:** True Laurel, 753 Alabama St, San Francisco, CA 94110 \
+**Host:** LiveKit & Dimensional \
+Meet robotics developers, researchers, and hobbyists during SF Tech Week for conversations about robotics and physical AI, updates from LiveKit and Dimensional, and food and drinks.
+
+[More info / RSVP →](https://partiful.com/e/u610QKw40q4lh1MR5ZLJ)
+
 ### Bots, Bevs & International Women in Robotics Day <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** October 7, 2026 @ 6:00 PM – 8:45 PM PDT (calendar listing; the published agenda ends at 8:30 PM) \
 **Where:** Circuit Launch, Mountain View, CA (register for the exact address) \
