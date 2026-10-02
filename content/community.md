@@ -7,22 +7,6 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
-### Robotaxis and the Most Contested Real Estate in Our Cities: The Curb <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** October 1, 2026 @ 10:00 AM – 11:00 AM EDT \
-**Where:** Online (Zoom; registration required) \
-**Host:** Urban Robotics Foundation \
-An interactive panel on curb management as robotaxis become everyday urban transportation, exploring how cities, operators, and standards bodies can coordinate safe pickups, drop-offs, and interactions with other street users.
-
-[More info / RSVP →](https://www.massrobotics.org/event/robotaxis-and-the-most-contested-real-estate-in-our-cities-the-curb/)
-
-### 65th Boston Hardware Meetup @ Formlabs <span class="badge badge-tech">💻 Tech & Community</span>
-**When:** October 1, 2026 @ 6:00 PM – 9:00 PM \
-**Where:** Formlabs Twin City, 22 McGrath Hwy Ste 201, Somerville, MA 02143 \
-**Host:** Boston Hardware Meetup \
-The first hardware meetup of the fall season, back at Formlabs — bring your latest builds, demos, announcements, or asks for the community open mic.
-
-[More info / RSVP →](https://luma.com/axpq7u3w)
-
 ### Boston Robot Hackers: Arjun Viswanathan on Reinforcement Learning for Multimodal Locomotion <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** October 15, 2026 @ 7:00 PM – 9:00 PM \
 **Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
