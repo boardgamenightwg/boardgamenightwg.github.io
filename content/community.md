@@ -47,7 +47,7 @@ A two-day, hands-on robotics hackathon focused on counter-drone swarm defense an
 
 [More info / RSVP →](https://luma.com/xl77cp4v)
 
-### Minds in Motion @ MIT <span class="badge badge-tech">💻 Tech & Community</span>
+### IIA Physical AI Summit @ MIT <span class="badge badge-tech">💻 Tech & Community</span>
 **When:** October 30, 2026 @ 8:00 AM \
 **Where:** MIT Samberg Conference Center, 50 Memorial Dr, Cambridge, MA 02142 \
 **Host:** Theo Ehrmann, John Werner & MassRobotics \
@@ -70,6 +70,14 @@ Build search-and-rescue prototypes with special operations personnel, first resp
 Yun Chang shares lessons from the DARPA Subterranean Challenge and current work bringing autonomous scene understanding to heavy equipment.
 
 [More info / RSVP →](https://bostonrobothackers.com/news/25-yun-chang-talk-announcement.html)
+
+### RoboBoston: 9th Annual Robot Block Party <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** May 1, 2027 @ 11:00 AM – 4:00 PM EDT \
+**Where:** SoWa Power Station, 550 Harrison Ave, Boston, MA 02118 \
+**Host:** MassRobotics \
+A free, all-ages robotics festival showcasing universities, startups, companies, and student teams, with robot demonstrations and hands-on activities.
+
+[More info / RSVP →](https://luma.com/c2kl6qdb)
 
 <!-- Example entry — copy and adapt when adding an approved submission:
 
