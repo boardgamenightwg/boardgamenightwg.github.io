@@ -93,14 +93,6 @@ A talk on the latest in legged locomotion, followed by an open lab tour.
 
 ## 🌉🌅 Bay Area
 
-### Robotics & World Models Reading Club 32: Robotics Center Dexterity Day <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** October 3, 2026 @ 2:00 PM – 5:00 PM PDT \
-**Where:** San Francisco, CA (register for the exact address) \
-**Host:** Saturday Robotics & Robotics Center of Silicon Valley \
-Explore dexterous manipulation with live robotic hands, tactile sensing, manipulation datasets, and a panel on the dexterity data problem. Free registration requires host approval; space is limited.
-
-[More info / RSVP →](https://luma.com/h8ew3co6)
-
 ### Robotics Happy Hour with LiveKit & Dimensional – #SFTechWeek <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** October 6, 2026 @ 5:30 PM PDT \
 **Where:** True Laurel, 753 Alabama St, San Francisco, CA 94110 \
