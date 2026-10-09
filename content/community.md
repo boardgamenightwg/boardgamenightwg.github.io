@@ -77,30 +77,6 @@ A talk on the latest in legged locomotion, followed by an open lab tour.
 
 ## 🌉🌅 Bay Area
 
-### Robotics & World Models Reading Club 32: Robotics Center Dexterity Day <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** October 3, 2026 @ 2:00 PM – 5:00 PM PDT \
-**Where:** San Francisco, CA (register for the exact address) \
-**Host:** Saturday Robotics & Robotics Center of Silicon Valley \
-Explore dexterous manipulation with live robotic hands, tactile sensing, manipulation datasets, and a panel on the dexterity data problem. Free registration requires host approval; space is limited.
-
-[More info / RSVP →](https://luma.com/h8ew3co6)
-
-### Robotics Happy Hour with LiveKit & Dimensional – #SFTechWeek <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** October 6, 2026 @ 5:30 PM PDT \
-**Where:** True Laurel, 753 Alabama St, San Francisco, CA 94110 \
-**Host:** LiveKit & Dimensional \
-Meet robotics developers, researchers, and hobbyists during SF Tech Week for conversations about robotics and physical AI, updates from LiveKit and Dimensional, and food and drinks.
-
-[More info / RSVP →](https://partiful.com/e/u610QKw40q4lh1MR5ZLJ)
-
-### Bots, Bevs & International Women in Robotics Day <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** October 7, 2026 @ 6:00 PM – 8:45 PM PDT (calendar listing; the published agenda ends at 8:30 PM) \
-**Where:** Circuit Launch, Mountain View, CA (register for the exact address) \
-**Host:** Silicon Valley Robotics / Robots and Startups & Women in Robotics \
-Celebrate International Women in Robotics Day with networking, a panel, and talks by Allison Thackston of Blue River / John Deere and Erin McColl of Toyota Research Institute. Free registration, and all are welcome.
-
-[More info / RSVP →](https://luma.com/rotwje1d)
-
 ### Robotics & World Models Reading Club 33: Physical Interaction + AdaJEPA <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** October 10, 2026 @ 2:00 PM – 5:00 PM PDT \
 **Where:** San Francisco, CA (register for the exact address) \
