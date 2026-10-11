@@ -77,14 +77,6 @@ A talk on the latest in legged locomotion, followed by an open lab tour.
 
 ## 🌉🌅 Bay Area
 
-### Robotics & World Models Reading Club 33: Physical Interaction + AdaJEPA <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** October 10, 2026 @ 2:00 PM – 5:00 PM PDT \
-**Where:** San Francisco, CA (register for the exact address) \
-**Host:** Saturday Robotics \
-Hongyu Li of NVIDIA presents perception, prediction, and planning for physical interaction, and Ying Wang of NYU discusses AdaJEPA and adaptive world models. Free registration requires host approval, with talks followed by Q&A and an open-floor research discussion.
-
-[More info / RSVP →](https://luma.com/y9omqzz0)
-
 ### RoboBusiness 2026 <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** October 20, 2026 @ 8:00 AM – 6:30 PM; October 21 @ 8:00 AM – 3:45 PM \
 **Where:** Santa Clara Convention Center, 5001 Great America Pkwy, Santa Clara, CA 95054 \
