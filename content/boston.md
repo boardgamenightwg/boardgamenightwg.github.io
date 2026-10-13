@@ -17,8 +17,8 @@ title = "🫘🌆 Boston"
 </a>
 
 **[Fab Hub Kendall](https://fabhubkendall.org/)** \
-**315 Main Street, 2nd Floor** \
-**Cambridge, MA 02142**
+**315 Main Street, Floor 2** \
+**Kendall Square, Cambridge, MA 02142**
 
 Board games with the Boston robotics community at Fab Hub Kendall, the Fab Foundation's headquarters and digital fabrication lab in Kendall Square.
 
@@ -27,6 +27,8 @@ The event is alcohol free. \
 Games will be provided but feel free to bring your own to share!
 
 Photos and social media are 100% welcome.
+
+We'll be set up at tables in the event space and café. Please stay out of the lab itself.
 
 ## When
 October 20, 2026 @ 6:00 pm - 9:00 pm
