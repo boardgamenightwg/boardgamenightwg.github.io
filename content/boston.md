@@ -22,22 +22,29 @@ title = "🫘🌆 Boston"
 
 Board games with the Boston robotics community at Fab Hub Kendall, the Fab Foundation's headquarters and digital fabrication lab in Kendall Square.
 
-## When
-Tuesday, October 20, 2026. \
-TBD: Start and end times (Eastern). \
-TBD: Final host confirmation.
-
-## RSVP
-TBD: RSVP link and registration requirements.
-
-## Venue Info
-TBD: Food and drinks. \
-TBD: Alcohol policy. \
-TBD: Photography policy.
-
+Food and drinks are not provided at this venue, so please plan accordingly. Grab dinner beforehand or bring snacks to share. \
+The event is alcohol free. \
 Games will be provided but feel free to bring your own to share!
 
+Photos and social media are 100% welcome.
+
+## When
+October 20, 2026 @ 6:00 pm - 9:00 pm
+
+## RSVP
+Space is limited to 40 guests, so please RSVP early. Please RSVP by Monday, October 19, 2026.
+
+TBD: RSVP link.
+
+All attendees sign in on paper when they arrive.
+
 ## Access
-TBD: Entrance and arrival instructions. \
-TBD: Accessibility information. \
-TBD: Parking and transit information.
+Take the Red Line to **Kendall/MIT**. Fab Hub Kendall is right next to the station.
+
+Note that Google Maps sends you to the hotel. Instead, take the stairs next to the station on the left up to the second-floor plaza, then ring the doorbell.
+
+TBD: Accessibility information (elevator or step-free entrance).
+
+Parking may be difficult, but there is some street parking nearby.
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2948.0!2d-71.0865262!3d42.3623984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDIxJzQ0LjYiTiA3McKwMDUnMTEuNSJX!5e0!3m2!1sen!2sus!4v1776100000000!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

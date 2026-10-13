@@ -2,13 +2,14 @@
 
 ## Fab Hub Kendall, Boston, October 20, 2026
 
-Draft only. Final host confirmation, event hours, RSVP and venue logistics are pending. Do not merge or announce until the organizer approves the completed details.
+Draft only. Host questionnaire answers received 2026-10-13; the RSVP link is still pending. Do not merge or announce until the organizer approves the completed details.
 
-- Public venue source: https://fabhubkendall.org/ (315 Main Street, Cambridge, MA 02142).
-- The proposed date and second-floor address come from organizer-provided details. Exact entrance instructions remain TBD.
+- Public venue source: https://fabhubkendall.org/ (315 Main Street, Cambridge, MA 02142). The host-provided URL https://fabhubkendall.fabfoundation.org/ redirects there.
+- Hours, food/drink, alcohol, capacity (40), sign-in, photography, entrance, parking and transit come from the host questionnaire.
+- The map pin uses OpenStreetMap coordinates for 315 Main Street (42.3623984, -71.0865262).
 - Logo source: https://fabhubkendall.org/assets/brand/fhkweb-footer-logo.svg
-- Both variants use the official footer logo, with the KENDALL text constrained to its wordmark width to prevent clipping when the original font is unavailable. The light variant changes the white wordmark fill to `#202020` so it is readable on a light background.
-- No RSVP link, catering, alcohol, photography, accessibility or parking policy has been inferred from another venue.
+- Both variants use the official footer logo, with the KENDALL text constrained to its wordmark width to prevent clipping when the original font is unavailable. The light variant changes the white wordmark fill to `#202020` so it is readable on a light background. The host has no official dark-background version, so the dark variant is derived from the same footer logo.
+- Still TBD: RSVP link and accessibility information (elevator or step-free entrance).
 
 ## Restore the November Boston listing after October 20
 
