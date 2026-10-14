@@ -54,7 +54,7 @@ Take the Red Line to **Kendall/MIT**. Fab Hub Kendall is right next to the stati
 
 Note that Google Maps sends you to the hotel. Instead, take the stairs next to the station on the left up to the second-floor plaza, then ring the doorbell.
 
-TBD: Accessibility information (elevator or step-free entrance).
+The venue is wheelchair accessible, with an elevator to the second floor.
 
 Parking may be difficult, but there is some street parking nearby.
 
