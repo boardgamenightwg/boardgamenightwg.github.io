@@ -28,13 +28,13 @@ Games will be provided but feel free to bring your own to share!
 
 Photos and social media are 100% welcome.
 
-We'll be set up at tables in the event space and café. Please stay out of the lab itself.
+We'll set up at tables in the event space and café.
 
 ## When
 October 20, 2026 @ 6:00 pm - 9:00 pm
 
 ## RSVP
-Space is limited to 40 guests, so please RSVP early. Please RSVP by Monday, October 19, 2026.
+Space is limited to 40 guests. Please RSVP by noon on Tuesday, October 20, 2026.
 
 <a
   href="https://luma.com/event/evt-4dK3puMtuU6KVth"
@@ -50,12 +50,10 @@ Space is limited to 40 guests, so please RSVP early. Please RSVP by Monday, Octo
 All attendees sign in on paper when they arrive.
 
 ## Access
-Take the Red Line to **Kendall/MIT**. Fab Hub Kendall is right next to the station.
+Take the Red Line to **Kendall/MIT**. To get to 315 Main St Floor 2, take the stairs next to the station on the left up to the second-floor plaza, then ring the doorbell.
 
-Note that Google Maps sends you to the hotel. Instead, take the stairs next to the station on the left up to the second-floor plaza, then ring the doorbell.
+There is some street parking nearby, but we strongly recommend public transit.
 
 The venue is wheelchair accessible, with an elevator to the second floor.
-
-Parking may be difficult, but there is some street parking nearby.
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2948.0!2d-71.0865262!3d42.3623984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDIxJzQ0LjYiTiA3McKwMDUnMTEuNSJX!5e0!3m2!1sen!2sus!4v1776100000000!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
