@@ -36,7 +36,16 @@ October 20, 2026 @ 6:00 pm - 9:00 pm
 ## RSVP
 Space is limited to 40 guests, so please RSVP early. Please RSVP by Monday, October 19, 2026.
 
-TBD: RSVP link.
+<a
+  href="https://luma.com/event/evt-4dK3puMtuU6KVth"
+  class="luma-checkout--button"
+  data-luma-action="checkout"
+  data-luma-event-id="evt-4dK3puMtuU6KVth"
+>
+  Register for Event
+</a>
+
+<script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
 
 All attendees sign in on paper when they arrive.
 
