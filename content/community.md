@@ -7,14 +7,6 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
-### Boston Robot Hackers: Arjun Viswanathan on Reinforcement Learning for Multimodal Locomotion <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** October 15, 2026 @ 7:00 PM – 9:00 PM \
-**Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
-**Host:** Boston Robot Hackers \
-Arjun Viswanathan shares a hierarchical reinforcement learning approach that teaches a legged-aerial robot both how to move and when to switch between walking and flying.
-
-[More info / RSVP →](https://bostonrobothackers.com/news/26-arjun-viswanathan-talk-announcement.html)
-
 ### Scalable, Robust and Safe Autonomy at Zoox <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** October 23, 2026 @ 3:00 PM – 4:00 PM EDT \
 **Where:** Harvard Science and Engineering Complex, Room LL2.221, 150 Western Ave, Allston, MA 02134 \
