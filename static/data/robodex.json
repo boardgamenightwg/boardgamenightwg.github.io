@@ -3,7 +3,7 @@
     {
       "careers_url": "https://www.amazon.jobs/content/en/teams/ftr/amazon-robotics",
       "id": "amazon-robotics",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "San Francisco, CA",
@@ -25,6 +25,11 @@
       "name": "Amazon Robotics",
       "news": [
         {
+          "date": "2026-10-08",
+          "headline": "Amazon launches the Physical AI Toolchain on AWS, drawing on its robotics expertise.",
+          "url": "https://www.aboutamazon.com/news/aws/aws-physical-ai-toolchain-build-intelligent-machines"
+        },
+        {
           "date": "2026-09-24",
           "headline": "Amazon announces $100 million-plus Indiana manufacturing facility for its fulfillment and robotics network.",
           "url": "https://press.aboutamazon.com/job-creation-and-investment/2026/9/amazon-to-create-300-high-paying-jobs-at-new-advanced-manufacturing-facility-in-greenwood-indiana"
@@ -40,7 +45,7 @@
     {
       "careers_url": "https://www.ambirobotics.com/careers",
       "id": "ambi-robotics",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "Berkeley, CA",
@@ -62,7 +67,7 @@
     {
       "careers_url": "https://www.analog.com/en/careers.html",
       "id": "analog-devices",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "boston": {
           "label": "Boston, MA",
@@ -75,6 +80,11 @@
       },
       "name": "Analog Devices (Analog Garage)",
       "news": [
+        {
+          "date": "2026-10-07",
+          "headline": "Analog Devices, Moet Hennessy and UC Davis announce AI-enabled chemical sensing collaboration for wine quality.",
+          "url": "https://investor.analog.com/news-releases/news-release-details/moet-hennessy-analog-devices-and-uc-davis-join-forces-advance/"
+        },
         {
           "date": "2026-09-09",
           "headline": "Analog Devices agrees to acquire Alif Semiconductor to expand AI-native processing for physical intelligence.",
@@ -90,7 +100,7 @@
     {
       "careers_url": "https://www.apex.ai/careers",
       "id": "apex-ai",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "Palo Alto, CA",
@@ -118,7 +128,7 @@
     {
       "careers_url": "https://www.bearrobotics.ai/careers",
       "id": "bear-robotics",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "Redwood City, CA",
@@ -146,7 +156,7 @@
     {
       "careers_url": "https://www.berkshiregrey.com/careers/",
       "id": "berkshire-grey",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "boston": {
           "label": "Bedford, MA",
@@ -168,7 +178,7 @@
     {
       "careers_url": "https://www.bonsairobotics.ai/careers/",
       "id": "bonsai-robotics",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "San Jose, CA",
@@ -180,7 +190,13 @@
         }
       },
       "name": "Bonsai Robotics",
-      "news": [],
+      "news": [
+        {
+          "date": "2026-10-02",
+          "headline": "Bonsai Robotics introduces Bonsai World simulation and world models for off-road autonomy.",
+          "url": "https://bonsairobotics.ai/news/bonsai-robotics-unveils-bonsai-world-to-accelerate-physical-ai-across-rugged-environments/"
+        }
+      ],
       "regions": [
         "bay"
       ],
@@ -190,7 +206,7 @@
     {
       "careers_url": "https://bostondynamics.com/careers/",
       "id": "boston-dynamics",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "boston": {
           "label": "Waltham, MA",
@@ -203,6 +219,11 @@
       },
       "name": "Boston Dynamics",
       "news": [
+        {
+          "date": "2026-10-06",
+          "headline": "Boston Dynamics appoints former Amazon AI leader Rohit Prasad CEO, effective October 7.",
+          "url": "https://bostondynamics.com/news/boston-dynamics-appoints-rohit-prasad-as-chief-executive-officer/"
+        },
         {
           "date": "2026-09-30",
           "headline": "Boston.com reports a $1.3 million ICE contract for Spot robots for tunnel and hazard inspections.",
@@ -223,7 +244,7 @@
     {
       "careers_url": "https://www.cobaltai.com/careers/",
       "id": "cobalt-ai",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "San Francisco, CA",
@@ -235,7 +256,13 @@
         }
       },
       "name": "Cobalt AI (Cobalt Robotics)",
-      "news": [],
+      "news": [
+        {
+          "date": "2026-09-15",
+          "headline": "Cobalt AI launches CMI SaaS for customer-managed enterprise security operations.",
+          "url": "https://www.einpresswire.com/article/942315941/cobalt-ai-launches-cmi-saas-bringing-proven-ai-judgment-to-customer-managed-security-operations"
+        }
+      ],
       "regions": [
         "bay"
       ],
@@ -245,7 +272,7 @@
     {
       "careers_url": "https://www.codemetal.ai/careers",
       "id": "code-metal",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "boston": {
           "label": "Boston, MA",
@@ -274,7 +301,7 @@
     {
       "careers_url": "https://jobs.lever.co/dexterity",
       "id": "dexterity",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "Redwood City, CA",
@@ -302,7 +329,7 @@
     {
       "careers_url": "https://www.dustyrobotics.com/careers",
       "id": "dusty-robotics",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "Mountain View, CA",
@@ -324,7 +351,7 @@
     {
       "careers_url": "https://jobs.ashbyhq.com/ekarobotics",
       "id": "eka-robotics",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "boston": {
           "label": "Cambridge, MA",
@@ -346,7 +373,7 @@
     {
       "careers_url": "https://www.familiarmachines.com/careers",
       "id": "familiar-machines",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "boston": {
           "label": "Woburn, MA",
@@ -368,7 +395,7 @@
     {
       "careers_url": "https://www.figure.ai/careers",
       "id": "figure",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "San Jose, CA",
@@ -381,6 +408,11 @@
       },
       "name": "Figure AI",
       "news": [
+        {
+          "date": "2026-09-30",
+          "headline": "Retires most of its Figure 02 robot fleet as Figure 03 deployment expands.",
+          "url": "https://www.figure.ai/news/f-02-decommission"
+        },
         {
           "date": "2026-09-17",
           "headline": "Introduces Helix 2.5 and demonstrates zero-shot humanoid tasks in 30 previously unseen homes.",
@@ -401,7 +433,7 @@
     {
       "careers_url": "https://careers.formlabs.com/",
       "id": "formlabs",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "boston": {
           "label": "Somerville, MA",
@@ -414,6 +446,11 @@
       },
       "name": "Formlabs",
       "news": [
+        {
+          "date": "2026-10-14",
+          "headline": "Introduces the Form Studio 1 resin 3D printer, with orders starting at $699 and shipping scheduled for November 16.",
+          "url": "https://formlabs.com/company/press/formlabs-introduces-form-studio-1/"
+        },
         {
           "date": "2026-08-12",
           "headline": "Names Dan Riccio strategic advisor and investor; appoints Max Lobovsky chairman and D\u00e1vid Lakatos president.",
@@ -429,9 +466,14 @@
     {
       "careers_url": "https://foxglove.dev/careers",
       "id": "foxglove",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "name": "Foxglove",
       "news": [
+        {
+          "date": "2026-10-06",
+          "headline": "Introduces photorealistic 3D Maps for visualizing outdoor robot data alongside buildings and terrain.",
+          "url": "https://foxglove.dev/blog/introducing-3d-maps-in-foxglove"
+        },
         {
           "date": "2026-08-18",
           "headline": "Foxglove introduces its agentic data platform for physical AI.",
@@ -447,7 +489,7 @@
     {
       "careers_url": null,
       "id": "gaia-ai",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "name": "Gaia AI",
       "news": [],
       "regions": [
@@ -459,15 +501,15 @@
     {
       "careers_url": "https://generalistai.com/careers",
       "id": "generalist-ai",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "San Mateo, CA",
           "lat": 37.5629997,
           "lon": -122.3253265,
           "precision": "city",
-          "source_url": "https://jobs.ashbyhq.com/generalist/dd96a0e1-13e6-479f-8ab1-c4136411d0ff",
-          "verified": "2026-10-04"
+          "source_url": "https://jobs.ashbyhq.com/generalist",
+          "verified": "2026-10-18"
         },
         "boston": {
           "label": "Somerville, MA",
@@ -496,7 +538,7 @@
     {
       "careers_url": "https://hello-robot.com/careers/",
       "id": "hello-robot",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "Martinez, CA",
@@ -524,7 +566,7 @@
     {
       "careers_url": "https://jobs.ashbyhq.com/innate/",
       "id": "innate",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "Palo Alto, CA",
@@ -546,7 +588,7 @@
     {
       "careers_url": "https://www.inorbit.ai/company",
       "id": "inorbit",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "Mountain View, CA",
@@ -574,7 +616,7 @@
     {
       "careers_url": "https://www.intrinsic.ai/careers",
       "id": "intrinsic",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "Mountain View, CA",
@@ -602,7 +644,7 @@
     {
       "careers_url": "https://careers.irobot.com/",
       "id": "irobot",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "boston": {
           "label": "Bedford, MA",
@@ -615,6 +657,11 @@
       },
       "name": "iRobot",
       "news": [
+        {
+          "date": "2026-10-07",
+          "headline": "iRobot introduces five Roomba models in Taiwan, led by the Max 875 Combo.",
+          "url": "https://irobot.tw/roomba-2026-new-models-guide/"
+        },
         {
           "date": "2026-09-04",
           "headline": "iRobot unveils Roomba Duo dual-unit robot cleaning system at IFA 2026.",
@@ -630,7 +677,7 @@
     {
       "careers_url": "https://locusrobotics.com/company/careers/",
       "id": "locus-robotics",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "boston": {
           "label": "Wilmington, MA",
@@ -643,6 +690,11 @@
       },
       "name": "Locus Robotics",
       "news": [
+        {
+          "date": "2026-10-06",
+          "headline": "Locus reports a second consecutive first-place Americas AMR revenue ranking from Interact Analysis.",
+          "url": "https://locusrobotics.com/news/locus-robotics-no-1-amr-provider-revenue/"
+        },
         {
           "date": "2026-09-24",
           "headline": "Locus advances fleet-level AI orchestration and mobile manipulation for warehouse fulfillment.",
@@ -658,7 +710,7 @@
     {
       "careers_url": "https://www.mathworks.com/company/jobs/opportunities.html",
       "id": "mathworks",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "Santa Clara, CA",
@@ -680,6 +732,11 @@
       "name": "MathWorks",
       "news": [
         {
+          "date": "2026-10-14",
+          "headline": "MathWorks announces T\u00dcV S\u00dcD-certified guidance for agentic AI engineering workflows under ISO 26262.",
+          "url": "https://www.mathworks.com/company/newsroom/mathworks-provides-tuv-sud-certified-guidance-for-using-agentic-ai.html"
+        },
+        {
           "date": "2026-09-28",
           "headline": "MathWorks introduces MATLAB and Simulink R2026b with visual inspection and perception tools.",
           "url": "https://embeddedcomputing.com/technology/software-and-os/simulation-modeling-tools/mathworks-introduces-release-2026b-of-matlab-and-simulink"
@@ -695,7 +752,7 @@
     {
       "careers_url": "https://ouster.com/company/careers",
       "id": "ouster",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "San Francisco, CA",
@@ -708,6 +765,11 @@
       },
       "name": "Ouster",
       "news": [
+        {
+          "date": "2026-10-07",
+          "headline": "Ouster subsidiary Stereolabs and AVerMedia announce JetPack 7.2 support for robotics AI vision systems.",
+          "url": "https://investors.ouster.com/news-releases/news-release-details/avermedia-and-stereolabs-accelerate-ai-vision-deployment-nvidia"
+        },
         {
           "date": "2026-10-01",
           "headline": "Ouster partners with Seneca on lidar-equipped autonomous drones for wildfire response.",
@@ -723,7 +785,7 @@
     {
       "careers_url": "https://www.pi.website/join-us",
       "id": "physical-intelligence",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "San Francisco, CA",
@@ -736,6 +798,11 @@
       },
       "name": "Physical Intelligence",
       "news": [
+        {
+          "date": "2026-10-13",
+          "headline": "Physical Intelligence opens its Pi API beta for robot-model fine-tuning and hosted inference.",
+          "url": "https://www.pi.website/blog/api-beta"
+        },
         {
           "date": "2026-09-30",
           "headline": "Physical Intelligence expands its San Francisco footprint with an Airbnb office sublease.",
@@ -751,7 +818,7 @@
     {
       "careers_url": "https://www.picklerobot.com/careers",
       "id": "pickle-robot-company",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "boston": {
           "label": "Boston, MA",
@@ -773,7 +840,7 @@
     {
       "careers_url": "https://www.ycombinator.com/companies/polymath-robotics/jobs",
       "id": "polymath-robotics",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "San Francisco, CA",
@@ -795,15 +862,15 @@
     {
       "careers_url": "https://jobs.ashbyhq.com/reframesystems",
       "id": "reframe-systems",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "boston": {
-          "label": "Andover, MA",
-          "lat": 42.65717,
-          "lon": -71.1408776,
+          "label": "North Billerica, MA",
+          "lat": 42.5852621,
+          "lon": -71.2877645,
           "precision": "city",
           "source_url": "https://www.reframe.systems/contact-form",
-          "verified": "2026-10-04"
+          "verified": "2026-10-18"
         }
       },
       "name": "Reframe Systems",
@@ -845,7 +912,7 @@
     {
       "careers_url": "https://www.simberobotics.com/about/work-at-simbe",
       "id": "simbe-robotics",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "Burlingame, CA",
@@ -859,9 +926,14 @@
       "name": "Simbe Robotics",
       "news": [
         {
+          "date": "2026-10-15",
+          "headline": "Los Angeles Times reports on Tally robots rolling out in local grocery stores and workers' concerns.",
+          "url": "https://latimes.com/business/story/2026-10-15/ai-robots-are-roaming-la-grocery-store-aisles-shoppers-workers-are-worried"
+        },
+        {
           "date": "2026-09-21",
           "headline": "Simbe reports more than 3,000 autonomous shelf-intelligence units under contract.",
-          "url": "https://finance.yahoo.com/technology/ai/articles/simbe-surpasses-3-000-units-130000821.html"
+          "url": "https://www.simberobotics.com/about/newsroom/simbe-surpasses-3-000-units-marking-the-largest-autonomous-shelf-intelligence-fleet-in-retail"
         }
       ],
       "regions": [
@@ -873,7 +945,7 @@
     {
       "careers_url": "https://www.skydio.com/careers",
       "id": "skydio",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "San Mateo, CA",
@@ -886,6 +958,11 @@
       },
       "name": "Skydio",
       "news": [
+        {
+          "date": "2026-10-13",
+          "headline": "Skydio launches ISR Command software for coordinated X10D drone operations.",
+          "url": "https://www.skydio.com/blog/skydio-isr-command-drone-dominance"
+        },
         {
           "date": "2026-09-24",
           "headline": "Skydio announces F10 Lightrunner, MegaDock and new inspection and security software platforms.",
@@ -902,7 +979,7 @@
     {
       "careers_url": "https://www.symbotic.com/careers/jobs/",
       "id": "symbotic",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "boston": {
           "label": "Wilmington, MA",
@@ -914,7 +991,13 @@
         }
       },
       "name": "Symbotic",
-      "news": [],
+      "news": [
+        {
+          "date": "2026-10-13",
+          "headline": "Symbotic announces acquisition of cellumation and its celluveyor sortation technology.",
+          "url": "https://ir.symbotic.com/news-releases/news-release-details/symbotic-announces-acquisition-cellumation-advancing-next"
+        }
+      ],
       "regions": [
         "boston",
         "bay"
@@ -925,7 +1008,7 @@
     {
       "careers_url": "https://jobs.lever.co/tutorintelligence",
       "id": "tutor-intelligence",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "boston": {
           "label": "Watertown, MA",
@@ -953,7 +1036,7 @@
     {
       "careers_url": "https://www.vecnarobotics.com/company/careers/",
       "id": "vecna-robotics",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "boston": {
           "label": "Waltham, MA",
@@ -966,6 +1049,11 @@
       },
       "name": "Vecna Robotics",
       "news": [
+        {
+          "date": "2026-10-09",
+          "headline": "Robotics 24/7 reports on CaseFlow deployment results and warehouse picking improvements.",
+          "url": "https://www.robotics247.com/article/vecna-robotics-advances-warehouse-case-picking-automation-with-caseflow"
+        },
         {
           "date": "2026-09-10",
           "headline": "Vecna Robotics raises $31 million to scale flexible material-handling automation.",
@@ -981,7 +1069,7 @@
     {
       "careers_url": "https://www.waldenrobotics.com/careers",
       "id": "walden-robotics",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "San Francisco, CA",
@@ -1012,7 +1100,7 @@
     {
       "careers_url": null,
       "id": "willow-garage",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "name": "Willow Garage (historical)",
       "news": [],
       "regions": [
@@ -1024,7 +1112,7 @@
     {
       "careers_url": "https://www.zipline.com/careers",
       "id": "zipline",
-      "last_verified": "2026-10-04",
+      "last_verified": "2026-10-18",
       "locations": {
         "bay": {
           "label": "South San Francisco, CA",
@@ -1037,6 +1125,11 @@
       },
       "name": "Zipline",
       "news": [
+        {
+          "date": "2026-10-09",
+          "headline": "Zipline launches Austin-area First Flight drone delivery, starting in Round Rock.",
+          "url": "https://www.zipline.com/newsroom/now-loading-zipline-brings-fast-autonomous-delivery-to-austin"
+        },
         {
           "date": "2026-09-22",
           "headline": "C\u00f4te d\u2019Ivoire approves an eight-year Zipline partnership to expand healthcare delivery to ten hubs.",
