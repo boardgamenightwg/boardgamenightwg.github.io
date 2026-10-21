@@ -2,6 +2,11 @@
 title = "📆📷 Past Events"
 +++
 
+# 10/20/2026 - Boston
+Fab Hub Kendall \
+315 Main Street, Floor 2, \
+Kendall Square, Cambridge, MA 02142
+
 # 09/03/2026 - Bay Area
 Dusty Robotics \
 909 San Rafael Ave, \

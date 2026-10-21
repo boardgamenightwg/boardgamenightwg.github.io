@@ -3,57 +3,47 @@ title = "🫘🌆 Boston"
 +++
 
 ## Where
-<a href="https://fabhubkendall.org/">
+<a href="https://tutorintelligence.com">
   <img
-    src="/images/logos/fab-hub-kendall-light.svg"
-    alt="Fab Hub Kendall Logo"
+    src="/images/logos/tutor_intelligence_light.png"
+    alt="Tutor Intelligence Logo"
     class="logo-light"
   >
   <img
-    src="/images/logos/fab-hub-kendall-dark.svg"
-    alt="Fab Hub Kendall Logo"
+    src="/images/logos/tutor_intelligence_dark.png"
+    alt="Tutor Intelligence Logo"
     class="logo-dark"
   >
 </a>
 
-**[Fab Hub Kendall](https://fabhubkendall.org/)** \
-**315 Main Street, Floor 2** \
-**Kendall Square, Cambridge, MA 02142**
+**[Tutor Intelligence](https://tutorintelligence.com)** \
+**480 Pleasant St** \
+**Watertown, MA 02472**
 
-Board games with the Boston robotics community at Fab Hub Kendall, the Fab Foundation's headquarters and digital fabrication lab in Kendall Square.
+We're returning to Tutor Intelligence for an evening of board games with the robotics community! Founded in 2021 out of MIT CSAIL, Tutor Intelligence is a robotics research and deployment company building generally capable robots for the common good.
 
-UPDATE: There will be pizza! \
-The event is alcohol free. \
+Pizza, drinks, and beer/cider will be provided. \
+Photographs are welcome! \
 Games will be provided but feel free to bring your own to share!
 
-Photos and social media are 100% welcome.
-
-We'll set up at tables in the event space and café.
-
 ## When
-October 20, 2026 @ 6:00 pm - 9:00 pm
+November 12, 2026 @ 6:30 pm - 9:00 pm (Eastern)
 
 ## RSVP
-Space is limited to 40 guests. Please RSVP by noon on Tuesday, October 20, 2026.
+[Request to join on Luma](https://luma.com/p65baai8). Registration is subject to host approval.
 
-<a
-  href="https://luma.com/event/evt-4dK3puMtuU6KVth"
-  class="luma-checkout--button"
-  data-luma-action="checkout"
-  data-luma-event-id="evt-4dK3puMtuU6KVth"
->
-  Register for Event
-</a>
+NDA signature is required. A kiosk will be available at the location to fill it out.
 
-<script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
-
-All attendees sign in on paper when they arrive.
+TBD: Registration deadline.
 
 ## Access
-Take the Red Line to **Kendall/MIT**. To get to 315 Main St Floor 2, take the stairs next to the station on the left up to the second-floor plaza, then ring the doorbell.
+The entrance is behind the Riverworks building. Go down the parking lot ramp, turn left at the bottom, then go straight to the door that says Tutor in white letters.
 
-There is some street parking nearby, but we strongly recommend public transit.
+**Entrance:** Use [this entrance pin](https://maps.app.goo.gl/Qt1xdxmGcKHzznXA8) for rideshare drop-off, biking, or walking to the door. The street address gets you to the building, but the entrance is behind it.
 
-The venue is wheelchair accessible, with an elevator to the second floor.
+<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2947.9052735356013!2d-71.206336!3d42.365857999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDIxJzU3LjEiTiA3McKwMTInMjIuOCJX!5e0!3m2!1sen!2sus!4v1774965613210!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2948.0!2d-71.0865262!3d42.3623984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDIxJzQ0LjYiTiA3McKwMDUnMTEuNSJX!5e0!3m2!1sen!2sus!4v1776100000000!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+### Parking
+Park across the street in the [Riverworks parking lot](https://maps.app.goo.gl/AQTjimn5vnKq5FFp7), not in the lot by the entrance.
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2947.8812948912755!2d-71.208142!3d42.366369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDIxJzU4LjkiTiA3McKwMTInMjkuMyJX!5e0!3m2!1sen!2sus!4v1774965630421!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
