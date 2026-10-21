@@ -37,7 +37,7 @@ Thanks for volunteering to host Board Game Night! To get your event page set up 
 
 **Date and Time**
 4. What date works for you? (We typically do weekday evenings.)
-5. What start and end time would you prefer? (Most events run ~3 hours, e.g. 6:00 pm to 9:00 pm.)
+5. What start and end time would you prefer? (Most events run ~4 hours, e.g. 6:00 pm to 10:00 pm.)
 6. Is there an RSVP deadline we should communicate to attendees?
 
 **Food and Drink**
