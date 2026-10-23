@@ -24,7 +24,7 @@ A two-day, hands-on robotics hackathon focused on counter-drone swarm defense an
 [More info / RSVP →](https://luma.com/xl77cp4v)
 
 ### IIA Physical AI Summit @ MIT <span class="badge badge-tech">💻 Tech & Community</span>
-**When:** October 30, 2026 @ 8:00 AM \
+**When:** October 30, 2026 @ 8:30 AM EDT \
 **Where:** MIT Samberg Conference Center, 50 Memorial Dr, Cambridge, MA 02142 \
 **Host:** Theo Ehrmann, John Werner & MassRobotics \
 A Tough Tech Week gathering of innovators and robotics enthusiasts at MIT. Registration requires host approval, so RSVP early.
@@ -68,22 +68,6 @@ A talk on the latest in legged locomotion, followed by an open lab tour.
 -->
 
 ## 🌉🌅 Bay Area
-
-### RoboBusiness 2026 <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** October 20, 2026 @ 8:00 AM – 6:30 PM; October 21 @ 8:00 AM – 3:45 PM \
-**Where:** Santa Clara Convention Center, 5001 Great America Pkwy, Santa Clara, CA 95054 \
-**Host:** RoboBusiness \
-The robotics industry gathering brings founders, engineers, investors, and operators together for more than 40 sessions across five tracks on building and deploying commercial robots.
-
-[More info / RSVP →](https://www.robobusiness.com/)
-
-### RobOpsCon 26 <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** October 22, 2026 @ 8:00 AM – 6:00 PM PDT \
-**Where:** InOrbit Robot Space, 285 Castro St, Mountain View, CA 94041 \
-**Host:** Florian Pestoni & the RobOpsCon organizing team \
-A conference on scaling robot operations, with keynotes, panels, lightning talks, and a hands-on OpenRobOps workshop covering mixed fleets, physical-AI data pipelines, and decentralized intelligence. Paid registration requires host approval; bring a laptop for the workshop.
-
-[More info / RSVP →](https://luma.com/ds1tsm40)
 
 ### 2026 IEEE-RAS International Conference on Humanoid Robots <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** December 6–9, 2026, program hours vary \
