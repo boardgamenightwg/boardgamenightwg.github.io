@@ -69,14 +69,6 @@ A talk on the latest in legged locomotion, followed by an open lab tour.
 
 ## 🌉🌅 Bay Area
 
-### RobOpsCon 26 <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** October 22, 2026 @ 8:00 AM – 6:00 PM PDT \
-**Where:** InOrbit Robot Space, 285 Castro St, Mountain View, CA 94041 \
-**Host:** Florian Pestoni & the RobOpsCon organizing team \
-A conference on scaling robot operations, with keynotes, panels, lightning talks, and a hands-on OpenRobOps workshop covering mixed fleets, physical-AI data pipelines, and decentralized intelligence. Paid registration requires host approval; bring a laptop for the workshop.
-
-[More info / RSVP →](https://luma.com/ds1tsm40)
-
 ### 2026 IEEE-RAS International Conference on Humanoid Robots <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** December 6–9, 2026, program hours vary \
 **Where:** Santa Clara Convention Center, 5001 Great America Pkwy, Santa Clara, CA 95054 \
