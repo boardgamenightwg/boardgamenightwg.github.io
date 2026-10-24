@@ -7,14 +7,6 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
-### Scalable, Robust and Safe Autonomy at Zoox <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** October 23, 2026 @ 3:00 PM – 4:00 PM EDT \
-**Where:** Harvard Science and Engineering Complex, Room LL2.221, 150 Western Ave, Allston, MA 02134 \
-**Host:** Harvard SEAS \
-Nicholas Roy, Zoox's Autonomy Architecture lead and an MIT professor, discusses designing and deploying a self-driving robotaxi system at scale, including robustness, safety, and open technical questions.
-
-[More info / RSVP →](https://events.seas.harvard.edu/event/scalable-robust-and-safe-autonomy-at-zoox)
-
 ### Action Space Hackathon 2026 <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** October 23, 2026 @ 4:00 PM – 9:00 PM; October 24 @ 8:00 AM – 5:00 PM EDT \
 **Where:** Microsoft NERD Center, 1 Memorial Drive, Cambridge, MA 02142 \
