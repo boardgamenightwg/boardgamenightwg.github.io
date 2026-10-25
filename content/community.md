@@ -15,6 +15,14 @@ A two-day, hands-on robotics hackathon focused on counter-drone swarm defense an
 
 [More info / RSVP →](https://luma.com/xl77cp4v)
 
+### South Asians in Physical AI <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** October 26, 2026 @ 5:30 PM – 7:00 PM EDT \
+**Where:** Boston, MA (register to see the exact address) \
+**Host:** American South Asian Network (ASAN) \
+A community-first evening of conversations, demos, and networking for robotics builders, engineers, researchers, founders, and enthusiasts. Registration is free and requires host approval.
+
+[More info / RSVP →](https://luma.com/asan-pai-bos-1026)
+
 ### IIA Physical AI Summit @ MIT <span class="badge badge-tech">💻 Tech & Community</span>
 **When:** October 30, 2026 @ 8:30 AM EDT \
 **Where:** MIT Samberg Conference Center, 50 Memorial Dr, Cambridge, MA 02142 \
