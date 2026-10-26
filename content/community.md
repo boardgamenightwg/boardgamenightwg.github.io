@@ -31,6 +31,14 @@ A Tough Tech Week gathering of innovators and robotics enthusiasts at MIT. Regis
 
 [More info / RSVP →](https://luma.com/9rdzhuwf)
 
+### When Robotaxis Meet Humanoids: Rethinking Urban Mobility <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** November 2, 2026 @ 4:00 PM – 5:00 PM EST \
+**Where:** MIT Building 1, Room 1-131, 33 Massachusetts Ave, Cambridge, MA 02139 \
+**Host:** MIT Civil and Environmental Engineering, Pierce Seminar \
+Klaus Bogenberger of the Technical University of Munich connects autonomous fleet operations with humanoid passenger assistants, exploring efficiency, accessibility, safety, and trust in urban mobility.
+
+[More info / RSVP →](https://calendar.mit.edu/event/prof-klaus-bogenberger-pierce-seminar)
+
 ### Code Metal Forge Hackathon 2026: Operation Lost and Found <span class="badge badge-tech">💻 Tech & Community</span>
 **When:** November 6–8, 2026 (EST). November 6 reception: 5:00 PM – 8:00 PM; November 7 check-in: 8:00 AM, build starts: 10:00 AM; November 8 submissions close: 12:00 PM, deliberation and closing ceremony start: 4:30 PM \
 **Where:** BASE-X, 60 State Street, Suite 1400, Boston, MA 02109 \
@@ -46,6 +54,14 @@ Build search-and-rescue prototypes with special operations personnel, first resp
 Yun Chang shares lessons from the DARPA Subterranean Challenge and current work bringing autonomous scene understanding to heavy equipment.
 
 [More info / RSVP →](https://bostonrobothackers.com/news/25-yun-chang-talk-announcement.html)
+
+### Visualizing and Debugging Robot Learning Data with Voxel51 and Hugging Face's LeRobot <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** November 19, 2026 @ 12:00 PM – 1:00 PM EST (9:00 AM – 10:00 AM PST) \
+**Where:** Online via Zoom (register through the event page) \
+**Host:** Voxel51 \
+Harpreet Sahota leads a hands-on workshop on inspecting LeRobot datasets, debugging missing sensor streams and broken metadata, and validating schemas across robot embodiments. Register for the Zoom session through the event page.
+
+[More info / RSVP →](https://voxel51.com/events/lerobot-workshop-november-19-2026)
 
 ### RoboBoston: 9th Annual Robot Block Party <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** May 1, 2027 @ 11:00 AM – 4:00 PM EDT \
@@ -68,6 +84,22 @@ A talk on the latest in legged locomotion, followed by an open lab tour.
 -->
 
 ## 🌉🌅 Bay Area
+
+### Robot Hackathon: Harnessing Physical AI & Data <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** October 29–30, 2026. Daily schedule: October 29 @ 9:00 AM – 9:00 PM PDT; October 30 @ 9:00 AM – 6:00 PM PDT (no overnight hacking) \
+**Where:** Robotics Center of Silicon Valley, 90 Welsh St, San Francisco, CA 94107 \
+**Host:** Viam & MongoDB \
+Build a physical AI application in a small team using a real robot arm, Viam, and MongoDB Atlas, with expert support and no prior robotics experience required. Participation is free with advance host approval; bring your own laptop and some software experience.
+
+[More info / RSVP →](https://luma.com/ta40197s)
+
+### Bay Area Robotics Symposium 2026 <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** October 30, 2026 @ 9:00 AM – 5:00 PM PDT; breakfast at 8:30 AM; 5:00 PM – 5:30 PM open house / reception listed as TBD \
+**Where:** Pauley Ballroom, Martin Luther King Jr. Building, UC Berkeley, Berkeley, CA \
+**Host:** Bay Area Robotics Symposium organizers (UC Berkeley & Stanford) \
+A day of faculty research talks, student posters, and industry presentations, with keynotes on motor learning and humanoid robotics. Registration is open; bring your registration confirmation email for check-in.
+
+[More info / RSVP →](https://bayarearoboticssymposium.github.io/)
 
 ### FUSE San Francisco 2026 <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** November 19, 2026 @ 9:00 AM – 4:30 PM PST (registration listing); doors open at 8:00 AM, keynote at 9:00 AM, drinks start at 4:00 PM \
@@ -94,6 +126,14 @@ A premier international forum on humanoid robotics, featuring public forums, wor
 An international research conference at the intersection of robotics and machine learning, with presentations, poster sessions, demos, and workshops. Sessions span multiple Austin venues; check the program for each day's schedule and location.
 
 [More info / RSVP →](https://www.corl.org/)
+
+### ProMat 2027 <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** April 19–21, 2027. Exhibit hours: 9:00 AM – 5:00 PM CDT daily; keynotes at 8:30 AM daily \
+**Where:** McCormick Place, 2301 S. Lake Shore Drive, Chicago, IL 60616 \
+**Host:** MHI \
+A manufacturing and supply chain exhibition featuring robotics, automation, hands-on equipment demonstrations, and educational sessions. Registration to attend is free.
+
+[More info / RSVP →](https://www.promatshow.com/)
 
 ### Automate 2027 <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** May 10–13, 2027. Show floor: May 10–12 @ 10:00 AM – 5:00 PM PDT; May 13 @ 10:00 AM – 3:00 PM PDT \
