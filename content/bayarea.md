@@ -40,7 +40,7 @@ Knock on the front door at the street entrance on 61st St.
 
 **Transit:** If taking the train from SF or the South Bay, take BART to Ashby Station. It's a 19 minute walk from there.
 
-**Trouble getting in?** Contact Jason Abi Chebli at [+1-510-542-3915](tel:+15105423915).
+**Trouble getting in?** Contact Jason Abi Chebli at (see announcement email).
 
 **Photos:** Photography and social media posts are welcome.
 
