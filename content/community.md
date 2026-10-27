@@ -53,6 +53,14 @@ A talk on the latest in legged locomotion, followed by an open lab tour.
 
 ## 🌉🌅 Bay Area
 
+### FUSE San Francisco 2026 <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** November 19, 2026 @ 9:00 AM – 4:30 PM PST (registration listing); doors open at 8:00 AM, keynote at 9:00 AM, drinks start at 4:00 PM \
+**Where:** Foundry SF, 1425 Folsom Street, San Francisco, CA 94103 \
+**Host:** Point One Navigation & Silicon Valley Robotics \
+A single-track technical conference on reliable localization for physical AI, bringing robotics engineers together to discuss system designs that work beyond the lab and ship at scale. Speakers include leaders from Open Navigation, Foxglove, and FieldAI.
+
+[More info / RSVP →](https://fuse.pointonenav.com/sf)
+
 ### 2026 IEEE-RAS International Conference on Humanoid Robots <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** December 6–9, 2026, program hours vary \
 **Where:** Santa Clara Convention Center, 5001 Great America Pkwy, Santa Clara, CA 95054 \
@@ -62,6 +70,14 @@ A premier international forum on humanoid robotics, featuring public forums, wor
 [More info / RSVP →](https://2026.ieee-humanoids.org/)
 
 ## 🤖🌎 Major Robotics Events
+
+### CoRL 2026: Conference on Robot Learning <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** November 9–12, 2026, daily times vary (CST, America/Chicago). Main conference: November 9–11; workshops: November 12 \
+**Where:** Austin, TX: JW Marriott Austin, 110 E 2nd St (posters, exhibits, registration, and workshops); Hilton Austin, 500 E 4th St (talks and keynotes on days 1–2); Bass Concert Hall, 2350 Robert Dedman Dr (final keynote and farewell reception) \
+**Host:** CoRL 2026 organizers \
+An international research conference at the intersection of robotics and machine learning, with presentations, poster sessions, demos, and workshops. Sessions span multiple Austin venues; check the program for each day's schedule and location.
+
+[More info / RSVP →](https://www.corl.org/)
 
 ### Automate 2027 <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** May 10–13, 2027. Show floor: May 10–12 @ 10:00 AM – 5:00 PM PDT; May 13 @ 10:00 AM – 3:00 PM PDT \
