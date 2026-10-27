@@ -7,22 +7,6 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
-### Action Space Hackathon 2026 <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** October 23, 2026 @ 4:00 PM – 9:00 PM; October 24 @ 8:00 AM – 5:00 PM EDT \
-**Where:** Microsoft NERD Center, 1 Memorial Drive, Cambridge, MA 02142 \
-**Host:** Jaime Romero & Sebastian Romero \
-A two-day, hands-on robotics hackathon focused on counter-drone swarm defense and physical AI, using NVIDIA Isaac Lab and multi-agent reinforcement learning to take team strategies from simulation to real drones. Open to ages 18+; registration requires host approval, with final approvals by October 17.
-
-[More info / RSVP →](https://luma.com/xl77cp4v)
-
-### South Asians in Physical AI <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** October 26, 2026 @ 5:30 PM – 7:00 PM EDT \
-**Where:** Boston, MA (register to see the exact address) \
-**Host:** American South Asian Network (ASAN) \
-A community-first evening of conversations, demos, and networking for robotics builders, engineers, researchers, founders, and enthusiasts. Registration is free and requires host approval.
-
-[More info / RSVP →](https://luma.com/asan-pai-bos-1026)
-
 ### IIA Physical AI Summit @ MIT <span class="badge badge-tech">💻 Tech & Community</span>
 **When:** October 30, 2026 @ 8:30 AM EDT \
 **Where:** MIT Samberg Conference Center, 50 Memorial Dr, Cambridge, MA 02142 \
