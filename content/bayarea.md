@@ -31,7 +31,7 @@ Please bring your favorite board games!
 Thursday, November 19, 2026 @ 6:00 pm - 9:00 pm
 
 ## RSVP
-TBD: RSVP link \
+Please [RSVP on Luma](https://luma.com/r525drz5) to attend and see full event details.
 
 ## Access
 Knock on the front door at the street entrance on 61st St.
