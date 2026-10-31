@@ -7,14 +7,6 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
-### IIA Physical AI Summit @ MIT <span class="badge badge-tech">💻 Tech & Community</span>
-**When:** October 30, 2026 @ 8:30 AM EDT \
-**Where:** MIT Samberg Conference Center, 50 Memorial Dr, Cambridge, MA 02142 \
-**Host:** Theo Ehrmann, John Werner & MassRobotics \
-A Tough Tech Week gathering of innovators and robotics enthusiasts at MIT. Registration requires host approval, so RSVP early.
-
-[More info / RSVP →](https://luma.com/9rdzhuwf)
-
 ### When Robotaxis Meet Humanoids: Rethinking Urban Mobility <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** November 2, 2026 @ 4:00 PM – 5:00 PM EST \
 **Where:** MIT Building 1, Room 1-131, 33 Massachusetts Ave, Cambridge, MA 02139 \
@@ -68,22 +60,6 @@ A talk on the latest in legged locomotion, followed by an open lab tour.
 -->
 
 ## 🌉🌅 Bay Area
-
-### Robot Hackathon: Harnessing Physical AI & Data <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** October 29–30, 2026. Daily schedule: October 29 @ 9:00 AM – 9:00 PM PDT; October 30 @ 9:00 AM – 6:00 PM PDT (no overnight hacking) \
-**Where:** Robotics Center of Silicon Valley, 90 Welsh St, San Francisco, CA 94107 \
-**Host:** Viam & MongoDB \
-Build a physical AI application in a small team using a real robot arm, Viam, and MongoDB Atlas, with expert support and no prior robotics experience required. Participation is free with advance host approval; bring your own laptop and some software experience.
-
-[More info / RSVP →](https://luma.com/ta40197s)
-
-### Bay Area Robotics Symposium 2026 <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** October 30, 2026 @ 9:00 AM – 5:00 PM PDT; breakfast at 8:30 AM; 5:00 PM – 5:30 PM open house / reception listed as TBD \
-**Where:** Pauley Ballroom, Martin Luther King Jr. Building, UC Berkeley, Berkeley, CA \
-**Host:** Bay Area Robotics Symposium organizers (UC Berkeley & Stanford) \
-A day of faculty research talks, student posters, and industry presentations, with keynotes on motor learning and humanoid robotics. Registration is open; bring your registration confirmation email for check-in.
-
-[More info / RSVP →](https://bayarearoboticssymposium.github.io/)
 
 ### FUSE San Francisco 2026 <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** November 19, 2026 @ 9:00 AM – 4:30 PM PST (registration listing); doors open at 8:00 AM, keynote at 9:00 AM, drinks start at 4:00 PM \
