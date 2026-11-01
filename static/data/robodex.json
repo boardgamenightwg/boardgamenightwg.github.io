@@ -3,7 +3,7 @@
     {
       "careers_url": "https://www.amazon.jobs/content/en/teams/ftr/amazon-robotics",
       "id": "amazon-robotics",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "San Francisco, CA",
@@ -55,7 +55,7 @@
     {
       "careers_url": "https://www.ambirobotics.com/careers",
       "id": "ambi-robotics",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "Berkeley, CA",
@@ -72,6 +72,11 @@
           "date": "2026-09-17",
           "headline": "Ambi Robotics reports deploying its AmbiOS agentic harness to solve a production package-placement problem.",
           "url": "https://www.ambirobotics.com/blog/agentic-robotics"
+        },
+        {
+          "date": "2026-08-26",
+          "headline": "Ambi Robotics introduces CARGO, a reinforcement-learned Physical AI model for industrial package stacking.",
+          "url": "https://www.ambirobotics.com/blog/cargo-physical-ai-stacking"
         }
       ],
       "regions": [
@@ -83,7 +88,7 @@
     {
       "careers_url": "https://www.analog.com/en/careers.html",
       "id": "analog-devices",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "boston": {
           "label": "Boston, MA",
@@ -96,6 +101,11 @@
       },
       "name": "Analog Devices (Analog Garage)",
       "news": [
+        {
+          "date": "2026-10-22",
+          "headline": "FTC grants early termination of the antitrust waiting period for Analog Devices' proposed acquisition of Alif Semiconductor.",
+          "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262410"
+        },
         {
           "date": "2026-10-21",
           "headline": "Analog Devices details NVIDIA cuVSLAM extensions combining wheel encoders, visual features and adaptive sensor fusion.",
@@ -126,7 +136,7 @@
     {
       "careers_url": "https://www.apex.ai/careers",
       "id": "apex-ai",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "Palo Alto, CA",
@@ -154,7 +164,7 @@
     {
       "careers_url": "https://www.bearrobotics.ai/careers",
       "id": "bear-robotics",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "Redwood City, CA",
@@ -192,7 +202,7 @@
     {
       "careers_url": "https://www.berkshiregrey.com/careers/",
       "id": "berkshire-grey",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "boston": {
           "label": "Bedford, MA",
@@ -204,7 +214,13 @@
         }
       },
       "name": "Berkshire Grey",
-      "news": [],
+      "news": [
+        {
+          "date": "2026-10-29",
+          "headline": "Berkshire Grey announces BG Pilot AI enhancements for trailer unloading, warehouse orchestration and precision packing.",
+          "url": "https://www.berkshiregrey.com/resources/press-release/berkshire-grey-unveils-enhanced-ai-capabilities-powered-by-bg-pilot-software/"
+        }
+      ],
       "regions": [
         "boston"
       ],
@@ -214,7 +230,7 @@
     {
       "careers_url": "https://www.bonsairobotics.ai/careers/",
       "id": "bonsai-robotics",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "San Jose, CA",
@@ -247,7 +263,7 @@
     {
       "careers_url": "https://bostondynamics.com/careers/",
       "id": "boston-dynamics",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "boston": {
           "label": "Waltham, MA",
@@ -261,6 +277,11 @@
       "name": "Boston Dynamics",
       "news": [
         {
+          "date": "2026-10-27",
+          "headline": "Electronic Times reports Hyundai Mobis, Samsung SDI and LG Energy Solution selected for Atlas actuator and battery supply.",
+          "url": "https://en.etnews.com/20261027200004"
+        },
+        {
           "date": "2026-10-23",
           "headline": "WBUR reports Boston Dynamics employees petitioned against the ICE Spot sale; the company stands by its decision.",
           "url": "https://www.wbur.org/news/2026/10/23/boston-dynamics-employees-petition-dhs"
@@ -269,6 +290,11 @@
           "date": "2026-10-06",
           "headline": "Boston Dynamics appoints former Amazon AI leader Rohit Prasad CEO, effective October 7.",
           "url": "https://bostondynamics.com/news/boston-dynamics-appoints-rohit-prasad-as-chief-executive-officer/"
+        },
+        {
+          "date": "2026-10-01",
+          "headline": "Boston Dynamics details new four-finger Atlas hands with 13 degrees of freedom for industrial manipulation and robot learning.",
+          "url": "https://bostondynamics.com/blog/robot-hands-for-modern-ai-and-real-work/"
         },
         {
           "date": "2026-09-30",
@@ -290,7 +316,7 @@
     {
       "careers_url": "https://www.cobaltai.com/careers/",
       "id": "cobalt-ai",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "San Francisco, CA",
@@ -323,7 +349,7 @@
     {
       "careers_url": "https://www.codemetal.ai/company#open-roles",
       "id": "code-metal",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "boston": {
           "label": "Boston, MA",
@@ -352,7 +378,7 @@
     {
       "careers_url": "https://jobs.lever.co/dexterity",
       "id": "dexterity",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "Redwood City, CA",
@@ -364,13 +390,7 @@
         }
       },
       "name": "Dexterity",
-      "news": [
-        {
-          "date": "2026-07-30",
-          "headline": "FedEx and Dexterity expand autonomous trailer-loading deployment at the Hagerstown Hub.",
-          "url": "https://dexterity.ai/blog/fedex-hagerstown-physical-ai-deployment"
-        }
-      ],
+      "news": [],
       "regions": [
         "bay"
       ],
@@ -380,7 +400,7 @@
     {
       "careers_url": "https://www.dustyrobotics.com/careers",
       "id": "dusty-robotics",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "Mountain View, CA",
@@ -393,6 +413,11 @@
       },
       "name": "Dusty Robotics",
       "news": [
+        {
+          "date": "2026-10-29",
+          "headline": "Adds Amba AI assistance, project-level sharing and layout notifications to Dusty Portal.",
+          "url": "https://support.dustyrobotics.com/hc/en-us/articles/57920985868699"
+        },
         {
           "date": "2026-10-19",
           "headline": "Announces Floor Elevation measurement is included in every Dusty platform package, with jobsite heatmaps and reporting.",
@@ -408,7 +433,7 @@
     {
       "careers_url": "https://jobs.ashbyhq.com/ekarobotics",
       "id": "eka-robotics",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "boston": {
           "label": "Cambridge, MA",
@@ -436,7 +461,7 @@
     {
       "careers_url": "https://www.familiarmachines.com/careers",
       "id": "familiar-machines",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "boston": {
           "label": "Woburn, MA",
@@ -458,7 +483,7 @@
     {
       "careers_url": "https://www.figure.ai/careers",
       "id": "figure",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "San Jose, CA",
@@ -471,6 +496,11 @@
       },
       "name": "Figure AI",
       "news": [
+        {
+          "date": "2026-10-27",
+          "headline": "T-Mobile says it is testing network-edge computing for portions of Figure\u2019s Helix S1 and S2 models.",
+          "url": "https://www.t-mobile.com/news/network/physical-ai-is-leaving-the-lab"
+        },
         {
           "date": "2026-10-19",
           "headline": "CEO reports Figure 03 passed nine days and 348 miles in an ongoing treadmill endurance test.",
@@ -501,7 +531,7 @@
     {
       "careers_url": "https://careers.formlabs.com/",
       "id": "formlabs",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "boston": {
           "label": "Somerville, MA",
@@ -534,7 +564,7 @@
     {
       "careers_url": "https://foxglove.dev/careers",
       "id": "foxglove",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "name": "Foxglove",
       "news": [
         {
@@ -557,7 +587,7 @@
     {
       "careers_url": null,
       "id": "gaia-ai",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "name": "Gaia AI",
       "news": [],
       "regions": [
@@ -569,7 +599,7 @@
     {
       "careers_url": "https://generalistai.com/careers",
       "id": "generalist-ai",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "San Mateo, CA",
@@ -606,7 +636,7 @@
     {
       "careers_url": "https://hello-robot.com/careers/",
       "id": "hello-robot",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "Martinez, CA",
@@ -619,6 +649,11 @@
       },
       "name": "Hello Robot Inc",
       "news": [
+        {
+          "date": "2026-10-26",
+          "headline": "Releases Stretch 4 integration with Hugging Face LeRobot for demonstration recording, policy training and deployment.",
+          "url": "https://hello-robot.com/stretch-4-lerobot-integration/"
+        },
         {
           "date": "2026-09-29",
           "headline": "Hello Robot receives NIH grant with UIUC to develop Stretch support for older adults with cognitive impairment.",
@@ -634,7 +669,7 @@
     {
       "careers_url": "https://jobs.ashbyhq.com/innate/",
       "id": "innate",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "Palo Alto, CA",
@@ -662,7 +697,7 @@
     {
       "careers_url": "https://www.inorbit.ai/company",
       "id": "inorbit",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "Mountain View, CA",
@@ -690,7 +725,7 @@
     {
       "careers_url": "https://www.intrinsic.ai/careers",
       "id": "intrinsic",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "Mountain View, CA",
@@ -723,7 +758,7 @@
     {
       "careers_url": "https://careers.irobot.com/",
       "id": "irobot",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "boston": {
           "label": "Bedford, MA",
@@ -756,7 +791,7 @@
     {
       "careers_url": "https://locusrobotics.com/company/careers/",
       "id": "locus-robotics",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "boston": {
           "label": "Wilmington, MA",
@@ -789,7 +824,7 @@
     {
       "careers_url": "https://www.mathworks.com/company/jobs/opportunities.html",
       "id": "mathworks",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "Santa Clara, CA",
@@ -831,7 +866,7 @@
     {
       "careers_url": "https://ouster.com/company/careers",
       "id": "ouster",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "San Francisco, CA",
@@ -844,6 +879,11 @@
       },
       "name": "Ouster",
       "news": [
+        {
+          "date": "2026-10-27",
+          "headline": "Ouster subsidiary Stereolabs launches ZED Box 2 edge AI computers for multi-camera robot perception.",
+          "url": "https://www.stereolabs.com/blog/stereolabs-launches-zed-box-2-series-for-physical-ai-and-vision-in-production-robots"
+        },
         {
           "date": "2026-10-21",
           "headline": "Ouster and Forterra report Lancer autonomous vehicles using Ouster lidar for supply and casualty-evacuation missions in Ukraine.",
@@ -869,7 +909,7 @@
     {
       "careers_url": "https://www.pi.website/join-us",
       "id": "physical-intelligence",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "San Francisco, CA",
@@ -902,7 +942,7 @@
     {
       "careers_url": "https://www.picklerobot.com/careers",
       "id": "pickle-robot-company",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "boston": {
           "label": "Boston, MA",
@@ -930,7 +970,7 @@
     {
       "careers_url": "https://www.ycombinator.com/companies/polymath-robotics/jobs",
       "id": "polymath-robotics",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "San Francisco, CA",
@@ -942,7 +982,13 @@
         }
       },
       "name": "Polymath Robotics",
-      "news": [],
+      "news": [
+        {
+          "date": "2026-09-09",
+          "headline": "Polymath announces its founding role in the Open Source Safety Consortium, sharing robotics safety evidence and a protective-stop prototype.",
+          "url": "https://discourse.openrobotics.org/t/open-source-safety-consortium-sharing-safety-evidence-not-just-code/57992"
+        }
+      ],
       "regions": [
         "bay"
       ],
@@ -952,7 +998,7 @@
     {
       "careers_url": "https://jobs.ashbyhq.com/reframesystems",
       "id": "reframe-systems",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "boston": {
           "label": "North Billerica, MA",
@@ -999,6 +1045,11 @@
       "name": "Robotics and AI Institute",
       "news": [
         {
+          "date": "2026-10-27",
+          "headline": "RAI demonstrates outdoor whole-body manipulation with Spot using onboard cameras and neural control.",
+          "url": "https://rai-inst.com/resources/blog/whole-body-manipulation-outside-the-lab/"
+        },
+        {
           "date": "2026-10-07",
           "headline": "RAI introduces Exploy, an open-source library for deploying robot learning policies from simulation to hardware.",
           "url": "https://rai-inst.com/resources/blog/introducing-exploy-simplifying-rl-policy-deployment-in-autonomous-robotics/"
@@ -1013,7 +1064,7 @@
     {
       "careers_url": "https://www.simberobotics.com/about/work-at-simbe",
       "id": "simbe-robotics",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "Burlingame, CA",
@@ -1046,7 +1097,7 @@
     {
       "careers_url": "https://www.skydio.com/careers",
       "id": "skydio",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "San Mateo, CA",
@@ -1059,6 +1110,11 @@
       },
       "name": "Skydio",
       "news": [
+        {
+          "date": "2026-10-27",
+          "headline": "Skydio details Controller 2, now shipping with X10, X10D and R10 drones and available for existing fleets.",
+          "url": "https://www.skydio.com/blog/skydio-controller-2-field-drone-pilots"
+        },
         {
           "date": "2026-10-25",
           "headline": "Defence Blog reports Royal Navy tender for Skydio X10D drones; bids remain open.",
@@ -1085,7 +1141,7 @@
     {
       "careers_url": "https://www.symbotic.com/careers/jobs/",
       "id": "symbotic",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "boston": {
           "label": "Wilmington, MA",
@@ -1098,6 +1154,11 @@
       },
       "name": "Symbotic",
       "news": [
+        {
+          "date": "2026-10-29",
+          "headline": "Walmart expands its Symbotic automation agreement with an initial approximately $6 billion commitment across 25 U.S. distribution centers.",
+          "url": "https://www.symbotic.com/news/walmart-and-symbotic-expand-commercial-agreement-to-support-supply-chain-transformation/"
+        },
         {
           "date": "2026-10-13",
           "headline": "Symbotic announces acquisition of cellumation and its celluveyor sortation technology.",
@@ -1114,7 +1175,7 @@
     {
       "careers_url": "https://jobs.lever.co/tutorintelligence",
       "id": "tutor-intelligence",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "boston": {
           "label": "Watertown, MA",
@@ -1134,7 +1195,8 @@
         }
       ],
       "regions": [
-        "boston"
+        "boston",
+        "bay"
       ],
       "summary": "AI-powered robot workers for manufacturing and logistics. Board-game host.",
       "website": "https://tutorintelligence.com/"
@@ -1142,7 +1204,7 @@
     {
       "careers_url": "https://www.vecnarobotics.com/company/careers/",
       "id": "vecna-robotics",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "boston": {
           "label": "Waltham, MA",
@@ -1175,7 +1237,7 @@
     {
       "careers_url": "https://www.waldenrobotics.com/careers",
       "id": "walden-robotics",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "San Francisco, CA",
@@ -1195,7 +1257,13 @@
         }
       },
       "name": "Walden Robotics",
-      "news": [],
+      "news": [
+        {
+          "date": "2026-10-26",
+          "headline": "Walden details how its robot policies learn to request remote human assistance during manufacturing tasks.",
+          "url": "https://www.waldenrobotics.com/news/call-for-help-teaching-robots-to-request-assistance"
+        }
+      ],
       "regions": [
         "boston",
         "bay"
@@ -1206,7 +1274,7 @@
     {
       "careers_url": null,
       "id": "willow-garage",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "name": "Willow Garage (historical)",
       "news": [],
       "regions": [
@@ -1218,7 +1286,7 @@
     {
       "careers_url": "https://www.zipline.com/careers",
       "id": "zipline",
-      "last_verified": "2026-10-25",
+      "last_verified": "2026-11-01",
       "locations": {
         "bay": {
           "label": "South San Francisco, CA",
@@ -1231,6 +1299,11 @@
       },
       "name": "Zipline",
       "news": [
+        {
+          "date": "2026-10-27",
+          "headline": "Zipline says it has deployed sound-optimized dynamic flying fleetwide to reduce delivery-drone noise and energy use.",
+          "url": "https://www.zipline.com/newsroom/zipline-now-making-quieter-deliveries-with-acoustics-breakthrough"
+        },
         {
           "date": "2026-10-25",
           "headline": "Axios reports Zipline has begun permitting for drone charging towers in Charlotte.",
