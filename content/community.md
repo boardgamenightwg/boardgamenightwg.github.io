@@ -15,14 +15,6 @@ A Tough Tech Week gathering of innovators and robotics enthusiasts at MIT. Regis
 
 [More info / RSVP →](https://luma.com/9rdzhuwf)
 
-### When Robotaxis Meet Humanoids: Rethinking Urban Mobility <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** November 2, 2026 @ 4:00 PM – 5:00 PM EST \
-**Where:** MIT Building 1, Room 1-131, 33 Massachusetts Ave, Cambridge, MA 02139 \
-**Host:** MIT Civil and Environmental Engineering, Pierce Seminar \
-Klaus Bogenberger of the Technical University of Munich connects autonomous fleet operations with humanoid passenger assistants, exploring efficiency, accessibility, safety, and trust in urban mobility.
-
-[More info / RSVP →](https://calendar.mit.edu/event/prof-klaus-bogenberger-pierce-seminar)
-
 ### Code Metal Forge Hackathon 2026: Operation Lost and Found <span class="badge badge-tech">💻 Tech & Community</span>
 **When:** November 6–8, 2026 (EST). November 6 reception: 5:00 PM – 8:00 PM; November 7 check-in: 8:00 AM, build starts: 10:00 AM; November 8 submissions close: 12:00 PM, deliberation and closing ceremony start: 4:30 PM \
 **Where:** BASE-X, 60 State Street, Suite 1400, Boston, MA 02109 \
