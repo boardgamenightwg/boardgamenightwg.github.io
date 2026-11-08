@@ -30,6 +30,17 @@ and [additional company sources](robodex-company-sources.md). The
 Generalist/MathWorks regional pins and the Eka/ROSCon additions. Each records
 its own verification date, city source and coordinate provenance.
 
+## November 8, 2026: Amazon Bay source refresh
+
+The previous San Francisco lab-safety posting now returns a job-unavailable 404.
+A current [Amazon Robotics data-operations posting](https://www.amazon.jobs/en/jobs/10591986/manager-robotics-data-collection-ops-frontier-ai-robotics-far)
+describes Amazon's Frontier AI & Robotics team and explicitly locates its robot
+data-collection operation in San Francisco. The compensation location also says
+“USA, CA, San Francisco”. Replace only the Bay evidence URL and advance its
+`verified` date to November 8. Keep the existing approximate San Francisco city
+coordinates, not an inferred office address. Boston location metadata and all
+other companies' location dates remain unchanged in this review.
+
 ## Coordinate provenance
 
 Coordinates are city/town representative points returned by the
