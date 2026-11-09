@@ -23,14 +23,6 @@ Klaus Bogenberger of the Technical University of Munich connects autonomous flee
 
 [More info / RSVP →](https://calendar.mit.edu/event/prof-klaus-bogenberger-pierce-seminar)
 
-### Code Metal Forge Hackathon 2026: Operation Lost and Found <span class="badge badge-tech">💻 Tech & Community</span>
-**When:** November 6–8, 2026 (EST). November 6 reception: 5:00 PM – 8:00 PM; November 7 check-in: 8:00 AM, build starts: 10:00 AM; November 8 submissions close: 12:00 PM, deliberation and closing ceremony start: 4:30 PM \
-**Where:** BASE-X, 60 State Street, Suite 1400, Boston, MA 02109 \
-**Host:** Code Metal, sponsored by U.S. Special Operations Command \
-Build search-and-rescue prototypes with special operations personnel, first responders, and deep-tech mentors, tackling sensing, resilient communications, and edge computing in an overnight sprint. Applying and participating are free, with rolling selection and an October 5 application deadline.
-
-[More info / RSVP →](https://www.codemetal.ai/forge-hackathon)
-
 ### Boston Robot Hackers: Yun Chang on Robot Scene Understanding for Extreme Environments <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** November 12, 2026 @ 7:00 PM – 9:00 PM \
 **Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
