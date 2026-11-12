@@ -7,14 +7,6 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
-### When Robotaxis Meet Humanoids: Rethinking Urban Mobility <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** November 2, 2026 @ 4:00 PM – 5:00 PM EST \
-**Where:** MIT Building 1, Room 1-131, 33 Massachusetts Ave, Cambridge, MA 02139 \
-**Host:** MIT Civil and Environmental Engineering, Pierce Seminar \
-Klaus Bogenberger of the Technical University of Munich connects autonomous fleet operations with humanoid passenger assistants, exploring efficiency, accessibility, safety, and trust in urban mobility.
-
-[More info / RSVP →](https://calendar.mit.edu/event/prof-klaus-bogenberger-pierce-seminar)
-
 ### Boston Robot Hackers: Yun Chang on Robot Scene Understanding for Extreme Environments <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** November 12, 2026 @ 7:00 PM – 9:00 PM \
 **Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
