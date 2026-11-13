@@ -7,14 +7,6 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
-### Boston Robot Hackers: Yun Chang on Robot Scene Understanding for Extreme Environments <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** November 12, 2026 @ 7:00 PM – 9:00 PM \
-**Where:** Artisans Asylum, 96 Holton Street, Allston, MA \
-**Host:** Boston Robot Hackers \
-Yun Chang shares lessons from the DARPA Subterranean Challenge and current work bringing autonomous scene understanding to heavy equipment.
-
-[More info / RSVP →](https://bostonrobothackers.com/news/25-yun-chang-talk-announcement.html)
-
 ### Visualizing and Debugging Robot Learning Data with Voxel51 and Hugging Face's LeRobot <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** November 19, 2026 @ 12:00 PM – 1:00 PM EST (9:00 AM – 10:00 AM PST) \
 **Where:** Online via Zoom (register through the event page) \
@@ -62,14 +54,6 @@ A premier international forum on humanoid robotics, featuring public forums, wor
 [More info / RSVP →](https://2026.ieee-humanoids.org/)
 
 ## 🤖🌎 Major Robotics Events
-
-### CoRL 2026: Conference on Robot Learning <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** November 9–12, 2026, daily times vary (CST, America/Chicago). Main conference: November 9–11; workshops: November 12 \
-**Where:** Austin, TX: JW Marriott Austin, 110 E 2nd St (posters, exhibits, registration, and workshops); Hilton Austin, 500 E 4th St (talks and keynotes on days 1–2); Bass Concert Hall, 2350 Robert Dedman Dr (final keynote and farewell reception) \
-**Host:** CoRL 2026 organizers \
-An international research conference at the intersection of robotics and machine learning, with presentations, poster sessions, demos, and workshops. Sessions span multiple Austin venues; check the program for each day's schedule and location.
-
-[More info / RSVP →](https://www.corl.org/)
 
 ### ProMat 2027 <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** April 19–21, 2027. Exhibit hours: 9:00 AM – 5:00 PM CDT daily; keynotes at 8:30 AM daily \
