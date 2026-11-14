@@ -38,7 +38,7 @@ A talk on the latest in legged locomotion, followed by an open lab tour.
 ## 🌉🌅 Bay Area
 
 ### FUSE San Francisco 2026 <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** November 19, 2026 @ 9:00 AM – 4:30 PM PST (registration listing); doors open at 8:00 AM, keynote at 9:00 AM, drinks start at 4:00 PM \
+**When:** November 19, 2026 @ 9:00 AM – 4:30 PM PST (registration listing); doors open at 8:00 AM, keynote at 9:00 AM, drinks start at 4:30 PM \
 **Where:** Foundry SF, 1425 Folsom Street, San Francisco, CA 94103 \
 **Host:** Point One Navigation & Silicon Valley Robotics \
 A single-track technical conference on reliable localization for physical AI, bringing robotics engineers together to discuss system designs that work beyond the lab and ship at scale. Speakers include leaders from Open Navigation, Foxglove, and FieldAI.
