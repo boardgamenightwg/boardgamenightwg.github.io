@@ -15,6 +15,14 @@ Harpreet Sahota leads a hands-on workshop on inspecting LeRobot datasets, debugg
 
 [More info / RSVP →](https://voxel51.com/events/lerobot-workshop-november-19-2026)
 
+### Revolute v1.11: Physical AI Hackathon <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** November 21, 2026 @ 10:00 AM – 4:00 PM EST; social / demos 4:00 PM – 5:00 PM. Optional setup November 20 at 6:00 PM. Luma's calendar spans November 20 at 6:00 PM through November 21 at 7:00 PM; confirm the schedule with the organizers \
+**Where:** Fab Hub Kendall, Kendall Square, Cambridge, MA. The description lists 325 Main St, while Luma's location card lists 315 Main St; confirm the entrance with the organizers \
+**Host:** Revolute Community \
+An 18+ hands-on physical AI build day with robot arms and cameras, in teams of three to four, followed by demos and a social. Space is limited to 16 builders, applications are reviewed on a rolling basis, and food is not included; a separate open-house/demo ticket is available.
+
+[More info / RSVP →](https://luma.com/yiif4l7u)
+
 ### RoboBoston: 9th Annual Robot Block Party <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** May 1, 2027 @ 11:00 AM – 4:00 PM EDT \
 **Where:** SoWa Power Station, 550 Harrison Ave, Boston, MA 02118 \
