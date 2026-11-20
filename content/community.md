@@ -7,14 +7,6 @@ A community-submitted list of upcoming robotics, board game, and adjacent tech e
 
 ## 🫘🌆 Boston
 
-### Visualizing and Debugging Robot Learning Data with Voxel51 and Hugging Face's LeRobot <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** November 19, 2026 @ 12:00 PM – 1:00 PM EST (9:00 AM – 10:00 AM PST) \
-**Where:** Online via Zoom (register through the event page) \
-**Host:** Voxel51 \
-Harpreet Sahota leads a hands-on workshop on inspecting LeRobot datasets, debugging missing sensor streams and broken metadata, and validating schemas across robot embodiments. Register for the Zoom session through the event page.
-
-[More info / RSVP →](https://voxel51.com/events/lerobot-workshop-november-19-2026)
-
 ### Revolute v1.11: Physical AI Hackathon <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** November 21, 2026 @ 10:00 AM – 4:00 PM EST; social / demos 4:00 PM – 5:00 PM. Optional setup November 20 at 6:00 PM. Luma's calendar spans November 20 at 6:00 PM through November 21 at 7:00 PM; confirm the schedule with the organizers \
 **Where:** Fab Hub Kendall, Kendall Square, Cambridge, MA. The description lists 325 Main St, while Luma's location card lists 315 Main St; confirm the entrance with the organizers \
@@ -44,14 +36,6 @@ A talk on the latest in legged locomotion, followed by an open lab tour.
 -->
 
 ## 🌉🌅 Bay Area
-
-### FUSE San Francisco 2026 <span class="badge badge-robotics">🤖 Robotics</span>
-**When:** November 19, 2026 @ 9:00 AM – 4:30 PM PST (registration listing); doors open at 8:00 AM, keynote at 9:00 AM, drinks start at 4:30 PM \
-**Where:** Foundry SF, 1425 Folsom Street, San Francisco, CA 94103 \
-**Host:** Point One Navigation & Silicon Valley Robotics \
-A single-track technical conference on reliable localization for physical AI, bringing robotics engineers together to discuss system designs that work beyond the lab and ship at scale. Speakers include leaders from Open Navigation, Foxglove, and FieldAI.
-
-[More info / RSVP →](https://fuse.pointonenav.com/sf)
 
 ### 2026 IEEE-RAS International Conference on Humanoid Robots <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** December 6–9, 2026, program hours vary \
