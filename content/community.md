@@ -29,6 +29,14 @@ A talk on the latest in legged locomotion, followed by an open lab tour.
 
 ## 🌉🌅 Bay Area
 
+### Bots, Bevs & Humanoids <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** December 2, 2026 @ 6:00 PM – 8:45 PM PST on Luma; the organizer's agenda lists an 8:30 PM finish \
+**Where:** Hosted at Ultimate Bots, San Francisco, CA (exact location shared after registration) \
+**Host:** Silicon Valley Robotics \
+A free meetup with robot demos, networking, and a talk by SKIP's Patrick Franks on predicting human motion on real trails.
+
+[More info / RSVP →](https://luma.com/k2jvkz3f)
+
 ### 2026 IEEE-RAS International Conference on Humanoid Robots <span class="badge badge-robotics">🤖 Robotics</span>
 **When:** December 6–9, 2026, program hours vary \
 **Where:** Santa Clara Convention Center, 5001 Great America Pkwy, Santa Clara, CA 95054 \
@@ -36,6 +44,14 @@ A talk on the latest in legged locomotion, followed by an open lab tour.
 A premier international forum on humanoid robotics, featuring public forums, workshops and tutorials, and two days of research presentations.
 
 [More info / RSVP →](https://2026.ieee-humanoids.org/)
+
+### AUTONOMOUS 2027 <span class="badge badge-robotics">🤖 Robotics</span>
+**When:** April 13–14, 2027; daily hours not yet announced (Pacific time) \
+**Where:** Pier 27, James R. Herman Cruise Terminal, The Embarcadero, San Francisco, CA 94111 \
+**Host:** AUTONOMOUS \
+A two-day robotics and physical AI conference with three stages, a robot expo, and a first-day reception. Paid registration is open.
+
+[More info / RSVP →](https://autonomousfuture.co/)
 
 ## 🤖🌎 Major Robotics Events
 
